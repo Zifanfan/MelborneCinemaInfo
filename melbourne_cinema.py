@@ -47,6 +47,7 @@ class Film:
     poster: str = ""           # 海报 URL
     synopsis: str = ""
     recommendation: str = ""
+    hot_comment: str = ""     # 豆瓣最热短评
 
 
 # ─────────────── HTTP ───────────────
@@ -69,11 +70,16 @@ def _get(url: str, **kw) -> requests.Response:
 
 # ─────────────── 日期 ───────────────
 def next_week_range() -> tuple[dt.date, dt.date]:
+    """返回从今天起的 7 天"""
     today = dt.date.today()
-    return today + dt.timedelta(1), today + dt.timedelta(7)
+    return today, today + dt.timedelta(days=6)
 
 def _day_name(d: dt.date) -> str:
     return d.strftime("%A").lower()
+
+def _day_label(d: dt.date) -> str:
+    """生成日期标签: '3/24 Monday'"""
+    return f"{d.month}/{d.day} {d.strftime('%A')}"
 
 
 # ═══════════════════════════════════════
@@ -144,8 +150,8 @@ def _lido_sessions(url: str, start: dt.date, end: dt.date) -> list[str]:
         tab_date = _parse_lido_tab_date(label, today)
         if tab_date is None or tab_date < start or tab_date > end:
             continue
-        # 用星期几作为统一标签
-        day_label = tab_date.strftime("%A")  # Monday, Tuesday, ...
+        # 用 "3/24 Monday" 格式作为统一标签
+        day_label = _day_label(tab_date)
         times = [s.get_text(strip=True) for s in ul.find_all("span", class_="Time")]
         if times:
             result.append(f"{day_label}: {', '.join(times)}")
@@ -162,12 +168,12 @@ def _parse_lido_tab_date(label: str, today: dt.date) -> Optional[dt.date]:
     if label == "Tomorrow":
         return today + dt.timedelta(days=1)
     # 纯星期名: "Sunday", "Monday", ...
+    # Lido 的 tabs 指的是从今天开始最近的那个星期几
     weekdays = {"monday":0,"tuesday":1,"wednesday":2,"thursday":3,"friday":4,"saturday":5,"sunday":6}
     if label.lower() in weekdays:
         target_wd = weekdays[label.lower()]
         delta = (target_wd - today.weekday()) % 7
-        if delta == 0:
-            delta = 7  # 下周同一天
+        # delta=0 表示今天，不跳到下周
         return today + dt.timedelta(days=delta)
     # "Tue 31 Mar", "Fri 10 Apr", "Sat 19 Dec" 等
     m = re.match(r'[A-Za-z]+\s+(\d+)\s+([A-Za-z]+)', label)
@@ -190,6 +196,21 @@ def _parse_lido_tab_date(label: str, today: dt.date) -> Optional[dt.date]:
     return None
 
 # ───────── Cinema Nova ─────────
+def _nova_date_to_label(text: str) -> str:
+    """将 Nova 的日期文本转为统一格式。
+    'Monday, 23rd March' → '3/23 Monday'
+    'Friday, 20th March' → '3/20 Friday'
+    """
+    m = re.match(r'(\w+),?\s+(\d+)\w*\s+(\w+)', text.strip())
+    if m:
+        weekday, day_num, month_str = m.group(1), int(m.group(2)), m.group(3)
+        months = {"january":1,"february":2,"march":3,"april":4,"may":5,"june":6,
+                  "july":7,"august":8,"september":9,"october":10,"november":11,"december":12}
+        month = months.get(month_str.lower())
+        if month:
+            return f"{month}/{day_num} {weekday}"
+    return text
+
 def scrape_nova(start: dt.date, end: dt.date) -> list[Film]:
     log.info("Nova: 抓取 /films-now-showing")
     try:
@@ -217,7 +238,9 @@ def scrape_nova(start: dt.date, end: dt.date) -> list[Film]:
                 if hasattr(sib, 'find_all'):
                     times.extend(s.get_text(strip=True) for s in sib.find_all("a", class_="showtime"))
                 sib = sib.find_next_sibling()
-            sessions.append(f"{date_text}: {', '.join(times)}" if times else date_text)
+            # 转换日期标签: "Monday, 23rd March" → "3/23 Monday"
+            label = _nova_date_to_label(date_text)
+            sessions.append(f"{label}: {', '.join(times)}" if times else label)
 
         if title not in films:
             films[title] = Film(title=title, cinema="Cinema Nova", url=full_url, sessions=sessions)
@@ -271,32 +294,66 @@ def _title_similar(q: str, c: str) -> bool:
     return len(qw & cw)/len(qw) >= 0.6 and len(qw & cw)/len(cw) >= 0.4
 
 # ── 豆瓣 ──
-def search_douban(title: str) -> tuple[Optional[float], str, str]:
-    """返回 (score, douban_url, title_cn)"""
+def search_douban(title: str) -> tuple[Optional[float], str, str, str]:
+    """返回 (score, douban_url, title_cn, hot_comment)
+    策略: suggest API (轻量, 拿ID+中文名) → 搜索页 (拿评分)
+    不访问详情页（403风险高），短评从搜索页拿不到则留空。
+    """
     clean = _search_title(title)
     title_cn = ""
-    # suggest API: 获取中文片名 + ID
+    douban_url = ""
+    score = None
+    hot_comment = ""
+
+    # Step1: suggest API — 获取中文片名 + douban ID (轻量接口, 成功率高)
     try:
-        resp = SESSION.get("https://movie.douban.com/j/subject_suggest", params={"q": clean}, timeout=8)
+        resp = SESSION.get("https://movie.douban.com/j/subject_suggest",
+                           params={"q": clean}, timeout=8)
         if resp.status_code == 200:
             for item in (resp.json() or []):
                 if item.get("type") == "movie":
                     title_cn = item.get("title", "")
+                    did = item.get("id", "")
+                    if did:
+                        douban_url = f"https://movie.douban.com/subject/{did}/"
                     break
     except Exception:
         pass
-    # 搜索页面: 获取评分
+
+    # Step2: 搜索页 — 获取评分 (比详情页稳定)
     try:
-        resp = SESSION.get("https://www.douban.com/search", params={"q": clean, "cat": "1002"}, timeout=10)
+        resp = SESSION.get("https://www.douban.com/search",
+                           params={"q": clean, "cat": "1002"}, timeout=10)
         if resp.status_code == 200:
             soup = BeautifulSoup(resp.text, "html.parser")
             rating = soup.find("span", class_="rating_nums")
             if rating and (txt := rating.get_text(strip=True)):
+                score = float(txt)
+            # 如果 suggest 没拿到 url，从搜索页补
+            if not douban_url:
                 link = soup.find("a", href=re.compile(r"movie\.douban\.com/subject/\d+"))
-                return float(txt), (link["href"] if link else ""), title_cn
+                if link:
+                    douban_url = link["href"]
     except Exception:
         pass
-    return None, "", title_cn
+
+    # Step3: 如果有 url 且搜索页拿不到评分，尝试详情页 (最后手段)
+    if score is None and douban_url:
+        try:
+            resp = SESSION.get(douban_url, timeout=10)
+            if resp.status_code == 200:
+                soup = BeautifulSoup(resp.text, "html.parser")
+                se = soup.find("strong", class_="ll rating_num")
+                if se and (t := se.get_text(strip=True)):
+                    score = float(t)
+                # 顺便拿短评
+                ce = soup.find("span", class_="short")
+                if ce:
+                    hot_comment = ce.get_text(strip=True)[:120]
+        except Exception:
+            pass
+
+    return score, douban_url, title_cn, hot_comment
 
 # ── 烂番茄 ──
 def search_rotten_tomatoes(title: str) -> tuple[Optional[int], str, str, str]:
@@ -359,14 +416,8 @@ def _fetch_rt_detail(url: str) -> dict:
         pass
     return {}
 
-def _query_ratings(film: Film) -> Film:
-    """查询一部电影的评分 + 事实信息 (用于线程池)"""
-    # 豆瓣: 评分 + 中文名
-    try:
-        film.douban_score, film.douban_url, film.title_cn = search_douban(film.title)
-    except Exception:
-        pass
-    # 烂番茄: 评分 + 演员 + 年份
+def _query_rt(film: Film) -> Film:
+    """查询烂番茄评分 + 导演/类型/海报 (用于线程池并行)"""
     try:
         film.rt_score, film.rt_url, cast, year = search_rotten_tomatoes(film.title)
         if cast and not film.cast:
@@ -375,7 +426,6 @@ def _query_ratings(film: Film) -> Film:
             film.year = year
     except Exception:
         pass
-    # RT 详情页: 导演/类型/海报 (只为有 rt_url 的电影获取)
     if film.rt_url:
         try:
             detail = _fetch_rt_detail(film.rt_url)
@@ -385,6 +435,62 @@ def _query_ratings(film: Film) -> Film:
         except Exception:
             pass
     return film
+
+def _query_douban_serial(films: list[Film]) -> None:
+    """串行查询豆瓣评分，带本地缓存避免重复请求"""
+    # 加载缓存
+    cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".douban_cache.json")
+    cache: dict = {}
+    try:
+        with open(cache_path, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
+    queried = 0
+    for i, film in enumerate(films):
+        key = _dedup_key(film.title)
+        # 从缓存读取
+        if key in cache:
+            c = cache[key]
+            film.douban_score = c.get("score")
+            film.douban_url = c.get("url", "")
+            film.title_cn = c.get("title_cn", "") or film.title_cn
+            film.hot_comment = c.get("hot_comment", "")
+            log.info("  豆瓣 [%d/%d] %s → 缓存 %s", i+1, len(films), film.title,
+                     f"✓ {film.douban_score}" if film.douban_score else "✗")
+            continue
+
+        log.info("  豆瓣 [%d/%d] %s", i+1, len(films), film.title)
+        try:
+            film.douban_score, film.douban_url, film.title_cn, film.hot_comment = search_douban(film.title)
+            status = f"✓ {film.douban_score}" if film.douban_score else "✗ 无评分"
+            if film.title_cn:
+                status += f" ({film.title_cn})"
+            log.info("    %s", status)
+        except Exception as e:
+            log.warning("    豆瓣失败: %s", e)
+
+        # 写入缓存 (即使没评分也缓存, 但只缓存有 url 的)
+        if film.douban_url or film.douban_score or film.title_cn:
+            cache[key] = {
+                "score": film.douban_score,
+                "url": film.douban_url,
+                "title_cn": film.title_cn,
+                "hot_comment": film.hot_comment,
+            }
+
+        queried += 1
+        time.sleep(2.5)  # 间隔 2.5 秒避免豆瓣反爬
+
+    # 保存缓存
+    if queried > 0:
+        try:
+            with open(cache_path, "w", encoding="utf-8") as f:
+                json.dump(cache, f, ensure_ascii=False, indent=2)
+            log.info("  豆瓣缓存已保存 (%d 条)", len(cache))
+        except Exception:
+            pass
 
 
 # ═══════════════════════════════════════
@@ -490,15 +596,31 @@ def _template_recommendation(film: Film) -> str:
     return f"🎬 {'、'.join(parts)}，推荐观看！" if parts else f"🎬 正在热映，值得关注！"
 
 def _display_title(f: Film) -> str:
-    """生成显示标题: 中文名 英文名 (年份)"""
+    """生成显示标题: 中文名 英文名 (年份)
+    - 如果 title 已含年份如 '12 Monkeys (1995)', 先去掉再统一添加
+    - 只有官方中文译名才展示，否则只展示英文名
+    """
+    # 从 title 中提取并移除年份
+    base_title = re.sub(r'\s*\(\d{4}\)\s*', '', f.title).strip()
+    # 也移除 (Dubbed) 等后缀
+    base_title = re.sub(r'\s*\(Dubbed\)\s*', '', base_title, flags=re.I).strip()
+
     parts = []
-    if f.title_cn and f.title_cn != f.title:
+    if f.title_cn and f.title_cn != base_title:
         parts.append(f.title_cn)
-    parts.append(f.title)
-    base = " ".join(parts)
-    if f.year:
-        base += f" ({f.year})"
-    return base
+    parts.append(base_title)
+    result = " ".join(parts)
+
+    # 统一添加年份
+    year = f.year or ""
+    if not year:
+        # 从原始 title 提取
+        m = re.search(r'\((\d{4})\)', f.title)
+        if m:
+            year = m.group(1)
+    if year:
+        result += f" ({year})"
+    return result
 
 
 # ═══════════════════════════════════════
@@ -511,10 +633,10 @@ def _is_movie(f: Film) -> bool:
     return not any(kw in f.title.lower() for kw in _NON_MOVIE)
 
 def is_high_rated(f: Film) -> bool:
-    """豆瓣 ≥ 7.5 或 烂番茄 ≥ 80%"""
+    """豆瓣 ≥ 7.5 或 烂番茄 ≥ 85%"""
     if (f.douban_score or 0) >= 7.5:
         return True
-    if (f.rt_score or 0) >= 80:
+    if (f.rt_score or 0) >= 85:
         return True
     return False
 
@@ -530,10 +652,16 @@ def _sort_score(f: Film) -> float:
     else:
         return -(r * 0.6)   # 只有 RT，权重更低
 
+def _dedup_key(title: str) -> str:
+    """生成去重用的 key: 去除年份、(Dubbed)、标点，统一小写"""
+    t = _search_title(title)
+    t = re.sub(r'\bdubbed\b', '', t, flags=re.I)
+    return re.sub(r'\s+', ' ', t).strip().lower()
+
 def deduplicate(films: list[Film]) -> list[Film]:
     merged: dict[str, Film] = {}
     for f in films:
-        key = _search_title(f.title).lower()
+        key = _dedup_key(f.title)
         if key in merged:
             ex = merged[key]
             if f.cinema not in ex.cinema:
@@ -559,7 +687,7 @@ def generate_report(films: list[Film], start: dt.date, end: dt.date) -> str:
     lines = [
         "# 🎬 墨尔本电影周报 — 本周值得看",
         f"**{start.strftime('%Y.%m.%d')}–{end.strftime('%Y.%m.%d')}**\n",
-        f"筛选: 豆瓣 ≥ 7.5 或 🍅 ≥ 80% | 来源: Lido · Nova · ACMI | {dt.datetime.now().strftime('%m-%d %H:%M')}\n",
+        f"筛选: 豆瓣 ≥ 7.5 或 🍅 ≥ 85% | 来源: Lido · Nova · ACMI | {dt.datetime.now().strftime('%m-%d %H:%M')}\n",
         "---\n",
     ]
     if not rec:
@@ -581,6 +709,8 @@ def generate_report(films: list[Film], start: dt.date, end: dt.date) -> str:
             lines.append(f"📖 {f.synopsis}\n")
         if f.recommendation:
             lines.append(f"> {f.recommendation}\n")
+        if f.hot_comment:
+            lines.append(f'> 🗣 豆瓣热评: "{f.hot_comment}"\n')
         lines.append(f"**🎟️ 排片** — {f.cinema}")
         if f.sessions:
             lines.extend(f"- {s}" for s in f.sessions)
@@ -605,17 +735,23 @@ def generate_html(films: list[Film], start: dt.date, end: dt.date) -> str:
 
     # 提取所有影院和日期用于筛选器
     all_cinemas = sorted(set(c.strip() for f in rec for c in f.cinema.split("/")))
-    all_days = []
+
+    # 按日期排序 day tabs: "3/23 Monday" → 提取月/日排序
+    _weekday_order = {"Monday":0,"Tuesday":1,"Wednesday":2,"Thursday":3,"Friday":4,"Saturday":5,"Sunday":6}
     day_set = set()
     for f in rec:
         for s in f.sessions:
-            # 从 "[Lido Cinemas] Today: 3:00 pm" 或 "[Cinema Nova] Monday, 23rd March" 提取日期标签
             m = re.match(r'\[[^\]]+\]\s*([^:]+)', s)
             if m:
-                day = m.group(1).strip().split(",")[0].strip()  # "Today" / "Monday" / "Friday"
-                if day not in day_set:
-                    day_set.add(day)
-                    all_days.append(day)
+                day = m.group(1).strip().split(",")[0].strip()
+                day_set.add(day)
+    def _day_sort_key(d: str) -> tuple:
+        # "3/24 Monday" → (3, 24)
+        m = re.match(r'(\d+)/(\d+)', d)
+        if m:
+            return (int(m.group(1)), int(m.group(2)))
+        return (99, _weekday_order.get(d, 99))
+    all_days = sorted(day_set, key=_day_sort_key)
 
     # 生成筛选按钮 HTML
     cinema_btns = ''.join(f'<button class="fb" data-filter-cinema="{_esc(c)}">{_esc(c)}</button>' for c in all_cinemas)
@@ -654,6 +790,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 .meta{{font-size:.84em;color:var(--t2);margin:4px 0 8px}}.meta b{{color:var(--t);font-weight:600}}
 .syn{{color:var(--t2);font-size:.9em;margin:8px 0;padding:9px 13px;border-left:3px solid var(--acc);background:rgba(230,200,76,.04);border-radius:0 6px 6px 0}}
 .rec{{font-size:.9em;margin:8px 0;padding:9px 13px;background:rgba(255,255,255,.03);border-radius:6px;font-style:italic}}
+.hc{{font-size:.83em;color:var(--t2);margin:6px 0;padding:8px 12px;border-left:2px solid var(--g);background:rgba(103,194,58,.04);border-radius:0 6px 6px 0}}.hc em{{color:var(--g);font-style:normal}}
 .ss{{margin:10px 0 4px}}.ss-t{{font-size:.83em;color:var(--acc);font-weight:600;margin-bottom:4px}}
 .ss ul{{list-style:none;padding:0}}.ss li{{font-size:.83em;color:var(--t2);padding:2px 0 2px 16px;position:relative}}
 .ss li::before{{content:"▸";position:absolute;left:0;color:var(--acc)}}
@@ -672,7 +809,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 </style></head><body>
 
 <div class="hd"><h1>🎬 墨尔本电影周报</h1>
-<div class="sub">{start.strftime('%Y年%m月%d日')} — {end.strftime('%Y年%m月%d日')} · 豆瓣 ≥ 7.5 / 🍅 ≥ 80%</div></div>
+<div class="sub">{start.strftime('%Y年%m月%d日')} — {end.strftime('%Y年%m月%d日')} · 豆瓣 ≥ 7.5 / 🍅 ≥ 85%</div></div>
 
 <div class="filters"><div class="filters-inner">
 <div class="fg"><div class="fg-label">🎬 影院</div><div class="fg-btns">
@@ -689,7 +826,14 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 <div class="no-results" id="no-results" style="display:none">没有符合筛选条件的电影</div>
 </div>
 
-<div class="ft">Lido Cinemas · Cinema Nova · ACMI · 豆瓣 · Rotten Tomatoes<br>{dt.datetime.now().strftime('%Y-%m-%d %H:%M')}</div>
+<div class="ft">
+  Lido Cinemas · Cinema Nova · ACMI · 豆瓣 · Rotten Tomatoes<br>
+  {dt.datetime.now().strftime('%Y-%m-%d %H:%M')}<br><br>
+  <span style="font-size:.9em;color:var(--acc)">Authored by Zifan Ni && Claude</span><br>
+  <a href="https://github.com/Zifanfan/MelborneCinemaInfo" target="_blank" style="color:var(--t2);text-decoration:none;font-size:.85em">
+    github.com/Zifanfan/MelborneCinemaInfo
+  </a>
+</div>
 
 <script>
 (function(){{
@@ -744,7 +888,10 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 def _html_card(f: Film, idx: int) -> str:
     title = _esc(_display_title(f))
     badges = ""
-    if f.douban_score: badges += f'<span class="bd bd-d">豆瓣 {f.douban_score}</span> '
+    if f.douban_score:
+        badges += f'<span class="bd bd-d">豆瓣 {f.douban_score}</span> '
+    else:
+        badges += '<span class="bd" style="background:#2a2a3e;color:var(--t2);border:1px solid var(--b)">豆瓣 暂无评分</span> '
     if f.rt_score is not None: badges += f'<span class="bd bd-r">🍅 {f.rt_score}%</span> '
 
     meta_parts = []
@@ -755,6 +902,7 @@ def _html_card(f: Film, idx: int) -> str:
 
     syn = f'<div class="syn">{_esc(f.synopsis)}</div>' if f.synopsis else ""
     rec = f'<div class="rec">💡 {_esc(f.recommendation)}</div>' if f.recommendation else ""
+    hc = f'<div class="hc"><em>🗣 豆瓣热评</em> "{_esc(f.hot_comment)}"</div>' if f.hot_comment else ""
 
     # 场次 + 提取日期/影院用于筛选
     sess_days = set()
@@ -799,7 +947,7 @@ def _html_card(f: Film, idx: int) -> str:
 <div class="fc-body">
 {poster_html}
 <div class="fc-info">
-{meta}{syn}{rec}{sess}{lnk}
+{meta}{syn}{rec}{hc}{sess}{lnk}
 </div>
 </div>
 </div>"""
@@ -824,27 +972,71 @@ def main():
     films = [f for f in deduplicate(all_films) if _is_movie(f)]
     log.info("📋 去重+过滤后 %d 部电影", len(films))
 
-    # ② 并行查询评分
-    log.info("📊 并行查询评分 (%d 部)...", len(films))
+    # ② 评分查询: RT 并行 → 豆瓣串行
+    log.info("📊 烂番茄并行查询 (%d 部)...", len(films))
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=6) as pool:
-        list(pool.map(_query_ratings, films))
-    log.info("📊 评分查询完成 (%.1fs)", time.time()-t0)
+        list(pool.map(_query_rt, films))
+    log.info("📊 烂番茄完成 (%.1fs)", time.time()-t0)
 
-    # ③ AI 丰富高分电影
+    log.info("📊 豆瓣串行查询 (%d 部, 避免反爬)...", len(films))
+    t0 = time.time()
+    _query_douban_serial(films)
+    log.info("📊 豆瓣完成 (%.1fs)", time.time()-t0)
+
+    # ③ AI 丰富高分电影 (带缓存)
     high = [f for f in films if is_high_rated(f)]
     log.info("💡 %d 部高分电影，AI enrichment...", len(high))
+
+    # 加载 AI 缓存
+    ai_cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".ai_cache.json")
+    ai_cache: dict = {}
+    try:
+        with open(ai_cache_path, "r", encoding="utf-8") as fp:
+            ai_cache = json.load(fp)
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
+    # 分出需要调用 AI 的 vs 走缓存的
+    need_ai = []
+    for f in high:
+        key = _dedup_key(f.title)
+        if key in ai_cache:
+            c = ai_cache[key]
+            f.synopsis = c.get("synopsis", "") or f.synopsis
+            f.recommendation = c.get("recommendation", "") or _template_recommendation(f)
+            log.info("  AI 缓存: %s", f.title)
+        else:
+            need_ai.append(f)
+
     client, model = _get_openai_client()
-    if client:
+    if need_ai and client:
+        log.info("  需要调用 AI: %d 部", len(need_ai))
         with ThreadPoolExecutor(max_workers=4) as pool:
-            futs = {pool.submit(enrich_with_ai, f, client, model): f for f in high}
+            futs = {pool.submit(enrich_with_ai, f, client, model): f for f in need_ai}
             for fut in as_completed(futs):
                 try: fut.result()
                 except Exception as e: log.warning("AI error: %s", e)
-    else:
+        # 写入缓存
+        for f in need_ai:
+            if f.synopsis or f.recommendation:
+                ai_cache[_dedup_key(f.title)] = {
+                    "synopsis": f.synopsis,
+                    "recommendation": f.recommendation,
+                }
+    elif need_ai:
         log.info("  (未配置 AI，使用模板推荐)")
-        for f in high:
+        for f in need_ai:
             f.recommendation = _template_recommendation(f)
+
+    # 保存 AI 缓存
+    if need_ai:
+        try:
+            with open(ai_cache_path, "w", encoding="utf-8") as fp:
+                json.dump(ai_cache, fp, ensure_ascii=False, indent=2)
+            log.info("  AI 缓存已保存 (%d 条)", len(ai_cache))
+        except Exception:
+            pass
 
     # ④ 输出
     base = os.path.dirname(os.path.abspath(__file__))
@@ -856,18 +1048,21 @@ def main():
     log.info("✅ Markdown: %s", md_path)
 
     html = generate_html(films, start, end)
-    html_path = os.path.join(base, f"report_{stamp}.html")
+    html_path = os.path.join(base, "index.html")
     with open(html_path, "w", encoding="utf-8") as fp: fp.write(html)
     log.info("✅ HTML: %s", html_path)
 
     print("\n" + "=" * 50)
-    print(md)
+    try:
+        print(md)
+    except UnicodeEncodeError:
+        print(md.encode("utf-8", errors="replace").decode("utf-8", errors="replace"))
     print("=" * 50)
 
     # JSON
     jd = [{"title":f.title,"title_cn":f.title_cn,"year":f.year,"cinema":f.cinema,"url":f.url,
            "sessions":f.sessions,"genre":f.genre,"director":f.director,"cast":f.cast,
-           "poster":f.poster,"synopsis":f.synopsis,
+           "poster":f.poster,"synopsis":f.synopsis,"hot_comment":f.hot_comment,
            "douban_score":f.douban_score,"douban_url":f.douban_url,
            "rt_score":f.rt_score,"rt_url":f.rt_url,"recommendation":f.recommendation} for f in films]
     jp = os.path.join(base, f"data_{stamp}.json")
