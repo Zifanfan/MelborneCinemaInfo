@@ -249,23 +249,85 @@ def scrape_nova(start: dt.date, end: dt.date) -> list[Film]:
     return list(films.values())
 
 # ───────── ACMI ─────────
+ACMI_API = "https://admin.acmi.net.au/api/v2/calendar"
+
 def scrape_acmi(start: dt.date, end: dt.date) -> list[Film]:
-    log.info("ACMI: 抓取排片")
+    """
+    通过 ACMI Wagtail API 获取影院排片。
+    API 返回所有 calendar 事件（含场次时间和场地），
+    我们筛选出 venue 包含 "Cinema" 且在日期范围内的放映。
+    排除 Online/线上放映。
+    """
+    log.info("ACMI: 通过 API 抓取排片")
+    films_dict: dict[str, Film] = {}
+
     try:
-        text = _get(f"{ACMI_BASE}/whats-on/").text
-    except RuntimeError:
-        return []
-    decoded = text.replace("\\u002F", "/")
-    films = []
-    seen = set()
-    for slug in dict.fromkeys(re.findall(r'/whats-on/(in-cinemas-[a-z0-9-]+)/', decoded)):
-        if slug in seen:
-            continue
-        seen.add(slug)
-        name = re.sub(r'-with-live-score.*|-live-score.*', '', slug.replace("in-cinemas-","",1))
-        films.append(Film(title=name.replace("-"," ").title(), cinema="ACMI", url=f"{ACMI_BASE}/whats-on/{slug}/"))
-    log.info("ACMI: %d 部电影", len(films))
-    return films
+        # 分页获取所有 calendar items
+        all_items = []
+        offset = 0
+        while True:
+            resp = _get(f"{ACMI_API}/?fields=event(title,url)&limit=100&offset={offset}")
+            data = resp.json()
+            items = data.get("items", [])
+            all_items.extend(items)
+            total = data.get("meta", {}).get("total_count", 0)
+            offset += len(items)
+            if offset >= total or not items:
+                break
+
+        # 筛选: venue 包含 "Cinema" 且不含 "Online"，日期在 start~end 范围内
+        for item in all_items:
+            venue = item.get("venue", "")
+            if "cinema" not in venue.lower() or "online" in venue.lower():
+                continue
+
+            start_dt_str = item.get("start_datetime", "")
+            if not start_dt_str:
+                continue
+            # 解析日期 "2026-03-23T18:30:00+11:00"
+            try:
+                item_date = dt.date.fromisoformat(start_dt_str[:10])
+            except ValueError:
+                continue
+            if item_date < start or item_date > end:
+                continue
+
+            ev = item.get("event", {})
+            title = ev.get("title", "")
+            url_path = ev.get("url", "")
+            if not title:
+                continue
+
+            full_url = f"{ACMI_BASE}{url_path}" if url_path.startswith("/") else url_path
+            time_str = start_dt_str[11:16]  # "18:30"
+            # 转换为 12 小时制
+            try:
+                h, m = int(time_str[:2]), int(time_str[3:5])
+                ampm = "am" if h < 12 else "pm"
+                h12 = h if 1 <= h <= 12 else (h - 12 if h > 12 else 12)
+                time_12 = f"{h12}:{m:02d} {ampm}"
+            except ValueError:
+                time_12 = time_str
+
+            day_label = _day_label(item_date)
+
+            if title not in films_dict:
+                films_dict[title] = Film(title=title, cinema="ACMI", url=full_url, sessions=[])
+
+            # 添加场次 (格式与 Lido 一致)
+            session_str = f"{day_label}: {time_12}"
+            if session_str not in films_dict[title].sessions:
+                films_dict[title].sessions.append(session_str)
+
+    except Exception as exc:
+        log.warning("ACMI API 失败: %s", exc)
+
+    # 按日期排序场次
+    for f in films_dict.values():
+        f.sessions.sort()
+
+    log.info("ACMI: %d 部电影 (本周影院放映)", len(films_dict))
+    return list(films_dict.values())
 
 
 # ═══════════════════════════════════════
