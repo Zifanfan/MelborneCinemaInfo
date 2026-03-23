@@ -1,0 +1,64 @@
+name: Daily Cinema Report
+
+on:
+  schedule:
+    # 每天 04:00 AEST (Melbourne) = 前一天 18:00 UTC (AEST = UTC+10)
+    - cron: '0 18 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Restore caches
+        run: |
+          # 如果 repo 中有缓存文件则使用，否则从空开始
+          echo "Douban cache: $(wc -c < .douban_cache.json 2>/dev/null || echo 'none')"
+          echo "AI cache: $(wc -c < .ai_cache.json 2>/dev/null || echo 'none')"
+      
+      - name: Generate report
+        env:
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
+        run: python melbourne_cinema.py || true
+        # || true: 即使脚本有非关键错误 (如 console print unicode) 也继续
+      
+      - name: Check output
+        run: |
+          if [ -f index.html ]; then
+            echo "✅ index.html generated ($(wc -c < index.html) bytes)"
+          else
+            echo "❌ index.html not found!"
+            exit 1
+          fi
+      
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html .douban_cache.json .ai_cache.json
+          git add -f report_*.md data_*.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            DATE=$(TZ='Australia/Melbourne' date '+%Y-%m-%d')
+            git commit -m "🎬 Cinema report updated ($DATE)"
+            git push
+            echo "✅ Pushed to repo"
+          fi

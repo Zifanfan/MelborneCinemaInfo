@@ -55,12 +55,14 @@
 
 ## 🚀 使用方法
 
-### 1. 安装依赖
+### 本地运行
+
+#### 1. 安装依赖
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. 配置 AI（可选）
+#### 2. 配置 AI（可选）
 
 在 `.env` 中配置以下任一方式：
 
@@ -80,28 +82,48 @@ OPENAI_BASE_URL=https://api.deepseek.com/v1
 
 不配置 AI 也能正常运行，会使用模板推荐语。
 
-### 3. 运行
+#### 3. 运行
 ```bash
 python melbourne_cinema.py
 ```
 
-### 4. 输出
+#### 4. 输出
 - `index.html` — 精美的静态网页报告（可直接打开或部署）
 - `report_YYYYMMDD.md` — Markdown 格式报告
 - `data_YYYYMMDD.json` — 原始数据 JSON
 
+### GitHub Pages 自动部署
+
+项目内置 GitHub Actions，每周一墨尔本时间 02:00 自动生成报告并部署到 GitHub Pages。
+
+**配置步骤：**
+
+1. 在 GitHub 仓库 → **Settings → Secrets and variables → Actions** 中添加：
+   - `AZURE_OPENAI_API_KEY` — Azure OpenAI API Key
+   - `AZURE_OPENAI_ENDPOINT` — Azure OpenAI Endpoint URL
+   - `AZURE_OPENAI_DEPLOYMENT` — 模型部署名（如 `gpt-4.1`）
+
+2. 在 **Settings → Pages** 中：
+   - Source: Deploy from a branch
+   - Branch: `main` / `/ (root)`
+
+3. 也可在 **Actions** 页面手动触发 `workflow_dispatch` 立即生成
+
 ## 📁 项目结构
 
 ```
-├── melbourne_cinema.py     # 主脚本
-├── index.html              # 生成的 HTML 报告
-├── requirements.txt        # Python 依赖
-├── .env                    # AI 配置 (不提交)
-├── .env.example            # 配置模板
-├── .douban_cache.json      # 豆瓣评分缓存
-├── .ai_cache.json          # AI 推荐语缓存
-├── report_YYYYMMDD.md      # Markdown 报告
-└── data_YYYYMMDD.json      # 原始数据
+├── melbourne_cinema.py         # 主脚本
+├── fill_douban_cache.py        # 豆瓣缓存手动补充工具
+├── index.html                  # 生成的 HTML 报告 (GitHub Pages)
+├── requirements.txt            # Python 依赖
+├── .env                        # AI 配置 (不提交)
+├── .env.example                # 配置模板
+├── .douban_cache.json          # 豆瓣评分缓存
+├── .ai_cache.json              # AI 推荐语缓存
+├── .github/workflows/
+│   └── weekly-report.yml       # GitHub Actions 自动部署
+├── report_YYYYMMDD.md          # Markdown 报告
+└── data_YYYYMMDD.json          # 原始数据
 ```
 
 ## 👥 作者

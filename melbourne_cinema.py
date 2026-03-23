@@ -885,12 +885,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 .lk{{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}}
 .lk a{{font-size:.73em;color:var(--acc);text-decoration:none;padding:2px 10px;border:1px solid var(--b);border-radius:6px;transition:all .2s}}
 .lk a:hover{{background:var(--acc);color:var(--bg)}}
-.fc-body{{display:flex;gap:14px}}
-.fc-poster{{flex-shrink:0;width:88px}}
-.fc-poster img{{width:88px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}}
+.fc-body{{display:flex;gap:16px}}
+.fc-poster{{flex-shrink:0;width:130px}}
+.fc-poster img{{width:130px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}}
 .fc-info{{flex:1;min-width:0}}
 .no-results{{text-align:center;color:var(--t2);padding:32px 20px;font-size:.88em}}
-@media(max-width:500px){{.fc-poster{{width:64px}}.fc-poster img{{width:64px}}.fc{{padding:14px 16px}}}}
+@media(max-width:500px){{.fc-poster{{width:90px}}.fc-poster img{{width:90px}}.fc{{padding:14px 16px}}}}
 .ft{{text-align:center;color:var(--t2);font-size:.73em;padding:24px 20px;border-top:1px solid var(--b)}}
 </style></head><body>
 
