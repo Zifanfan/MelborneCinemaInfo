@@ -1167,34 +1167,11 @@ def main():
 
     # ④ 输出
     base = os.path.dirname(os.path.abspath(__file__))
-    stamp = dt.date.today().strftime('%Y%m%d')
-
-    md = generate_report(films, start, end)
-    md_path = os.path.join(base, f"report_{stamp}.md")
-    with open(md_path, "w", encoding="utf-8") as fp: fp.write(md)
-    log.info("✅ Markdown: %s", md_path)
 
     html = generate_html(films, start, end)
     html_path = os.path.join(base, "index.html")
     with open(html_path, "w", encoding="utf-8") as fp: fp.write(html)
     log.info("✅ HTML: %s", html_path)
-
-    print("\n" + "=" * 50)
-    try:
-        print(md)
-    except UnicodeEncodeError:
-        print(md.encode("utf-8", errors="replace").decode("utf-8", errors="replace"))
-    print("=" * 50)
-
-    # JSON
-    jd = [{"title":f.title,"title_cn":f.title_cn,"year":f.year,"cinema":f.cinema,"url":f.url,
-           "sessions":f.sessions,"genre":f.genre,"director":f.director,"cast":f.cast,
-           "poster":f.poster,"duration":f.duration,"synopsis":f.synopsis,"hot_comment":f.hot_comment,"awards":f.awards,
-           "douban_score":f.douban_score,"douban_url":f.douban_url,
-           "rt_score":f.rt_score,"rt_url":f.rt_url,"recommendation":f.recommendation} for f in films]
-    jp = os.path.join(base, f"data_{stamp}.json")
-    with open(jp, "w", encoding="utf-8") as fp: json.dump(jd, fp, ensure_ascii=False, indent=2)
-    log.info("📦 JSON: %s", jp)
 
 
 if __name__ == "__main__":
