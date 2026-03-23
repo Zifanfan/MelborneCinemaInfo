@@ -45,9 +45,11 @@ class Film:
     director: str = ""
     cast: str = ""
     poster: str = ""           # 海报 URL
+    duration: str = ""         # 时长 (如 "2h 10m")
     synopsis: str = ""
-    recommendation: str = ""
-    hot_comment: str = ""     # 豆瓣最热短评
+    recommendation: str = ""   # 影片亮点/看点
+    awards: str = ""           # 电影节获奖信息
+    hot_comment: str = ""      # 豆瓣最热短评
 
 
 # ─────────────── HTTP ───────────────
@@ -229,18 +231,28 @@ def scrape_nova(start: dt.date, end: dt.date) -> list[Film]:
         full_url = href if href.startswith("http") else NOVA_BASE + href
 
         sessions = []
-        for dd in panel.find_all("div", class_="start-times-date"):
-            date_text = dd.get_text(strip=True)
-            times, sib = [], dd.find_next_sibling()
-            while sib:
-                if sib.name == "div" and "start-times-date" in (sib.get("class") or []):
-                    break
-                if hasattr(sib, 'find_all'):
-                    times.extend(s.get_text(strip=True) for s in sib.find_all("a", class_="showtime"))
-                sib = sib.find_next_sibling()
-            # 转换日期标签: "Monday, 23rd March" → "3/23 Monday"
-            label = _nova_date_to_label(date_text)
-            sessions.append(f"{label}: {', '.join(times)}" if times else label)
+        # Nova 的场次结构: show-times > start-times > col-xs-12 > start-times-date / start-times-time
+        st_div = panel.find("div", class_="show-times")
+        if st_div:
+            for dd in st_div.find_all("div", class_="start-times-date"):
+                date_text = dd.get_text(strip=True)
+                label = _nova_date_to_label(date_text)
+                # 从整个 start-times 容器中找同组的时间
+                parent_start_times = dd.find_parent("div", class_="start-times")
+                times = []
+                if parent_start_times:
+                    for time_div in parent_start_times.find_all("div", class_="start-times-time"):
+                        for a in time_div.find_all("a", class_="showtime"):
+                            t = a.find("p")
+                            if t:
+                                time_text = t.get_text(strip=True)
+                                if re.match(r'\d{1,2}:\d{2}', time_text):
+                                    # 转为12小时制
+                                    h, m = int(time_text[:2]), int(time_text[3:5])
+                                    ampm = "am" if h < 12 else "pm"
+                                    h12 = h if 1 <= h <= 12 else (h - 12 if h > 12 else 12)
+                                    times.append(f"{h12}:{m:02d} {ampm}")
+                sessions.append(f"{label}: {', '.join(times)}" if times else label)
 
         if title not in films:
             films[title] = Film(title=title, cinema="Cinema Nova", url=full_url, sessions=sessions)
@@ -470,6 +482,15 @@ def _fetch_rt_detail(url: str) -> dict:
                     # 如果没有 og:image，用 JSON-LD 的 image
                     if "poster" not in result and data.get("image"):
                         result["poster"] = data["image"]
+                    # 时长: "PT2H10M" → "2h 10m"
+                    dur = data.get("duration", "")
+                    if dur:
+                        dm = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?', dur)
+                        if dm:
+                            parts = []
+                            if dm.group(1): parts.append(f"{dm.group(1)}h")
+                            if dm.group(2): parts.append(f"{dm.group(2)}m")
+                            result["duration"] = " ".join(parts)
                     break
             except (json.JSONDecodeError, KeyError):
                 continue
@@ -494,6 +515,7 @@ def _query_rt(film: Film) -> Film:
             if detail.get("director"): film.director = detail["director"]
             if detail.get("genre"): film.genre = detail["genre"]
             if detail.get("poster"): film.poster = detail["poster"]
+            if detail.get("duration"): film.duration = detail["duration"]
         except Exception:
             pass
     return film
@@ -602,12 +624,11 @@ def _get_openai_client():
 
 
 def enrich_with_ai(film: Film, client, model: str) -> Film:
-    """用 AI 生成剧情简介 + 推荐语 (导演/类型/演员已从 RT 获取)"""
+    """用 AI 生成剧情简介 + 影片亮点 + 获奖信息"""
     if not client:
         film.recommendation = _template_recommendation(film)
         return film
 
-    # 构建已知信息
     info_parts = []
     if film.genre: info_parts.append(f"类型: {film.genre}")
     if film.director: info_parts.append(f"导演: {film.director}")
@@ -617,29 +638,31 @@ def enrich_with_ai(film: Film, client, model: str) -> Film:
     if film.rt_score is not None: scores.append(f"烂番茄 {film.rt_score}%")
     if scores: info_parts.append(f"评分: {', '.join(scores)}")
 
-    prompt = f"""你是一位资深电影评论人。请根据以下电影信息，用中文写剧情简介和推荐理由。
+    prompt = f"""你是一位资深电影评论人和选片顾问。请根据以下电影信息，帮助观众快速判断是否值得去影院观看。
 
 电影名: {film.title} ({film.year or '未知年份'})
 {chr(10).join(info_parts) if info_parts else '暂无更多信息'}
 
 请严格按以下 JSON 格式回复，不要多余文字:
 {{
-  "synopsis": "剧情简介，50-80字，概括核心故事线，不要剧透结局",
-  "recommendation": "观影推荐理由，80-120字，需包含: 这部电影的独特亮点、适合什么样的观众、为什么值得去影院看。语气热情但不浮夸"
+  "synopsis": "剧情简介，50-80字，概括主角困境和核心冲突，不剧透。如果是续集/系列作品请注明（如'《28天后》系列第三部'）",
+  "highlights": "影片核心看点，100-150字。用▸分隔2-3个最突出的看点（不要凑数），只写最有信息量的内容。可以涉及: 导演独特手法/演员突破表演/获奖加持/视听语言创新/系列关联/文化意义等。避免'值得一看''不容错过'等空话。每个▸后直接写内容，不需要小标题。",
+  "awards": "电影节获奖/提名，如'2023戛纳金棕榈提名'。无则留空字符串"
 }}"""
 
     try:
         resp = client.chat.completions.create(
             model=model,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=400, temperature=0.7,
+            max_tokens=600, temperature=0.7,
         )
         text = resp.choices[0].message.content.strip()
         m = re.search(r'\{.*\}', text, re.DOTALL)
         if m:
             data = json.loads(m.group())
             film.synopsis = data.get("synopsis", "") or film.synopsis
-            film.recommendation = data.get("recommendation", "") or _template_recommendation(film)
+            film.recommendation = data.get("highlights", "") or _template_recommendation(film)
+            film.awards = data.get("awards", "") or ""
             return film
     except Exception as exc:
         log.warning("  AI 失败 (%s): %s", film.title, exc)
@@ -828,46 +851,47 @@ def generate_html(films: list[Film], start: dt.date, end: dt.date) -> str:
 <style>
 :root{{--bg:#0f0f0f;--card:#1a1a2e;--ch:#22223a;--acc:#e6c84c;--t:#e0e0e0;--t2:#999;--g:#67c23a;--r:#fa5252;--b:#2a2a3e}}
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.7;padding-bottom:60px}}
-.hd{{text-align:center;padding:48px 20px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-bottom:1px solid var(--b)}}
-.hd h1{{font-size:2em;color:var(--acc);margin-bottom:6px;letter-spacing:2px}}.hd .sub{{color:var(--t2);font-size:.92em}}
-.filters{{background:#141425;border-bottom:1px solid var(--b);padding:16px 20px;position:sticky;top:0;z-index:10}}
-.filters-inner{{max-width:820px;margin:0 auto}}
-.fg{{margin-bottom:10px}}.fg:last-child{{margin-bottom:0}}
-.fg-label{{font-size:.78em;color:var(--t2);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:1px}}
-.fg-btns{{display:flex;flex-wrap:wrap;gap:6px}}
-.fb{{font-size:.78em;padding:4px 14px;border-radius:999px;border:1px solid var(--b);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s;font-family:inherit}}
+body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.6;padding-bottom:60px;font-size:14px}}
+.hd{{text-align:center;padding:36px 20px 16px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-bottom:1px solid var(--b)}}
+.hd h1{{font-size:1.6em;color:var(--acc);margin-bottom:4px;letter-spacing:2px}}.hd .sub{{color:var(--t2);font-size:.85em}}
+.filters{{background:#141425;border-bottom:1px solid var(--b);padding:12px 20px;position:sticky;top:0;z-index:10}}
+.filters-inner{{max-width:800px;margin:0 auto}}
+.fg{{margin-bottom:8px}}.fg:last-child{{margin-bottom:0}}
+.fg-label{{font-size:.72em;color:var(--t2);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:1px}}
+.fg-btns{{display:flex;flex-wrap:wrap;gap:5px}}
+.fb{{font-size:.72em;padding:3px 12px;border-radius:999px;border:1px solid var(--b);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s;font-family:inherit}}
 .fb:hover{{border-color:var(--acc);color:var(--acc)}}
 .fb.active{{background:var(--acc);color:var(--bg);border-color:var(--acc);font-weight:600}}
-.ct{{max-width:820px;margin:0 auto;padding:20px 16px}}.stat{{text-align:center;color:var(--t2);font-size:.9em;margin:8px 0 20px}}
-.fc{{background:var(--card);border:1px solid var(--b);border-radius:12px;padding:22px 26px;margin-bottom:18px;transition:all .25s}}
+.ct{{max-width:800px;margin:0 auto;padding:16px 14px}}.stat{{text-align:center;color:var(--t2);font-size:.84em;margin:6px 0 16px}}
+.fc{{background:var(--card);border:1px solid var(--b);border-radius:10px;padding:18px 22px;margin-bottom:14px;transition:all .25s}}
 .fc:hover{{background:var(--ch)}}
 .fc.hidden{{display:none}}
-.fh{{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}}
-.rk{{color:var(--acc);font-weight:700;font-size:1.35em;min-width:26px}}
-.tt{{font-size:1.2em;font-weight:700;color:#fff}}
-.bd{{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.76em;font-weight:600}}
+.fh{{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:4px}}
+.rk{{color:var(--acc);font-weight:700;font-size:1.15em;min-width:22px}}
+.tt{{font-size:1.05em;font-weight:700;color:#fff}}
+.bd{{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.7em;font-weight:600}}
 .bd-d{{background:#1a3a1a;color:var(--g);border:1px solid #2d5a2d}}
 .bd-r{{background:#3a1a1a;color:var(--r);border:1px solid #5a2d2d}}
-.meta{{font-size:.84em;color:var(--t2);margin:4px 0 8px}}.meta b{{color:var(--t);font-weight:600}}
-.syn{{color:var(--t2);font-size:.9em;margin:8px 0;padding:9px 13px;border-left:3px solid var(--acc);background:rgba(230,200,76,.04);border-radius:0 6px 6px 0}}
-.rec{{font-size:.9em;margin:8px 0;padding:9px 13px;background:rgba(255,255,255,.03);border-radius:6px;font-style:italic}}
-.hc{{font-size:.83em;color:var(--t2);margin:6px 0;padding:8px 12px;border-left:2px solid var(--g);background:rgba(103,194,58,.04);border-radius:0 6px 6px 0}}.hc em{{color:var(--g);font-style:normal}}
-.ss{{margin:10px 0 4px}}.ss-t{{font-size:.83em;color:var(--acc);font-weight:600;margin-bottom:4px}}
-.ss ul{{list-style:none;padding:0}}.ss li{{font-size:.83em;color:var(--t2);padding:2px 0 2px 16px;position:relative}}
+.meta{{font-size:.78em;color:var(--t2);margin:3px 0 6px}}.meta b{{color:var(--t);font-weight:600}}
+.syn{{color:var(--t2);font-size:.82em;margin:6px 0;padding:7px 11px;border-left:3px solid var(--acc);background:rgba(230,200,76,.04);border-radius:0 6px 6px 0}}
+.rec{{font-size:.8em;margin:6px 0;padding:8px 12px;background:rgba(255,255,255,.03);border-radius:6px;line-height:1.65;color:var(--t2)}}
+.hl{{list-style:none;padding:0;margin:0}}.hl li{{padding:2px 0 2px 16px;position:relative}}.hl li::before{{content:"▸";position:absolute;left:0;color:var(--acc);font-weight:700}}
+.hc{{font-size:.76em;color:var(--t2);margin:5px 0;padding:6px 10px;border-left:2px solid var(--g);background:rgba(103,194,58,.04);border-radius:0 6px 6px 0}}.hc em{{color:var(--g);font-style:normal}}
+.ss{{margin:8px 0 3px}}.ss-t{{font-size:.76em;color:var(--acc);font-weight:600;margin-bottom:3px}}
+.ss ul{{list-style:none;padding:0}}.ss li{{font-size:.76em;color:var(--t2);padding:1px 0 1px 14px;position:relative}}
 .ss li::before{{content:"▸";position:absolute;left:0;color:var(--acc)}}
 .ss li.s-hide{{display:none}}
-.ct-tag{{display:inline-block;font-size:.7em;background:#2a2a3e;color:var(--t2);padding:1px 6px;border-radius:4px;margin-right:4px}}
-.lk{{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}}
-.lk a{{font-size:.8em;color:var(--acc);text-decoration:none;padding:3px 12px;border:1px solid var(--b);border-radius:6px;transition:all .2s}}
+.ct-tag{{display:inline-block;font-size:.68em;background:#2a2a3e;color:var(--t2);padding:1px 5px;border-radius:4px;margin-right:3px}}
+.lk{{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}}
+.lk a{{font-size:.73em;color:var(--acc);text-decoration:none;padding:2px 10px;border:1px solid var(--b);border-radius:6px;transition:all .2s}}
 .lk a:hover{{background:var(--acc);color:var(--bg)}}
-.fc-body{{display:flex;gap:18px}}
-.fc-poster{{flex-shrink:0;width:100px}}
-.fc-poster img{{width:100px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}}
+.fc-body{{display:flex;gap:14px}}
+.fc-poster{{flex-shrink:0;width:88px}}
+.fc-poster img{{width:88px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}}
 .fc-info{{flex:1;min-width:0}}
-.no-results{{text-align:center;color:var(--t2);padding:40px 20px;font-size:.95em}}
-@media(max-width:500px){{.fc-poster{{width:72px}}.fc-poster img{{width:72px}}.fc{{padding:16px 18px}}}}
-.ft{{text-align:center;color:var(--t2);font-size:.8em;padding:28px 20px;border-top:1px solid var(--b)}}
+.no-results{{text-align:center;color:var(--t2);padding:32px 20px;font-size:.88em}}
+@media(max-width:500px){{.fc-poster{{width:64px}}.fc-poster img{{width:64px}}.fc{{padding:14px 16px}}}}
+.ft{{text-align:center;color:var(--t2);font-size:.73em;padding:24px 20px;border-top:1px solid var(--b)}}
 </style></head><body>
 
 <div class="hd"><h1>🎬 墨尔本电影周报</h1>
@@ -958,12 +982,24 @@ def _html_card(f: Film, idx: int) -> str:
 
     meta_parts = []
     if f.genre: meta_parts.append(f.genre)
+    if f.duration: meta_parts.append(f"⏱ {f.duration}")
     if f.director: meta_parts.append(f"<b>导演</b> {_esc(f.director)}")
     if f.cast: meta_parts.append(f"<b>主演</b> {_esc(f.cast)}")
     meta = f'<div class="meta">{" · ".join(meta_parts)}</div>' if meta_parts else ""
 
     syn = f'<div class="syn">{_esc(f.synopsis)}</div>' if f.synopsis else ""
-    rec = f'<div class="rec">💡 {_esc(f.recommendation)}</div>' if f.recommendation else ""
+    # 获奖信息
+    awards_html = ""
+    if f.awards:
+        awards_html = f'<div style="margin:6px 0;font-size:.82em"><span class="bd" style="background:#3a2a1a;color:#f0c040;border:1px solid #5a4a2d">🏆 {_esc(f.awards)}</span></div>'
+    # 影片亮点 (支持 ▸ 分点)
+    rec = ""
+    if f.recommendation:
+        # 将 ▸ 转为列表项, 避免空行
+        lines = [l.strip() for l in f.recommendation.split("▸") if l.strip()]
+        if lines:
+            items = "".join(f"<li>{_esc(l)}</li>" for l in lines)
+            rec = f'<div class="rec"><ul class="hl">{items}</ul></div>'
     hc = f'<div class="hc"><em>🗣 豆瓣热评</em> "{_esc(f.hot_comment)}"</div>' if f.hot_comment else ""
 
     # 场次 + 提取日期/影院用于筛选
@@ -1009,7 +1045,7 @@ def _html_card(f: Film, idx: int) -> str:
 <div class="fc-body">
 {poster_html}
 <div class="fc-info">
-{meta}{syn}{rec}{hc}{sess}{lnk}
+{meta}{awards_html}{syn}{rec}{hc}{sess}{lnk}
 </div>
 </div>
 </div>"""
@@ -1046,6 +1082,33 @@ def main():
     _query_douban_serial(films)
     log.info("📊 豆瓣完成 (%.1fs)", time.time()-t0)
 
+    # ②b 豆瓣补查: 对无评分的电影重试一次 (可能是临时限流导致)
+    no_score = [f for f in films if f.douban_score is None and f.douban_url]
+    if no_score:
+        log.info("📊 豆瓣补查 %d 部 (重试无评分的电影)...", len(no_score))
+        for f in no_score:
+            try:
+                resp = SESSION.get(f.douban_url, timeout=10)
+                if resp.status_code == 200:
+                    soup = BeautifulSoup(resp.text, "html.parser")
+                    se = soup.find("strong", class_="ll rating_num")
+                    if se and (t := se.get_text(strip=True)):
+                        f.douban_score = float(t)
+                        log.info("  补查成功: %s → %s", f.title, f.douban_score)
+                        # 更新缓存
+                        cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".douban_cache.json")
+                        try:
+                            dc = json.load(open(cache_path, "r", encoding="utf-8"))
+                            key = _dedup_key(f.title)
+                            if key in dc:
+                                dc[key]["score"] = f.douban_score
+                                json.dump(dc, open(cache_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+                        except Exception:
+                            pass
+            except Exception:
+                pass
+            time.sleep(2.5)
+
     # ③ AI 丰富高分电影 (带缓存)
     high = [f for f in films if is_high_rated(f)]
     log.info("💡 %d 部高分电影，AI enrichment...", len(high))
@@ -1067,6 +1130,7 @@ def main():
             c = ai_cache[key]
             f.synopsis = c.get("synopsis", "") or f.synopsis
             f.recommendation = c.get("recommendation", "") or _template_recommendation(f)
+            f.awards = c.get("awards", "") or f.awards
             log.info("  AI 缓存: %s", f.title)
         else:
             need_ai.append(f)
@@ -1085,6 +1149,7 @@ def main():
                 ai_cache[_dedup_key(f.title)] = {
                     "synopsis": f.synopsis,
                     "recommendation": f.recommendation,
+                    "awards": f.awards,
                 }
     elif need_ai:
         log.info("  (未配置 AI，使用模板推荐)")
@@ -1124,7 +1189,7 @@ def main():
     # JSON
     jd = [{"title":f.title,"title_cn":f.title_cn,"year":f.year,"cinema":f.cinema,"url":f.url,
            "sessions":f.sessions,"genre":f.genre,"director":f.director,"cast":f.cast,
-           "poster":f.poster,"synopsis":f.synopsis,"hot_comment":f.hot_comment,
+           "poster":f.poster,"duration":f.duration,"synopsis":f.synopsis,"hot_comment":f.hot_comment,"awards":f.awards,
            "douban_score":f.douban_score,"douban_url":f.douban_url,
            "rt_score":f.rt_score,"rt_url":f.rt_url,"recommendation":f.recommendation} for f in films]
     jp = os.path.join(base, f"data_{stamp}.json")

@@ -1,0 +1,6 @@
+.env
+.douban_cache.json
+.ai_cache.json
+data_*.json
+report_*.md
+__pycache__/
