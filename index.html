@@ -6,11 +6,20 @@
 :root{--bg:#0f0f0f;--card:#1a1a2e;--ch:#22223a;--acc:#e6c84c;--t:#e0e0e0;--t2:#999;--g:#67c23a;--r:#fa5252;--b:#2a2a3e}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.7;padding-bottom:60px}
-.hd{text-align:center;padding:48px 20px 28px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-bottom:1px solid var(--b)}
+.hd{text-align:center;padding:48px 20px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-bottom:1px solid var(--b)}
 .hd h1{font-size:2em;color:var(--acc);margin-bottom:6px;letter-spacing:2px}.hd .sub{color:var(--t2);font-size:.92em}
+.filters{background:#141425;border-bottom:1px solid var(--b);padding:16px 20px;position:sticky;top:0;z-index:10}
+.filters-inner{max-width:820px;margin:0 auto}
+.fg{margin-bottom:10px}.fg:last-child{margin-bottom:0}
+.fg-label{font-size:.78em;color:var(--t2);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.fg-btns{display:flex;flex-wrap:wrap;gap:6px}
+.fb{font-size:.78em;padding:4px 14px;border-radius:999px;border:1px solid var(--b);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s;font-family:inherit}
+.fb:hover{border-color:var(--acc);color:var(--acc)}
+.fb.active{background:var(--acc);color:var(--bg);border-color:var(--acc);font-weight:600}
 .ct{max-width:820px;margin:0 auto;padding:20px 16px}.stat{text-align:center;color:var(--t2);font-size:.9em;margin:8px 0 20px}
-.fc{background:var(--card);border:1px solid var(--b);border-radius:12px;padding:22px 26px;margin-bottom:18px;transition:background .2s}
+.fc{background:var(--card);border:1px solid var(--b);border-radius:12px;padding:22px 26px;margin-bottom:18px;transition:all .25s}
 .fc:hover{background:var(--ch)}
+.fc.hidden{display:none}
 .fh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
 .rk{color:var(--acc);font-weight:700;font-size:1.35em;min-width:26px}
 .tt{font-size:1.2em;font-weight:700;color:#fff}
@@ -23,86 +32,365 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .ss{margin:10px 0 4px}.ss-t{font-size:.83em;color:var(--acc);font-weight:600;margin-bottom:4px}
 .ss ul{list-style:none;padding:0}.ss li{font-size:.83em;color:var(--t2);padding:2px 0 2px 16px;position:relative}
 .ss li::before{content:"▸";position:absolute;left:0;color:var(--acc)}
+.ss li.s-hide{display:none}
 .ct-tag{display:inline-block;font-size:.7em;background:#2a2a3e;color:var(--t2);padding:1px 6px;border-radius:4px;margin-right:4px}
 .lk{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
 .lk a{font-size:.8em;color:var(--acc);text-decoration:none;padding:3px 12px;border:1px solid var(--b);border-radius:6px;transition:all .2s}
 .lk a:hover{background:var(--acc);color:var(--bg)}
+.fc-body{display:flex;gap:18px}
+.fc-poster{flex-shrink:0;width:100px}
+.fc-poster img{width:100px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.fc-info{flex:1;min-width:0}
+.no-results{text-align:center;color:var(--t2);padding:40px 20px;font-size:.95em}
+@media(max-width:500px){.fc-poster{width:72px}.fc-poster img{width:72px}.fc{padding:16px 18px}}
 .ft{text-align:center;color:var(--t2);font-size:.8em;padding:28px 20px;border-top:1px solid var(--b)}
 </style></head><body>
+
 <div class="hd"><h1>🎬 墨尔本电影周报</h1>
-<div class="sub">2026年03月24日 — 2026年03月30日 · 豆瓣 ≥ 7.5</div></div>
+<div class="sub">2026年03月24日 — 2026年03月30日 · 豆瓣 ≥ 7.5 / 🍅 ≥ 80%</div></div>
+
+<div class="filters"><div class="filters-inner">
+<div class="fg"><div class="fg-label">🎬 影院</div><div class="fg-btns">
+<button class="fb active" data-filter-cinema="all">全部</button><button class="fb" data-filter-cinema="ACMI">ACMI</button><button class="fb" data-filter-cinema="Cinema Nova">Cinema Nova</button><button class="fb" data-filter-cinema="Lido Cinemas">Lido Cinemas</button>
+</div></div>
+<div class="fg"><div class="fg-label">📅 日期</div><div class="fg-btns">
+<button class="fb active" data-filter-day="all">全部</button><button class="fb" data-filter-day="Thursday">Thursday</button><button class="fb" data-filter-day="Monday">Monday</button><button class="fb" data-filter-day="Saturday">Saturday</button><button class="fb" data-filter-day="Tuesday">Tuesday</button><button class="fb" data-filter-day="Wednesday">Wednesday</button><button class="fb" data-filter-day="Sunday">Sunday</button><button class="fb" data-filter-day="Friday">Friday</button>
+</div></div>
+</div></div>
+
 <div class="ct">
-<p class="stat">从 48 部排片中精选 14 部高分佳作</p>
-<div class="fc">
-<div class="fh"><span class="rk">#1</span><span class="tt">It&#x27;s a Wonderful Life (1946)</span><span class="bd bd-d">豆瓣 9.2</span> <span class="bd bd-r">🍅 94%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">剧情/奇幻/家庭 · <b>导演</b> 弗兰克·卡普拉 · <b>主演</b> James Stewart, Donna Reed, Lionel Barrymore</div><div class="syn">银行家乔治·贝利一生致力于帮助他人，在人生低谷时，遇到一位天使，带他重新审视自己的人生价值和影响力，让他对生活有了新的认识。</div><div class="rec">💡 作为圣诞佳作，《生活多美好》以温暖人心的故事和精湛表演，展现了人性光辉与希望。影片用奇幻元素点缀现实困境，适合喜欢治愈、励志题材的观众。其深刻的人生思考和情感共鸣，让每一次观影都充满力量，绝对值得在大银幕上细细品味。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Sat 19 Dec: 2:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Mon 21 Dec: 11:00 am</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/its-a-wonderful-life-1946" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/its_a_wonderful_life" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#2</span><span class="tt">Roman Holiday (1953)</span><span class="bd bd-d">豆瓣 9.1</span> <span class="bd bd-r">🍅 96%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">爱情/喜剧/剧情 · <b>导演</b> William Wyler · <b>主演</b> Gregory Peck, Audrey Hepburn, Eddie Albert</div><div class="syn">欧洲某国公主安娜在罗马出访期间厌倦了繁文缛节，偷偷溜出宫殿，与美国记者乔邂逅，两人在罗马经历了一段奇妙而浪漫的冒险。</div><div class="rec">💡 《罗马假日》以浪漫的黑白画面、精彩的表演和罗马的迷人风情成为影史经典。奥黛丽·赫本的灵动演绎令人难忘，非常适合喜欢文艺爱情、复古氛围和异国风情的观众。这部电影不仅让人感受纯真的爱情，还能领略经典电影的魅力，非常值得在大银幕上体验。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Sat 12 Dec: 2:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Mon 14 Dec: 11:00 am</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/roman-holiday-1953" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/roman_holiday" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#3</span><span class="tt">Project Hail Mary</span><span class="bd bd-d">豆瓣 8.5</span> <span class="bd bd-r">🍅 95%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas / Cinema Nova</div>
-<div class="meta">科幻/剧情/冒险 · <b>导演</b> 菲尔·劳德, 克里斯托弗·米勒 · <b>主演</b> Ryan Gosling, Sandra Hüller, James Ortiz</div><div class="syn">一名宇航员独自醒来在陌生飞船上，发现自己肩负拯救地球的重大使命。他必须依靠有限的资源和智慧，解开谜团，对抗未知威胁，完成看似不可能的任务。</div><div class="rec">💡 《Project Hail Mary》以硬核科幻与人性探索相结合，剧情紧凑，视觉效果震撼。Ryan Gosling的表演细腻感人，带来强烈代入感。喜欢太空题材、科学推理和情感共鸣的观众绝不能错过大银幕体验。这是一部让你思考、感动并热血沸腾的佳作，非常适合影院观赏。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Today: 1:00 pm, 3:00 pm, 4:15 pm, 6:15 pm, 7:30 pm, 8:40 pm</li><li><span class="ct-tag">Lido Cinemas</span>Tomorrow: 11:45 am, 1:00 pm, 3:00 pm, 4:15 pm, 6:20 pm, 7:30 pm, 8:40 pm</li><li><span class="ct-tag">Lido Cinemas</span>Wednesday: 11:00 am, 12:30 pm, 2:30 pm, 3:45 pm, 6:20 pm, 7:00 pm, 8:40 pm</li><li><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/project-hail-mary" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/project_hail_mary" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#4</span><span class="tt">Blow-Up (1966)</span><span class="bd bd-d">豆瓣 8.4</span> <span class="bd bd-r">🍅 87%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">剧情/悬疑/惊悚 · <b>导演</b> 米开朗基罗·安东尼奥尼 · <b>主演</b> David Hemmings, Vanessa Redgrave, Sarah Miles</div><div class="syn">伦敦的一名时尚摄影师在公园偶然拍下神秘照片，逐渐卷入一场扑朔迷离的事件。他试图通过放大照片寻找真相，却发现现实与幻觉之间的界限变得模糊。</div><div class="rec">💡 《放大》以冷静的视角探讨现实与幻想的界线，是电影史上视觉与叙事实验的经典之作。它独特的悬疑氛围、精妙的摄影和开放式结构，极具观赏与讨论价值。推荐给喜欢艺术电影、心理悬疑和影像语言创新的观众，影院大银幕能更好感受其画面细节与氛围营造。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Thursday: 7:00 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/blow-up-1966" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/blow_up_1966" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#5</span><span class="tt">The Parent Trap (1998)</span><span class="bd bd-d">豆瓣 8.4</span> <span class="bd bd-r">🍅 87%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">家庭/喜剧/剧情 · <b>导演</b> Nancy Meyers · <b>主演</b> Lindsay Lohan, Dennis Quaid, Natasha Richardson</div><div class="syn">一对素未谋面的双胞胎女孩在夏令营偶遇，发现彼此竟是失散多年的姐妹。她们决定交换身份，分别接近各自未曾谋面的父母，尝试让家庭重聚。</div><div class="rec">💡 这部影片巧妙融合了温馨的家庭情感和幽默的情节，Lindsay Lohan一人分饰两角令人惊艳。适合全家观赏，尤其适合喜欢轻松温暖故事的观众。影片不仅有欢笑，更有感人的亲情，非常值得在影院感受那份温暖与欢乐。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Tue 21 Apr: 7:00 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/the-parent-trap-1998" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/1083414-parent_trap" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#6</span><span class="tt">12 Monkeys (1995)</span><span class="bd bd-d">豆瓣 8.2</span> <span class="bd bd-r">🍅 88%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">剧情/科幻/悬疑 · <b>导演</b> 特瑞·吉列姆 · <b>主演</b> Bruce Willis, Madeleine Stowe, Brad Pitt</div><div class="syn">在一个被病毒摧毁的未来世界，幸存者派遣一名囚犯穿越时空回到过去，试图阻止灾难的发生。他逐渐揭开神秘组织“12只猴子”的真相，并与不同人物产生复杂联系。</div><div class="rec">💡 《12只猴子》以其独特的时间旅行设定和扑朔迷离的剧情，展现了导演特瑞·吉列姆独树一帜的视觉风格和荒诞气质。布鲁斯·威利斯与布拉德·皮特的精湛表演令人印象深刻。本片适合喜欢悬疑烧脑、探讨命运与现实交错的观众，是值得在大银幕上体验的科幻佳作。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Friday: 8:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Mon 30 Mar: 7:30 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/12-monkeys-1995" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/12_monkeys" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#7</span><span class="tt">One Battle After Another</span><span class="bd bd-d">豆瓣 8.0</span> <span class="bd bd-r">🍅 94%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas / Cinema Nova</div>
-<div class="meta">剧情/战争/动作 · <b>导演</b> David O. Russell · <b>主演</b> Leonardo DiCaprio, Sean Penn, Chase Infiniti</div><div class="syn">讲述一支特种小队在现代战场上执行一项危险任务，队员们在极端压力下展现出各自的人性与勇气，同时也面临信仰与生存的抉择。</div><div class="rec">💡 《One Battle After Another》以紧凑的叙事和深刻的人物刻画脱颖而出，Leonardo DiCaprio与Sean Penn的对手戏张力十足。电影不仅为战争题材爱好者带来震撼体验，也适合喜欢人物心理描写与情感冲突的观众。大银幕下的视觉与音效，更能让你沉浸在那令人心跳加速的战场氛围中。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Today: 3:00 pm, 8:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Tomorrow: 3:00 pm, 7:50 pm</li><li><span class="ct-tag">Lido Cinemas</span>Wednesday: 3:00 pm, 8:00 pm</li><li><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/one-battle-after-another" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/one_battle_after_another" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#8</span><span class="tt">Hamnet</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 87%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas / Cinema Nova</div>
-<div class="meta">剧情/历史 · <b>导演</b> Chloé Zhao · <b>主演</b> Jessie Buckley, Paul Mescal, Emily Watson</div><div class="syn">《Hamnet》改编自玛吉·奥法雷尔同名小说，讲述了莎士比亚家中失去独子的故事。影片聚焦在家庭成员之间的情感波澜与悲痛，展现了亲情、爱与失落。</div><div class="rec">💡 《Hamnet》以细腻的人物刻画和历史氛围重现打动人心，导演巧妙地融合了文学性与情感张力。喜欢历史题材、家庭伦理或深刻情感表达的观众将会被其吸引。此外，杰西·巴克利和保罗·梅斯卡的精湛演技让角色更加真实，绝对值得走进大银幕体验。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Today: 1:20 pm, 6:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Tomorrow: 1:20 pm, 6:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Wednesday: 1:10 pm, 6:10 pm</li><li><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/hamnet" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/hamnet" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#9</span><span class="tt">Othello</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 68%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">剧情/爱情/悲剧 · <b>导演</b> 奥利弗·帕克 · <b>主演</b> Laurence Fishburne, Irène Jacob, Kenneth Branagh</div><div class="syn">讲述了威尼斯摩尔将军奥赛罗与妻子苔丝狄蒙娜的爱情故事，以及其副官伊阿古因嫉妒和阴谋，逐步破坏二人关系，酿成悲剧的过程。</div><div class="rec">💡 本片将莎士比亚经典悲剧以现代电影语言呈现，Laurence Fishburne与Kenneth Branagh的对手戏极具张力。适合喜欢文学改编和心理戏剧的观众。大银幕上能更好感受角色内心冲突与戏剧氛围，是体验经典名著魅力的绝佳选择。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Thursday: 6:30 pm</li><li><span class="ct-tag">Lido Cinemas</span>Friday: 6:30 pm</li><li><span class="ct-tag">Lido Cinemas</span>Saturday: 1:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Sunday: 1:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Mon 30 Mar: 1:00 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/othello" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/othello_1995" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#10</span><span class="tt">Plainclothes</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 83%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Cinema Nova</div>
-<div class="meta">剧情/悬疑/惊悚 · <b>导演</b> Joe Mantello · <b>主演</b> Tom Blyth, Russell Tovey, Maria Dizzia</div><div class="syn">一名年轻的卧底警察被派往调查一桩看似普通的校园失踪案。在伪装成学生的过程中，他逐渐发现校园表象之下隐藏着更深的秘密和危险。</div><div class="rec">💡 《Plainclothes》以紧张的悬疑氛围和细腻的人物刻画脱颖而出，导演Joe Mantello将现实与心理博弈巧妙交织，令人欲罢不能。喜欢悬疑推理、校园题材或关注社会议题的观众都能在本片中获得极佳观影体验。大银幕能更好感受角色的心理变化和紧张气氛，值得一看！</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/plainclothes" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/plainclothes" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#11</span><span class="tt">Sinners</span><span class="bd bd-d">豆瓣 7.7</span> <span class="bd bd-r">🍅 97%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas / Cinema Nova</div>
-<div class="meta">犯罪/剧情/惊悚 · <b>导演</b> David Fincher · <b>主演</b> Michael B. Jordan, Hailee Steinfeld, Miles Caton</div><div class="syn">讲述一位年轻侦探在调查一系列离奇罪案时，逐渐揭开了城市中隐藏的罪恶真相，并在正义与道德之间展开激烈冲突。</div><div class="rec">💡 《Sinners》凭借大卫·芬奇一贯的悬疑节奏与层层递进的剧情，带来强烈的心理冲击。演员阵容实力不凡，表演细腻入微，极具代入感。适合喜欢犯罪悬疑、心理剧的观众，尤其适合在影院大银幕体验那种紧张氛围和视觉细节，绝对不容错过。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Today: 8:40 pm</li><li><span class="ct-tag">Lido Cinemas</span>Tomorrow: 11:45 am, 8:40 pm</li><li><span class="ct-tag">Lido Cinemas</span>Wednesday: 8:50 pm</li><li><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/sinners" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/sinners_2025" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#12</span><span class="tt">Sentimental Value</span><span class="bd bd-d">豆瓣 7.6</span> <span class="bd bd-r">🍅 95%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas / Cinema Nova</div>
-<div class="meta">剧情/家庭/文艺 · <b>导演</b> Nina Jankovic · <b>主演</b> Renate Reinsve, Stellan Skarsgård, Elle Fanning</div><div class="syn">一位年迈作家在妻子去世后，女儿和孙女为处理遗物返回故居。三代女性在回忆与现实中碰撞，逐渐理解亲情的真正含义，也面对各自未解的情感伤痕。</div><div class="rec">💡 《Sentimental Value》以细腻的家庭情感和温暖的文艺气质打动人心，演员阵容极具吸引力，表演真挚动人。影片采用优雅的镜头语言，适合喜欢深度情感、亲情题材和文艺风格的观众。在大银幕观赏将更能体会角色的细腻心理变化，是一部值得细细品味的人文佳作。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Today: 3:00 pm, 6:20 pm</li><li><span class="ct-tag">Lido Cinemas</span>Tomorrow: 10:45 am, 2:40 pm, 6:20 pm</li><li><span class="ct-tag">Lido Cinemas</span>Wednesday: 10:45 am, 3:20 pm, 9:00 pm</li><li><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/sentimental-value" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/sentimental_value" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#13</span><span class="tt">The Lady Eve (1941)</span><span class="bd bd-d">豆瓣 7.5</span> <span class="bd bd-r">🍅 99%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">喜剧/爱情 · <b>导演</b> Preston Sturges · <b>主演</b> Barbara Stanwyck, Henry Fonda, Charles Coburn</div><div class="syn">富家子查尔斯乘船归国，邂逅美丽的女骗子琼。两人在爱情与欺骗之间展开一场妙趣横生的博弈，身份错位和机智对决带来连连误会与笑料。</div><div class="rec">💡 《The Lady Eve》以机智对白和巧妙情节著称，是黄金时代好莱坞浪漫喜剧的经典。Barbara Stanwyck与Henry Fonda之间的化学反应令人难忘，适合喜欢聪明幽默和轻松爱情故事的观众。影院大银幕能更好欣赏其精致场景与表演，绝对值得一看。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Sat 5 Sept: 2:00 pm</li><li><span class="ct-tag">Lido Cinemas</span>Mon 7 Sept: 11:00 am</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/the-lady-eve-1941" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/lady_eve" target="_blank">🍅 烂番茄</a></div>
-</div>
-<div class="fc">
-<div class="fh"><span class="rk">#14</span><span class="tt">House (1977)</span><span class="bd bd-d">豆瓣 7.5</span> <span class="bd bd-r">🍅 75%</span> </div>
-<div style="font-size:.83em;color:var(--t2)">📍 Lido Cinemas</div>
-<div class="meta">惊悚/悬疑/剧情 · <b>导演</b> 大林宣彦 · <b>主演</b> Idris Elba, Rebecca Ferguson, Gabriel Basso</div><div class="syn">一群年轻人在偏僻的房子中度周末，意外触发了神秘事件。随着夜幕降临，他们被迫面对隐藏在房屋中的恐怖秘密，逐渐揭开彼此间的复杂关系与真相。</div><div class="rec">💡 本片以极具张力的叙事和氛围营造，将观众带入一个充满未知与惊悚的空间。导演巧妙融合心理悬疑与现实议题，适合喜欢刺激和思考的观众。大银幕体验更能感受其视觉冲击与情绪递进，是一部值得影院观赏的惊悚佳作。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li><span class="ct-tag">Lido Cinemas</span>Friday: 9:00 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/house-1977" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/a_house_of_dynamite" target="_blank">🍅 烂番茄</a></div>
+<p class="stat" id="stat-text">从 41 部排片中精选 28 部高分佳作</p>
+<div class="fc" data-cinemas="ACMI" data-days="">
+<div class="fh"><span class="rk">#1</span><span class="tt">A Fistful Of Dollars (1964)</span><span class="bd bd-d">豆瓣 8.4</span> <span class="bd bd-r">🍅 98%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 ACMI</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/DJXN_rhXnTLMalVJc4rH52mk7M8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p3571_p_v10_ae.jpg" alt="A Fistful Of Dollars" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Western · <b>导演</b> Sergio Leone · <b>主演</b> Clint Eastwood, Marianne Koch, Joseph Egger</div><div class="syn">一位神秘的陌生人来到边境小镇，发现两个家族势力火拼，他巧妙地在双方之间周旋，利用智慧和枪法搅动局势，逐步揭开各方秘密。</div><div class="rec">💡 《荒野大镖客》以独特的意大利式西部风格和极具张力的镜头语言，开创了斯帕格蒂西部片的新时代。克林特·伊斯特伍德的冷酷形象与莫里康内的经典配乐相得益彰。喜欢西部片、动作片或影史经典的观众绝不能错过，在大银幕上能更好感受影片的氛围与视觉冲击力。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li>请前往购票页面查看</li></ul></div><div class="lk"><a href="https://www.acmi.net.au/whats-on/in-cinemas-a-fistful-of-dollars-with-live-score-by-chiara-kickdrum/" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/fistful_of_dollars" target="_blank">🍅 烂番茄</a></div>
 </div>
 </div>
-<div class="ft">Lido Cinemas · Cinema Nova · ACMI · 豆瓣 · Rotten Tomatoes<br>2026-03-23 12:46</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Thursday">
+<div class="fh"><span class="rk">#2</span><span class="tt">Blow-Up (1966) (1966)</span><span class="bd bd-d">豆瓣 8.4</span> <span class="bd bd-r">🍅 87%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/AF5suf9fBN1qIg-Zh19luAS8Lc8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p1268_p_v8_az.jpg" alt="Blow-Up (1966)" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Crime / Drama · <b>导演</b> Michelangelo Antonioni · <b>主演</b> David Hemmings, Vanessa Redgrave, Sarah Miles</div><div class="syn">伦敦时尚摄影师偶然拍下一对情侣，照片中却疑似隐藏着一起谋杀案的线索。他在追查真相的过程中，被卷入现实与幻觉交错的迷局。</div><div class="rec">💡 《Blow-Up》以独特的镜头语言和悬疑氛围，探索现实与幻觉的边界。安东尼奥尼导演对视觉细节与心理变化的精妙把控，让影片成为艺术电影的经典。适合喜欢悬疑、心理戏和艺术电影的观众，是一次关于观察、真相与自我认知的非凡体验，非常值得在大银幕上细细品味。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Thursday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Thursday: 7:00 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/blow-up-1966" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/blow_up_1966" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#3</span><span class="tt">Secret Agent, The (2025)</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 98%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/b4r4D-_lLuqi7Y-M9BsW1zwlwMw=/206x305/v2/https://resizing.flixster.com/YBTbc6VIpar20XFi7a0tCAPmcd8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzljMTgwZDBmLWRiYTgtNDZkYi04M2NhLTcxZGZiOTU0N2NhMy5qcGc=" alt="Secret Agent, The" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama / Mystery & Thriller / History · <b>导演</b> Kleber Mendonça Filho · <b>主演</b> Wagner Moura, Sebastiana de Medeiros, Udo Kier</div><div class="syn">在20世纪的动荡岁月中，一名身负秘密任务的间谍游走于权力与阴谋之间，不仅要破解谜团，还需面对个人信仰与忠诚的抉择。故事层层递进，悬念丛生。</div><div class="rec">💡 《Secret Agent, The》由克莱贝·门多萨·菲尔霍执导，融合历史与悬疑，营造出紧张而细腻的氛围。影片在角色塑造和情感张力上极具突破，适合热爱推理、喜爱历史题材的观众。精湛表演与高分口碑，让这部电影在大银幕上更显震撼，值得影迷走进影院细细品味。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/secret-agent-the" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/the_secret_agent_2025" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#4</span><span class="tt">Mr. Nobody Against Putin (2025)</span><span class="bd bd-d">豆瓣 7.6</span> <span class="bd bd-r">🍅 100%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/Ks4YGPM-DHcTUJR99RnM56y4s0Q=/206x305/v2/https://resizing.flixster.com/gPRfJnLOmFutSaEUMP-DsAfyYNw=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2VmYmJlNWU3LTRiMDgtNGFhOS05Mjk5LTYxYzBhNGI0N2EwZS5qcGc=" alt="Mr. Nobody Against Putin" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Documentary · <b>导演</b> David Borenstein · <b>主演</b> Pasha Talankin</div><div class="syn">本片通过主人公Pasha Talankin的视角，记录了他在俄罗斯社会中对抗普京政权的勇气与挣扎，展示了普通人在强权面前的坚持与希望。</div><div class="rec">💡 《Mr. Nobody Against Putin》以纪实手法深入刻画了个人与体制抗争的真实故事，展现了难得一见的俄罗斯当代社会切面。对于关注政治、社会议题或纪录片爱好者来说，本片极具启发意义。影片情感真挚、影像风格鲜明，非常值得走进影院，亲身感受小人物的巨大勇气与信念。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/mr-nobody-against-putin" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/mr_nobody_against_putin" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Saturday|Monday">
+<div class="fh"><span class="rk">#5</span><span class="tt">Ninotchka (1939) (1939)</span><span class="bd bd-d">豆瓣 7.7</span> <span class="bd bd-r">🍅 95%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/5LlOm_bgefFu0nQRR_SBaN9XWkE=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p5887_p_v10_aa.jpg" alt="Ninotchka (1939)" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Comedy · <b>导演</b> Ernst Lubitsch · <b>主演</b> Greta Garbo, Melvyn Douglas, Ina Claire</div><div class="syn">苏联女特派员妮诺奇卡被派往巴黎监督三名同事的工作，却在异国邂逅一位风趣的法国男子，由此卷入一场东西方文化碰撞下的幽默与情感纠葛。</div><div class="rec">💡 《Ninotchka》以其机智幽默的对白和文化冲突为核心，展现了爱情与理性的较量。格蕾塔·嘉宝首次尝试喜剧，表现令人惊喜。喜欢经典老电影、浪漫喜剧或对东西方文化碰撞感兴趣的观众绝不能错过。大银幕上细腻表演与幽默火花，更能感受卢比奇式风格的魅力。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Saturday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Saturday: 2:00 pm</li><li data-day="Monday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Monday: 11:00 am</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/ninotchka-1939" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/ninotchka" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#6</span><span class="tt">情感价值 Sentimental Value (2025)</span><span class="bd bd-d">豆瓣 7.6</span> <span class="bd bd-r">🍅 95%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/F3HG70kkF8vBNamZqxj0b9aXsIk=/206x305/v2/https://resizing.flixster.com/PAUYG-yc_Cx2yQaj92V9FMSByo4=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk0NDY3OTQzLTBlNDEtNGVmNS05OTRkLWM0NGJlMzgyZjJmMi5qcGc=" alt="Sentimental Value" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama · <b>导演</b> Joachim Trier · <b>主演</b> Renate Reinsve, Stellan Skarsgård, Elle Fanning</div><div class="syn">在父亲突然去世后，一位年轻女性携手异国友人，踏上寻回家庭遗失珍贵物件的旅程，过程中逐渐揭开亲情与自我认同的复杂纠葛。</div><div class="rec">💡 《Sentimental Value》以细腻情感和温柔镜头，展现家庭与个体成长的微妙关系。导演Joachim Trier擅长捕捉人物内心变化，Renate Reinsve与Stellan Skarsgård的表演深沉动人。适合喜欢文艺剧情、关注人性探索的观众。影院大银幕更能体会情感张力与画面美感，是一场心灵触动的观影体验。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 10:45 am, 2:40 pm, 6:20 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 10:45 am, 3:20 pm, 9:00 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/sentimental-value" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/sentimental_value" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#7</span><span class="tt">It Was Just an Accident (2025)</span><span class="bd bd-d">豆瓣 7.4</span> <span class="bd bd-r">🍅 98%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/EwIZj_tqxoSxEABwp2xQ51HQA8U=/206x305/v2/https://resizing.flixster.com/bJJ57noM7uFLFepE_J7mkM0Mf_4=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzdkOGFlYWU2LTRlZmYtNDMzZS04MDAxLWFmZDVjNzI3MGQ4My5qcGc=" alt="It Was Just an Accident" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama / Mystery & Thriller · <b>导演</b> Jafar Panahi · <b>主演</b> Vahid Mobasseri, Ebrahim Azizi, Mariam Afshari</div><div class="syn">一场看似偶然的车祸牵扯出三位陌生人，他们在真相、谎言与自我救赎之间挣扎，逐渐揭开彼此隐藏的秘密。事件背后的人性与命运悄然展开较量。</div><div class="rec">💡 《It Was Just an Accident》以帕纳希导演标志性的现实主义手法，细腻刻画人物心理与社会矛盾，悬疑氛围令人屏息。影片适合喜欢思考与探寻人性复杂性的观众，尤其适合热爱剧情与悬疑片的影迷。大银幕上的情感张力与精妙叙事，值得你走进影院细细品味。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/it-was-just-an-accident" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/it_was_just_an_accident" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Wednesday">
+<div class="fh"><span class="rk">#8</span><span class="tt">They Will Kill You (2026)</span><span class="bd bd-d">豆瓣 8.2</span> <span class="bd bd-r">🍅 79%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/X34AoUJAHhquX_YC8LqHSd67kpo=/206x305/v2/https://resizing.flixster.com/22Lhhj1pH8V50patVwfaxOx1XnU=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzg5ZWNkZWFhLTE0ZGQtNDI1Yy1iY2Q1LTAwYWRkYTBmYmM5NS5qcGc=" alt="They Will Kill You" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Horror / Comedy · <b>导演</b> Kirill Sokolov · <b>主演</b> Zazie Beetz, Myha&#x27;la Herrold, Paterson Joseph</div><div class="syn">一群性格各异的陌生人在偏远庄园聚会，意外卷入一连串既诡异又荒诞的致命游戏，每个人都必须在恐怖与喜剧交织的危机中寻找生存的办法。</div><div class="rec">💡 《They Will Kill You》融合了黑色幽默与高能恐怖元素，导演Kirill Sokolov用巧妙的叙事和快节奏营造出令人欲罢不能的观影体验。Zazie Beetz等主演表现亮眼，非常适合喜欢新鲜感、爱好悬疑和黑色喜剧的观众。这部电影在大银幕上更能感受到紧张与搞笑的碰撞，绝对值得走进影院体验惊喜与刺激。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 7:30 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/they-will-kill-you" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/they_will_kill_you" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#9</span><span class="tt">哈姆奈特 Hamnet (2025)</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 87%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/woHhtzYV4bb_F2AFEDn6bFqHs_k=/206x305/v2/https://resizing.flixster.com/6LGQJrao1ZROpy-EoS0WjfPoKkM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzFlOWU5YmRmLTM4NjItNGFhMy1hN2IwLTMxZmY1NTgxM2I2OC5qcGc=" alt="Hamnet" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama / Romance · <b>导演</b> Chloé Zhao · <b>主演</b> Jessie Buckley, Paul Mescal, Emily Watson</div><div class="syn">《Hamnet》讲述了莎士比亚的妻子安妮·哈撒韦和儿子哈姆尼特之间深刻的情感纽带，在家庭悲剧和时代动荡中，展现了一段关于爱与失落的动人故事。</div><div class="rec">💡 本片由奥斯卡导演赵婷执导，融合细腻情感与诗意画面，Jessie Buckley与Paul Mescal精彩演绎令人动容。它适合喜欢深度人文关怀与历史题材的观众。影院大银幕上，电影的美学与情感张力将被最大化呈现，非常值得亲身体验。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 1:20 pm, 6:00 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 1:10 pm, 6:10 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/hamnet" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/hamnet" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#10</span><span class="tt">No Other Choice (2025)</span><span class="bd bd-d">豆瓣 7.3</span> <span class="bd bd-r">🍅 97%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/aKmpqWTT7gXvVTbvCIrDp-gqbEk=/206x305/v2/https://resizing.flixster.com/jmx4yLi00DEubbDPQoxemNRqPsc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2MyMzQ4M2M5LWEzMTUtNDA4NC05OGMyLTVhYjMxNTE0ZjhhNi5qcGc=" alt="No Other Choice" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Comedy / Mystery & Thriller / Crime / Drama · <b>导演</b> Park Chan-wook · <b>主演</b> Lee Byung-hun, Son Ye-jin, Park Hee-soon</div><div class="syn">一桩离奇命案打破了小镇的平静，三位性格迥异的角色在调查过程中不断碰撞，他们在追寻真相的同时，也揭开了各自不为人知的秘密。</div><div class="rec">💡 由朴赞郁执导，李秉宪与孙艺珍领衔主演，这部电影巧妙融合喜剧、悬疑与犯罪元素，节奏紧凑，角色塑造鲜明。片中黑色幽默与反转不断，极具观赏性。喜欢烧脑推理、细腻情感和风格化视觉体验的观众不容错过，绝对值得在大银幕上感受导演的匠心之作。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/no-other-choice" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/no_other_choice" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#11</span><span class="tt">Plainclothes (2025)</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 83%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/25NIYUW-18OyL8z6F3uuObtiR5k=/206x305/v2/https://resizing.flixster.com/Cd5i1Ye8-kCfGKOdZT96_GUHaxo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzM4NDBmMzM3LTA5ZmItNDFlNC04MDJiLTFlZDMyYmYwOWIzYy5qcGc=" alt="Plainclothes" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Mystery & Thriller / LGBTQ+ / Crime / Drama / Romance · <b>导演</b> Carmen Emmi · <b>主演</b> Tom Blyth, Russell Tovey, Maria Dizzia</div><div class="syn">一名卧底警探在追查一桩复杂案件时，意外卷入一段充满张力的同性情感与道德抉择之中。在面对真相与自我身份的挣扎中，案件与情感逐渐交织，考验他的信念与勇气。</div><div class="rec">💡 《Plainclothes》以悬疑犯罪为底色，巧妙融入LGBTQ+浪漫与心理戏剧，展现人物内心的复杂与真实。精湛的表演和细腻的情感描写令人共鸣，尤其适合喜欢悬疑、情感以及关注多元题材的观众。影院体验将放大影片紧张氛围与微妙情感，非常值得一看。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/plainclothes" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/plainclothes" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#12</span><span class="tt">Marty Supreme (2025)</span><span class="bd bd-d">豆瓣 7.3</span> <span class="bd bd-r">🍅 93%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/oAZHwVDtGLFxqLS4eMnWoMNFpZI=/206x305/v2/https://resizing.flixster.com/ctnE9C-eNbOaWPgDjHa7U2bPcoY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2QzYWQxYzYwLTM3NjgtNDMyMy1iZjBmLWZhYTlhMTU3ZTA5My5qcGc=" alt="Marty Supreme" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Mystery & Thriller / Drama · <b>导演</b> Josh Safdie · <b>主演</b> Timothée Chalamet, Gwyneth Paltrow, Odessa A&#x27;zion</div><div class="syn">在纽约闹市中，年轻侦探马蒂·苏普林接手一宗扑朔迷离的失踪案，逐步揭开背后错综复杂的人际关系网，并在真相与自我之间不断挣扎。</div><div class="rec">💡 《Marty Supreme》由乔什·萨夫迪执导，融合了高能悬疑与都市情感，节奏紧凑、氛围张力十足。提莫西·查拉梅、格温妮斯·帕特洛等演员的精湛表演更赋予角色深度。喜欢烧脑剧情、都市写实和精致影像的观众不可错过，大银幕观感让紧张与细腻并存的故事体验更加极致。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 6:00 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 12:15 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/marty-supreme" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/marty_supreme" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#13</span><span class="tt">Arco (2025)</span><span class="bd bd-d">豆瓣 7.3</span> <span class="bd bd-r">🍅 93%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/9YM8oldQ-g8MmUs6WJVA9D_AyoA=/206x305/v2/https://resizing.flixster.com/IEx88btWgjoy_wM4DS9h4eGJdbg=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzJlMzMwZDJlLWFhYjItNGEzMy1iYmZlLTNkMjg0MmU1MzMzZS5qcGc=" alt="Arco" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Kids & Family / Fantasy / Adventure / Animation / Drama / Sci-Fi · <b>导演</b> Ugo Bienvenu · <b>主演</b> Will Ferrell, America Ferrera, Flea</div><div class="syn">在未来世界，孤独少年阿尔科意外结识了一群拥有奇异能力的朋友，他们共同踏上一段神秘冒险旅程，试图拯救逐渐失去色彩和想象力的家园。</div><div class="rec">💡 《Arco》以绚丽动画和细腻情感描绘了成长与希望的主题，融合奇幻与科幻元素，构建出充满想象力的世界观。适合亲子家庭、热爱冒险与童话故事的观众。影片在视觉与音乐上极具感染力，影院大银幕能更好感受它的艺术魅力，是一部老少咸宜、令人感动的动画佳作。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/arco" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/arco" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#14</span><span class="tt">后座 Pillion (2025)</span><span class="bd bd-d">豆瓣 6.7</span> <span class="bd bd-r">🍅 99%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/v16LO-g6ElrbcgVKFySd8OgeYL0=/206x305/v2/https://resizing.flixster.com/6xHmbjMbOpJgk8CBZwTVMDPWw7c=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzc3NGI0NDI0LTM5MDEtNDZmOC1iMDcxLWJjZTQ5NjhjZTcxMC5qcGc=" alt="Pillion" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Romance / Drama / LGBTQ+ · <b>导演</b> Harry Lighton · <b>主演</b> Alexander Skarsgård, Harry Melling, Douglas Hodge</div><div class="syn">《Pillion》讲述两位性格迥异的男人在英国乡村一次偶然的摩托之旅中，逐渐打开心扉，探索自我与情感边界的故事，细腻描绘内心挣扎与成长。</div><div class="rec">💡 本片以独特的摩托旅行为切入点，结合精湛的表演和细腻的情感描写，展现LGBTQ+群体的真实心声。无论你是喜欢公路电影、关注人性探索，还是热爱美丽景致与深刻对话，这部电影都能触动心弦。大银幕观感更能感受角色情感流动与视觉氛围，值得一看。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 1:15 pm, 5:45 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 1:30 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/pillion" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/pillion" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Wednesday">
+<div class="fh"><span class="rk">#15</span><span class="tt">Sweet Charity (1969) (1969)</span><span class="bd bd-d">豆瓣 7.5</span> <span class="bd bd-r">🍅 80%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/pfnHTlOjCtbA9Jpr71jH2ud_bXo=/206x305/v2/https://resizing.flixster.com/HDcOuyqDKV7LueImUJrrRqVJX24=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzVkNzgwY2ZjLTBmNGYtNGNjZC1iNDNiLTZkOTlhODY1YTE3OC5qcGc=" alt="Sweet Charity (1969)" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Musical · <b>导演</b> Bob Fosse · <b>主演</b> Shirley MacLaine, John McMartin, Ricardo Montalban</div><div class="syn">本片讲述了乐观善良的舞女查丽蒂在追寻爱情与幸福的过程中，经历了一系列令人哭笑不得的际遇，展现她对生活的坚持与希望。</div><div class="rec">💡 《Sweet Charity》由编舞大师Bob Fosse执导，融合华丽歌舞与幽默情节，展现上世纪60年代的独特魅力。Shirley MacLaine的精彩表演令人难忘。推荐给热爱经典音乐剧、喜欢励志故事和视觉盛宴的观众。这部电影不仅让人感受音乐与舞蹈的魔力，也带来温暖与思考，值得走进影院细细品味。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 11:00 am</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/sweet-charity-1969" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/sweet_charity" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#16</span><span class="tt">La Grazia (2025)</span><span class="bd bd-d">豆瓣 7.3</span> <span class="bd bd-r">🍅 84%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/nQQVb6MZunlfUQcVJgo3uN4Nr_U=/206x305/v2/https://resizing.flixster.com/Ne0yNz2NAI3yjYJutSdIH7s2FmY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2QyYjNmMWQ2LWFjY2EtNDg0OS1iYmQ1LTBkZWM1MGMyMTE0OC5wbmc=" alt="La Grazia" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama / Romance · <b>导演</b> Paolo Sorrentino · <b>主演</b> Toni Servillo, Anna Ferzetti, Orlando Cinque</div><div class="syn">一位年迈的作家在偶然邂逅一位神秘女子后，生活发生微妙变化。他在那不勒斯的迷人街头，重新思考爱与救赎的意义，逐渐踏上一段充满诗意与自我探索的情感旅程。</div><div class="rec">💡 《La Grazia》由意大利名导保罗·索伦蒂诺执导，画面充满诗意与城市气息，展现了岁月与情感的细腻流动。托尼·塞尔维洛的表演极具感染力，适合喜欢深度情感与唯美画面的观众。这部电影不仅仅是爱情故事，更是对人生和自我救赎的深刻探讨，非常值得在大银幕上感受那不勒斯的独特魅力。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/la-grazia" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/la_grazia" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Thursday|Sunday|Saturday|Monday">
+<div class="fh"><span class="rk">#17</span><span class="tt">奥赛罗 Othello (1995)</span><span class="bd bd-d">豆瓣 7.8</span> <span class="bd bd-r">🍅 68%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/KjrNq72kOhMxKYbPGeyvRNhSFV8=/206x305/v2/https://resizing.flixster.com/gteIBMdIK_GPih9Q5-o2GbMX-4o=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Q3N2NhZWZiLWM4ZWYtNGExOS05Yjk4LWMyMjcwNjMxODY4MS53ZWJw" alt="Othello" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama · <b>导演</b> Oliver Parker · <b>主演</b> Laurence Fishburne, Irène Jacob, Kenneth Branagh</div><div class="syn">《奥赛罗》讲述了摩尔人将军奥赛罗因嫉妒与阴谋，被身边亲信伊阿古操控，逐步陷入信任与背叛的漩涡，婚姻与命运因此发生巨变。</div><div class="rec">💡 这部电影将莎士比亚著名戏剧搬上银幕，融合了宏大的戏剧冲突与精致的表演。Laurence Fishburne与Kenneth Branagh的对手戏极具张力，画面氛围浓烈。适合喜欢经典文学改编、戏剧性强烈或关注人物心理刻画的观众。影院观看能更好领略台词魅力和视觉冲击，值得一试。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Thursday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Thursday: 6:30 pm</li><li data-day="Saturday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Saturday: 12:30 pm</li><li data-day="Sunday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Sunday: 1:00 pm</li><li data-day="Monday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Monday: 1:00 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/othello" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/othello_1995" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Wednesday|Tuesday">
+<div class="fh"><span class="rk">#18</span><span class="tt">GOAT (2026)</span><span class="bd bd-d">豆瓣 7.1</span> <span class="bd bd-r">🍅 84%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/NZsXua8VmotJEdSHeKANBl6RcKI=/206x305/v2/https://resizing.flixster.com/E4RWTXg58eK-yeETfMDBjOKjfGI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk1YWYwNTYzLWNjYjMtNGYyNi1iMGE4LWM2NWM5NmVhMWZkYi5qcGc=" alt="GOAT" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Kids & Family / Comedy / Animation / Adventure / Sports · <b>导演</b> Tyree Dillihay · <b>主演</b> Caleb McLaughlin, Gabrielle Union, Steph Curry</div><div class="syn">《GOAT》讲述了一个天赋异禀的少年山羊，在家人和朋友的陪伴下，勇敢追逐篮球梦想，力争成为史上最伟大的球员。在成长旅程中，他不断突破自我，收获友情与勇气。</div><div class="rec">💡 这部电影融合了篮球、冒险和家庭元素，以幽默风趣的动画风格，展现了追梦少年的成长与拼搏。无论是热爱运动的孩子，还是需要亲子共度时光的家庭观众，都能从中获得欢乐和启发。大银幕的视听体验更能感受比赛的热血与激情，绝对值得全家一同走进影院观赏。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 10:30 am, 12:45 pm, 5:30 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 5:40 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/goat" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/goat_2026" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Cinema Nova" data-days="Monday">
+<div class="fh"><span class="rk">#19</span><span class="tt">28 Years Later: The Bone Temple (2026)</span><span class="bd bd-d">豆瓣 6.5</span> <span class="bd bd-r">🍅 92%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/WTti7x0SAxze8dlfXxL2OQy59DM=/206x305/v2/https://resizing.flixster.com/KhvweFDt8lqqSgqfVdOUZVXZzow=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzFmNjI1OGU2LTY2MDEtNDMyNi04NGFiLTY3NjZhNDA3ODA2MS5qcGc=" alt="28 Years Later: The Bone Temple" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Horror / Mystery & Thriller / Sci-Fi · <b>导演</b> Nia DaCosta · <b>主演</b> Ralph Fiennes, Alfie Williams, Jack O&#x27;Connell</div><div class="syn">28年后，末日病毒肆虐后的世界依旧危机四伏，一支幸存者小队踏上寻找“骨庙”真相的危险旅途。在废墟与恐怖中，他们面对人性与生存的双重考验。</div><div class="rec">💡 《28 Years Later: The Bone Temple》以紧张悬疑与惊悚氛围为亮点，导演Nia DaCosta巧妙融合科幻与恐怖元素，拉尔夫·费因斯等演员展现出色演技。该片适合喜欢末世题材、悬疑和心理惊悚的观众。影院级视听体验将带来沉浸式恐怖冲击，绝对值得一看！</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.cinemanova.com.au/films/28-years-later-the-bone-temple" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/28_years_later_the_bone_temple" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Tuesday|Monday">
+<div class="fh"><span class="rk">#20</span><span class="tt">Nirvanna the Band the Show the Movie (2025)</span><span class="bd bd-r">🍅 98%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/Vq2JysXi7-Xw-RJ2fUew2ve82XE=/206x305/v2/https://resizing.flixster.com/qxReJqya9fF9rZbB1dVeMgPH1_E=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzVlMmM2ZDFkLTQ2YzQtNGJjZi04ZDI2LTQ1Y2E1YTZjYzYxYi5qcGc=" alt="Nirvanna the Band the Show the Movie" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Comedy · <b>导演</b> Matt Johnson · <b>主演</b> Ben Petrie, Ethan Eng, Luke Lalonde</div><div class="syn">本片讲述了两位音乐梦想家竭力让自己的乐队在多伦多最著名的音乐场地演出的爆笑历程，他们不断策划各种荒诞计划，过程中闹出一连串意想不到的乌龙和趣事。</div><div class="rec">💡 这部电影以伪纪录片风格、突破第四面墙的幽默和极具创意的情节设计脱颖而出，对喜欢另类喜剧、现实题材和音乐文化的观众尤其有吸引力。强烈推荐进影院感受其独特的互动氛围和现场感，爆笑之余也能体会到青春理想的热烈。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 3:40 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/nirvanna-the-band-the-show-the-movie" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/nirvanna_the_band_the_show_the_movie" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#21</span><span class="tt">Sinners (2025)</span><span class="bd bd-r">🍅 97%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/rc2aT1XKcvIHluV6HHZ3oAjVaxE=/206x305/v2/https://resizing.flixster.com/VR3Tfr9zpNllsU6RchvnbhGmPkc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2VhOTdiZDNjLTlmODQtNGNlYi1iZWYwLWNkYjY2YmI5YzZjYS5qcGc=" alt="Sinners" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Horror / Mystery & Thriller / Drama · <b>导演</b> Ryan Coogler · <b>主演</b> Michael B. Jordan, Hailee Steinfeld, Miles Caton</div><div class="syn">一桩离奇谋杀案牵扯出小镇居民背后的秘密，三位主角在调查真相时逐渐逼近更大的黑暗，各自的过去也随之浮出水面。</div><div class="rec">💡 《Sinners》以紧凑悬疑氛围和心理惊悚为最大亮点，导演瑞恩·库格勒巧妙调度节奏，让观众始终紧张投入。迈克尔·B·乔丹与海莉·斯坦菲尔德的对手戏极具张力，适合喜欢烧脑悬疑与心理深度的观众。大银幕下的视觉冲击与情感共振，绝对值得走进影院亲身体验。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 11:45 am, 8:40 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 8:50 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/sinners" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/sinners_2025" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#22</span><span class="tt">The Plague (2025)</span><span class="bd bd-r">🍅 97%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/Q_YAjBJi1AVY9vFOZz5_Leyk1_o=/206x305/v2/https://resizing.flixster.com/gG8RTke2CcCjPHw_VlmkQHQjRbo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzU3YTUyZjEwLTUyYjEtNGY3NC1hNzMzLWI3ZjRkODc2ZDMxZC5qcGc=" alt="The Plague" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Mystery & Thriller / Drama · <b>导演</b> Charlie Polinger · <b>主演</b> Joel Edgerton, Everett Blunck, Kayo Martin</div><div class="syn">一场神秘的瘟疫席卷小镇，社区陷入恐慌与隔离。镇长（Joel Edgerton 饰）与一名少年、女护士在混乱中寻找真相，逐步揭开瘟疫背后的人性与黑暗秘密。</div><div class="rec">💡 《The Plague》以紧张悬疑的氛围和深刻的人物刻画脱颖而出，导演通过细腻镜头和精湛调度展现人性在危机下的挣扎与救赎。喜欢心理悬疑、社会议题及群像戏的观众不可错过。大银幕体验更能感受瘟疫下的压抑与希望，非常值得走进影院细细品味。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 3:30 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 4:10 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/the-plague" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/the_plague_2025" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#23</span><span class="tt">挽救计划 Project Hail Mary (2026)</span><span class="bd bd-r">🍅 95%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/hPAtDUKUIu7noae-gKABoNRkQcM=/206x305/v2/https://resizing.flixster.com/6EeDwgqrKFi1ADO4k4VzZtrOVhM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2NlNDNmOTM0LTc3NDctNDcxNi05ZWY1LTQ3NzI0OWIxYTlhNC5qcGc=" alt="Project Hail Mary" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Sci-Fi / Adventure · <b>导演</b> Phil Lord, Christopher Miller · <b>主演</b> Ryan Gosling, Sandra Hüller, James Ortiz</div><div class="syn">一名宇航员在宇宙深处独自醒来，发现地球面临灭绝危机。他必须依靠有限的资源和出人意料的伙伴，展开一场惊心动魄的星际救援任务。</div><div class="rec">💡 《Project Hail Mary》以宏大的科幻构想和紧张的冒险情节脱颖而出，导演巧妙结合幽默与人性探索，Ryan Gosling的表演极具感染力。喜欢硬核科幻、太空冒险和感人情感线的观众绝不能错过。大银幕的视听震撼和扣人心弦的故事，值得你走进影院全身心体验。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 11:45 am, 1:00 pm, 3:00 pm, 4:15 pm, 6:20 pm, 7:30 pm, 8:40 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 11:00 am, 12:30 pm, 2:30 pm, 3:45 pm, 6:20 pm, 7:00 pm, 8:40 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/project-hail-mary" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/project_hail_mary" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Tuesday|Monday">
+<div class="fh"><span class="rk">#24</span><span class="tt">The Voice of Hind Rajab (2025)</span><span class="bd bd-r">🍅 95%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/zuTTSdrjN9t0dc8KXJ5rup8zPbs=/206x305/v2/https://resizing.flixster.com/_UlJWXDptjC14b69b_u-AEhZOk4=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA5OWJmODY5LWJhOTItNGJmNC04NDlkLTRiZDU5Y2E0ZTAyYS5qcGc=" alt="The Voice of Hind Rajab" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Drama / War · <b>导演</b> Kaouther Ben Hania · <b>主演</b> Saja Kilani, Motaz Malhees, Clara Khoury</div><div class="syn">《The Voice of Hind Rajab》讲述了在战争阴影下，少女Hind Rajab通过电台发声，勇敢寻求救援的故事。她的声音穿越战火，唤起了希望与共情，展现了人性的坚韧与温暖。</div><div class="rec">💡 本片由才华横溢的Kaouther Ben Hania执导，以细腻视角刻画战争中的女性与儿童，情感真实动人。95%高分不仅验证了其艺术水准，更让人期待影院沉浸式体验。适合关注人性、社会议题或喜欢深度剧情片的观众，不容错过这部映照现实、引发深思的佳作。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 11:10 am</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/the-voice-of-hind-rajab" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/the_voice_of_hind_rajab" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas|Cinema Nova" data-days="Wednesday|Tuesday|Monday">
+<div class="fh"><span class="rk">#25</span><span class="tt">One Battle After Another (2025)</span><span class="bd bd-r">🍅 94%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas / Cinema Nova</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/a0E2gFPOf0-iJR0RSgWv8zqCJxQ=/206x305/v2/https://resizing.flixster.com/yepsxuaCu3f7igZnTo2huAOVtCU=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNhNmQzNDA0LWFhYjQtNDA5Mi04OTMyLTA2Y2U2OWI5ZjVmYS5qcGc=" alt="One Battle After Another" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Mystery & Thriller / Comedy / Drama · <b>导演</b> Paul Thomas Anderson · <b>主演</b> Leonardo DiCaprio, Sean Penn, Chase Infiniti</div><div class="syn">一名落魄侦探卷入一桩扑朔迷离的连环案件，不得不联合一位神秘证人与一位风趣搭档，共同揭露城市背后的黑暗势力，同时面对各自的内心困境。</div><div class="rec">💡 《One Battle After Another》由保罗·托马斯·安德森执导，莱昂纳多·迪卡普里奥与西恩·潘飙戏，融合悬疑、幽默与人性冲突，风格鲜明。影片通过层层反转与黑色幽默，给观众带来智力与情感的双重刺激。推荐给喜欢烧脑推理、角色深度和导演风格化表达的观众，这部电影在大银幕上体验更佳，不容错过。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 3:00 pm, 7:50 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 3:00 pm, 8:00 pm</li><li data-day="Monday" data-cinema="Cinema Nova"><span class="ct-tag">Cinema Nova</span>Monday, 23rd March</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/one-battle-after-another" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/one_battle_after_another" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Wednesday|Tuesday">
+<div class="fh"><span class="rk">#26</span><span class="tt">Arco (Dubbed) (2025)</span><span class="bd bd-r">🍅 93%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/9YM8oldQ-g8MmUs6WJVA9D_AyoA=/206x305/v2/https://resizing.flixster.com/IEx88btWgjoy_wM4DS9h4eGJdbg=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzJlMzMwZDJlLWFhYjItNGEzMy1iYmZlLTNkMjg0MmU1MzMzZS5qcGc=" alt="Arco (Dubbed)" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Kids & Family / Fantasy / Adventure / Animation / Drama / Sci-Fi · <b>导演</b> Ugo Bienvenu · <b>主演</b> Will Ferrell, America Ferrera, Flea</div><div class="syn">在奇幻的未来世界里，少年阿科与机器人伙伴踏上冒险旅程，寻找失落的家园和自我认同，途中结识新朋友，共同面对未知挑战。</div><div class="rec">💡 《Arco (Dubbed)》融合了科幻、奇幻与家庭元素，画面风格独特，情感真挚，适合亲子观影或喜欢冒险与成长主题的观众。明星配音阵容为角色注入灵魂，故事寓意深远。大银幕能更好展现其视觉魅力与感官体验，绝对值得全家人走进影院，共同感受这段温暖人心的冒险之旅。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Tuesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Tuesday: 1:35 pm</li><li data-day="Wednesday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Wednesday: 3:45 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/arco-dubbed" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/arco" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="Lido Cinemas" data-days="Monday|Friday">
+<div class="fh"><span class="rk">#27</span><span class="tt">12 Monkeys (1995) (1995)</span><span class="bd bd-r">🍅 88%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 Lido Cinemas</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/oCn_sq0co1EkH17SIbrwmRVQ4I8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p17517_p_v8_au.jpg" alt="12 Monkeys (1995)" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Mystery & Thriller / Sci-Fi · <b>导演</b> Terry Gilliam · <b>主演</b> Bruce Willis, Madeleine Stowe, Brad Pitt</div><div class="syn">在未来世界被致命病毒摧毁后，囚犯詹姆斯被送回过去，试图揭开“12只猴子军团”与病毒爆发的真相。他在时空穿梭中面临种种谜团与人性的考验。</div><div class="rec">💡 《12只猴子》以烧脑的叙事结构和极具张力的悬疑氛围脱颖而出，导演特里·吉列姆赋予了影片独特的视觉风格。布鲁斯·威利斯与布拉德·皮特的精彩表演令人难忘。喜欢科幻悬疑、思考时间与命运主题的观众绝对不能错过，在大银幕上观赏更能体会其复杂时空与末世氛围的冲击力。</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li data-day="Friday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Friday: 8:00 pm</li><li data-day="Monday" data-cinema="Lido Cinemas"><span class="ct-tag">Lido Cinemas</span>Monday: 7:30 pm</li></ul></div><div class="lk"><a href="https://www.lidocinemas.com.au/movies/12-monkeys-1995" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/12_monkeys" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="fc" data-cinemas="ACMI" data-days="">
+<div class="fh"><span class="rk">#28</span><span class="tt">Rock N Roll (1979)</span><span class="bd bd-r">🍅 82%</span> </div>
+<div style="font-size:.83em;color:var(--t2);margin-bottom:8px">📍 ACMI</div>
+<div class="fc-body">
+<div class="fc-poster"><img src="https://resizing.flixster.com/WpSF9x4s_ewhgfAoYy7VIaLJAh4=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p1589_p_v8_aa.jpg" alt="Rock N Roll" loading="lazy"></div>
+<div class="fc-info">
+<div class="meta">Musical · <b>导演</b> Allan Arkush · <b>主演</b> P.J. Soles, Vince Van Patten, Clint Howard</div><div class="syn">《Rock N Roll (1979)》讲述了一群高中生为筹备毕业舞会，勇敢挑战学校权威，大胆追逐音乐梦想的青春故事，充满热情与幽默。</div><div class="rec">💡 这部电影以活力四射的音乐、幽默的青春桥段和真实的成长困境，展现了70年代末美国青少年的独特气息。对于热爱音乐、怀旧氛围和校园题材的观众来说，它不仅能唤起青春回忆，还能带来满满正能量。大银幕的声光效果更能让观众沉浸在摇滚与梦想的狂欢中，绝对值得走进影院体验！</div><div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li>请前往购票页面查看</li></ul></div><div class="lk"><a href="https://www.acmi.net.au/whats-on/in-cinemas-rock-n-roll/" target="_blank">🎟 购票</a><a href="https://www.rottentomatoes.com/m/1017745-rock_n_roll_high_school" target="_blank">🍅 烂番茄</a></div>
+</div>
+</div>
+</div>
+<div class="no-results" id="no-results" style="display:none">没有符合筛选条件的电影</div>
+</div>
+
+<div class="ft">Lido Cinemas · Cinema Nova · ACMI · 豆瓣 · Rotten Tomatoes<br>2026-03-23 13:21</div>
+
+<script>
+(function(){
+  let activeCinema='all', activeDay='all';
+  const cards=document.querySelectorAll('.fc[data-cinemas]');
+  const statEl=document.getElementById('stat-text');
+  const noRes=document.getElementById('no-results');
+
+  function applyFilters(){
+    let visible=0;
+    cards.forEach(card=>{
+      const cinemas=card.dataset.cinemas||'';
+      const days=card.dataset.days||'';
+      const matchC=activeCinema==='all'||cinemas.includes(activeCinema);
+      const matchD=activeDay==='all'||days.includes(activeDay);
+      const show=matchC&&matchD;
+      card.classList.toggle('hidden',!show);
+      if(show) visible++;
+      // 场次行也按日期过滤
+      card.querySelectorAll('.ss li[data-day]').forEach(li=>{
+        if(activeDay==='all'){ li.classList.remove('s-hide'); }
+        else{ li.classList.toggle('s-hide',!li.dataset.day.includes(activeDay)); }
+      });
+    });
+    statEl.textContent=activeCinema==='all'&&activeDay==='all'
+      ? '从 41 部排片中精选 28 部高分佳作'
+      : '筛选结果: '+visible+' 部电影';
+    noRes.style.display=visible===0?'block':'none';
+  }
+
+  document.querySelectorAll('[data-filter-cinema]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      activeCinema=btn.dataset.filterCinema;
+      document.querySelectorAll('[data-filter-cinema]').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll('[data-filter-day]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      activeDay=btn.dataset.filterDay;
+      document.querySelectorAll('[data-filter-day]').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+})();
+</script>
 </body></html>
