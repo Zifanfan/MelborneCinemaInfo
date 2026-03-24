@@ -904,5 +904,35 @@
     "url": "https://movie.douban.com/subject/35740369/",
     "title_cn": "吉爸",
     "hot_comment": ""
+  },
+  "the princess diaries": {
+    "score": 7.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "dogs in space": {
+    "score": 7.1,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "if i had legs i'd kick you": {
+    "score": 7.0,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "nouvelle vague": {
+    "score": 6.9,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the royal tenenbaums": {
+    "score": 8.1,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
   }
 }
