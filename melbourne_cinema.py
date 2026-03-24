@@ -47,8 +47,11 @@ class Film:
     poster: str = ""           # 海报 URL
     duration: str = ""         # 时长 (如 "2h 10m")
     synopsis: str = ""
-    recommendation: str = ""   # 影片亮点/看点
-    awards: str = ""           # 电影节获奖信息
+    synopsis_en: str = ""      # English synopsis
+    recommendation: str = ""   # 影片亮点/看点 (中文)
+    recommendation_en: str = "" # English highlights
+    awards: str = ""           # 电影节获奖信息 (中文)
+    awards_en: str = ""        # 电影节获奖信息 (English)
     hot_comment: str = ""      # 豆瓣最热短评
 
 
@@ -342,6 +345,155 @@ def scrape_acmi(start: dt.date, end: dt.date) -> list[Film]:
     return list(films_dict.values())
 
 
+# ───────── Palace Cinemas ─────────
+PALACE_BASE = "https://www.palacecinemas.com.au"
+# Melbourne Palace cinemas (VIC only)
+PALACE_MELB_SLUGS = [
+    "palace-cinema-como",
+    "palace-brighton-bay",
+    "the-kino-melbourne",
+    "palace-balwyn",
+    "palace-westgarth",
+    "pentridge-cinema",
+    "palace-penny-lane",
+    "palace-church-street",
+    "the-astor-theatre",
+]
+
+def scrape_palace(start: dt.date, end: dt.date) -> list[Film]:
+    """
+    Palace Cinemas 使用 Next.js，__NEXT_DATA__ 中包含完整的 sessions 数据。
+    每个 cinema 页面包含该影院所有排片和场次时间 (UTC)。
+    """
+    log.info("Palace: 抓取排片")
+    films_dict: dict[str, Film] = {}
+
+    for slug in PALACE_MELB_SLUGS:
+        url = f"{PALACE_BASE}/cinemas/{slug}/"
+        cinema_label = slug.replace("-", " ").title().replace("Palace ", "Palace ")
+        try:
+            resp = _get(url)
+            soup = BeautifulSoup(resp.text, "html.parser")
+            script = soup.find("script", id="__NEXT_DATA__")
+            if not script:
+                continue
+            data = json.loads(script.string)
+            sessions = data.get("props", {}).get("pageProps", {}).get("sessions", [])
+            cinema_info = data.get("props", {}).get("pageProps", {}).get("cinema", {})
+            cinema_name = cinema_info.get("title", cinema_label)
+
+            for movie in sessions:
+                title = movie.get("title", "")
+                movie_slug = movie.get("slug", "")
+                if not title:
+                    continue
+                movie_url = f"{PALACE_BASE}/movies/{movie_slug}" if movie_slug else ""
+
+                for sess in movie.get("sessions", []):
+                    date_str = sess.get("date", "")  # "2026-03-25T16:00:00.000Z" (UTC)
+                    if not date_str:
+                        continue
+                    try:
+                        # UTC → Melbourne time (UTC+10/+11)
+                        utc_dt = dt.datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+                        melb_dt = utc_dt + dt.timedelta(hours=10)  # AEST
+                        sess_date = melb_dt.date()
+                    except (ValueError, TypeError):
+                        continue
+
+                    if sess_date < start or sess_date > end:
+                        continue
+
+                    # Format time
+                    h, m = melb_dt.hour, melb_dt.minute
+                    ampm = "am" if h < 12 else "pm"
+                    h12 = h if 1 <= h <= 12 else (h - 12 if h > 12 else 12)
+                    time_str = f"{h12}:{m:02d} {ampm}"
+                    day_label = _day_label(sess_date)
+
+                    key = title
+                    if key not in films_dict:
+                        films_dict[key] = Film(title=title, cinema=cinema_name, url=movie_url, sessions=[])
+                    elif cinema_name not in films_dict[key].cinema:
+                        films_dict[key].cinema += f" / {cinema_name}"
+
+                    # 场次带上影院名 (Palace 有多家, 需要区分)
+                    session_str = f"[{cinema_name}] {day_label}: {time_str}"
+                    if session_str not in films_dict[key].sessions:
+                        films_dict[key].sessions.append(session_str)
+
+        except Exception as exc:
+            log.warning("Palace %s 失败: %s", slug, exc)
+
+    for f in films_dict.values():
+        f.sessions.sort()
+
+    log.info("Palace: %d 部电影 (本周)", len(films_dict))
+    return list(films_dict.values())
+
+
+# ───────── IMAX Melbourne ─────────
+IMAX_BASE = "https://imaxmelbourne.com.au"
+
+def scrape_imax(start: dt.date, end: dt.date) -> list[Film]:
+    """
+    IMAX Melbourne: 
+    1. 从 /session_times_and_tickets/ 的 movie dropdown 获取所有电影 ID
+    2. 从 /now_showing 获取当前放映电影的链接
+    3. Session times 由 JS 渲染无法直接获取, 只提供电影列表和购票链接
+    """
+    log.info("IMAX: 抓取排片")
+    films_dict: dict[str, Film] = {}
+
+    # 从 dropdown 获取电影 ID 和名称
+    movie_ids: dict[str, str] = {}  # name -> id
+    try:
+        resp = _get(f"{IMAX_BASE}/session_times_and_tickets/")
+        soup = BeautifulSoup(resp.text, "html.parser")
+        select = soup.find("select", {"name": "movie"})
+        if select:
+            for opt in select.find_all("option"):
+                val = opt.get("value", "")
+                text = opt.get_text(strip=True)
+                if val and val not in ["", "-1"] and text:
+                    movie_ids[text] = val
+    except Exception:
+        pass
+
+    # 从 now_showing 获取当前放映电影
+    try:
+        resp = _get(f"{IMAX_BASE}/now_showing")
+        soup = BeautifulSoup(resp.text, "html.parser")
+        for listing in soup.find_all("div", class_="film-listing"):
+            title_el = listing.find("h2")
+            if not title_el:
+                continue
+            title = title_el.get_text(strip=True)
+            link = listing.find("a", href=re.compile(r"/movie/"))
+            href = link.get("href", "") if link else ""
+            movie_url = f"{IMAX_BASE}{href}" if href.startswith("/") else href
+
+            # 找到对应的 movie ID，构建购票链接
+            mid = movie_ids.get(title.upper(), "")
+            if not mid:
+                # 模糊匹配
+                for name, mid_val in movie_ids.items():
+                    if title.upper() in name or name in title.upper():
+                        mid = mid_val
+                        break
+            ticket_url = f"{IMAX_BASE}/session_times_and_tickets/?movie={mid}" if mid else movie_url
+
+            films_dict[title] = Film(
+                title=title, cinema="IMAX Melbourne", url=ticket_url,
+                sessions=[]  # IMAX sessions are JS-rendered, can't scrape
+            )
+    except Exception as exc:
+        log.warning("IMAX now_showing 失败: %s", exc)
+
+    log.info("IMAX: %d 部电影", len(films_dict))
+    return list(films_dict.values())
+
+
 # ═══════════════════════════════════════
 #  2. 评分查询
 # ═══════════════════════════════════════
@@ -532,6 +684,7 @@ def _query_douban_serial(films: list[Film]) -> None:
         pass
 
     queried = 0
+    retry_cn = []  # 有评分但缺中文名的，稍后重试 suggest API
     for i, film in enumerate(films):
         key = _dedup_key(film.title)
         # 从缓存读取
@@ -543,6 +696,9 @@ def _query_douban_serial(films: list[Film]) -> None:
             film.hot_comment = c.get("hot_comment", "")
             log.info("  豆瓣 [%d/%d] %s → 缓存 %s", i+1, len(films), film.title,
                      f"✓ {film.douban_score}" if film.douban_score else "✗")
+            # 记录缺中文名的
+            if not film.title_cn:
+                retry_cn.append((key, film))
             continue
 
         log.info("  豆瓣 [%d/%d] %s", i+1, len(films), film.title)
@@ -555,7 +711,6 @@ def _query_douban_serial(films: list[Film]) -> None:
         except Exception as e:
             log.warning("    豆瓣失败: %s", e)
 
-        # 写入缓存 (即使没评分也缓存, 但只缓存有 url 的)
         if film.douban_url or film.douban_score or film.title_cn:
             cache[key] = {
                 "score": film.douban_score,
@@ -565,7 +720,33 @@ def _query_douban_serial(films: list[Film]) -> None:
             }
 
         queried += 1
-        time.sleep(2.5)  # 间隔 2.5 秒避免豆瓣反爬
+        time.sleep(2.5)
+
+    # 补充中文名: 对缓存中有评分但缺 title_cn 的电影重试 suggest API
+    if retry_cn:
+        log.info("  补充中文名: %d 部...", len(retry_cn))
+        for key, film in retry_cn:
+            clean = _search_title(film.title)
+            try:
+                resp = SESSION.get("https://movie.douban.com/j/subject_suggest",
+                                   params={"q": clean}, timeout=8)
+                if resp.status_code == 200:
+                    for item in (resp.json() or []):
+                        if item.get("type") == "movie":
+                            cn = item.get("title", "")
+                            if cn:
+                                film.title_cn = cn
+                                cache[key]["title_cn"] = cn
+                                did = item.get("id", "")
+                                if did and not cache[key].get("url"):
+                                    film.douban_url = f"https://movie.douban.com/subject/{did}/"
+                                    cache[key]["url"] = film.douban_url
+                                log.info("    %s → %s", film.title, cn)
+                                queried += 1
+                            break
+            except Exception:
+                pass
+            time.sleep(1)
 
     # 保存缓存
     if queried > 0:
@@ -638,31 +819,37 @@ def enrich_with_ai(film: Film, client, model: str) -> Film:
     if film.rt_score is not None: scores.append(f"烂番茄 {film.rt_score}%")
     if scores: info_parts.append(f"评分: {', '.join(scores)}")
 
-    prompt = f"""你是一位资深电影评论人和选片顾问。请根据以下电影信息，帮助观众快速判断是否值得去影院观看。
+    prompt = f"""你是一位资深电影评论人和选片顾问。请根据以下电影信息，帮助观众快速判断是否值得去影院观看。请同时提供中文和英文版本。
 
 电影名: {film.title} ({film.year or '未知年份'})
 {chr(10).join(info_parts) if info_parts else '暂无更多信息'}
 
 请严格按以下 JSON 格式回复，不要多余文字:
 {{
-  "synopsis": "剧情简介，50-80字，概括主角困境和核心冲突，不剧透。如果是续集/系列作品请注明（如'《28天后》系列第三部'）",
-  "highlights": "影片核心看点，100-150字。用▸分隔2-3个最突出的看点（不要凑数），只写最有信息量的内容。可以涉及: 导演独特手法/演员突破表演/获奖加持/视听语言创新/系列关联/文化意义等。避免'值得一看''不容错过'等空话。每个▸后直接写内容，不需要小标题。",
-  "awards": "电影节获奖/提名，如'2023戛纳金棕榈提名'。无则留空字符串"
+  "synopsis": "中文剧情简介，50-80字，概括主角困境和核心冲突，不剧透。如果是续集/系列作品请注明",
+  "synopsis_en": "English synopsis, 40-60 words, core conflict and protagonist's dilemma, no spoilers",
+  "highlights": "中文影片核心看点，100-150字。用▸分隔2-3个最突出的看点（不要凑数），只写最有信息量的内容。避免空话。",
+  "highlights_en": "English highlights, 80-120 words. Use ▸ to separate 2-3 key selling points. Be specific about directorial style, performances, cinematography, awards. No generic praise.",
+  "awards": "电影节获奖/提名(中文)，如'2023戛纳金棕榈提名'。无则留空",
+  "awards_en": "Awards/nominations in English, e.g. '2023 Cannes Palme d'Or nominee'. Empty if none"
 }}"""
 
     try:
         resp = client.chat.completions.create(
             model=model,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=600, temperature=0.7,
+            max_tokens=800, temperature=0.7,
         )
         text = resp.choices[0].message.content.strip()
         m = re.search(r'\{.*\}', text, re.DOTALL)
         if m:
             data = json.loads(m.group())
             film.synopsis = data.get("synopsis", "") or film.synopsis
+            film.synopsis_en = data.get("synopsis_en", "") or ""
             film.recommendation = data.get("highlights", "") or _template_recommendation(film)
+            film.recommendation_en = data.get("highlights_en", "") or ""
             film.awards = data.get("awards", "") or ""
+            film.awards_en = data.get("awards_en", "") or ""
             return film
     except Exception as exc:
         log.warning("  AI 失败 (%s): %s", film.title, exc)
@@ -717,11 +904,63 @@ _NON_MOVIE = ["quartet","quintet","comedy:","trivia","jukebox","sings","we are j
 def _is_movie(f: Film) -> bool:
     return not any(kw in f.title.lower() for kw in _NON_MOVIE)
 
+
+# ── 电影节前缀 / 双片联映 处理 ──
+_FESTIVAL_PREFIXES = {
+    r'^AFFFF\d+\s+': 'AFFFF',
+    r'^AFFA\d+\s+': 'AFFA',
+    r'^MIFF\d*\s+': 'MIFF',
+    r'^HRAFF\d*\s+': 'HRAFF',
+    r'^Astor:\s*': 'Astor Special',       # "Astor: The Departed" → "The Departed"
+    r'^NT Live:\s*': 'NT Live',           # National Theatre Live
+    r'^La Scala:\s*': 'La Scala',
+    r'^Royal Ballet:\s*': 'Royal Ballet',
+    r'^Royal Opera:\s*': 'Royal Opera',
+}
+
+def _preprocess_films(films: list[Film]) -> list[Film]:
+    """预处理: 提取电影节前缀 + 拆分双片联映 + 特别版后缀"""
+    result = []
+    for f in films:
+        # 1. 电影节前缀: "AFFFF26 Alpha" → title="Alpha", festival tag
+        festival = ""
+        new_title = f.title
+        for pattern, fest_name in _FESTIVAL_PREFIXES.items():
+            if re.match(pattern, new_title, re.I):
+                festival = fest_name
+                new_title = re.sub(pattern, '', new_title, flags=re.I).strip()
+                break
+        if festival:
+            f.title = new_title
+            f.genre = f"🎪 {festival} | {f.genre}" if f.genre else f"🎪 {festival}"
+
+        # 2. 特别版/周年后缀: "The Departed - 10th Anniversary" → strip, add tag
+        special_m = re.search(r'\s*[-–]\s*(\d+\w*\s*(?:Anniversary|Remaster|Restoration|Director.s Cut|Special|Edition|4K)[^)]*?)$', f.title, re.I)
+        if special_m:
+            tag = special_m.group(1).strip()
+            f.title = f.title[:special_m.start()].strip()
+            f.genre = f"✨ {tag} | {f.genre}" if f.genre else f"✨ {tag}"
+
+        # 3. 双片联映: "X + Y"
+        if " + " in f.title:
+            parts = f.title.split(" + ")
+            for part in parts:
+                clone = Film(
+                    title=part.strip(), cinema=f.cinema, url=f.url,
+                    sessions=f.sessions.copy(),
+                    genre=f"🔗 Double Feature | {f.genre}" if f.genre else "🔗 Double Feature",
+                )
+                result.append(clone)
+            continue
+
+        result.append(f)
+    return result
+
 def is_high_rated(f: Film) -> bool:
-    """豆瓣 ≥ 7.5 或 烂番茄 ≥ 85%"""
+    """豆瓣 ≥ 7.5 或 烂番茄 ≥ 90%"""
     if (f.douban_score or 0) >= 7.5:
         return True
-    if (f.rt_score or 0) >= 85:
+    if (f.rt_score or 0) >= 90:
         return True
     return False
 
@@ -753,12 +992,15 @@ def deduplicate(films: list[Film]) -> list[Film]:
                 ex.cinema += f" / {f.cinema}"
             if f.sessions:
                 tag = f.cinema.split("/")[0].strip()
-                ex.sessions.extend(f"[{tag}] {s}" for s in f.sessions)
+                for s in f.sessions:
+                    # 只有不带 [...] 前缀的才加
+                    tagged = s if s.startswith("[") else f"[{tag}] {s}"
+                    ex.sessions.append(tagged)
             if not ex.url and f.url: ex.url = f.url
         else:
             if f.sessions:
                 tag = f.cinema.split("/")[0].strip()
-                f.sessions = [f"[{tag}] {s}" for s in f.sessions]
+                f.sessions = [s if s.startswith("[") else f"[{tag}] {s}" for s in f.sessions]
             merged[key] = f
     return list(merged.values())
 
@@ -881,6 +1123,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 .ss ul{{list-style:none;padding:0}}.ss li{{font-size:.76em;color:var(--t2);padding:1px 0 1px 14px;position:relative}}
 .ss li::before{{content:"▸";position:absolute;left:0;color:var(--acc)}}
 .ss li.s-hide{{display:none}}
+.ss li.s-extra{{display:none}}.ss.expanded li.s-extra{{display:list-item}}
+.ss-more{{font-size:.72em;color:var(--acc);cursor:pointer;padding:3px 0;margin-top:2px}}.ss-more:hover{{text-decoration:underline}}
 .ct-tag{{display:inline-block;font-size:.68em;background:#2a2a3e;color:var(--t2);padding:1px 5px;border-radius:4px;margin-right:3px}}
 .lk{{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}}
 .lk a{{font-size:.73em;color:var(--acc);text-decoration:none;padding:2px 10px;border:1px solid var(--b);border-radius:6px;transition:all .2s}}
@@ -892,28 +1136,44 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 .no-results{{text-align:center;color:var(--t2);padding:32px 20px;font-size:.88em}}
 @media(max-width:500px){{.fc-poster{{width:90px}}.fc-poster img{{width:90px}}.fc{{padding:14px 16px}}}}
 .ft{{text-align:center;color:var(--t2);font-size:.73em;padding:24px 20px;border-top:1px solid var(--b)}}
+[data-lang=en]{{display:none}}
+body.en [data-lang=cn]{{display:none}}
+body.en [data-lang=en]{{display:revert}}
+body.en span[data-lang=en]{{display:inline}}
+body.en div[data-lang=en]{{display:block}}
+.lang-toggle{{position:fixed;top:10px;right:14px;z-index:20;display:flex;border-radius:999px;overflow:hidden;border:1.5px solid var(--acc);font-size:.72em;font-family:inherit}}
+.lang-toggle button{{padding:4px 14px;border:none;cursor:pointer;font-family:inherit;transition:all .15s;font-weight:600}}
+.lang-toggle .lt-cn{{background:var(--acc);color:var(--bg)}}
+.lang-toggle .lt-en{{background:transparent;color:var(--acc)}}
+body.en .lang-toggle .lt-cn{{background:transparent;color:var(--acc)}}
+body.en .lang-toggle .lt-en{{background:var(--acc);color:var(--bg)}}
 </style></head><body>
 
-<div class="hd"><h1>🎬 墨尔本电影周报</h1>
-<div class="sub">{start.strftime('%Y年%m月%d日')} — {end.strftime('%Y年%m月%d日')} · 豆瓣 ≥ 7.5 / 🍅 ≥ 85%</div></div>
+<div class="lang-toggle" id="langToggle">
+<button class="lt-cn" onclick="document.body.classList.remove('en')">中文</button>
+<button class="lt-en" onclick="document.body.classList.add('en')">EN</button>
+</div>
+
+<div class="hd"><h1>🎬 <span data-lang="cn">墨尔本电影周报</span><span data-lang="en">Melbourne Cinema Weekly</span></h1>
+<div class="sub">{start.strftime('%m/%d')}–{end.strftime('%m/%d %Y')} · <span data-lang="cn">豆瓣 ≥ 7.5 / 🍅 ≥ 90%</span><span data-lang="en">Douban ≥ 7.5 / 🍅 ≥ 90%</span></div></div>
 
 <div class="filters"><div class="filters-inner">
-<div class="fg"><div class="fg-label">🎬 影院</div><div class="fg-btns">
-<button class="fb active" data-filter-cinema="all">全部</button>{cinema_btns}
+<div class="fg"><div class="fg-label"><span data-lang="cn">🎬 影院</span><span data-lang="en">🎬 CINEMA</span></div><div class="fg-btns">
+<button class="fb active" data-filter-cinema="all"><span data-lang="cn">全部</span><span data-lang="en">All</span></button>{cinema_btns}
 </div></div>
-<div class="fg"><div class="fg-label">📅 日期</div><div class="fg-btns">
-<button class="fb active" data-filter-day="all">全部</button>{day_btns}
+<div class="fg"><div class="fg-label"><span data-lang="cn">📅 日期</span><span data-lang="en">📅 DATE</span></div><div class="fg-btns">
+<button class="fb active" data-filter-day="all"><span data-lang="cn">全部</span><span data-lang="en">All</span></button>{day_btns}
 </div></div>
 </div></div>
 
 <div class="ct">
-<p class="stat" id="stat-text">从 {len(films)} 部排片中精选 {len(rec)} 部高分佳作</p>
+<p class="stat" id="stat-text"><span data-lang="cn">从 {len(films)} 部排片中精选 {len(rec)} 部高分佳作</span><span data-lang="en">{len(rec)} top picks from {len(films)} screenings</span></p>
 {cards}
-<div class="no-results" id="no-results" style="display:none">没有符合筛选条件的电影</div>
+<div class="no-results" id="no-results" style="display:none"><span data-lang="cn">没有符合筛选条件的电影</span><span data-lang="en">No films match your filter</span></div>
 </div>
 
 <div class="ft">
-  Lido Cinemas · Cinema Nova · ACMI · 豆瓣 · Rotten Tomatoes<br>
+  <span data-lang="cn">数据来源</span><span data-lang="en">Sources</span>: Lido · Nova · ACMI · Palace · IMAX · <span data-lang="cn">豆瓣</span><span data-lang="en">Douban</span> · Rotten Tomatoes<br>
   {dt.datetime.now().strftime('%Y-%m-%d %H:%M')}<br><br>
   <span style="font-size:.9em;color:var(--acc)">Authored by Zifan Ni && Claude</span><br>
   <a href="https://github.com/Zifanfan/MelborneCinemaInfo" target="_blank" style="color:var(--t2);text-decoration:none;font-size:.85em">
@@ -945,8 +1205,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
       }});
     }});
     statEl.textContent=activeCinema==='all'&&activeDay==='all'
-      ? '从 {len(films)} 部排片中精选 {len(rec)} 部高分佳作'
-      : '筛选结果: '+visible+' 部电影';
+      ? (document.body.classList.contains('en')?'{len(rec)} top picks from {len(films)} screenings':'从 {len(films)} 部排片中精选 {len(rec)} 部高分佳作')
+      : (document.body.classList.contains('en')?'Filtered: '+visible+' films':'筛选结果: '+visible+' 部电影');
     noRes.style.display=visible===0?'block':'none';
   }}
 
@@ -975,61 +1235,98 @@ def _html_card(f: Film, idx: int) -> str:
     title = _esc(_display_title(f))
     badges = ""
     if f.douban_score:
-        badges += f'<span class="bd bd-d">豆瓣 {f.douban_score}</span> '
+        badges += f'<span class="bd bd-d"><span data-lang="cn">豆瓣</span><span data-lang="en">Douban</span> {f.douban_score}</span> '
     else:
-        badges += '<span class="bd" style="background:#2a2a3e;color:var(--t2);border:1px solid var(--b)">豆瓣 暂无评分</span> '
+        badges += '<span class="bd" style="background:#2a2a3e;color:var(--t2);border:1px solid var(--b)"><span data-lang="cn">豆瓣 暂未收录</span><span data-lang="en">Douban N/A</span></span> '
     if f.rt_score is not None: badges += f'<span class="bd bd-r">🍅 {f.rt_score}%</span> '
 
     meta_parts = []
-    if f.genre: meta_parts.append(f.genre)
+    # 从 genre 中提取特殊标签 (🎪/✨/🔗) 作为独立 badges
+    tags_html = ""
+    genre_display = f.genre or ""
+    tag_badges = []
+    for emoji, cls_color in [("🎪", "#2a1a3a;color:#c090e0;border:1px solid #4a2d5a"),
+                              ("✨", "#3a2a1a;color:#f0c040;border:1px solid #5a4a2d"),
+                              ("🔗", "#1a2a3a;color:#60b0e0;border:1px solid #2d4a5a")]:
+        if emoji in genre_display:
+            parts = genre_display.split("|")
+            for p in parts:
+                p = p.strip()
+                if emoji in p:
+                    tag_badges.append(f'<span class="bd" style="background:{cls_color}">{_esc(p)}</span>')
+            genre_display = "|".join(p.strip() for p in parts if emoji not in p).strip(" |")
+    if tag_badges:
+        tags_html = f'<div style="margin:3px 0;display:flex;gap:5px;flex-wrap:wrap">{"".join(tag_badges)}</div>'
+
+    if genre_display: meta_parts.append(genre_display)
     if f.duration: meta_parts.append(f"⏱ {f.duration}")
-    if f.director: meta_parts.append(f"<b>导演</b> {_esc(f.director)}")
-    if f.cast: meta_parts.append(f"<b>主演</b> {_esc(f.cast)}")
+    if f.director: meta_parts.append(f"<b><span data-lang='cn'>导演</span><span data-lang='en'>Dir.</span></b> {_esc(f.director)}")
+    if f.cast: meta_parts.append(f"<b><span data-lang='cn'>主演</span><span data-lang='en'>Cast</span></b> {_esc(f.cast)}")
     meta = f'<div class="meta">{" · ".join(meta_parts)}</div>' if meta_parts else ""
 
-    syn = f'<div class="syn">{_esc(f.synopsis)}</div>' if f.synopsis else ""
+    # Synopsis (bilingual)
+    syn = ""
+    if f.synopsis:
+        syn = f'<div class="syn" data-lang="cn">{_esc(f.synopsis)}</div>'
+        if f.synopsis_en:
+            syn += f'<div class="syn" data-lang="en">{_esc(f.synopsis_en)}</div>'
     # 获奖信息
     awards_html = ""
     if f.awards:
-        awards_html = f'<div style="margin:6px 0;font-size:.82em"><span class="bd" style="background:#3a2a1a;color:#f0c040;border:1px solid #5a4a2d">🏆 {_esc(f.awards)}</span></div>'
-    # 影片亮点 (支持 ▸ 分点)
+        awards_cn = f'<span data-lang="cn">{_esc(f.awards)}</span>'
+        awards_en = f'<span data-lang="en">{_esc(f.awards_en or f.awards)}</span>'
+        awards_html = f'<div style="margin:4px 0;font-size:.78em"><span class="bd" style="background:#3a2a1a;color:#f0c040;border:1px solid #5a4a2d">🏆 {awards_cn}{awards_en}</span></div>'
+    # 影片亮点 (bilingual, 支持 ▸ 分点)
     rec = ""
     if f.recommendation:
-        # 将 ▸ 转为列表项, 避免空行
-        lines = [l.strip() for l in f.recommendation.split("▸") if l.strip()]
-        if lines:
-            items = "".join(f"<li>{_esc(l)}</li>" for l in lines)
-            rec = f'<div class="rec"><ul class="hl">{items}</ul></div>'
-    hc = f'<div class="hc"><em>🗣 豆瓣热评</em> "{_esc(f.hot_comment)}"</div>' if f.hot_comment else ""
+        lines_cn = [l.strip() for l in f.recommendation.split("▸") if l.strip()]
+        if lines_cn:
+            items_cn = "".join(f"<li>{_esc(l)}</li>" for l in lines_cn)
+            rec = f'<div class="rec" data-lang="cn"><ul class="hl">{items_cn}</ul></div>'
+    if f.recommendation_en:
+        lines_en = [l.strip() for l in f.recommendation_en.split("▸") if l.strip()]
+        if lines_en:
+            items_en = "".join(f"<li>{_esc(l)}</li>" for l in lines_en)
+            rec += f'<div class="rec" data-lang="en"><ul class="hl">{items_en}</ul></div>'
+    hc = f'<div class="hc"><em><span data-lang="cn">🗣 豆瓣热评</span><span data-lang="en">🗣 Douban Review</span></em> "{_esc(f.hot_comment)}"</div>' if f.hot_comment else ""
 
     # 场次 + 提取日期/影院用于筛选
     sess_days = set()
     sess_cinemas = set()
     sess = ""
+    MAX_VISIBLE = 5
     if f.sessions:
         items = ""
+        count = 0
         for s in f.sessions:
+            count += 1
+            extra_cls = ' class="s-extra"' if count > MAX_VISIBLE else ""
             m = re.match(r'\[([^\]]+)\]\s*(.*)', s)
             if m:
                 cinema_name, time_info = m.group(1), m.group(2)
                 sess_cinemas.add(cinema_name)
                 day_label = time_info.split(":")[0].strip().split(",")[0].strip() if ":" in time_info else time_info.split(",")[0].strip()
                 sess_days.add(day_label)
-                items += f'<li data-day="{_esc(day_label)}" data-cinema="{_esc(cinema_name)}"><span class="ct-tag">{_esc(cinema_name)}</span>{_esc(time_info)}</li>'
+                items += f'<li{extra_cls} data-day="{_esc(day_label)}" data-cinema="{_esc(cinema_name)}"><span class="ct-tag">{_esc(cinema_name)}</span>{_esc(time_info)}</li>'
             else:
-                items += f'<li>{_esc(s)}</li>'
-        sess = f'<div class="ss"><div class="ss-t">🎟️ 场次</div><ul>{items}</ul></div>'
+                items += f'<li{extra_cls}>{_esc(s)}</li>'
+        # "展开更多" 按钮
+        more_html = ""
+        if count > MAX_VISIBLE:
+            hidden = count - MAX_VISIBLE
+            more_html = f'<div class="ss-more" onclick="this.parentNode.classList.toggle(\'expanded\');this.textContent=this.parentNode.classList.contains(\'expanded\')?(document.body.classList.contains(\'en\')?\'Show less\':\'收起\'):(document.body.classList.contains(\'en\')?\'Show {hidden} more\':\'展开 {hidden} 场\')"><span data-lang="cn">展开 {hidden} 场</span><span data-lang="en">Show {hidden} more</span></div>'
+        sess = f'<div class="ss"><div class="ss-t"><span data-lang="cn">🎟️ 场次</span><span data-lang="en">🎟️ Sessions</span></div><ul>{items}</ul>{more_html}</div>'
     elif f.url:
-        sess = f'<div class="ss"><div class="ss-t">🎟️ 场次</div><ul><li>请前往购票页面查看</li></ul></div>'
+        sess = f'<div class="ss"><div class="ss-t"><span data-lang="cn">🎟️ 场次</span><span data-lang="en">🎟️ Sessions</span></div><ul><li><span data-lang="cn">请前往购票页面查看</span><span data-lang="en">Check ticketing page</span></li></ul></div>'
 
     for c in f.cinema.split("/"):
         sess_cinemas.add(c.strip())
 
     lnk = ""
     parts = []
-    if f.url: parts.append(f'<a href="{_esc(f.url)}" target="_blank">🎟 购票</a>')
-    if f.douban_url: parts.append(f'<a href="{_esc(f.douban_url)}" target="_blank">🟢 豆瓣</a>')
-    if f.rt_url: parts.append(f'<a href="{_esc(f.rt_url)}" target="_blank">🍅 烂番茄</a>')
+    if f.url: parts.append(f'<a href="{_esc(f.url)}" target="_blank"><span data-lang="cn">🎟 购票</span><span data-lang="en">🎟 Tickets</span></a>')
+    if f.douban_url: parts.append(f'<a href="{_esc(f.douban_url)}" target="_blank">🟢 <span data-lang="cn">豆瓣</span><span data-lang="en">Douban</span></a>')
+    if f.rt_url: parts.append(f'<a href="{_esc(f.rt_url)}" target="_blank">🍅 <span data-lang="cn">烂番茄</span><span data-lang="en">RT</span></a>')
     if parts: lnk = f'<div class="lk">{"".join(parts)}</div>'
 
     poster_html = ""
@@ -1045,7 +1342,7 @@ def _html_card(f: Film, idx: int) -> str:
 <div class="fc-body">
 {poster_html}
 <div class="fc-info">
-{meta}{awards_html}{syn}{rec}{hc}{sess}{lnk}
+{meta}{tags_html}{awards_html}{syn}{rec}{hc}{sess}{lnk}
 </div>
 </div>
 </div>"""
@@ -1063,11 +1360,14 @@ def main():
 
     # ① 爬取 (Nova/ACMI 串行快, Lido 内部已并行)
     log.info("📡 爬取排片...")
-    all_films = scrape_lido(start, end) + scrape_nova(start, end) + scrape_acmi(start, end)
+    all_films = (scrape_lido(start, end) + scrape_nova(start, end) + 
+                 scrape_acmi(start, end) + scrape_palace(start, end) + 
+                 scrape_imax(start, end))
     if not all_films:
         log.error("❌ 未获取到电影!"); return
 
     films = [f for f in deduplicate(all_films) if _is_movie(f)]
+    films = _preprocess_films(films)  # 处理电影节前缀 + 双片联映
     log.info("📋 去重+过滤后 %d 部电影", len(films))
 
     # ② 评分查询: RT 并行 → 豆瓣串行
@@ -1129,8 +1429,11 @@ def main():
         if key in ai_cache:
             c = ai_cache[key]
             f.synopsis = c.get("synopsis", "") or f.synopsis
+            f.synopsis_en = c.get("synopsis_en", "") or f.synopsis_en
             f.recommendation = c.get("recommendation", "") or _template_recommendation(f)
+            f.recommendation_en = c.get("recommendation_en", "") or f.recommendation_en
             f.awards = c.get("awards", "") or f.awards
+            f.awards_en = c.get("awards_en", "") or f.awards_en
             log.info("  AI 缓存: %s", f.title)
         else:
             need_ai.append(f)
@@ -1148,8 +1451,11 @@ def main():
             if f.synopsis or f.recommendation:
                 ai_cache[_dedup_key(f.title)] = {
                     "synopsis": f.synopsis,
+                    "synopsis_en": f.synopsis_en,
                     "recommendation": f.recommendation,
+                    "recommendation_en": f.recommendation_en,
                     "awards": f.awards,
+                    "awards_en": f.awards_en,
                 }
     elif need_ai:
         log.info("  (未配置 AI，使用模板推荐)")

@@ -110,7 +110,7 @@
   "la grazia": {
     "score": 7.3,
     "url": "https://movie.douban.com/subject/36913521/",
-    "title_cn": "",
+    "title_cn": "恩典",
     "hot_comment": ""
   },
   "no other choice": {
@@ -133,8 +133,8 @@
   },
   "the moment": {
     "score": 6.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/37207219/",
+    "title_cn": "绚烂一刻",
     "hot_comment": ""
   },
   "the plague": {
@@ -181,14 +181,14 @@
   },
   "hoppers": {
     "score": 7.7,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/36999793/",
+    "title_cn": "河狸变身计划",
     "hot_comment": ""
   },
   "house": {
     "score": 7.5,
     "url": "",
-    "title_cn": "",
+    "title_cn": "鬼屋",
     "hot_comment": ""
   },
   "the magic faraway tree": {
@@ -205,7 +205,7 @@
   },
   "reminders of him": {
     "score": null,
-    "url": "",
+    "url": "https://movie.douban.com/subject/37062611/",
     "title_cn": "你留下的痕迹",
     "hot_comment": ""
   },
@@ -222,7 +222,7 @@
     "hot_comment": ""
   },
   "the voice of hind rajab": {
-    "score": null,
+    "score": 6.9,
     "url": "https://movie.douban.com/subject/37445715/",
     "title_cn": "欣德·拉贾布之声",
     "hot_comment": ""
@@ -230,7 +230,7 @@
   "afternoons of solitude": {
     "score": 7.5,
     "url": "",
-    "title_cn": "",
+    "title_cn": "孤独的午后",
     "hot_comment": ""
   },
   "the parent trap": {
@@ -240,7 +240,7 @@
     "hot_comment": ""
   },
   "rock n roll": {
-    "score": null,
+    "score": 6.5,
     "url": "",
     "title_cn": "",
     "hot_comment": ""
@@ -266,29 +266,29 @@
   "blow-up": {
     "score": 8.4,
     "url": "",
-    "title_cn": "",
+    "title_cn": "放大",
     "hot_comment": ""
   },
   "to die for": {
-    "score": null,
+    "score": 6.8,
     "url": "https://movie.douban.com/subject/1297768/",
     "title_cn": "不惜一切",
     "hot_comment": ""
   },
   "crime 101": {
-    "score": null,
+    "score": 6.8,
     "url": "https://movie.douban.com/subject/36901008/",
     "title_cn": "洛杉矶劫案",
     "hot_comment": ""
   },
   "frankenstein": {
-    "score": null,
+    "score": 7.4,
     "url": "https://movie.douban.com/subject/3262044/",
     "title_cn": "弗兰肯斯坦",
     "hot_comment": ""
   },
   "jisoe": {
-    "score": null,
+    "score": 7.4,
     "url": "",
     "title_cn": "",
     "hot_comment": ""
@@ -398,31 +398,511 @@
   "the goalkeeper s fear of the penalty": {
     "score": 6.9,
     "url": "",
-    "title_cn": "",
+    "title_cn": "守门员面对罚点球时的焦虑",
     "hot_comment": ""
   },
   "anemone": {
     "score": 4.7,
     "url": "",
-    "title_cn": "",
+    "title_cn": "海葵",
     "hot_comment": ""
   },
   "blue moon": {
     "score": 6.7,
     "url": "",
-    "title_cn": "",
+    "title_cn": "蓝月亮",
     "hot_comment": ""
   },
   "the boy and the heron wind rises": {
     "score": 7.5,
     "url": "",
-    "title_cn": "",
+    "title_cn": "起风了",
     "hot_comment": ""
   },
   "bugonia": {
     "score": 7.0,
     "url": "",
+    "title_cn": "布戈尼亚",
+    "hot_comment": ""
+  },
+  "the salt of the earth": {
+    "score": 9.3,
+    "url": "https://movie.douban.com/subject/10741871/",
+    "title_cn": "地球之盐",
+    "hot_comment": ""
+  },
+  "midwinter break": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36916004/",
+    "title_cn": "仲冬假期",
+    "hot_comment": ""
+  },
+  "epic elvis presley in concert": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37159065/",
+    "title_cn": "传奇：演唱的猫王",
+    "hot_comment": ""
+  },
+  "how to make a killing": {
+    "score": 6.0,
+    "url": "https://movie.douban.com/subject/26900149/",
+    "title_cn": "如何大赚一笔",
+    "hot_comment": ""
+  },
+  "peaky blinders the immortal man": {
+    "score": 6.9,
+    "url": "",
+    "title_cn": "浴血黑帮：不朽之人",
+    "hot_comment": ""
+  },
+  "affff26 13 days 13 nights": {
+    "score": 6.3,
+    "url": "",
     "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 a dash of love": {
+    "score": 6.5,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 a nun in the city": {
+    "score": 7.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 a private life": {
+    "score": 6.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 case 137": {
+    "score": 7.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 colours of time": {
+    "score": 7.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 dog 51": {
+    "score": 5.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 leave one day": {
+    "score": 7.9,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 out of love": {
+    "score": 4.9,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 ride away": {
+    "score": 6.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the great arch": {
+    "score": 7.5,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the ice tower": {
+    "score": 4.8,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the little sister": {
+    "score": 5.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the musicians": {
+    "score": 8.0,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the party's over": {
+    "score": 6.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the richest woman in the world": {
+    "score": 5.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the son of": {
+    "score": 6.2,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 the stranger": {
+    "score": 7.2,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 what is love": {
+    "score": 9.1,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the passion of the christ": {
+    "score": 7.9,
+    "url": "",
+    "title_cn": "耶稣受难记",
+    "hot_comment": ""
+  },
+  "fackham hall": {
+    "score": 7.2,
+    "url": "",
+    "title_cn": "费克姆庄园",
+    "hot_comment": ""
+  },
+  "affff26 a man and a woman": {
+    "score": 8.4,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "affff26 once upon a time michel legrand": {
+    "score": 4.0,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the boy and the heron": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/26925611/",
+    "title_cn": "你想活出怎样的人生",
+    "hot_comment": ""
+  },
+  "the wind rises": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/6791750/",
+    "title_cn": "起风了",
+    "hot_comment": ""
+  },
+  "13 days 13 nights": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/36399215/",
+    "title_cn": "13个日夜",
+    "hot_comment": ""
+  },
+  "a dash of love": {
+    "score": 6.5,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "alpha": {
+    "score": 6.1,
+    "url": "https://movie.douban.com/subject/36877556/",
+    "title_cn": "阿尔法",
+    "hot_comment": ""
+  },
+  "a nun in the city": {
+    "score": 7.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "a private life": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/36961646/",
+    "title_cn": "私生活",
+    "hot_comment": ""
+  },
+  "case 137": {
+    "score": 7.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "colours of time": {
+    "score": 7.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "couture": {
+    "score": 7.4,
+    "url": "",
+    "title_cn": "高级定制",
+    "hot_comment": ""
+  },
+  "dog 51": {
+    "score": 5.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "enzo": {
+    "score": 7.1,
+    "url": "",
+    "title_cn": "恩佐",
+    "hot_comment": ""
+  },
+  "guru": {
+    "score": 7.6,
+    "url": "",
+    "title_cn": "大师",
+    "hot_comment": ""
+  },
+  "leave one day": {
+    "score": 6.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "maigret and the dead lover": {
+    "score": 6.8,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "out of love": {
+    "score": 4.9,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "redress": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37116026/",
+    "title_cn": "谜宴",
+    "hot_comment": ""
+  },
+  "ride away": {
+    "score": 6.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "six days in spring": {
+    "score": 7.2,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the great arch": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/36728357/",
+    "title_cn": "新凯旋门",
+    "hot_comment": ""
+  },
+  "the ice tower": {
+    "score": 4.8,
+    "url": "https://movie.douban.com/subject/36453662/",
+    "title_cn": "冰之塔",
+    "hot_comment": ""
+  },
+  "the little sister": {
+    "score": 5.7,
+    "url": "https://movie.douban.com/subject/35840586/",
+    "title_cn": "最小的女儿",
+    "hot_comment": ""
+  },
+  "the money maker": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/26794665/",
+    "title_cn": "The Moneymaker",
+    "hot_comment": ""
+  },
+  "the musicians": {
+    "score": 8.0,
+    "url": "",
+    "title_cn": "音乐家们",
+    "hot_comment": ""
+  },
+  "the party's over": {
+    "score": 6.7,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the son of": {
+    "score": 6.2,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the stranger": {
+    "score": 7.2,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "solo mio": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/37195133/",
+    "title_cn": "我独自蜜月",
+    "hot_comment": ""
+  },
+  "song sung blue": {
+    "score": 6.5,
+    "url": "https://movie.douban.com/subject/37022026/",
+    "title_cn": "蓝调之歌",
+    "hot_comment": ""
+  },
+  "little amélie or the character of rain": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/36394612/",
+    "title_cn": "你好，爱美丽",
+    "hot_comment": ""
+  },
+  "dance for your life": {
+    "score": 8.8,
+    "url": "https://movie.douban.com/subject/38382442/",
+    "title_cn": "Dance for Your Life",
+    "hot_comment": ""
+  },
+  "the searchers": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/1292668/",
+    "title_cn": "搜索者",
+    "hot_comment": ""
+  },
+  "what is love": {
+    "score": 9.1,
+    "url": "",
+    "title_cn": "什么是爱",
+    "hot_comment": ""
+  },
+  "a man and a woman": {
+    "score": 8.4,
+    "url": "",
+    "title_cn": "一个男人和一个女人",
+    "hot_comment": ""
+  },
+  "once upon a time michel legrand": {
+    "score": 4.0,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "cold storage": {
+    "score": 7.4,
+    "url": "",
+    "title_cn": "冷藏",
+    "hot_comment": ""
+  },
+  "scream 7": {
+    "score": 5.4,
+    "url": "",
+    "title_cn": "惊声尖叫7",
+    "hot_comment": ""
+  },
+  "treasure hunters on the tracks of khufu": {
+    "score": 5.5,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "la la land": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/25934014/",
+    "title_cn": "爱乐之城",
+    "hot_comment": ""
+  },
+  "the departed": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1315316/",
+    "title_cn": "无间道风云",
+    "hot_comment": ""
+  },
+  "taxi driver": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1292222/",
+    "title_cn": "出租车司机",
+    "hot_comment": ""
+  },
+  "giant": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/36246191/",
+    "title_cn": "巨人",
+    "hot_comment": ""
+  },
+  "sátántangó": {
+    "score": 8.7,
+    "url": "",
+    "title_cn": "撒旦探戈",
+    "hot_comment": ""
+  },
+  "spirited away": {
+    "score": 9.4,
+    "url": "",
+    "title_cn": "千与千寻",
+    "hot_comment": ""
+  },
+  "my neighbour totoro": {
+    "score": 9.2,
+    "url": "",
+    "title_cn": "龙猫",
+    "hot_comment": ""
+  },
+  "shark kingdom 3d": {
+    "score": 9.5,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "australia 3d": {
+    "score": 7.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "t rex 3d": {
+    "score": 5.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "class reunion": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/5224836/",
+    "title_cn": "Madea's Class Reunion",
+    "hot_comment": ""
+  },
+  "jean valjean": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37113529/",
+    "title_cn": "悲惨世界：冉阿让的故事",
+    "hot_comment": ""
+  },
+  "the richest woman in the world": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36953638/",
+    "title_cn": "全球最富有的女人",
+    "hot_comment": ""
+  },
+  "jimpa": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/35740369/",
+    "title_cn": "吉爸",
     "hot_comment": ""
   }
 }
