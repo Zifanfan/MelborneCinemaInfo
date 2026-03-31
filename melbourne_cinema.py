@@ -38,6 +38,8 @@ class Film:
     douban_url: str = ""
     rt_score: Optional[int] = None
     rt_url: str = ""
+    lb_score: Optional[float] = None    # Letterboxd rating (0-5 scale)
+    lb_url: str = ""
     # 影片信息 (从 RT/豆瓣获取, 非 AI)
     title_cn: str = ""         # 中文片名
     year: str = ""             # 年份
@@ -677,7 +679,77 @@ def _query_rt(film: Film) -> Film:
             if detail.get("duration"): film.duration = detail["duration"]
         except Exception:
             pass
+    # Letterboxd rating (with cache)
+    try:
+        lb_score, lb_url = _query_letterboxd_cached(film.title, film.year)
+        if lb_score is not None:
+            film.lb_score = lb_score
+            film.lb_url = lb_url
+    except Exception:
+        pass
     return film
+
+# ── Letterboxd ──
+_lb_cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".lb_cache.json")
+_lb_cache: dict = {}
+
+def _load_lb_cache():
+    global _lb_cache
+    try:
+        with open(_lb_cache_path, "r", encoding="utf-8") as f:
+            _lb_cache = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        _lb_cache = {}
+
+def _save_lb_cache():
+    try:
+        with open(_lb_cache_path, "w", encoding="utf-8") as f:
+            json.dump(_lb_cache, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+def _query_letterboxd_cached(title: str, year: str = "") -> tuple[Optional[float], str]:
+    key = _dedup_key(title)
+    if not _lb_cache:
+        _load_lb_cache()
+    if key in _lb_cache:
+        c = _lb_cache[key]
+        return c.get("score"), c.get("url", "")
+    score, url = search_letterboxd(title, year)
+    _lb_cache[key] = {"score": score, "url": url}
+    return score, url
+
+def search_letterboxd(title: str, year: str = "") -> tuple[Optional[float], str]:
+    """从 Letterboxd 电影页面提取评分 (5分制)。
+    尝试多种 slug 格式匹配。
+    """
+    clean = _search_title(title)
+    base_slug = re.sub(r'[^a-z0-9]+', '-', clean.lower()).strip('-')
+
+    # 尝试多种 slug 变体
+    slugs = []
+    if year:
+        slugs.append(f"{base_slug}-{year}")
+    slugs.append(base_slug)
+    # 去掉 "the-" 前缀
+    if base_slug.startswith("the-"):
+        alt = base_slug[4:]
+        if year:
+            slugs.append(f"{alt}-{year}")
+        slugs.append(alt)
+
+    for slug in slugs:
+        url = f"https://letterboxd.com/film/{slug}/"
+        try:
+            resp = SESSION.get(url, timeout=10, allow_redirects=True)
+            if resp.status_code != 200:
+                continue
+            m = re.search(r'ratingValue["\s:]+([0-9]\.[0-9]+)', resp.text)
+            if m:
+                return float(m.group(1)), resp.url
+        except Exception:
+            pass
+    return None, ""
 
 def _query_douban_serial(films: list[Film]) -> None:
     """串行查询豆瓣评分，带本地缓存避免重复请求"""
@@ -983,16 +1055,12 @@ def is_high_rated(f: Film) -> bool:
     return False
 
 def _sort_score(f: Film) -> float:
-    """综合排序分数: 豆瓣为主 (权重 70%), 烂番茄为辅 (权重 30%)
-    豆瓣 10 分制 → ×10 归一化为 100; 烂番茄已经是 0-100"""
+    """综合排序: 豆瓣 40% + Letterboxd 40% + 烂番茄 20%
+    缺失的评分视为 0 分 (拉低排名，鼓励完整数据)"""
     d = (f.douban_score or 0) * 10   # 0-100
+    lb = (f.lb_score or 0) * 20      # 0-100
     r = f.rt_score or 0              # 0-100
-    if d > 0 and r > 0:
-        return -(d * 0.7 + r * 0.3)
-    elif d > 0:
-        return -(d * 0.85)  # 只有豆瓣，给予稍低权重
-    else:
-        return -(r * 0.6)   # 只有 RT，权重更低
+    return -(d * 0.4 + lb * 0.4 + r * 0.2)
 
 def _dedup_key(title: str) -> str:
     """生成去重用的 key: 去除年份、(Dubbed)、标点，统一小写"""
@@ -1264,6 +1332,7 @@ def _html_card(f: Film, idx: int) -> str:
     else:
         badges += '<span class="bd" style="background:#2a2a3e;color:var(--t2);border:1px solid var(--b)"><span data-lang="cn">豆瓣 暂未收录</span><span data-lang="en">Douban N/A</span></span> '
     if f.rt_score is not None: badges += f'<span class="bd bd-r">🍅 {f.rt_score}%</span> '
+    if f.lb_score is not None: badges += f'<span class="bd" style="background:#1a2a1a;color:#85d485;border:1px solid #2d4a2d">🎬 LB {f.lb_score:.1f}</span> '
 
     meta_parts = []
     # 从 genre 中提取特殊标签 (🎪/✨/🔗) 作为独立 badges
@@ -1352,6 +1421,7 @@ def _html_card(f: Film, idx: int) -> str:
     if f.url: parts.append(f'<a href="{_esc(f.url)}" target="_blank"><span data-lang="cn">🎟 购票</span><span data-lang="en">🎟 Tickets</span></a>')
     if f.douban_url: parts.append(f'<a href="{_esc(f.douban_url)}" target="_blank">🟢 <span data-lang="cn">豆瓣</span><span data-lang="en">Douban</span></a>')
     if f.rt_url: parts.append(f'<a href="{_esc(f.rt_url)}" target="_blank">🍅 <span data-lang="cn">烂番茄</span><span data-lang="en">RT</span></a>')
+    if f.lb_url: parts.append(f'<a href="{_esc(f.lb_url)}" target="_blank">🎬 Letterboxd</a>')
     if parts: lnk = f'<div class="lk">{"".join(parts)}</div>'
 
     poster_html = ""
@@ -1498,6 +1568,10 @@ def main():
 
     # ④ 输出
     base = os.path.dirname(os.path.abspath(__file__))
+
+    # 保存 Letterboxd 缓存
+    _save_lb_cache()
+    log.info("📦 LB 缓存已保存 (%d 条)", len(_lb_cache))
 
     html = generate_html(films, start, end)
     html_path = os.path.join(base, "index.html")
