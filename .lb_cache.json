@@ -450,5 +450,65 @@
   "t rex": {
     "score": null,
     "url": ""
+  },
+  "bugonia": {
+    "score": 3.85,
+    "url": "https://letterboxd.com/film/bugonia/"
+  },
+  "blow out": {
+    "score": 4.09,
+    "url": "https://letterboxd.com/film/blow-out/"
+  },
+  "dolly": {
+    "score": 2.55,
+    "url": "https://letterboxd.com/film/dolly-2025/"
+  },
+  "live it up the mental as anything story": {
+    "score": null,
+    "url": ""
+  },
+  "jimpa": {
+    "score": 3.32,
+    "url": "https://letterboxd.com/film/jimpa/"
+  },
+  "plainclothes": {
+    "score": 3.74,
+    "url": "https://letterboxd.com/film/plainclothes/"
+  },
+  "the tales of hoffmann": {
+    "score": 3.83,
+    "url": "https://letterboxd.com/film/the-tales-of-hoffmann/"
+  },
+  "the plague": {
+    "score": 3.64,
+    "url": "https://letterboxd.com/film/the-plague-2025/"
+  },
+  "the testament of ann lee": {
+    "score": 3.48,
+    "url": "https://letterboxd.com/film/the-testament-of-ann-lee/"
+  },
+  "weapons": {
+    "score": 3.61,
+    "url": "https://letterboxd.com/film/weapons-2025/"
+  },
+  "donnie darko": {
+    "score": 3.97,
+    "url": "https://letterboxd.com/film/donnie-darko/"
+  },
+  "king kong": {
+    "score": 3.41,
+    "url": "https://letterboxd.com/film/king-kong-2005/"
+  },
+  "stand by me": {
+    "score": 4.19,
+    "url": "https://letterboxd.com/film/stand-by-me/"
+  },
+  "the general": {
+    "score": 4.2,
+    "url": "https://letterboxd.com/film/the-general/"
+  },
+  "the muppet movie": {
+    "score": 4.05,
+    "url": "https://letterboxd.com/film/the-muppet-movie/"
   }
 }
