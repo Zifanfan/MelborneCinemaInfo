@@ -751,8 +751,8 @@
   },
   "the stranger": {
     "score": 7.2,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/37284351/",
+    "title_cn": "局外人",
     "hot_comment": ""
   },
   "solo mio": {
@@ -907,8 +907,8 @@
   },
   "the princess diaries": {
     "score": 7.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1305065/",
+    "title_cn": "公主日记",
     "hot_comment": ""
   },
   "dogs in space": {
@@ -985,14 +985,14 @@
   },
   "calle malaga": {
     "score": 7.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/36900800/",
+    "title_cn": "马拉加街夕阳红",
     "hot_comment": ""
   },
   "zabriskie point": {
     "score": 8.0,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1293623/",
+    "title_cn": "扎布里斯基角",
     "hot_comment": ""
   },
   "angel's egg": {
@@ -1009,14 +1009,14 @@
   },
   "wings of desire": {
     "score": 8.7,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1292504/",
+    "title_cn": "柏林苍穹下",
     "hot_comment": ""
   },
   "army of shadows": {
     "score": 8.5,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1466419/",
+    "title_cn": "影子部队",
     "hot_comment": ""
   },
   "kokuho": {
@@ -1051,14 +1051,14 @@
   },
   "encanto": {
     "score": 6.5,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/35134724/",
+    "title_cn": "魔法满屋",
     "hot_comment": ""
   },
   "the apartment": {
     "score": 8.8,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1394218/",
+    "title_cn": "桃色公寓",
     "hot_comment": ""
   },
   "pellegrinis": {
@@ -1087,12 +1087,78 @@
   },
   "mamma mia": {
     "score": 7.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/2054024/",
+    "title_cn": "妈妈咪呀",
     "hot_comment": ""
   },
   "the state of things": {
     "score": 7.7,
+    "url": "https://movie.douban.com/subject/1306625/",
+    "title_cn": "事物的状态",
+    "hot_comment": ""
+  },
+  "father mother sister brother": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/36635632/",
+    "title_cn": "父母姐弟",
+    "hot_comment": ""
+  },
+  "the last emperor 末代皇帝": {
+    "score": 9.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "anselm": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/36352090/",
+    "title_cn": "安塞姆·基弗：流年之声",
+    "hot_comment": ""
+  },
+  "the deb": {
+    "score": 7.0,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "australia": {
+    "score": 7.3,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "t rex": {
+    "score": 5.6,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "mulholland dr": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/1292217/",
+    "title_cn": "穆赫兰道",
+    "hot_comment": ""
+  },
+  "train dreams": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/36778356/",
+    "title_cn": "火车梦",
+    "hot_comment": ""
+  },
+  "the secret of kells": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/3212221/",
+    "title_cn": "凯尔经的秘密",
+    "hot_comment": ""
+  },
+  "2001 a space odyssey": {
+    "score": 8.9,
+    "url": "https://movie.douban.com/subject/1292226/",
+    "title_cn": "2001太空漫游",
+    "hot_comment": ""
+  },
+  "the blues brothers": {
+    "score": 8.2,
     "url": "",
     "title_cn": "",
     "hot_comment": ""

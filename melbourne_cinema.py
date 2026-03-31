@@ -75,8 +75,15 @@ def _get(url: str, **kw) -> requests.Response:
 
 # ─────────────── 日期 ───────────────
 def next_week_range() -> tuple[dt.date, dt.date]:
-    """返回从今天起的 7 天"""
-    today = dt.date.today()
+    """返回从今天(墨尔本时间)起的 7 天"""
+    # 使用 Melbourne 时区 (AEST UTC+10 / AEDT UTC+11)
+    try:
+        from zoneinfo import ZoneInfo
+        melb_now = dt.datetime.now(ZoneInfo("Australia/Melbourne"))
+        today = melb_now.date()
+    except Exception:
+        # fallback: UTC+10
+        today = (dt.datetime.utcnow() + dt.timedelta(hours=10)).date()
     return today, today + dt.timedelta(days=6)
 
 def _day_name(d: dt.date) -> str:
@@ -722,7 +729,11 @@ def _query_douban_serial(films: list[Film]) -> None:
         queried += 1
         time.sleep(2.5)
 
-    # 补充中文名: 对缓存中有评分但缺 title_cn 的电影重试 suggest API
+        # 新查询的也检查是否缺中文名
+        if not film.title_cn:
+            retry_cn.append((key, film))
+
+    # 补充中文名: 对所有缺 title_cn 的电影重试 suggest API
     if retry_cn:
         log.info("  补充中文名: %d 部...", len(retry_cn))
         for key, film in retry_cn:
@@ -934,14 +945,21 @@ def _preprocess_films(films: list[Film]) -> list[Film]:
             f.title = new_title
             f.genre = f"🎪 {festival} | {f.genre}" if f.genre else f"🎪 {festival}"
 
-        # 2. 特别版/周年后缀: "The Departed - 10th Anniversary" → strip, add tag
-        special_m = re.search(r'\s*[-–]\s*(\d+\w*\s*(?:Anniversary|Remaster|Restoration|Director.s Cut|Special|Edition|4K)[^)]*?)$', f.title, re.I)
+        # 2. 放映格式后缀: "One Battle After Another 70mm" or "[70mm]" → strip, add tag
+        format_m = re.search(r'\s*[-–]?\s*\[?\b(70mm|35mm|IMAX|4K|3D|Dolby Atmos|Dolby Cinema)\b\]?\s*$', f.title, re.I)
+        if format_m:
+            fmt_tag = format_m.group(1).upper()
+            f.title = f.title[:format_m.start()].strip()
+            f.genre = f"🎞️ {fmt_tag} | {f.genre}" if f.genre else f"🎞️ {fmt_tag}"
+
+        # 3. 特别版/周年后缀: "The Departed - 10th Anniversary" → strip, add tag
+        special_m = re.search(r'\s*[-–]\s*(\d+\w*\s*(?:Anniversary|Remaster|Restoration|Director.s Cut|Special|Edition)[^)]*?)$', f.title, re.I)
         if special_m:
             tag = special_m.group(1).strip()
             f.title = f.title[:special_m.start()].strip()
             f.genre = f"✨ {tag} | {f.genre}" if f.genre else f"✨ {tag}"
 
-        # 3. 双片联映: "X + Y"
+        # 4. 双片联映: "X + Y" (只在 + 两边都是电影名才拆分)
         if " + " in f.title:
             parts = f.title.split(" + ")
             for part in parts:
@@ -1172,13 +1190,20 @@ body.en .lang-toggle .lt-en{{background:var(--acc);color:var(--bg)}}
 <div class="no-results" id="no-results" style="display:none"><span data-lang="cn">没有符合筛选条件的电影</span><span data-lang="en">No films match your filter</span></div>
 </div>
 
-<div class="ft">
+<div class="ft" style="position:relative">
   <span data-lang="cn">数据来源</span><span data-lang="en">Sources</span>: Lido · Nova · ACMI · Palace · IMAX · <span data-lang="cn">豆瓣</span><span data-lang="en">Douban</span> · Rotten Tomatoes<br>
   {dt.datetime.now().strftime('%Y-%m-%d %H:%M')}<br><br>
   <span style="font-size:.9em;color:var(--acc)">Authored by Zifan Ni && Claude</span><br>
   <a href="https://github.com/Zifanfan/MelborneCinemaInfo" target="_blank" style="color:var(--t2);text-decoration:none;font-size:.85em">
     github.com/Zifanfan/MelborneCinemaInfo
   </a>
+  <div style="position:absolute;right:20px;bottom:16px;text-align:center">
+    <img src="wechat.jpg" alt="WeChat QR" style="width:100px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.3);margin-bottom:4px"><br>
+    <span style="font-size:.68em;color:var(--t2);line-height:1.4">
+      <span data-lang="cn">有建议或想一起看电影<br>加微信喵 🐱</span>
+      <span data-lang="en">Add me on WeChat 🐱</span>
+    </span>
+  </div>
 </div>
 
 <script>
@@ -1366,8 +1391,8 @@ def main():
     if not all_films:
         log.error("❌ 未获取到电影!"); return
 
+    all_films = _preprocess_films(all_films)  # 处理前缀/后缀/双片 (需在去重前)
     films = [f for f in deduplicate(all_films) if _is_movie(f)]
-    films = _preprocess_films(films)  # 处理电影节前缀 + 双片联映
     log.info("📋 去重+过滤后 %d 部电影", len(films))
 
     # ② 评分查询: RT 并行 → 豆瓣串行

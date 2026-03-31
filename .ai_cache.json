@@ -1,698 +1,522 @@
 {
   "project hail mary": {
-    "synopsis": "一名宇航员在孤独的太空任务中醒来，发现自己肩负着拯救地球的重大使命，却对任务细节一无所知。他必须在有限时间内解开谜团，完成看似不可能的任务，面对生死抉择与未知危机。",
-    "synopsis_en": "An astronaut awakens alone on a distant spacecraft, burdened with the fate of Earth but with no memory of his mission details. Racing against time, he must uncover the truth, confront impossible odds, and make life-or-death decisions in the vastness of space.",
-    "recommendation": "▸ 菲尔·罗德和克里斯托弗·米勒以幽默与紧张并存的导演风格，将硬核科幻与人性探索有机结合，叙事节奏流畅紧凑。▸ 瑞恩·高斯林独挑大梁，展现极具层次的表演，情感张力贯穿全片，配角桑德拉·惠勒同样表现出色。▸ 视觉特效极具冲击力，太空场景和科学设定高度还原，带来沉浸式观影体验。",
-    "recommendation_en": "▸ Directors Phil Lord and Christopher Miller masterfully blend sharp humor with high-stakes tension, delivering a sci-fi narrative that balances scientific rigor with deep emotional stakes. ▸ Ryan Gosling’s nuanced performance anchors the film, conveying vulnerability and determination, while Sandra Hüller provides strong support. ▸ The film’s visually stunning space sequences and realistic production design create an immersive cinematic experience.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "sentimental value": {
-    "synopsis": "一位年轻女性在父亲突如其来的重病后，被迫回到童年家中，与疏远的家庭成员共同面对未解的伤痛与亲情裂痕。她在和解与自我救赎之间挣扎，寻找人生的意义与归属。",
-    "synopsis_en": "A young woman is forced to return to her childhood home after her father's sudden illness, confronting unresolved family wounds and strained relationships. Torn between reconciliation and personal healing, she seeks meaning and belonging amidst emotional turmoil.",
-    "recommendation": "▸ 尤阿希姆·提尔以细腻人性著称，此片延续其对家庭与情感的深刻刻画，情感真实动人。▸ 雷娜特·赖因斯维与斯特兰·斯卡斯加德的对手戏极具张力，两代演员碰撞出复杂情感火花。▸ 影片摄影延续北欧风格，画面冷静克制，强化了角色内心的孤独与挣扎。",
-    "recommendation_en": "▸ Joachim Trier's signature sensitive direction deeply explores family bonds and emotional fractures, delivering authentic and affecting drama. ▸ Standout performances by Renate Reinsve and Stellan Skarsgård create intense, multi-layered character dynamics. ▸ The film's Nordic cinematography uses restrained color palettes and composition to mirror the protagonist's inner solitude and emotional struggle.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "i swear": {
-    "synopsis": "影片讲述一位平凡青年在生活压力和家庭期望下，不得不面对自我成长与责任之间的抉择。喜剧与现实交织，主角在困境中寻找属于自己的价值与人生方向。",
-    "synopsis_en": "A young man struggles to balance personal aspirations with family expectations, navigating the pressures of adulthood. Blending comedy and drama, the film explores his search for identity and meaning amid life's challenges, without revealing key plot twists.",
-    "recommendation": "▸ 导演Kirk Jones巧妙融合幽默与深度，将平凡生活的烦恼拍得真实又感人。▸ Robert Aramayo、Peter Mullan、Maxine Peake三位演员表现极为出色，刻画角色细腻，情感层次丰富。▸ 豆瓣高分和烂番茄满分证明影片口碑极佳，适合喜欢人性探索与英式幽默的观众。",
-    "recommendation_en": "▸ Director Kirk Jones skillfully blends humor and emotional depth, capturing the struggles of ordinary life with authenticity. ▸ Standout performances from Robert Aramayo, Peter Mullan, and Maxine Peake bring complex characters to life with nuance and subtle emotion. ▸ Exceptional ratings on Douban and Rotten Tomatoes suggest widespread acclaim, making it a top pick for fans of British comedy-dramas.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "they will kill you": {
-    "synopsis": "一群陌生人在夜晚被困于荒废的郊区别墅，意外卷入一场混乱的生死游戏。主角们必须在恐怖与荒诞之间寻找生存机会，同时揭露彼此隐藏的秘密与动机。",
-    "synopsis_en": "A group of strangers are trapped in a deserted suburban mansion at night, forced into a twisted survival game. As terror and absurdity unfold, the protagonists must navigate escalating dangers while confronting each other's hidden motives.",
-    "recommendation": "▸导演Kirill Sokolov以独特的黑色幽默和紧凑节奏，将恐怖与喜剧巧妙融合，制造出令人窒息又荒诞的氛围。▸主演Zazie Beetz和Myha'la Herrold表现出色，角色张力十足，推动剧情高潮迭起。▸豆瓣高分与烂番茄好评证明影片兼具娱乐性和艺术性，适合喜欢新鲜刺激的观众。",
-    "recommendation_en": "▸ Director Kirill Sokolov’s trademark blend of dark humor and brisk pacing creates a tense yet absurd atmosphere, effectively merging horror and comedy. ▸ Standout performances by Zazie Beetz and Myha'la Herrold add depth and intensity, driving the story’s emotional peaks. ▸ Strong ratings on Douban and Rotten Tomatoes signal both entertainment value and artistic merit, appealing to fans of innovative genre mashups.",
+    "synopsis": "宇航员瑞兰·格雷斯在外太空苏醒，发现自己孤身一人，肩负拯救地球于灭亡的重任。他必须克服个人记忆的缺失与外星环境的未知威胁，展开一场与时间赛跑的冒险。",
+    "synopsis_en": "Astronaut Ryland Grace wakes up alone in deep space, faced with a daunting mission to save Earth from extinction. As he grapples with memory loss and unknown cosmic threats, he must race against time to avert disaster.",
+    "recommendation": "▸ 罗德与米勒的导演风格将幽默与紧张氛围巧妙融合，赋予硬核科幻故事强烈人文关怀。▸ 瑞恩·高斯林凭借细腻表演展现角色绝望与希望的转变，与外星元素互动极具感染力。▸ 画面呈现宇宙浩瀚与孤独感，视觉特效与音效高度还原原著氛围，极具沉浸感。",
+    "recommendation_en": "▸ Directors Phil Lord and Christopher Miller seamlessly blend humor with tension, bringing a unique human touch to hard sci-fi. ▸ Ryan Gosling delivers a nuanced performance, capturing the protagonist’s emotional journey and interactions with alien elements. ▸ The film’s visuals evoke the vastness and isolation of space, with immersive special effects and sound design that faithfully recreate the novel’s atmosphere.",
     "awards": "",
     "awards_en": ""
   },
   "hoppers": {
-    "synopsis": "一群性格迥异的小青蛙为拯救家园，踏上一段充满挑战的冒险旅程。他们不仅要克服外部危机，还要学会团队合作和面对自我恐惧。适合全家观赏的原创动画故事。",
-    "synopsis_en": "A group of quirky little frogs embarks on a challenging adventure to save their home. Along the way, they must overcome external threats and learn the value of teamwork and facing their own fears. An original animated story suitable for the whole family.",
-    "recommendation": "▸ 导演Daniel Chong以细腻幽默和温暖情感著称，本片延续了其对儿童成长主题的深刻表达。▸ Bobby Moynihan与Jon Hamm的配音表现极具层次，为角色注入鲜明个性，让人物生动立体。▸ 画面色彩丰富，冒险场面想象力十足，细节处理精致，视觉体验极具吸引力。",
-    "recommendation_en": "▸ Director Daniel Chong delivers his signature blend of gentle humor and heartfelt emotion, offering a nuanced take on childhood growth. ▸ Voice performances by Bobby Moynihan and Jon Hamm provide memorable character depth and charm, making the frogs truly stand out. ▸ Visually, the film boasts vibrant colors and imaginative adventure sequences, with meticulous attention to detail creating a captivating cinematic experience.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "hamnet": {
-    "synopsis": "影片围绕莎士比亚的儿子哈姆内特展开，聚焦于他的突然离世对家庭带来的巨大情感创伤，以及母亲如何在痛苦与爱之间挣扎，寻找自我救赎的过程。",
-    "synopsis_en": "Centered on Shakespeare’s son Hamnet, the film explores the profound impact of his untimely death on his family, especially his mother, as she navigates overwhelming grief and seeks personal redemption.",
-    "recommendation": "▸ 奥斯卡获奖导演赵婷以细腻诗意的镜头语言，重现伊丽莎白时代家庭悲剧，气氛沉静而充满张力。▸ 杰西·巴克利和保罗·麦斯卡尔的表演极具感染力，细致展现角色的悲痛与复杂情感。▸ 影片获得豆瓣高分和烂番茄87%的好评，艺术性与观赏性兼备，适合喜欢深度情感戏的观众。",
-    "recommendation_en": "▸ Oscar-winning director Chloé Zhao brings her signature poetic and nuanced visual style to Elizabethan tragedy, creating a quiet yet intense atmosphere. ▸ Jessie Buckley and Paul Mescal deliver powerful, emotionally resonant performances, authentically portraying grief and complex familial bonds. ▸ With high ratings on Douban and Rotten Tomatoes, the film balances artistic merit and watchability, suiting those who appreciate profound emotional dramas.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "one battle after another": {
-    "synopsis": "一位落魄私家侦探在调查一桩离奇失踪案时，意外卷入多方势力的博弈，逐渐发现自己所信任的人和事都充满谜团，他必须在幽默与危险之间寻找真相。",
-    "synopsis_en": "A down-and-out private detective, investigating a bizarre disappearance, gets entangled in a web of intrigue. As he navigates shifting alliances and hidden motives, he must balance wit and danger to uncover the truth.",
-    "recommendation": "▸ 保罗·托马斯·安德森导演延续其独特的黑色幽默与悬疑风格，剧情张力与荒诞感并存，让观众时刻保持紧张与好奇。▸ 莱昂纳多·迪卡普里奥与西恩·潘两大影帝同台飙戏，角色塑造层次丰富，表演极具看点。▸ 电影摄影与配乐极具风格，氛围营造出色，强化了悬疑与荒诞喜剧的双重体验。",
-    "recommendation_en": "▸ Paul Thomas Anderson delivers his signature blend of dark humor and suspense, creating a tense yet absurd atmosphere that keeps viewers on edge. ▸ Leonardo DiCaprio and Sean Penn deliver nuanced, compelling performances, elevating the film’s emotional and comedic layers. ▸ The film’s cinematography and score are highly stylized, intensifying both the mystery and comedic undertones for a unique viewing experience.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "pillion": {
-    "synopsis": "一对性格迥异的年轻男孩在英国小镇上相遇，逐渐建立起亲密关系。然而，传统家庭观念与自我认同的冲突让他们陷入情感挣扎，面对社会偏见和内心恐惧，必须做出艰难选择。",
-    "synopsis_en": "Two young men with contrasting personalities meet in a British town and develop a close bond. As traditional family expectations clash with their emerging identities, they face emotional struggles and must navigate social prejudice and personal fears.",
-    "recommendation": "▸ 导演Harry Lighton以细腻写实的手法还原英国小镇氛围，情感真实动人。▸ Alexander Skarsgård与Harry Melling表演真挚，细腻展现角色内心挣扎，赋予角色独特生命力。▸ 影片在LGBTQ+题材下探讨自我认同与社会压力，情感张力充沛，适合关注性别议题的观众。",
-    "recommendation_en": "▸ Director Harry Lighton brings a nuanced and authentic depiction of small-town British life, with a realistic, emotionally charged atmosphere. ▸ Alexander Skarsgård and Harry Melling deliver deeply felt performances, capturing the characters’ internal struggles with great subtlety. ▸ The film approaches LGBTQ+ themes through the lens of identity and social pressure, offering compelling emotional tension for viewers interested in gender and societal issues.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "sinners": {
-    "synopsis": "一名侦探在调查一连串离奇凶案时，被卷入小镇隐藏的黑暗秘密与自身道德困境。随着案件深入，他不得不在正义与救赎之间做出艰难抉择，直面内心的恐惧与罪孽。",
-    "synopsis_en": "A detective investigating a series of bizarre murders becomes entangled in his town’s darkest secrets and his own moral quandaries. As the truth unravels, he faces a harrowing choice between justice and redemption, confronting his deepest fears and guilt.",
-    "recommendation": "▸ 瑞恩·库格勒以紧凑悬疑氛围和现实主义手法赋予恐怖类型新意，剧情张力十足。▸ 迈克尔·B·乔丹奉献职业生涯新高表演，角色心理层次丰富，与海莉·斯坦菲尔德对手戏火花四射。▸ 摄影运用阴郁色调和极具压迫感的构图，营造出强烈的不安感和视觉冲击力。",
-    "recommendation_en": "▸ Ryan Coogler reinvents the horror-thriller genre with a tightly woven narrative and gritty realism, sustaining suspense throughout. ▸ Michael B. Jordan delivers a career-best performance, exploring complex psychological depths, while his interactions with Hailee Steinfeld are electric. ▸ Cinematography features moody palettes and claustrophobic framing, amplifying tension and visual impact.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "arco": {
-    "synopsis": "在未来世界，一位少年意外获得神秘力量，被迫在责任与家庭之间做出艰难选择。在奇幻冒险中，他不仅要面对外部威胁，还要寻找自我认同与成长的答案。",
-    "synopsis_en": "In a futuristic world, a young boy unexpectedly gains mysterious powers and must choose between his responsibilities and family. Amidst a fantastical adventure, he confronts external threats while searching for self-identity and personal growth.",
-    "recommendation": "▸ 法国导演Ugo Bienvenu以细腻的画面和独特的科幻美学，呈现兼具童趣与深度的未来世界。▸ Will Ferrell与America Ferrera的配音为角色注入鲜明个性，情感表达自然动人。▸ 高达93%烂番茄新鲜度，说明影片获得影评界高度认可，动画与剧情的结合表现出色。",
-    "recommendation_en": "▸ Director Ugo Bienvenu's refined visuals and distinctive sci-fi aesthetic blend childlike wonder with layered storytelling. ▸ Voice performances by Will Ferrell and America Ferrera add vivid personalities and emotional nuance to the characters. ▸ With a 93% Rotten Tomatoes score, the film is highly acclaimed for its seamless mix of stunning animation and compelling narrative.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "othello": {
-    "synopsis": "摩尔人军官奥赛罗在威尼斯军队中崭露头角，却因下属伊阿古的阴谋和怀疑，被卷入爱情与信任的巨大考验。影片聚焦权力、嫉妒与种族偏见下的人性挣扎。",
-    "synopsis_en": "Moorish general Othello rises in the Venetian army but faces a crisis of trust and love due to the manipulations of his subordinate, Iago. The film delves into themes of jealousy, power, and prejudice that threaten to unravel Othello’s life.",
-    "recommendation": "▸ 劳伦斯·菲什伯恩与肯尼思·布拉纳的对手戏极具张力，还原莎士比亚经典人物的复杂心理。▸ 导演奥利弗·帕克忠实还原原著的戏剧张力，黑白种族议题在视觉与对白中巧妙呈现。▸ 影片采用大量舞台化的构图与浓烈色彩，营造出紧张压抑的氛围，提升观赏体验。",
-    "recommendation_en": "▸ Laurence Fishburne and Kenneth Branagh deliver intense performances, vividly capturing the psychological nuances of Shakespeare’s characters. ▸ Director Oliver Parker remains faithful to the original play, skillfully integrating racial themes through both visuals and dialogue. ▸ The film’s theatrical compositions and rich color palette create a tense, claustrophobic atmosphere that heightens the drama.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "12 monkeys": {
-    "synopsis": "未来世界中，人类因病毒爆发几近灭绝，主角詹姆斯·科尔被送回过去，试图阻止灾难发生。他在时间旅行中遭遇身份质疑与精神折磨，挣扎于现实和幻觉之间，核心冲突围绕命运能否被改变展开。",
-    "synopsis_en": "In a future devastated by a deadly virus, James Cole is sent back in time to prevent the catastrophe. He faces skepticism and psychological torment, torn between reality and delusion, as he wrestles with whether fate can truly be altered.",
-    "recommendation": "▸ 泰瑞·吉列姆极具个人风格的导演手法，融合梦境与现实，营造出独特的末世氛围与迷离的视觉体验。▸ 布鲁斯·威利斯与布拉德·皮特奉献职业生涯高光表演，尤其皮特饰演的精神病人极具张力和层次感。▸ 复杂的时间线与悬疑结构，引发对命运、记忆与现实的深层思考，观影后仍让人回味不已。",
-    "recommendation_en": "▸ Terry Gilliam’s distinctive direction merges surreal visuals with a bleak dystopian atmosphere, creating a mind-bending blend of dream and reality. ▸ Bruce Willis delivers a raw, vulnerable performance, while Brad Pitt’s portrayal of a manic patient is electrifying and multi-layered, earning critical acclaim. ▸ The intricate narrative structure, with its time-travel paradoxes and psychological suspense, provokes deep reflection on fate and memory.",
-    "awards": "1996奥斯卡最佳男配角(布拉德·皮特)提名，最佳服装设计提名；1996金球奖最佳男配角(布拉德·皮特)获奖",
-    "awards_en": "1996 Oscar nominee for Best Supporting Actor (Brad Pitt) and Best Costume Design; 1996 Golden Globe winner for Best Supporting Actor (Brad Pitt)"
-  },
-  "ninotchka": {
-    "synopsis": "严肃的苏联女特使妮诺奇卡被派往巴黎，处理一宗复杂的政治经济任务，却意外卷入一段令人困惑的浪漫关系，在理性与情感之间陷入两难。",
-    "synopsis_en": "A stern Soviet envoy, Ninotchka, is sent to Paris for a delicate political mission. She unexpectedly finds herself caught between duty and a budding romance, facing a dilemma between her ideological beliefs and new emotions.",
-    "recommendation": "▸ 著名导演卢比奇以其独特的“卢比奇风格”将冷战前夕的政治与浪漫巧妙融合，展现高超的喜剧节奏与讽刺手法。▸ 葛丽泰·嘉宝以罕见的喜剧形象出演，突破以往严肃银幕形象，展现极具魅力的转变，贡献职业生涯代表作之一。",
-    "recommendation_en": "▸ Director Ernst Lubitsch employs his signature 'Lubitsch Touch,' blending pre-Cold War politics with witty romance and sharp satire, achieving impeccable comedic timing. ▸ Greta Garbo delivers a rare comedic performance, breaking from her usual dramatic roles, and offers one of the most charming and memorable transformations of her career.",
-    "awards": "1940年奥斯卡最佳影片、最佳女主角等4项提名",
-    "awards_en": "1940 Academy Award nominations for Best Picture, Best Actress, and two other categories"
-  },
-  "marty supreme": {
-    "synopsis": "天赋异禀的侦探Marty卷入一桩扑朔迷离的案件，面对复杂人性与道德抉择。他在追查真相过程中逐步揭开隐藏的秘密，陷入信任与背叛的漩涡，挑战自我与社会规则。",
-    "synopsis_en": "Gifted detective Marty becomes entangled in a bewildering case, wrestling with moral dilemmas and human complexities. As he pursues the truth, hidden secrets emerge, pulling him into a vortex of trust and betrayal, testing his limits and societal norms.",
-    "recommendation": "▸Josh Safdie导演延续紧张真实的风格，将都市悬疑与心理剧巧妙融合，营造高压氛围。▸Timothée Chalamet精湛表演，刻画角色内心挣扎与多重情感。▸影片在视觉设计和节奏把控上极具特色，紧扣观众注意力，豆瓣7.3与烂番茄93%高分口碑。",
-    "recommendation_en": "▸ Director Josh Safdie delivers his signature tense, realistic style, blending urban mystery with psychological drama for a gripping atmosphere. ▸ Timothée Chalamet's nuanced performance reveals the protagonist’s inner turmoil and layered emotions. ▸ The film stands out for its inventive visual design and tight pacing, earning strong ratings (Douban 7.3, Rotten Tomatoes 93%).",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the plague": {
-    "synopsis": "小镇爆发神秘瘟疫，主角医生在混乱中努力寻找控制疫情的办法，却遭遇居民猜忌与道德困境。面对人性挣扎与社会秩序瓦解，他必须做出艰难选择。",
-    "synopsis_en": "A mysterious plague strikes a small town, forcing a dedicated doctor to confront both the escalating crisis and the growing mistrust among townspeople. As social order unravels, he faces tough moral dilemmas in his quest to contain the outbreak.",
-    "recommendation": "▸ 导演Charlie Polinger以紧张氛围和细致人性描绘著称，本片延续其悬疑风格，情绪张力十足。▸ Joel Edgerton的表演层次丰富，展现角色在压力与道德冲突下的内心挣扎，提升影片感染力。▸ 高分烂番茄认证，说明影片在欧美影评界广受好评，剧情和导演手法得到认可。",
-    "recommendation_en": "▸ Director Charlie Polinger crafts a suspenseful atmosphere, skillfully blending mystery with psychological drama through precise pacing and character-driven storytelling. ▸ Joel Edgerton delivers a nuanced performance, effectively conveying the protagonist’s moral conflicts and emotional depth. ▸ With a 97% Rotten Tomatoes score, the film is highly praised by Western critics for its narrative strength and directorial execution.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "blow-up": {
-    "synopsis": "伦敦时尚摄影师在偶然拍摄中卷入一起谜案。他在现实与幻觉之间挣扎，试图揭开真相，却越陷越深，逐渐质疑自身所见和世界的真实。",
-    "synopsis_en": "A London fashion photographer stumbles upon a possible crime while working. As he investigates, he becomes increasingly unsure about the reality of what he witnessed, leading to a growing sense of uncertainty and obsession.",
-    "recommendation": "▸ 安东尼奥尼导演以冷静疏离的镜头语言，探讨了现实与幻觉的界限，构建出悬疑氛围。▸ 摄影与色彩极具美学价值，展现60年代伦敦的时尚与迷离。▸ 主角心理变化细腻，作品对现代都市人孤独与困惑的刻画极为深刻。",
-    "recommendation_en": "▸ Antonioni’s direction uses detached, observational camerawork to blur the line between reality and illusion, creating a tense, ambiguous atmosphere. ▸ The film’s striking cinematography and color palette capture the vibrant yet disorienting spirit of 1960s London. ▸ David Hemmings delivers a nuanced performance, and the film offers a profound portrait of urban alienation.",
-    "awards": "1967年戛纳电影节金棕榈奖",
-    "awards_en": "1967 Cannes Palme d'Or"
-  },
-  "house": {
-    "synopsis": "一位侦探被卷入一栋神秘宅邸的离奇案件，与两位关键人物展开角力。他们逐渐揭开房子的秘密，但每一步都充满危险与心理考验。影片属于悬疑惊悚类型，核心冲突围绕信任与真相。",
-    "synopsis_en": "A detective is drawn into a bizarre case in a mysterious house, confronting two pivotal figures. As secrets unravel, every move is fraught with danger and psychological tension. This is a mystery thriller focused on trust and truth.",
-    "recommendation": "▸导演凯瑟琳·毕格罗以紧张节奏和视觉风格营造压迫氛围，把悬疑与心理斗争巧妙结合。▸伊德里斯·艾尔巴与丽贝卡·弗格森的对手戏火花四射，表演层次丰富，推动剧情。▸摄影运用极具特色的构图和灯光，使宅邸本身成为角色，增强故事沉浸感。",
-    "recommendation_en": "▸ Kathryn Bigelow crafts an intense atmosphere through tight pacing and striking visuals, blending suspense with psychological conflict. ▸ Idris Elba and Rebecca Ferguson deliver nuanced performances, their interactions driving the narrative. ▸ The cinematography’s unique framing and lighting turn the house into a character, heightening immersion.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "nirvanna the band the show the movie": {
-    "synopsis": "本片是热门剧集《Nirvanna the Band the Show》的电影版，讲述两个痴迷音乐的朋友为让乐队在心仪场地演出而费尽心机，却不断陷入荒唐困境，友情与梦想面临严峻考验。",
-    "synopsis_en": "Based on the cult TV series, two passionate friends hatch wild schemes to get their band on stage at their dream venue, but their chaotic plans spiral out of control, testing both their friendship and ambitions.",
-    "recommendation": "▸ 导演Matt Johnson延续剧集的伪纪录片风格，融合即兴表演与现实恶搞，展现强烈个人风格和高度幽默感。▸ 烂番茄98%的高分反映了评论界对本片创新喜剧手法和演员化学反应的高度认可，适合喜欢另类幽默与突破叙事边界的观众。",
-    "recommendation_en": "▸ Director Matt Johnson brings his signature mockumentary style, blending improvisational acting and real-life pranks for a uniquely meta-comedic experience. ▸ With a 98% Rotten Tomatoes score, critics praise its inventive humor and the electric chemistry between leads, making it a standout for fans of offbeat, boundary-pushing comedy.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "sweet charity": {
-    "synopsis": "舞女Charity在纽约追寻爱情与幸福，却屡次遭遇情感挫折。她始终保持乐观，努力突破社会偏见，寻求属于自己的生活。影片聚焦她的内心挣扎与成长。",
-    "synopsis_en": "Charity, a dance hall hostess in New York, faces repeated heartbreaks while seeking love and happiness. Despite setbacks and societal judgment, she remains optimistic, striving for personal fulfillment and self-discovery.",
-    "recommendation": "▸导演Bob Fosse以标志性的舞蹈编排和镜头语言，展现了音乐剧的创新美学，舞台化效果极强。▸Shirley MacLaine的表演极富感染力，将主角的脆弱与坚韧刻画得细腻动人。▸影片色彩和剪辑大胆，视觉风格鲜明，开创了60年代音乐电影的新潮流。",
-    "recommendation_en": "▸ Bob Fosse’s iconic choreography and dynamic visual style bring innovative stage aesthetics to the musical genre, creating a highly theatrical effect. ▸ Shirley MacLaine delivers a nuanced, compelling performance, vividly portraying Charity’s vulnerability and resilience. ▸ Bold use of color and editing gives the film a distinctive visual flair, marking a trendsetting moment for 1960s musicals.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the boy and the heron": {
-    "synopsis": "一名少年在失去母亲后，随父亲搬到新家，意外遇见神秘的灰鹭。面对内心的悲伤与未知世界的挑战，他踏上奇幻冒险，探索生命与成长的意义。本片为宫崎骏时隔多年重返动画长片。",
-    "synopsis_en": "After losing his mother, a young boy moves with his father and encounters a mysterious heron. He embarks on a fantastical adventure that challenges his grief and leads him to discover the meaning of life and growth. Miyazaki returns to feature animation after years.",
-    "recommendation": "▸ 宫崎骏导演时隔多年再次执导，延续其独特幻想风格，融合深刻人生寓意和精妙世界观。▸ 画面极具美学价值，手绘动画细节丰富，视觉体验令人惊艳。▸ 配音阵容强大，克里斯蒂安·贝尔等好莱坞明星与日本传统动画巧妙结合。",
-    "recommendation_en": "▸ Hayao Miyazaki's return to directing showcases his signature blend of fantasy and profound life themes, offering a uniquely crafted world. ▸ The hand-drawn animation is visually stunning, with exceptional artistic detail and immersive cinematography. ▸ The film features a strong voice cast, including Christian Bale, bridging Hollywood talent and traditional Japanese anime.",
-    "awards": "2024奥斯卡最佳动画长片提名",
-    "awards_en": "2024 Academy Award nominee for Best Animated Feature"
-  },
-  "the wind rises": {
-    "synopsis": "影片讲述了日本著名飞机设计师堀越二郎在战争与梦想、责任与爱情之间挣扎的故事，他渴望飞翔，却不得不面对残酷的时代选择。本片为宫崎骏导演的动画长片。",
-    "synopsis_en": "The film follows Jiro Horikoshi, a gifted Japanese aircraft designer torn between his passion for flight and the harsh realities of wartime Japan. Amid dreams and duty, he must confront profound personal and historical dilemmas. Directed by Hayao Miyazaki.",
-    "recommendation": "▸ 宫崎骏以细腻手法描绘梦想与现实、战争与人性的复杂交织，情感真挚动人。▸ 动画画面极具美学价值，天空、机械与自然场景细节丰富，视觉体验独特。▸ 影片配乐由久石让创作，为故事增添诗意氛围，情感表达更加深刻。",
-    "recommendation_en": "▸ Hayao Miyazaki delivers a nuanced exploration of dreams versus reality, weaving war and humanity into a deeply moving narrative. ▸ The animation stands out for its aesthetic richness—detailed aircraft design, sweeping skies, and evocative landscapes create a unique visual feast. ▸ Joe Hisaishi’s score enhances the film’s poetic and emotional resonance.",
-    "awards": "第86届奥斯卡最佳动画长片提名；第37届日本电影学院奖最佳动画片",
-    "awards_en": "Nominated for Best Animated Feature, 86th Academy Awards; Best Animation, 37th Japan Academy Prize"
-  },
-  "it was just an accident": {
-    "synopsis": "一场看似普通的车祸让主角卷入一连串谜团，面对警方调查和社会压力，他在真相与自我救赎之间艰难抉择。影片聚焦个人责任与社会公正的拉锯，张力十足。",
-    "synopsis_en": "A seemingly ordinary car accident spirals the protagonist into a web of mystery, as he faces police scrutiny and societal pressure. The film explores his struggle between truth and self-redemption, centered on the tension between personal responsibility and justice.",
-    "recommendation": "▸ 贾法·帕纳希以极简镜头和现实主义手法，展现伊朗社会的复杂人性，氛围紧张，情感克制。▸ 男主瓦希德·莫巴塞里的表演层次丰富，将内心挣扎和道德困境表现得细腻真实。▸ 高分悬疑剧情，结局开放，发人深省，适合喜欢深度思考的观众。",
-    "recommendation_en": "▸ Jafar Panahi’s minimalist direction and realist touch vividly depict the complexities of Iranian society, creating a tense and understated atmosphere. ▸ Vahid Mobasseri delivers a nuanced performance, authentically portraying the protagonist’s moral dilemmas and internal conflicts. ▸ The high-rated suspenseful narrative with an open-ended conclusion invites deep reflection, ideal for viewers who appreciate thought-provoking cinema.",
-    "awards": "2025柏林电影节主竞赛单元入围",
-    "awards_en": "2025 Berlin International Film Festival Competition Selection"
-  },
-  "mr nobody against putin": {
-    "synopsis": "一位普通俄罗斯公民帕沙·塔兰金在普京政权下，因坚持个人信念与体制产生冲突，面临巨大社会和心理压力。影片聚焦他的抗争与抉择，展现个人在强权面前的无力与坚持。",
-    "synopsis_en": "An ordinary Russian citizen, Pasha Talankin, faces immense societal and psychological pressure as he confronts the Putin regime for his beliefs. The documentary follows his struggle and choices, depicting the tension between personal conviction and state power.",
-    "recommendation": "▸ 真实记录普通人在极权体制下的抗争，揭示俄罗斯社会的复杂现实与个体困境。▸ 导演大卫·博伦斯坦以冷静、细腻的镜头语言展现主人公的成长与心理变化，情感张力十足。▸ 豆瓣高分和烂番茄满分反映出影片在东西方观众中的强烈共鸣与评价一致。",
-    "recommendation_en": "▸ A candid and unflinching look at individual resistance under authoritarian rule, offering rare insight into the everyday realities of Russian society. ▸ Director David Borenstein employs restrained, nuanced cinematography and intimate interviews to capture the protagonist’s emotional journey. ▸ Its high Douban rating and perfect Rotten Tomatoes score demonstrate broad critical acclaim and strong resonance with both Eastern and Western audiences.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "no other choice": {
-    "synopsis": "一名警探意外卷入一桩复杂案件，面对道德与法律的双重挑战。他必须在揭开真相和保护亲人之间做出艰难抉择，案件逐渐牵扯出隐藏的罪恶与人性考验。",
-    "synopsis_en": "A detective becomes entangled in a complex case, facing both moral and legal dilemmas. As he struggles to uncover the truth while protecting his loved ones, the investigation reveals hidden crimes and tests the limits of human nature.",
-    "recommendation": "▸朴赞郁导演以其标志性的悬疑与黑色幽默风格，巧妙融合犯罪与喜剧元素，带来紧张又充满反转的观影体验。▸李秉宪、孙艺珍、朴熙俊三位实力演员同台飙戏，人物层次丰富，情感张力十足。▸影片在视觉风格上延续朴赞郁独特美学，构图精致，节奏把控极佳。",
-    "recommendation_en": "▸ Park Chan-wook’s signature blend of suspense, black humor, and crime creates a thrilling atmosphere with unexpected twists. ▸ Powerful performances from Lee Byung-hun, Son Ye-jin, and Park Hee-soon bring depth and emotional intensity to their characters. ▸ The film showcases Park’s unique visual style with exquisite compositions and tightly controlled pacing.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "plainclothes": {
-    "synopsis": "一名卧底警察在调查复杂犯罪时，意外卷入一段同性关系，身份与情感的双重危机逐步升级。他必须在忠于职责和追随内心之间做出艰难选择，谜团与人性冲突交织。",
-    "synopsis_en": "An undercover cop investigating a complex crime becomes unexpectedly involved in a same-sex relationship, facing escalating dilemmas between duty and personal desire. The film weaves mystery, romance, and identity struggles without revealing key plot twists.",
-    "recommendation": "▸导演Carmen Emmi以细腻镜头捕捉人物心理，为犯罪悬疑注入独特LGBTQ+视角，情感张力十足。▸汤姆·布莱斯与拉塞尔·托维的对手戏极具说服力，展现复杂人物关系与道德抉择。▸影片节奏紧凑，犯罪剧情与情感线索交互推进，悬疑氛围浓厚。",
-    "recommendation_en": "▸ Director Carmen Emmi delivers nuanced character studies within a crime thriller framework, offering a unique LGBTQ+ perspective and intense emotional tension. ▸ Tom Blyth and Russell Tovey give compelling performances, bringing depth to their morally conflicted characters. ▸ The film maintains strong pacing, skillfully intertwining mystery and romance, with atmospheric cinematography enhancing the suspense.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the secret agent": {
-    "synopsis": "在20世纪动荡的巴西，一名普通职员无意间卷入一场政治阴谋，被迫在忠诚与自保之间艰难抉择。他必须在危机四伏的环境中寻找真相，决定自己未来的命运。",
-    "synopsis_en": "Set in turbulent 20th-century Brazil, an ordinary clerk is inadvertently entangled in a political conspiracy. Torn between loyalty and self-preservation, he must navigate a perilous world to uncover the truth and determine his own fate.",
-    "recommendation": "▸ Kleber Mendonça Filho导演以独特的视听风格和沉浸式叙事，精准还原历史氛围，营造出悬疑与紧张并存的观影体验。▸ Wagner Moura领衔主演，细腻展现角色心理转变，赋予故事极强张力。▸ 融合历史事件与悬疑推理，剧情层层递进，逻辑严密，令观众全程投入。",
-    "recommendation_en": "▸ Director Kleber Mendonça Filho masterfully recreates the historical atmosphere with his signature immersive narrative style, blending suspense and tension. ▸ Wagner Moura delivers a nuanced performance, capturing the protagonist’s psychological transformation and grounding the film’s emotional core. ▸ The script skillfully weaves real historical events with intricate mystery elements, offering a tightly constructed plot that keeps audiences engaged throughout.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the voice of hind rajab": {
-    "synopsis": "年幼的欣德·拉贾布在战火中与家人失散，被困废墟之中，努力与外界联系寻求救援。影片聚焦她在绝望中的求生意志与战争带来的残酷困境。",
-    "synopsis_en": "Young Hind Rajab is separated from her family amid war and trapped in the ruins, desperately trying to reach the outside world for help. The film centers on her resilience and the harrowing challenges brought by conflict.",
-    "recommendation": "▸ 导演考瑟·本·哈尼亚以纪实风格还原战争现实，情感冲击力极强，细腻展现儿童视角下的恐惧与希望。▸ 主演萨贾·基拉尼表演自然真挚，成功传递极端环境下的无助与坚韧，让观众深度共情。▸ 影片在影像和音效设计上极具沉浸感，烂番茄高分体现其国际认可度和艺术成就。",
-    "recommendation_en": "▸ Director Kaouther Ben Hania employs a realistic, documentary-like approach, delivering powerful emotional resonance and an authentic depiction of war through a child's eyes. ▸ Lead actress Saja Kilani gives a raw, heartfelt performance, compellingly conveying vulnerability and resilience in extreme circumstances. ▸ The film’s immersive visuals and sound design, along with its high Rotten Tomatoes score, underscore its international acclaim and artistic impact.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "paris texas": {
-    "synopsis": "特拉维斯在失踪多年后突然出现在德州边境，他在弟弟的帮助下试图重拾与儿子和妻子的关系，面对内心创伤和家庭裂痕，踏上一段自我救赎的旅程。",
-    "synopsis_en": "After years of disappearance, Travis reemerges on the Texas border. With his brother's help, he seeks to reconnect with his estranged son and wife, confronting past wounds and the challenges of redemption.",
-    "recommendation": "▸ 文·温德斯以公路电影形式展现美国西南的苍凉与诗意，镜头语言极具美感和深度。▸ 哈利·迪恩·斯坦顿和娜塔莎·金斯基的表演层次丰富，情感极具感染力，传递孤独与希望。▸ 影片配乐由莱·库德创作，吉他旋律与氛围完美融合，成为影史经典。",
-    "recommendation_en": "▸ Wim Wenders crafts a poetic road movie, using stunning cinematography to capture the American Southwest’s vastness and emotional isolation. ▸ Harry Dean Stanton and Nastassja Kinski deliver nuanced, unforgettable performances that evoke deep empathy. ▸ Ry Cooder’s iconic slide guitar score perfectly complements the film’s haunting atmosphere, cementing its status as a classic.",
-    "awards": "1984戛纳电影节金棕榈奖、国际影评人费比西奖",
-    "awards_en": "1984 Cannes Palme d'Or, FIPRESCI Prize"
-  },
-  "sweetie": {
-    "synopsis": "本片讲述一对姐妹在家庭环境中面临心理困扰和相互依赖，随着“甜心”性格失控，关系逐渐紧张，主角必须面对自我认知与家庭责任的核心冲突。",
-    "synopsis_en": "The film follows two sisters caught in a dysfunctional family, as Sweetie's erratic behavior intensifies their emotional struggles. The protagonist confronts issues of self-identity and responsibility amid escalating family tensions.",
-    "recommendation": "▸ 坎皮恩导演以独特女性视角和荒诞幽默，展现家庭与心理困境，风格鲜明。▸ 主演Geneviève Lemon和Karen Colston表演真实，层次丰富，深入刻画人物内心。▸ 画面构图和色彩运用强烈，创造出不安与诗意并存的视觉体验。",
-    "recommendation_en": "▸ Jane Campion’s distinctive female perspective and dark humor explore family dysfunction with an original style. ▸ Geneviève Lemon and Karen Colston deliver nuanced, authentic performances, deeply portraying complex emotions. ▸ The film’s striking cinematography and bold color palette evoke both unease and poetic beauty.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the american friend": {
-    "synopsis": "一名德国画匠在生命危机与道德困境中，被牵涉进美国神秘男子的危险交易。在选择生存与良知之间，他不得不做出艰难抉择，命运变得扑朔迷离。",
-    "synopsis_en": "A German picture framer, facing a life-threatening illness, is drawn into a perilous criminal deal by a mysterious American. As he struggles between survival and conscience, his fate becomes increasingly entangled in danger.",
-    "recommendation": "▸ 文德斯导演以冷峻疏离的镜头语言，展现70年代汉堡的都市异化与人性边界，氛围感极强。▸ 丹尼斯·霍珀与布鲁诺·冈茨的对手戏张力十足，角色心理转变细腻可信。▸ 色调与构图充满新好莱坞与欧洲电影的融合美学，是犯罪类型片的视觉典范。",
-    "recommendation_en": "▸ Wim Wenders crafts a tense, atmospheric neo-noir, using cool, detached cinematography to evoke urban alienation in 1970s Hamburg. ▸ Dennis Hopper and Bruno Ganz deliver riveting performances, their psychological transformations nuanced and believable. ▸ The film’s color palette and composition blend New Hollywood grit with European art-house aesthetics, making it a visual standout in the crime thriller genre.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "perfect days": {
-    "synopsis": "一位东京公厕清洁工在平凡的日常中寻找自我与人生意义，面对孤独与内心世界的冲突。影片以细腻视角展现都市人隐秘情感，探索个人与环境的关系。",
-    "synopsis_en": "A Tokyo public restroom cleaner quietly seeks meaning and self-discovery amid routine work, confronting loneliness and his inner world. The film delicately explores urban emotional secrecy and the connection between individual and environment.",
-    "recommendation": "▸德国名导温·温德斯以极简主义手法，捕捉都市日常的诗意与哲思，呈现生活的美学。▸主演役所广司以克制、细腻的表演，将角色内心的微妙变化精准传达，极具感染力。▸摄影运用自然光与静态镜头，营造温柔而深刻的氛围，强化观众的沉浸体验。",
-    "recommendation_en": "▸ Wim Wenders employs minimalist direction to evoke poetic beauty and philosophical depth within urban routines, creating a visually elegant narrative. ▸ Kôji Yakusho delivers a subtle, restrained performance, capturing nuanced emotional shifts that resonate deeply. ▸ The cinematography uses natural light and static shots to craft a gentle, immersive atmosphere, enhancing the viewer's experience.",
-    "awards": "2023戛纳电影节最佳男演员奖、金棕榈提名",
-    "awards_en": "2023 Cannes Best Actor Award, Palme d'Or nominee"
-  },
-  "alice in the cities": {
-    "synopsis": "一位德国记者在美国旅行后陷入人生困境，并意外与一名小女孩结伴回欧洲。两人共同踏上寻找女孩母亲的旅程，面对身份迷失与情感孤独的核心冲突。",
-    "synopsis_en": "A German journalist, struggling with personal crisis after traveling in America, unexpectedly becomes the guardian of a young girl. Together, they embark on a journey across Europe to find her mother, confronting themes of identity and emotional isolation.",
-    "recommendation": "▸ 导演维姆·文德斯以黑白影像展现70年代欧洲与美国的真实风貌，画面极具诗意。▸ 鲁迪格·福格勒与耶拉·罗特兰德表演自然，情感细腻，展现角色间特殊羁绊。▸ 探索异乡人身份、孤独与家庭主题，兼具公路片独特氛围和深刻人文关怀。",
-    "recommendation_en": "▸ Wim Wenders uses poetic black-and-white cinematography to authentically capture 1970s Europe and America, creating a visually immersive atmosphere. ▸ Rudiger Vogler and Yella Rottlander deliver subtle, nuanced performances, highlighting an unusual bond. ▸ The film explores themes of alienation, loneliness, and family, blending road movie aesthetics with profound humanistic insight.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "buena vista social club": {
-    "synopsis": "一群年迈的古巴音乐家在才子制作人Ry Cooder帮助下，重新汇聚，面对遗忘与时代变迁，努力将古巴传统音乐带向世界舞台。他们的故事展现艺术与人生的坚韧。",
-    "synopsis_en": "A group of aging Cuban musicians, aided by producer Ry Cooder, reunite to revive traditional Cuban music amid fading memories and cultural shifts. Their journey reveals resilience in both art and life, as they seek global recognition.",
-    "recommendation": "▸ 韦姆·文德斯以纪实和诗意手法捕捉古巴音乐家的人生故事与现场表演，音乐与影像交融极具感染力。▸ Ry Cooder的制作推动下，观众能深入体验古巴音乐根源与独特氛围，感受音乐如何连接代际与文化。▸ 豆瓣9.0和烂番茄92%高分证明影片在全球观众和评论界的广泛认可，适合音乐和纪录片爱好者。",
-    "recommendation_en": "▸ Wim Wenders blends documentary realism with poetic visuals, capturing the musicians’ lives and performances with emotional intensity. ▸ Under Ry Cooder’s production, viewers immerse in the roots and spirit of Cuban music, witnessing its cultural impact. ▸ With a Douban score of 9.0 and Rotten Tomatoes 92%, the film is critically acclaimed and a must-see for music and documentary lovers.",
-    "awards": "1999奥斯卡最佳纪录片提名，1999欧洲电影奖最佳纪录片",
-    "awards_en": "1999 Academy Award nominee for Best Documentary Feature, 1999 European Film Award for Best Documentary"
-  },
-  "pina 3d": {
-    "synopsis": "本片通过舞者们的视角，展现德国现代舞大师皮娜·鲍什的艺术人生和舞蹈创新。舞者在舞台与现实之间挣扎，寻找自我表达与艺术传承的平衡。作为独立纪录片，并非系列作品。",
-    "synopsis_en": "This documentary presents the artistic journey of German choreographer Pina Bausch through the perspectives of her dancers, who grapple with self-expression and preserving her legacy. It explores the tension between stage performance and real-life emotion. Not part of a series.",
-    "recommendation": "▸ 温德斯以3D技术创新呈现舞蹈，镜头捕捉舞者动作细腻，观众仿佛置身舞台中央。▸ 皮娜·鲍什的舞蹈作品融合现实与幻想，展现极富情感和哲思的舞台美学。▸ 纪录片深入采访舞者，揭示他们对皮娜的敬仰与个人成长，情感真挚动人。",
-    "recommendation_en": "▸ Wim Wenders’ groundbreaking use of 3D immerses viewers in the choreography, capturing subtle movements and spatial dynamics as if onstage. ▸ Pina Bausch’s works blend reality and fantasy, offering emotionally charged, thought-provoking stage aesthetics. ▸ In-depth interviews reveal heartfelt tributes and personal growth among dancers, providing genuine insight into Bausch’s impact.",
-    "awards": "2011欧洲电影奖最佳纪录片提名",
-    "awards_en": "2011 European Film Award nominee for Best Documentary"
-  },
-  "the salt of the earth": {
-    "synopsis": "本片讲述著名摄影师萨尔加多在全球拍摄人类苦难与自然之美的旅程，面对社会动荡、环境破坏与个人信仰的挑战。他在镜头下不断探寻人性与希望，陷入艺术与道德抉择。",
-    "synopsis_en": "The film follows renowned photographer Sebastião Salgado as he documents human suffering and natural wonders worldwide, confronting social upheaval, environmental destruction, and his own convictions. He seeks hope and humanity through his lens, facing artistic and ethical dilemmas.",
-    "recommendation": "▸ 温德斯与萨尔加多父子联合导演，融合纪实与诗意影像，展现摄影背后的故事和情感。▸ 画面极具冲击力，萨尔加多黑白摄影捕捉人类与自然的壮丽与残酷，视觉体验震撼。▸ 影片探讨人性、环境与艺术责任，思辨深刻，引发观众共鸣与反思。",
-    "recommendation_en": "▸ Wim Wenders and Juliano Ribeiro Salgado co-direct, blending documentary realism with poetic visuals to reveal the emotional depth behind iconic photography. ▸ The film’s striking cinematography features Sebastião Salgado’s black-and-white photos, powerfully capturing humanity and nature’s grandeur. ▸ It thoughtfully explores ethical, environmental, and artistic responsibilities, provoking profound audience reflection.",
-    "awards": "2015奥斯卡最佳纪录片提名，2014戛纳电影节一种关注特别奖",
-    "awards_en": "2015 Academy Award nominee for Best Documentary Feature, 2014 Cannes Un Certain Regard Special Prize"
-  },
-  "epic elvis presley in concert": {
-    "synopsis": "本片以音乐纪录片形式，聚焦猫王Elvis Presley在巅峰时期的舞台人生，展现他在耀眼成就和个人压力之间的挣扎，以及他如何用音乐面对不断升级的名利困境。",
-    "synopsis_en": "This music documentary delves into Elvis Presley's peak years, exploring his struggle to balance overwhelming fame with personal challenges, and his unwavering commitment to music as he faces mounting pressures.",
-    "recommendation": "▸ 巴兹·鲁赫曼延续其华丽影像风格，结合珍贵演唱会实录和幕后花絮，还原猫王现场魅力与时代氛围。▸ 罕见高清修复的演出片段，配合全新混音，让观众如临其境，感受Elvis的音乐能量与情感张力。▸ 透过家人和乐队成员的深度访谈，立体展现猫王舞台背后鲜为人知的脆弱与坚持。",
-    "recommendation_en": "▸ Baz Luhrmann’s signature lavish direction infuses rare concert footage and behind-the-scenes material, authentically capturing Elvis’ stage charisma and the era’s spirit. ▸ High-definition restored performances and new audio mixes immerse viewers in the power and emotion of Elvis’s music. ▸ In-depth interviews with family and band members provide an intimate look at the vulnerabilities and resilience behind the legend.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "peaky blinders the immortal man": {
-    "synopsis": "本片为《浴血黑帮》系列电影，讲述托马斯·谢尔比在黑帮权力斗争与家族责任间挣扎，面对新旧势力的冲突与个人命运的抉择，展现他在黑暗世界中的生存智慧与内心挣扎。",
-    "synopsis_en": "This is a continuation of the Peaky Blinders saga. Thomas Shelby is caught between escalating gang rivalries and the weight of family duties, forcing him to make pivotal choices that test his survival instincts and moral boundaries in a treacherous historical underworld.",
-    "recommendation": "▸ 基里安·墨菲回归，塑造更复杂的谢尔比形象，展现角色心理变化与情感层次，表演极具张力。▸ 导演汤姆·哈珀延续剧集风格，运用独特的画面语言与配乐营造紧张氛围，历史质感浓厚。▸ 烂番茄高分，说明影评人普遍认可其艺术成就，尤其在犯罪与历史题材上的创新处理。",
-    "recommendation_en": "▸ Cillian Murphy delivers a nuanced performance, deepening the complexity of Thomas Shelby and vividly depicting his internal struggles. ▸ Director Tom Harper maintains the series’ signature visual style and atmospheric tension, using sharp cinematography and evocative music to amplify the historical setting. ▸ The high Rotten Tomatoes score reflects strong critical acclaim, especially for its innovative approach to crime and period storytelling.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "a nun in the city": {
-    "synopsis": "一位修女因命运安排来到都市，面对世俗诱惑和信仰的考验。她在陌生环境中挣扎，必须在坚持自我信仰与现实生活之间做出抉择。",
-    "synopsis_en": "A nun arrives in the bustling city, where she faces temptations and tests to her faith. Navigating an unfamiliar world, she must choose between her spiritual convictions and the demands of everyday life.",
-    "recommendation": "▸ 导演Marcello Pagliero以细腻现实主义手法展现战后社会变迁，对女性信仰与个体挣扎有深刻刻画。▸ Ginette Leclerc的表演层次丰富，将修女的内心矛盾与脆弱展现得淋漓尽致。▸ 浪漫主义黑白影像，捕捉城市氛围与人物心理，增强戏剧张力。",
-    "recommendation_en": "▸ Director Marcello Pagliero uses subtle realism to explore post-war social changes, with a nuanced focus on female faith and inner turmoil. ▸ Ginette Leclerc delivers a deeply layered performance, vividly portraying the nun's internal conflict and fragility. ▸ Striking black-and-white cinematography vividly captures the cityscape and the protagonist’s emotional state, enhancing the film’s dramatic tension.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "case 137": {
-    "synopsis": "一名女警探在调查一桩悬疑命案时，意外卷入复杂的人性与正义抉择。她必须在真相与自身信念之间做出艰难选择，逐步揭开案件背后的隐秘真相。",
-    "synopsis_en": "A female detective delves into a mysterious murder case, confronting intricate questions of justice and morality. As she investigates, she is forced to choose between uncovering the truth and staying true to her principles, unraveling secrets hidden beneath the surface.",
-    "recommendation": "▸ 导演多米尼克·莫尔以冷峻现实主义风格营造紧张氛围，层层递进的悬疑感引人入胜。▸ 女主角蕾雅·德吕克表现极具张力，细腻刻画警探内心挣扎，赋予角色深度。▸ 影片善于通过光影、构图展现压抑氛围，视觉风格与犯罪主题高度契合，观感沉浸。",
-    "recommendation_en": "▸ Director Dominik Moll creates a grippingly tense atmosphere with his signature realist style, expertly building suspense throughout the narrative. ▸ Lead actress Léa Drucker delivers a powerful, nuanced performance, portraying the detective's internal conflict with remarkable depth. ▸ The film's use of lighting and composition enhances its brooding mood, making the visual experience deeply immersive and perfectly aligned with the crime theme.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "colours of time": {
-    "synopsis": "一位被过去阴影困扰的画家，在时间与记忆的交错中，试图寻找到自我救赎的契机。他在不断变化的现实与幻境之间挣扎，面对亲情与理想的艰难抉择。",
-    "synopsis_en": "A painter haunted by shadows of the past seeks redemption as he navigates the blurred lines between time and memory. Torn between family bonds and his ideals, he must confront difficult choices in an ever-shifting reality.",
-    "recommendation": "▸ 导演大胆运用时空交错的叙事结构，通过色彩与光影展现人物心理变化，营造出独特的沉浸感。▸ 主演对心理创伤与自我救赎的细腻诠释极具感染力，人物层次丰富，情感张力强烈。▸ 影片在视觉设计上极具创新，色彩运用与镜头切换巧妙呼应主题，令人印象深刻。",
-    "recommendation_en": "▸ The director employs a bold, nonlinear narrative, using color and lighting to mirror the protagonist’s psychological journey, creating a uniquely immersive atmosphere. ▸ The lead actor delivers a deeply affecting performance, capturing the nuances of trauma and redemption with emotional intensity. ▸ Visually innovative, the film’s creative color palette and fluid camera work powerfully reinforce its central themes.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "guru": {
-    "synopsis": "Guru讲述了一位都市喜剧作家在事业遇冷和情感受挫的双重困境下，意外与一位性格迥异的女性相遇，两人从误解到互相吸引，逐渐面对自我和彼此的成长。",
-    "synopsis_en": "Guru follows a city-based comedy writer who faces both a stagnant career and romantic setbacks. An unexpected encounter with a woman of contrasting personality leads them from misunderstanding to connection, forcing both to confront personal growth and new possibilities.",
-    "recommendation": "▸ Nadeem Baig以流畅叙事和细腻情感见长，本片延续了其都市浪漫喜剧的导演风格，幽默与温情兼具。▸ Humayun Saeed与Mahira Khan时隔多年再度合作，表演默契，化学反应极强，极大提升观赏性。▸ 影片对白机智风趣，情节节奏明快，都市背景下的人物成长细腻真实，适合喜欢轻松浪漫氛围的观众。",
-    "recommendation_en": "▸ Director Nadeem Baig brings his signature blend of urban wit and heartfelt storytelling, balancing humor with emotional depth in a modern romantic setting. ▸ The on-screen reunion of Humayun Saeed and Mahira Khan delivers palpable chemistry and nuanced performances, adding authenticity to the film's central relationship. ▸ The screenplay features sharp, witty dialogues and brisk pacing, with relatable character arcs that resonate especially with fans of lighthearted, contemporary romance.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the great arch": {
-    "synopsis": "一位知名建筑师在承接一项宏伟工程时，面临职业理想与现实压力的激烈冲突。他不仅要应对来自业主和同事的质疑，还必须在个人信念与外部期望之间做出抉择。",
-    "synopsis_en": "A renowned architect is tasked with an ambitious project and finds himself caught between professional ideals and mounting external pressures. As doubts from clients and colleagues grow, he must navigate the tension between his personal convictions and the demands of the world around him.",
-    "recommendation": "▸ 导演Stéphane Demoustier以细腻现实主义手法，呈现建筑师内心挣扎与行业生态，镜头语言极具沉浸感。▸ Claes Bang与Sidse Babett Knudsen的表演层次丰富，情感张力强烈，极大提升了角色的真实感和观众代入感。▸ 影片对建筑美学与社会责任的探讨深刻，适合喜欢思辨题材的观众。",
-    "recommendation_en": "▸ Director Stéphane Demoustier employs a nuanced realist style, immersing viewers in the protagonist’s psychological landscape and the architectural world’s complexities. ▸ Claes Bang and Sidse Babett Knudsen deliver layered, emotionally intense performances that make the characters compelling and relatable. ▸ The film offers a thoughtful exploration of architectural aesthetics and social responsibility, appealing to audiences interested in intellectually stimulating dramas.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the musicians": {
-    "synopsis": "一群身处人生低谷的音乐家在命运的驱使下重新聚集，面对音乐与现实的双重挑战。他们必须克服个人困扰与团队分歧，寻找自我与重燃梦想之间的平衡。",
-    "synopsis_en": "A group of musicians, each struggling with personal setbacks, reunite under unexpected circumstances. Facing both musical ambitions and real-life challenges, they must overcome inner conflicts and team tensions to rediscover their passion and purpose.",
-    "recommendation": "▸导演Grégory Magne用细腻幽默展现音乐人真实生活，融合喜剧与戏剧元素，节奏自然。▸主演Valérie Donzelli、Frédéric Pierrot的表演层次丰富，情感真挚，带来强烈共鸣。▸音乐场景设计精巧，音乐与剧情深度结合，带来视听上的享受。",
-    "recommendation_en": "▸ Director Grégory Magne skillfully blends comedy and drama, capturing the authentic struggles of musicians with nuanced humor and natural pacing. ▸ Lead actors Valérie Donzelli and Frédéric Pierrot deliver emotionally resonant performances, elevating the film’s character depth. ▸ The musical sequences are intricately crafted, seamlessly integrating the soundtrack with the narrative for a compelling audiovisual experience.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the stranger": {
-    "synopsis": "一名卧底警探为侦破一桩悬而未决的绑架谋杀案，必须与一名嫌疑人建立危险的信任关系。他在道德与职责之间挣扎，逐步陷入心理边界模糊的困境。",
-    "synopsis_en": "An undercover cop, investigating an unresolved abduction and murder case, must form a precarious bond with a key suspect. As the lines between duty and morality blur, he finds himself trapped in a tense psychological dilemma.",
-    "recommendation": "▸ 影片根据真实案件改编，展现澳大利亚警方高压卧底调查手法，情节紧张且气氛压抑。▸ Joel Edgerton与Sean Harris两位主演的心理博弈极具张力，细腻演技令人信服，成功塑造出复杂的人物关系。▸ 导演托马斯·赖特以冷峻写实的影像风格，营造出强烈的悬疑感和压抑氛围，极具沉浸感。",
-    "recommendation_en": "▸ Based on a true story, the film offers a gripping look at high-stakes undercover operations within the Australian police, maintaining intense suspense throughout. ▸ Joel Edgerton and Sean Harris deliver outstanding performances, capturing the psychological tension and complex dynamics between their characters. ▸ Director Thomas Wright employs a stark, realistic visual style, creating a deeply immersive atmosphere and palpable sense of unease.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the passion of the christ": {
-    "synopsis": "影片聚焦耶稣基督受难的最后12小时，展现他在信仰与人性的双重考验下，面对背叛、审判和极端痛苦的挣扎，突出其坚定信念与无私牺牲。",
-    "synopsis_en": "The film centers on the last 12 hours of Jesus Christ's life, highlighting his struggle with betrayal, judgment, and immense suffering as he upholds his faith and confronts the limits of human endurance.",
-    "recommendation": "▸ 梅尔·吉布森极具争议与个人风格的导演手法，将宗教题材拍得极为震撼和写实，情感冲击力极强。▸ 摄影和化妆高度还原历史氛围，细节考究，营造出沉浸感极强的视觉体验。▸ 吉姆·卡维泽尔的表演极具感染力，对角色痛苦与信仰的诠释令人印象深刻。",
-    "recommendation_en": "▸ Mel Gibson’s controversial and highly personal direction delivers an intense, visceral portrayal of religious suffering, marked by emotional rawness and realism. ▸ The cinematography and makeup authentically recreate the historical setting, offering a deeply immersive visual experience. ▸ Jim Caviezel’s performance stands out for its powerful depiction of agony and conviction, anchoring the film’s emotional core.",
-    "awards": "2005奥斯卡最佳摄影、最佳化妆、最佳原创配乐提名",
-    "awards_en": "2005 Academy Award nominations for Best Cinematography, Best Makeup, and Best Original Score"
-  },
-  "little amélie or the character of rain": {
-    "synopsis": "四岁小女孩阿梅丽在比利时移民家庭中成长，对世界充满好奇，却因文化隔阂与孤独感困扰。她通过想象力探索自我与归属，面对家庭与成长的挑战。",
-    "synopsis_en": "Four-year-old Amélie, growing up in a Belgian immigrant family, struggles with feelings of isolation and cultural displacement. Using her vivid imagination, she seeks belonging and self-understanding amid the challenges of family and identity.",
-    "recommendation": "▸ 独特融合真人与动画，导演用诗意画面刻画儿童视角下的现实与幻想，视觉风格极具辨识度。▸ 小演员Loïse Charpentier表现自然细腻，成功传递角色内心挣扎与成长情感。▸ 影片在情感表达和文化议题处理上极为细腻，适合喜欢深度人文故事的观众。",
-    "recommendation_en": "▸ Unique blend of live-action and animation, with directors Vallade and Han crafting poetic visuals that authentically reflect a child's perspective. ▸ Loïse Charpentier delivers a remarkably nuanced performance, capturing Amélie's emotional journey with subtlety. ▸ The film excels in exploring deep cultural and identity themes, making it a compelling choice for viewers seeking thoughtful, artful storytelling.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "la la land": {
-    "synopsis": "怀揣音乐梦想的钢琴师与追求演艺生涯的女演员在洛杉矶相遇，在理想与现实之间挣扎，面临爱情与梦想难以兼得的抉择。",
-    "synopsis_en": "A jazz pianist and an aspiring actress meet in Los Angeles, both chasing their artistic dreams. As their romance develops, they confront the harsh realities of ambition, love, and the sacrifices required to succeed.",
-    "recommendation": "▸ 导演达米恩·查泽雷用色彩斑斓的长镜头和经典歌舞，致敬好莱坞黄金时代，视觉和听觉体验极为出色。▸ 瑞恩·高斯林与艾玛·斯通化学反应强烈，展现角色成长与挣扎，情感真挚动人。▸ 电影原声和插曲如《City of Stars》深入人心，多首原创歌曲获奖，音乐与剧情完美融合。",
-    "recommendation_en": "▸ Damien Chazelle masterfully blends vibrant visuals and long takes, paying homage to classic Hollywood musicals while offering a fresh, modern style. ▸ Ryan Gosling and Emma Stone deliver compelling performances with palpable chemistry, authentically portraying the challenges and growth of their characters. ▸ The film's soundtrack, including the Oscar-winning 'City of Stars,' seamlessly integrates into the narrative, elevating both emotional and musical impact.",
-    "awards": "2017奥斯卡最佳导演、最佳女主角、最佳原创配乐等6项大奖，14项提名；2017金球奖最佳音乐/喜剧片等7项大奖",
-    "awards_en": "2017 Academy Awards: Best Director, Best Actress, Best Original Score and 3 more (6 wins, 14 nominations); 2017 Golden Globes: Best Musical/Comedy Motion Picture and 6 more (7 wins)"
-  },
-  "the departed": {
-    "synopsis": "一名警察卧底渗透波士顿黑帮，同时黑帮也有内鬼在警局，两人身份危机四伏，随时可能暴露。警方与黑帮间的猫鼠游戏逐渐升级，主角在忠诚与生存之间挣扎。",
-    "synopsis_en": "An undercover cop infiltrates Boston's criminal underworld, while a gangster plants a mole in the police. Both men face escalating risks as they try to protect their identities, caught in a deadly game of loyalty and betrayal.",
-    "recommendation": "▸ 马丁·斯科塞斯以极具张力的叙事节奏和多线并进的方式，展现警匪身份错位的心理博弈。▸ 莱昂纳多·迪卡普里奥、马特·达蒙和杰克·尼克尔森三位主演贡献极具爆发力的表演，角色塑造层次丰富。▸ 影片剪辑、配乐及摄影风格硬朗，营造出紧张压抑的氛围，极大增强观影体验。",
-    "recommendation_en": "▸ Director Martin Scorsese crafts a taut and suspenseful narrative, masterfully weaving parallel storylines that heighten the tension of the identity crisis. ▸ Leonardo DiCaprio, Matt Damon, and Jack Nicholson deliver powerhouse performances, lending depth and nuance to their conflicted characters. ▸ The film’s sharp editing, gritty cinematography, and evocative soundtrack create a relentless, immersive atmosphere.",
-    "awards": "第79届奥斯卡最佳影片、最佳导演、最佳改编剧本、最佳剪辑奖",
-    "awards_en": "Academy Award for Best Picture, Best Director, Best Adapted Screenplay, and Best Film Editing at the 79th Oscars"
-  },
-  "giant": {
-    "synopsis": "小男孩霍加斯在冷战时期偶遇神秘巨人机器人，两者建立深厚友谊，却面临政府追捕和社会恐惧的双重压力。他必须在保护朋友和现实威胁之间做出抉择。",
-    "synopsis_en": "During the Cold War, young Hogarth discovers a giant robot and forms a deep friendship with it. As government forces close in, Hogarth must navigate the dangers of fear and suspicion, struggling to protect his extraordinary friend.",
-    "recommendation": "▸ 导演布拉德·伯德以细腻笔触呈现冷战时期的社会氛围，将冒险与成长巧妙结合，情感真实动人。▸ 动画风格独具匠心，巨人与男孩的互动极具张力，兼具童趣与深度，适合各年龄层观赏。▸ 影片以反战主题和包容视角广受好评，被誉为动画史上最具情感深度的作品之一。",
-    "recommendation_en": "▸ Director Brad Bird crafts a heartfelt narrative that balances Cold War paranoia with themes of friendship and growth, elevating the film beyond typical family fare. ▸ The animation features distinctive visual style and expressive character interactions, making the bond between Hogarth and the Giant both touching and memorable. ▸ Its anti-war message and perspective on acceptance have earned widespread acclaim, ranking it among the most emotionally resonant animated films.",
-    "awards": "2000安妮奖最佳动画长片、最佳导演、最佳配音等多项大奖",
-    "awards_en": "2000 Annie Awards: Best Animated Feature, Best Director, Best Voice Acting, and more"
-  },
-  "sátántangó": {
-    "synopsis": "在一座破败的匈牙利乡村，村民们在经济崩溃与集体幻灭中挣扎，期待着失踪已久的伊琳卡和皮特曼归来，带来改变命运的希望。影片深描人性的无力与渴望，展现社会崩解下的群像困境。",
-    "synopsis_en": "In a desolate Hungarian village, residents face economic collapse and collective disillusionment, clinging to hope as two vanished figures are rumored to return. The film explores the villagers’ despair and longing against a backdrop of societal decay.",
-    "recommendation": "▸ 导演塔尔贝拉以极致的长镜头和黑白摄影，营造出沉浸式的绝望氛围，具有极高艺术辨识度。▸ 影片时长达7小时，却以缓慢节奏和重复叙事展现群像众生相，挑战观众耐心，适合寻求极致艺术体验的观众。▸ 烂番茄100%高分，获全球影评人一致推崇，被视为慢电影与欧洲艺术片的巅峰之作。",
-    "recommendation_en": "▸ Béla Tarr’s masterful use of extended long takes and stark black-and-white cinematography creates an immersive atmosphere of existential despair, marking a unique directorial signature. ▸ The film’s 7-hour runtime and meditative pacing present daily life through repetitive structure, offering a demanding yet rewarding experience for art film enthusiasts. ▸ With a 100% score on Rotten Tomatoes, it is widely acclaimed as a landmark of slow cinema and European auteur filmmaking.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "spirited away": {
-    "synopsis": "少女千寻误入神秘异世界，为拯救父母和自保，必须适应陌生环境并面对各种奇异挑战。她在神灵与怪物间艰难求生，逐渐成长，核心冲突在于自我认知与勇气的抉择。",
-    "synopsis_en": "A young girl named Chihiro stumbles into a mysterious spirit world, where she must survive, save her parents, and adapt to surreal challenges. Her journey centers on personal growth and courage as she faces strange creatures and daunting obstacles.",
-    "recommendation": "▸ 宫崎骏以极富想象力的画面和独特东方文化符号，营造出奇幻世界，每一帧都充满细节与情感。▸ 角色塑造丰富，主角成长过程真实动人，配角各具特色，推动故事层层递进。▸ 音乐与氛围营造极为出色，久石让的配乐与画面完美结合，增强观众的沉浸体验。",
-    "recommendation_en": "▸ Hayao Miyazaki crafts a visually stunning world with imaginative animation and rich references to Japanese folklore, making each scene vibrant and meaningful. ▸ The character development is compelling, with Chihiro’s growth authentically portrayed and side characters adding depth to the narrative. ▸ Joe Hisaishi’s evocative score seamlessly blends with the visuals, heightening the immersive atmosphere.",
-    "awards": "2003奥斯卡最佳动画长片；2001柏林电影节金熊奖；2001日本电影金像奖最佳影片",
-    "awards_en": "2003 Academy Award for Best Animated Feature; 2001 Berlin International Film Festival Golden Bear; 2001 Japan Academy Prize for Picture of the Year"
-  },
-  "my neighbour totoro": {
-    "synopsis": "两姐妹随父亲搬到乡村，母亲住院治疗，家庭面临情感困境。她们在新环境中遇见神秘森林精灵，通过奇幻经历探索家庭与成长的意义。",
-    "synopsis_en": "Two sisters move to the countryside with their father while their mother is hospitalized. Facing emotional uncertainty, they encounter magical forest spirits, embarking on enchanting adventures that help them cope and grow together.",
-    "recommendation": "▸ 宫崎骏以极富诗意的画面和细腻的情感刻画，展现童真与家庭温情，动画风格独具匠心。▸ 森林精灵龙猫形象深入人心，成为日本动画史上标志性角色，适合全年龄观众。▸ 整体节奏舒缓，配乐由久石让创作，营造出温暖治愈的氛围。",
-    "recommendation_en": "▸ Hayao Miyazaki’s unique directorial touch brings poetic visuals and nuanced emotions, highlighting innocence and familial warmth. ▸ The iconic Totoro character stands as a hallmark of Japanese animation, appealing to all ages. ▸ Joe Hisaishi’s gentle score and the film’s unhurried pace create a comforting, therapeutic atmosphere.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "what is love": {
-    "synopsis": "本片以不同年龄和背景的男女为主角，探索他们在现代社会中对“爱”的困惑与渴望，面对亲密关系中的误解与挑战，试图寻找爱的真实意义。",
-    "synopsis_en": "Following men and women from diverse ages and backgrounds, the film explores their struggles and longings for love in modern society, focusing on misunderstandings and challenges in intimate relationships as they search for the true meaning of love.",
-    "recommendation": "▸ 影片采用多线叙事和真实访谈相结合的方式，展现不同文化、性别、年龄层对爱情的独特理解，内容丰富且极具代入感。▸ 画面细腻温暖，导演对情感细节的捕捉极为精准，配乐与剪辑恰到好处，提升情绪张力，让观众获得深刻共鸣。",
-    "recommendation_en": "▸ The film skillfully blends multi-perspective narratives with authentic interviews, providing a rich and immersive look at how love is perceived across various cultures, genders, and age groups. ▸ The cinematography is warm and intimate, with director Steve Bollman demonstrating an acute sensitivity to emotional nuance. Thoughtful editing and music enhance the film’s emotional resonance.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "a man and a woman": {
-    "synopsis": "一位丧偶的赛车手与一名失去丈夫的女教师在送孩子上学途中偶然相识，彼此在失落与孤独中逐渐靠近，却又因过往的伤痛难以走出心灵的桎梏。",
-    "synopsis_en": "A widowed racecar driver and a woman mourning her late husband meet by chance while taking their children to school. As they grow closer, both struggle with the shadows of their past and the challenge of embracing new love.",
-    "recommendation": "▸ 克洛德·勒卢什以细腻的镜头语言和诗意的叙事，将平凡生活中的情感波澜表现得极致动人，黑白与彩色影像交替极具美学特色。▸ 阿努克·艾梅与让-路易·特兰蒂尼昂的表演内敛真实，展现了人物情感的复杂层次。▸ 片中经典配乐《Samba Saravah》与主题旋律极具感染力，成为法语电影史上最具标志性的爱情片之一。",
-    "recommendation_en": "▸ Claude Lelouch’s delicate direction weaves poetic storytelling with innovative alternation between black-and-white and color cinematography, lending visual depth to everyday emotions. ▸ Anouk Aimée and Jean-Louis Trintignant deliver nuanced, understated performances, authentically portraying emotional vulnerability. ▸ The unforgettable score, especially the iconic theme, elevates the film into a landmark of French romantic cinema.",
-    "awards": "1966戛纳电影节金棕榈奖，1967奥斯卡最佳外语片、最佳原创剧本奖",
-    "awards_en": "1966 Cannes Palme d'Or, 1967 Academy Award for Best Foreign Language Film and Best Original Screenplay"
-  },
-  "dance for your life": {
-    "synopsis": "一名怀揣舞蹈梦想的青年在家庭压力与现实困境中挣扎，面临放弃梦想还是坚持自我的抉择。影片聚焦他在舞台与生活之间的核心冲突，展现成长与追寻的艰辛旅程。",
-    "synopsis_en": "A young dancer, burdened by family expectations and harsh realities, must choose between abandoning his passion or pursuing his dream. The film centers on his struggle between personal ambition and life’s practical demands.",
-    "recommendation": "▸ 影片以细腻的镜头语言捕捉舞者肢体张力，配合极富感染力的原声配乐，营造出强烈的临场感。▸ 主演对角色内心挣扎的层次表达极为真实，将梦想与现实冲突刻画得动人心弦，情感表现力极强。",
-    "recommendation_en": "▸ The film’s nuanced cinematography vividly captures the expressive physicality of dance, amplified by a compelling original soundtrack that immerses the audience in the protagonist’s world. ▸ Lead actor delivers a powerful portrayal of internal struggle, convincingly embodying the emotional tension between dreams and harsh reality.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the searchers": {
-    "synopsis": "美国内战后，伊桑踏上漫长旅程，寻找被印第安人掳走的侄女。他在荒野中面对外部敌意与内心仇恨，逐渐陷入道德与情感的挣扎。",
-    "synopsis_en": "After the Civil War, Ethan embarks on an arduous quest to find his niece abducted by Native Americans. As he traverses the wild frontier, he confronts both external hostility and inner moral conflicts.",
-    "recommendation": "▸ 导演约翰·福特以辽阔西部风光和色彩运用，树立西部片美学标杆，影片画面极具史诗感。▸ 约翰·韦恩饰演的伊桑形象复杂，展现种族偏见与救赎的矛盾，成为影史最具争议与深度的西部英雄之一。",
-    "recommendation_en": "▸ John Ford’s sweeping use of Monument Valley landscapes and vivid Technicolor set a new visual standard for Westerns, creating an epic sense of scale. ▸ John Wayne delivers a nuanced performance as Ethan, whose internal struggle with prejudice and redemption makes the character one of the genre’s most complex and debated antiheroes.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "taxi driver": {
-    "synopsis": "纽约出租车司机特拉维斯在孤独和社会疏离中挣扎，目睹城市黑暗后，他逐渐被愤怒和救赎欲望驱使，陷入道德和心理的巨大冲突。",
-    "synopsis_en": "New York cab driver Travis, alienated and struggling with loneliness, becomes increasingly disturbed by the city’s darkness. Driven by anger and a desire for redemption, he faces profound moral and psychological conflict.",
-    "recommendation": "▸ 马丁·斯科塞斯以极具张力的导演风格，展现70年代纽约的阴郁与混乱，带来视觉和情感冲击。▸ 罗伯特·德尼罗奉献极具层次的表演，细腻展现主角心理变化，成为影史经典角色之一。▸ 影片对孤独、暴力与社会疏离的深刻探讨，激发观众对道德边界和城市病态的思考。",
-    "recommendation_en": "▸ Martin Scorsese’s intense and immersive direction paints a gritty, atmospheric portrait of 1970s New York, heightening the film’s emotional impact. ▸ Robert De Niro delivers a nuanced, iconic performance, masterfully capturing Travis’s psychological descent. ▸ The film’s profound exploration of loneliness, violence, and social alienation prompts lasting reflection on morality and urban malaise.",
-    "awards": "1976戛纳电影节金棕榈奖",
-    "awards_en": "1976 Cannes Palme d'Or"
-  },
-  "shark kingdom 3d": {
-    "synopsis": "作为《鲨鱼王国》系列的最新续作，本片通过3D技术带领观众深入海洋世界，聚焦鲨鱼在生态系统中的关键角色。主角团队面临对鲨鱼生存环境不断恶化的挑战，探索人类与自然之间的冲突与共存。",
-    "synopsis_en": "As the newest installment in the Shark Kingdom series, this documentary uses 3D technology to immerse viewers in the ocean, focusing on sharks’ vital role in the ecosystem. The protagonists confront worsening environmental conditions, exploring the conflict and coexistence between humans and nature.",
-    "recommendation": "▸ 采用尖端3D摄影技术，水下场景极具视觉震撼，真实还原鲨鱼自然行为与生存环境。▸ 两位导演擅长生态纪录片，叙事手法兼具科学性与艺术美感，观众既能获得知识又能感受情感共鸣。▸ 豆瓣评分高达9.5，获得观众一致好评，适合家庭观影与科普教育。",
-    "recommendation_en": "▸ Advanced 3D cinematography delivers breathtaking underwater visuals, authentically capturing sharks’ natural behaviors and habitats. ▸ Directors Dave Duce and Matt Tomaszewski blend scientific rigor with artistic storytelling, offering both educational insight and emotional resonance. ▸ With an impressive Douban score of 9.5 and widespread acclaim, it’s ideal for family viewing and science outreach.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the princess diaries": {
-    "synopsis": "平凡少女米娅在得知自己是欧洲小国王室继承人后，生活发生巨变。她在奶奶的指导下，必须在普通学生和准公主身份之间做出抉择，面对成长的困惑与责任。",
-    "synopsis_en": "Shy teenager Mia discovers she is the heir to a European kingdom, turning her ordinary life upside down. Guided by her grandmother, she must navigate the challenges of adolescence while deciding whether to embrace her royal destiny.",
-    "recommendation": "▸ 朱莉·安德鲁斯与安妮·海瑟薇的首次合作，展现了温情与幽默并存的祖孙关系，表演自然有层次。▸ 导演盖瑞·马歇尔以其擅长的轻喜剧风格，将灰姑娘式成长故事拍得明快流畅，适合家庭观赏。",
-    "recommendation_en": "▸ The film features the memorable pairing of Julie Andrews and Anne Hathaway, whose chemistry and nuanced performances bring warmth and humor to the grandmother-granddaughter relationship. ▸ Director Garry Marshall’s signature light comedy style delivers a modern Cinderella tale with brisk pacing and accessible charm, making it ideal for family audiences.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "blue moon": {
-    "synopsis": "影片讲述一位音乐人试图在家庭与梦想之间寻找平衡，他在追寻自我表达的过程中，面对现实压力与内心挣扎，逐渐揭开生活的真相与意义。本片为独立传记类作品，非系列电影。",
-    "synopsis_en": "A musician struggles to balance his creative aspirations with personal responsibilities, facing both societal pressures and internal conflicts. As he pursues his dreams, he is forced to confront hard truths about life and himself. This is a standalone biographical drama, not part of a series.",
-    "recommendation": "▸ 导演理查德·林克莱特以其细腻的人物刻画和生活化叙事著称，本片延续其真实自然的风格，展现一位音乐人的心路历程。▸ 伊桑·霍克与玛格丽特·库里共同出演，表演层次丰富，情感充沛，带来极具感染力的角色塑造。▸ 虽然豆瓣评分中等，但烂番茄高达90%，海外评价极佳，适合喜欢音乐与人生议题的观众。",
-    "recommendation_en": "▸ Richard Linklater brings his signature intimate, naturalistic storytelling to the journey of a musician, offering nuanced character work and authentic narrative flow. ▸ Ethan Hawke and Margaret Qualley deliver layered, emotionally resonant performances that anchor the film’s exploration of ambition and compromise. ▸ Despite a modest Douban score, the film boasts a 90% on Rotten Tomatoes, indicating strong international critical acclaim—ideal for viewers who appreciate music-driven, introspective dramas.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "if i had legs i'd kick you": {
-    "synopsis": "一位生活陷入低谷的中年女性，在意外事件后被卷入一桩扑朔迷离的案件。面对荒诞而幽默的困境，她必须在自我怀疑与追寻真相之间做出抉择。",
-    "synopsis_en": "A middle-aged woman facing personal setbacks is unexpectedly drawn into a bewildering case. As absurdity and humor intertwine, she must navigate between self-doubt and the pursuit of truth.",
-    "recommendation": "▸ 玛丽·布朗斯坦导演以独特的黑色幽默手法，将悬疑与生活戏剧巧妙融合，营造出紧张又荒诞的氛围。\n▸ 罗丝·伯恩与康纳·奥布莱恩、丹妮尔·麦克唐纳的精彩对手戏，展现复杂人物心理，喜剧与悬疑张力十足。\n▸ 影片在结构和摄影上大胆尝试，画面风格鲜明，增强了观众的沉浸感。",
-    "recommendation_en": "▸ Director Mary Bronstein masterfully blends black humor with mystery, creating a tense yet absurd atmosphere that stands out. ▸ The cast, with Rose Byrne, Conan O'Brien, and Danielle Macdonald, delivers sharp performances, skillfully balancing comedy and drama. ▸ Visually, the film features bold cinematographic choices and a distinctive style, heightening immersion.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "nouvelle vague": {
-    "synopsis": "年轻的法国电影学院学生在追逐导演梦想的过程中，因一次意外卷入一场荒诞的拍摄风波。他必须在理想与现实、友情与野心之间作出艰难抉择，探索自我与艺术的真正价值。",
-    "synopsis_en": "A young French film student dreams of becoming a director, but an unexpected mishap during a chaotic shoot forces him to choose between his ideals and reality, as well as between friendship and ambition, in a comedic journey of self-discovery and artistic pursuit.",
-    "recommendation": "▸ 理查德·林克莱特延续其对青春与成长主题的细腻描绘，将美式幽默巧妙融入法国文化语境，带来新鲜的异国碰撞感。▸ 演员吉约姆·马贝克与柔伊·德伊奇在片中展现了自然且张力十足的表演，人物塑造立体真实，充满喜剧火花。▸ 影片通过群戏和动态镜头展现拍摄现场的混乱与激情，细节丰富，适合喜欢幕后故事的影迷。",
-    "recommendation_en": "▸ Richard Linklater brings his signature coming-of-age sensibility and sharp humor to a French setting, resulting in a refreshing cross-cultural experience. ▸ Standout performances from Guillaume Marbeck and Zoey Deutch lend the characters both authenticity and comedic energy, making the ensemble cast engaging. ▸ The film’s lively group scenes and dynamic camerawork vividly capture the chaos and excitement of a film set, appealing to fans of behind-the-scenes stories.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the royal tenenbaums": {
-    "synopsis": "讲述天拔姆家族成员因父亲突然回归而再度聚首，面对各自的失败与人生困境，家族内部的矛盾和情感裂痕逐步浮现，他们不得不重新审视彼此的关系与自我价值。",
-    "synopsis_en": "The eccentric Tenenbaum family is forced back together by their estranged father’s unexpected return. Each member struggles with personal failures and unresolved tensions, compelling them to confront fractured relationships and redefine their sense of self.",
-    "recommendation": "▸ 韦斯·安德森标志性的对称构图与色彩美学，营造独特的复古童话氛围，极具辨识度。▸ 金·哈克曼等主演奉献层次丰富的表演，将家庭成员的孤独与脆弱表现得细腻动人，喜剧与悲剧情感交织自然。",
-    "recommendation_en": "▸ Wes Anderson’s distinctive visual style—symmetrical compositions and vivid color palettes—creates a whimsical, meticulously crafted world. ▸ Gene Hackman and the ensemble deliver nuanced performances, balancing the film’s quirky humor with genuine emotional depth, making the Tenenbaum family’s struggles both relatable and moving.",
-    "awards": "2002年奥斯卡最佳原创剧本提名，2002年金球奖最佳男主角（音乐/喜剧）提名",
-    "awards_en": "2002 Academy Award nominee for Best Original Screenplay, 2002 Golden Globe nominee for Best Actor (Musical or Comedy)"
-  },
-  "weapons": {
-    "synopsis": "一系列离奇事件将数名陌生人卷入谜团，主角在追查真相时陷入了恐惧与怀疑的边缘，面对看不见的威胁与内心的挣扎，必须做出决定性选择。",
-    "synopsis_en": "A string of bizarre incidents draws several strangers into a chilling web of mystery. The protagonist, plagued by fear and doubt, must confront unseen dangers and make a crucial choice while unravelling the truth.",
-    "recommendation": "▸ 导演Zach Cregger继《Barbarian》后再度执导恐怖悬疑，延续其高压氛围与惊悚节奏，紧张感持续升级。▸ 实力派演员Josh Brolin、Julia Garner领衔，角色层次丰富，表演张力十足。▸ 画面构图与声效设计精巧，制造强烈的不安与沉浸感，是一部极具影院观赏价值的恐怖新作。",
-    "recommendation_en": "▸ Director Zach Cregger returns after his acclaimed 'Barbarian', bringing his signature tense pacing and atmospheric dread to the horror-mystery genre. ▸ Powerful performances from Josh Brolin and Julia Garner add depth and intensity, making the characters compelling. ▸ Meticulous cinematography and sound design heighten the sense of unease, making it a truly immersive big-screen experience.",
+    "synopsis": "本片讲述了一群性格迥异的小青蛙在面对家园危机时，必须团结协作、克服分歧，踏上一场充满挑战和自我成长的冒险旅程。影片既有幽默温馨的家庭氛围，也展现了友谊与勇气的主题。",
+    "synopsis_en": "A group of quirky young frogs must unite when their home faces an unexpected crisis. Their journey forces them to overcome differences, embrace teamwork, and discover the true meaning of friendship and bravery in this heartwarming animated adventure.",
+    "recommendation": "▸ 导演Daniel Chong曾执导《咱们裸熊》，本片延续其幽默温情风格，角色塑造鲜明，适合亲子观赏。▸ 豆瓣7.7及烂番茄94%高分，口碑极佳，动画细节丰富，色彩明快，视觉体验出色。▸ Jon Hamm与Bobby Moynihan等配音阵容表现生动，为角色赋予独特魅力。",
+    "recommendation_en": "▸ Directed by Daniel Chong (creator of 'We Bare Bears'), the film retains his signature warmth and humor, with well-developed characters ideal for family audiences. ▸ Highly rated with 7.7 on Douban and 94% on Rotten Tomatoes, it features vibrant animation, meticulous visual detail, and a delightful color palette. ▸ Voice talents like Jon Hamm and Bobby Moynihan breathe life into the characters, making them both memorable and engaging.",
     "awards": "",
     "awards_en": ""
   },
   "the super mario galaxy movie": {
-    "synopsis": "作为马里奥系列动画电影续作，马里奥和伙伴们踏上星际冒险，面对来自银河的神秘威胁。他们必须齐心协力，突破重重障碍，守护蘑菇王国免受危机。",
-    "synopsis_en": "As a sequel in the Mario animated series, Mario and his friends embark on an intergalactic quest to confront a mysterious threat from the galaxy. They must overcome obstacles and work together to protect the Mushroom Kingdom from impending danger.",
-    "recommendation": "▸导演亚伦·霍瓦斯和迈克尔·杰勒尼克延续前作幽默风格，结合冒险元素，打造适合全龄观众的动画体验。▸克里斯·帕拉特、安雅·泰勒-乔伊等明星配音，角色塑造生动。▸视觉特效丰富，场景设计充满任天堂游戏彩蛋，令粉丝倍感亲切。",
-    "recommendation_en": "▸ Directors Aaron Horvath and Michael Jelenic maintain the comedic tone from the previous film while blending in adventurous elements, creating a family-friendly animated experience. ▸ Star-studded voice cast led by Chris Pratt and Anya Taylor-Joy delivers lively character performances. ▸ Visually rich effects and set designs filled with Nintendo game Easter eggs will delight fans.",
+    "synopsis": "马里奥和伙伴们踏上星际冒险，面对新世界的未知挑战，努力拯救陷入危机的银河。作为超级马里奥系列的新篇章，影片聚焦团队合作与勇气，主角在成长中克服自我疑虑。",
+    "synopsis_en": "Mario and his friends embark on an intergalactic journey, facing unknown dangers to save the galaxy in peril. As a new chapter in the Super Mario series, the film centers on teamwork and courage as the protagonists overcome self-doubt.",
+    "recommendation": "▸ 动画风格延续游戏世界的缤纷想象，视觉效果细致还原星际场景，适合家庭观影。▸ 配音阵容强大，克里斯·帕拉特与安雅·泰勒-乔伊等人赋予角色鲜活个性，增强情感共鸣。▸ 导演团队延续前作风格，注入幽默和温情，兼顾老玩家与新观众的情怀与趣味。",
+    "recommendation_en": "▸ The animation vividly recreates the imaginative universe of the Mario games, with detailed galactic visuals that make it a family-friendly spectacle. ▸ Strong voice cast, including Chris Pratt and Anya Taylor-Joy, brings distinct personalities and emotional depth to beloved characters. ▸ Directors Horvath and Jelenic maintain the humor and warmth of previous entries, appealing to both veteran fans and newcomers.",
     "awards": "",
     "awards_en": ""
   },
-  "the magic faraway tree": {
-    "synopsis": "一群孩子偶然发现魔法远方树，进入奇幻世界，面对未知挑战和奇异生物。他们必须齐心协力解决难题，寻找回家的办法，成长过程中也考验友情与勇气。本片为经典童书改编。",
-    "synopsis_en": "A group of children stumble upon the Magic Faraway Tree and are transported into a fantastical world. Facing mysterious creatures and unexpected challenges, they must unite to solve puzzles and find a way home. Adapted from the beloved children’s book series.",
-    "recommendation": "▸ 安德鲁·加菲尔德与克莱尔·芙伊的精彩主演，赋予角色深度和独特魅力。▸ 导演本·格雷戈尔以精巧构造和富有想象力的镜头语言，营造出童话般的世界，视觉效果突出。▸ 烂番茄100%高分，原著粉丝与家庭观众都能获得情感共鸣与冒险体验。",
-    "recommendation_en": "▸ Standout performances by Andrew Garfield and Claire Foy, adding depth and charm to the characters. ▸ Director Ben Gregor crafts a visually imaginative world with inventive cinematography, creating a fairy tale atmosphere. ▸ With a 100% Rotten Tomatoes score, the film promises emotional resonance and adventure for both fans of the original book and family audiences.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the drama": {
-    "synopsis": "一位年轻编剧在洛杉矶追求事业和爱情时，意外卷入了一场错综复杂的情感漩涡。在事业突破与自我怀疑的拉扯中，她必须决定什么才是真正值得坚持的生活。",
-    "synopsis_en": "A young screenwriter in Los Angeles becomes entangled in a tangled web of romance and ambition. As she struggles between a career breakthrough and self-doubt, she must choose what truly matters in her life.",
-    "recommendation": "▸ 导演Kristoffer Borgli以独特的黑色幽默和现实主义风格，精准刻画都市青年的身份焦虑与情感挣扎，让人代入感极强。▸ Zendaya与Robert Pattinson首次同台飙戏，化学反应出色，人物层次丰富，细腻展现了爱情与梦想的碰撞。▸ 影片画面充满都市质感与艺术氛围，配乐与剪辑极具节奏感，提升观影沉浸体验。",
-    "recommendation_en": "▸ Director Kristoffer Borgli’s signature blend of dark humor and realism vividly portrays the identity crises and emotional struggles of urban youth, creating strong empathy. ▸ The on-screen pairing of Zendaya and Robert Pattinson delivers striking chemistry, with nuanced performances bringing depth to their characters’ clashing dreams and desires. ▸ The film’s urban aesthetic, stylish cinematography, and dynamic editing amplify immersion, complemented by a thoughtfully curated soundtrack.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "akira": {
-    "synopsis": "在末日后的新东京，少年金田卷入了好友铁雄觉醒超能力引发的混乱，面对政府、反抗组织和神秘实验的多重威胁。金田必须在动荡中寻找真相，阻止城市陷入更深的危机。",
-    "synopsis_en": "In post-apocalyptic Neo-Tokyo, teenager Kaneda is drawn into chaos when his friend Tetsuo develops destructive psychic powers. Caught between government conspiracies and underground rebels, Kaneda must uncover the truth to prevent the city’s collapse.",
-    "recommendation": "▸ 赛博朋克美学与极具冲击力的动画场面，将80年代日本社会不安和未来都市的荒凉刻画得淋漓尽致。▸ 大友克洋导演以精准分镜和动态镜头著称，带来极具沉浸感与压迫感的观影体验。▸ 影响深远的原声音乐与复杂世界观，为后世科幻与动画作品树立标杆。",
-    "recommendation_en": "▸ Stunning cyberpunk visuals and groundbreaking animation depict the dystopian future of 1980s Japan with unmatched detail and energy. ▸ Director Katsuhiro Otomo’s dynamic storyboarding and kinetic camerawork create an immersive, intense atmosphere. ▸ The influential soundtrack and intricate world-building set a new standard for sci-fi and anime worldwide.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "blow out": {
-    "synopsis": "音效师杰克在录制音效时意外录下一起车祸，逐步发现事件背后隐藏着政治阴谋和生命危险。他在追查真相过程中，被卷入复杂的权力斗争，面临信任与道德的抉择。",
-    "synopsis_en": "Sound technician Jack accidentally records evidence of a mysterious car accident, uncovering a web of political intrigue and danger. As he pursues the truth, he becomes entangled in deception and must navigate moral and personal challenges.",
-    "recommendation": "▸布莱恩·德·帕尔玛导演以精巧的视听语言和悬疑节奏，将视听与剧情紧密结合，呈现独特的氛围。▸约翰·特拉沃尔塔表现出色，赋予角色深度和复杂性，观众能感受到他的困惑与挣扎。▸影片以政治阴谋为背景，融合惊悚元素，营造出强烈的紧张感和社会现实关怀。",
-    "recommendation_en": "▸ Director Brian De Palma masterfully blends suspenseful pacing with innovative sound and visual storytelling, creating a gripping atmosphere. ▸ John Travolta delivers a nuanced performance, bringing depth and vulnerability to his character. ▸ The film’s political intrigue and thriller elements are tightly interwoven, resulting in palpable tension and a compelling social commentary.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "the tales of hoffmann": {
-    "synopsis": "本片讲述青年作曲家霍夫曼在追求爱情与艺术理想过程中，陷入三段奇幻爱情经历。他一边面对现实与幻想的冲突，一边努力寻觅真爱与自我，实现内心的救赎与成长。",
-    "synopsis_en": "The film follows young composer Hoffmann as he navigates three fantastical love stories, torn between his artistic ambitions and romantic desires. He faces conflicts between reality and imagination while seeking true love and personal redemption.",
-    "recommendation": "▸ 由迈克尔·鲍威尔与艾默里克·普雷斯伯格联手执导，全片融合歌剧、芭蕾与幻境，艺术风格极具创新性与视觉冲击力。▸ 莫伊拉·谢勒等主演的歌舞表演与精美布景完美结合，极大提升了音乐剧和幻想元素的沉浸感。▸ 剪辑与色彩运用大胆，构建出独一无二的戏剧氛围，是英国古典音乐电影的里程碑。",
-    "recommendation_en": "▸ Directed by the visionary duo Michael Powell and Emeric Pressburger, the film uniquely blends opera, ballet, and surreal visuals, creating a groundbreaking artistic style. ▸ Standout performances by Moira Shearer and the cast, coupled with exquisite set design, immerse viewers in a world where music and fantasy intertwine. ▸ The film’s bold editing and color palette set a new standard for classical British musical cinema.",
-    "awards": "1952戛纳电影节金棕榈奖提名",
-    "awards_en": "1952 Cannes Palme d'Or nominee"
-  },
-  "train dreams": {
-    "synopsis": "在20世纪初的美国西部，铁路工人罗伯特·格兰因命运多舛，被迫在不断变化的社会与个人悲剧中挣扎，寻找归属感与自我救赎。",
-    "synopsis_en": "Set in early 20th-century American West, railroad worker Robert Grain faces relentless hardships and personal loss as he struggles to find belonging and redemption in a rapidly changing world.",
-    "recommendation": "▸ 导演Clint Bentley以细腻真实的风格还原美国西部变迁，将人性脆弱与坚韧表现得层次丰富。▸ Joel Edgerton的表演极具感染力，细致刻画主人公在孤独与逆境中的心理变化，赋予角色强烈的生命力。▸ 影片画面采用自然光和广阔景色，营造出极具沉浸感的历史氛围。",
-    "recommendation_en": "▸ Director Clint Bentley employs a nuanced, realistic style to portray the transformation of the American West, highlighting both human vulnerability and resilience. ▸ Joel Edgerton delivers a powerful, layered performance, vividly depicting the protagonist’s psychological journey through isolation and adversity. ▸ Striking use of natural light and sweeping landscapes creates a deeply immersive period atmosphere.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "ladies": {
-    "synopsis": "三位来自印度小镇的少女，在面对家庭期望与社会偏见时，勇敢追寻各自的梦想，探索自我认同与独立的道路。影片以幽默与温情展现青春成长中的困惑和抗争。",
-    "synopsis_en": "Three teenage girls from a small Indian town confront family expectations and social prejudice while bravely pursuing their dreams. The film gently yet humorously explores their journey of self-discovery and independence amid the challenges of growing up.",
-    "recommendation": "▸ 导演基兰·拉奥以细腻真实的笔触，还原印度小镇女性成长环境，兼具幽默和深度。▸ 年轻女主演们表演自然动人，角色塑造鲜明，让观众产生强烈共鸣。▸ 获得豆瓣高分与烂番茄满分口碑，显示影片在国内外观众中均获高度认可。",
-    "recommendation_en": "▸ Director Kiran Rao masterfully balances humor and depth, offering an authentic portrayal of young women's lives in small-town India. ▸ The lead actresses deliver remarkably natural and engaging performances, making the characters relatable and memorable. ▸ With a high Douban score and 100% on Rotten Tomatoes, the film has resonated strongly with both Chinese and international audiences.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "calle malaga": {
-    "synopsis": "一位生活在马拉加街的青年，在家庭与自我追寻之间挣扎。当过去的阴影来袭，他被迫面对难以抉择的情感与责任，试图在变革与传统间找到属于自己的出路。",
-    "synopsis_en": "A young man living on Calle Malaga is torn between family expectations and his quest for identity. As shadows from the past resurface, he must navigate emotional turmoil and difficult choices to carve out his own path.",
-    "recommendation": "▸ 影片以西班牙南部城市为背景，展现了鲜明的地域风情和真实的市井生活，场景构图细腻。▸ 主演在情感层次的表达上极具张力，将角色的内心挣扎演绎得真切动人。▸ 导演采用现实主义手法，镜头语言简洁有力，增强了故事的沉浸感。",
-    "recommendation_en": "▸ Set in southern Spain, the film authentically portrays local culture and street life, with meticulous scene composition. ▸ The lead actor delivers a powerful performance, convincingly expressing the character’s inner turmoil. ▸ The director’s realist approach and concise visual style heighten immersion, making the emotional stakes feel immediate and genuine.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "zabriskie point": {
-    "synopsis": "一位大学生和一名年轻女子在动荡的60年代美国相遇，他们被社会冲突和个人迷茫所困扰，共同踏上一段探索自我与现实的旅程，展现反叛与疏离感。",
-    "synopsis_en": "A college student and a young woman meet amid the social upheaval of 1960s America, struggling with alienation and rebellion. Together, they embark on a journey to explore their identities and confront the realities of their environment.",
-    "recommendation": "▸ 意大利导演安东尼奥尼以独特的视觉风格和象征手法呈现美国社会的疏离与反抗，画面极具艺术性。▸ 影片中的沙漠景观和爆炸场面极具震撼力，成为电影史上的标志性视觉符号。▸ 原声配乐由平克·弗洛伊德等乐队创作，音乐与影像融合，增强氛围。",
-    "recommendation_en": "▸ Michelangelo Antonioni's unique visual style and symbolic approach offer a striking exploration of alienation and rebellion in American society, with highly artistic cinematography. ▸ The desert landscapes and explosive sequences deliver iconic, visually memorable moments. ▸ The soundtrack, featuring Pink Floyd and other notable bands, enhances the film's atmosphere with its seamless blend of music and imagery.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "angel's egg": {
-    "synopsis": "一位少女在荒废的世界中守护着神秘的蛋，与一位陌生男子相遇后陷入对信仰与存在意义的思考。影片以隐喻展现内心困境和人类孤独。",
-    "synopsis_en": "In a desolate world, a young girl protects a mysterious egg and meets a stranger, leading her to question faith and the meaning of existence. The story explores inner turmoil and human loneliness through metaphor.",
-    "recommendation": "▸ 押井守导演以极具诗意的影像风格和氛围构建，营造出独特的视觉体验。▸ 影片大量无对白，依靠细腻画面与象征手法传达主题，极具艺术性和启发性。▸ 豆瓣高分与烂番茄满分评价，证明其在影迷和评论界的高度认可。",
-    "recommendation_en": "▸ Mamoru Oshii’s poetic visual style and atmospheric direction create an immersive cinematic experience. ▸ The film uses minimal dialogue and intricate symbolic imagery to convey its themes, offering profound artistic and philosophical insight. ▸ Acclaimed with a high Douban score and perfect Rotten Tomatoes rating, it’s highly regarded among cinephiles and critics.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "wings of desire": {
-    "synopsis": "柏林上空，两位天使观察人类世界，主角陷入对人类情感与痛苦的共鸣，却无法真正体验。核心冲突在于他是否愿意放弃永生，投身于人的真实生活。",
-    "synopsis_en": "Over Berlin, two angels silently observe humanity. The protagonist is torn between his immortal existence and a growing desire to experience real human emotions and connection, raising the core conflict of choosing between eternity and authentic life.",
-    "recommendation": "▸ 文德斯导演以黑白与彩色影像交错，巧妙表现天使与人类世界的分界，视觉风格极具诗意。▸ 布鲁诺·甘茨的表演细腻动人，完美诠释天使对人性渴望的复杂情感。▸ 影片深刻探讨孤独、存在与爱的主题，被认为是德国电影的经典之作。",
-    "recommendation_en": "▸ Wim Wenders masterfully blends black-and-white and color cinematography to distinguish the angels' realm from human experience, creating a poetic visual style. ▸ Bruno Ganz delivers a subtle, moving performance that captures an angel's yearning for humanity. ▸ The film offers profound reflections on loneliness, existence, and love, solidifying its status as a German cinematic classic.",
-    "awards": "1987戛纳电影节最佳导演奖，1987戛纳电影节金棕榈提名",
-    "awards_en": "1987 Cannes Best Director Award, 1987 Cannes Palme d'Or nominee"
-  },
-  "one battle after another 70mm": {
-    "synopsis": "一桩离奇事件将落魄侦探与神秘嫌疑人卷入纷繁复杂的谜案，二人被迫联手，在层层误会与诡计中寻找真相，却不断陷入更深的困境与信任危机。",
-    "synopsis_en": "A washed-up detective and a mysterious suspect are drawn together by a bizarre case. Forced to cooperate, they navigate a web of misunderstandings and schemes, struggling to uncover the truth while facing escalating mistrust and personal dilemmas.",
-    "recommendation": "▸ 保罗·托马斯·安德森再度挑战类型片，将悬疑、黑色幽默与人性戏剧巧妙融合，整体气质极具个人标签。▸ 莱昂纳多·迪卡普里奥与西恩·潘的巅峰对手戏张力十足，两人情绪的微妙变化和心理较量成为全片亮点。▸ 全片以70mm胶片拍摄，画面质感极为复古考究，为观众带来沉浸式观影体验。",
-    "recommendation_en": "▸ Paul Thomas Anderson fuses mystery, dark humor, and human drama with his signature style, elevating genre conventions into a uniquely personal film. ▸ Leonardo DiCaprio and Sean Penn deliver electrifying performances, with their nuanced emotional shifts and psychological duels anchoring the narrative. ▸ Shot entirely on 70mm film, the cinematography offers a rich, immersive visual experience rarely seen in contemporary cinema.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "army of shadows": {
-    "synopsis": "影片讲述法国抵抗组织成员在纳粹占领下的秘密斗争，主角在不断的怀疑、背叛和危险中挣扎，面对生存与忠诚的艰难抉择，展现战争中的人性冲突。",
-    "synopsis_en": "The film follows members of the French Resistance during Nazi occupation, as the protagonist grapples with suspicion, betrayal, and peril, forced to make harrowing choices between survival and loyalty, revealing the core human conflicts in wartime.",
-    "recommendation": "▸ 梅尔维尔导演以冷静克制的镜头语言，营造压抑而真实的历史氛围，让观众沉浸于抵抗者的心理世界。▸ 主演Lino Ventura等演员的表演极具张力，展现复杂内心和道德挣扎。▸ 电影以精细的摄影和配乐突出紧张与孤独感，是战争题材经典之作。",
-    "recommendation_en": "▸ Jean-Pierre Melville’s restrained, atmospheric direction immerses viewers in the tense, authentic world of the Resistance, capturing psychological nuance. ▸ Lino Ventura and the cast deliver powerful performances, portraying moral dilemmas with remarkable depth. ▸ The film’s meticulous cinematography and haunting score accentuate its sense of isolation and suspense, marking it as a seminal war classic.",
-    "awards": "",
-    "awards_en": ""
-  },
-  "kokuho": {
-    "synopsis": "故事讲述青年主角在家庭责任与个人理想之间挣扎，面对突如其来的变故，被迫做出艰难抉择。这部影片聚焦成长的痛苦与和解，展现亲情与自我认同的矛盾。",
-    "synopsis_en": "A young protagonist is torn between family obligations and personal aspirations. When an unexpected event disrupts his life, he faces a tough choice, forcing him to confront painful growth and the conflict between kinship and self-identity.",
-    "recommendation": "▸ 李相日导演以细腻现实主义风格刻画角色心理，情感表达真挚动人，强化了观众的沉浸感。\n▸ 吉泽亮与横滨流星的表演层次丰富，将人物内心矛盾与成长痛苦展现得极具说服力，极大提升影片感染力。\n▸ 画面构图考究，色彩与光影烘托气氛，视觉风格为剧情增添张力。",
-    "recommendation_en": "▸ Director Lee Sang-il employs a subtle, realistic approach, offering nuanced psychological portraits that draw audiences deeply into the story.\n▸ Lead actors Ryô Yoshizawa and Ryûsei Yokohama deliver layered performances, convincingly portraying internal struggles and emotional growth that make the film highly engaging.\n▸ The cinematography features meticulous composition and atmospheric use of color and lighting, enhancing the emotional and narrative impact.",
+  "i swear": {
+    "synopsis": "影片讲述一位来自工人阶级的青年，在家庭和社会压力下努力追寻个人梦想的故事。他在成长过程中面临道德选择和身份认同的挑战，最终学会了自我接纳。",
+    "synopsis_en": "The film follows a working-class young man who struggles to pursue his ambitions amid family and societal pressures. Facing moral dilemmas and identity crises, he gradually learns self-acceptance on his journey.",
+    "recommendation": "▸导演Kirk Jones以细腻现实主义手法描绘主角成长，兼具幽默与温情，展现英国社会底层的真实人生。▸Robert Aramayo与Peter Mullan的精彩对手戏，情感表达细致，人物塑造极具说服力。▸影片节奏紧凑，摄影风格独具英国特色，成功融合喜剧与深刻社会议题。",
+    "recommendation_en": "▸ Director Kirk Jones employs nuanced realism to portray the protagonist’s journey, blending humor and warmth while authentically depicting British working-class life. ▸ Standout performances by Robert Aramayo and Peter Mullan deliver emotionally rich and convincing character dynamics. ▸ The film’s brisk pacing and distinctive British cinematography skillfully merge comedy with thought-provoking social themes.",
     "awards": "",
     "awards_en": ""
   },
   "the president's cake": {
-    "synopsis": "在权力动荡的伊拉克，年轻的厨师被卷入总统生日蛋糕的制作过程中，不得不在忠诚与自我选择之间做出艰难抉择。影片聚焦个人与国家命运的交织，展现历史变革下的挣扎与希望。",
-    "synopsis_en": "Set against political turmoil in Iraq, a young chef is tasked with preparing the president's birthday cake, forcing him to choose between loyalty and personal integrity. The film explores the intersection of individual fate and national upheaval, highlighting struggle and hope.",
-    "recommendation": "▸导演哈桑·哈迪以独特视角重现伊拉克历史关键时刻，赋予故事强烈的现实关怀。▸主演班尼恩·艾哈迈德奈耶夫展现复杂内心戏，表演自然细腻，极具感染力。▸摄影突出，采用写实风格捕捉动荡环境与人物情感，增强观众沉浸感。",
-    "recommendation_en": "▸ Director Hasan Hadi brings a distinctive perspective to pivotal moments in Iraq’s history, infusing the story with powerful social relevance. ▸ Lead actor Baneen Ahmad Nayyef delivers a nuanced performance, convincingly portraying inner conflict and vulnerability. ▸ The cinematography employs a realistic style, capturing both the turbulent atmosphere and intimate emotions of the characters, enhancing immersion.",
+    "synopsis": "在战乱背景下，一位普通面包师因意外卷入总统庆典，面临艰难抉择。他既要保护家人安全，又在权力与良知之间挣扎，展现个体在大时代洪流中的无力与坚守。",
+    "synopsis_en": "Set amidst turmoil, an ordinary baker is unexpectedly drawn into a presidential celebration, forcing him to choose between family safety and his conscience. The film explores how personal integrity perseveres against overwhelming historical forces.",
+    "recommendation": "▸ 导演哈桑·哈迪以细腻写实的风格重现中东战乱下的日常，场景真实，情感深刻。▸ 主演Baneen Ahmad Nayyef的表演极具张力，将小人物的恐惧与尊严表现得层次分明。▸ 豆瓣8.0与烂番茄99%高分，口碑极佳，证明其主题和艺术表现力兼具。",
+    "recommendation_en": "▸ Director Hasan Hadi employs a realistic, intimate approach to depict daily life in the Middle East under conflict, with strikingly authentic set design and emotional depth. ▸ Lead actor Baneen Ahmad Nayyef delivers a nuanced performance, powerfully conveying the protagonist's vulnerability and dignity. ▸ High ratings on Douban (8.0) and Rotten Tomatoes (99%) reflect its critical acclaim for both theme and cinematic execution.",
     "awards": "",
     "awards_en": ""
   },
-  "nawi": {
-    "synopsis": "在肯尼亚偏远村落，少女Nawi面临家庭与传统的双重压力，渴望通过教育改变命运。她在追求自我与履行家族责任之间艰难抉择，故事聚焦于她对自由与未来的坚定追寻。",
-    "synopsis_en": "In a remote Kenyan village, young Nawi is torn between family expectations and her desire for education. The film explores her struggle to break from tradition, highlighting her quest for personal freedom and a better future.",
-    "recommendation": "▸ 影片以真实细腻的视角描绘肯尼亚乡村女性成长困境，展现非洲本土文化与现代观念的激烈碰撞。▸ 主演Michelle Lemuya Ikeny自然真挚的表演赋予角色极强感染力，情感层次丰富。▸ 多导演协作下，摄影捕捉到旷野与村落的原生态美，氛围沉浸感突出。",
-    "recommendation_en": "▸ The film offers an authentic, intimate look at the struggles of young women in rural Kenya, capturing the clash between local traditions and modern aspirations. ▸ Michelle Lemuya Ikeny's natural, moving performance adds depth and resonance to Nawi's journey. ▸ Under the direction of multiple filmmakers, the cinematography beautifully captures the raw landscapes and daily life, greatly enhancing immersion.",
+  "the drama": {
+    "synopsis": "一位年轻编剧在爱情与事业之间挣扎，意外卷入一场因虚构剧本引发的现实风波。面对情感的真假和自我身份的迷失，她必须做出艰难抉择，寻找生活与梦想的平衡。",
+    "synopsis_en": "A young screenwriter is caught between love and career when her fictional script unexpectedly stirs up real-life chaos. Torn between emotional authenticity and personal identity, she must navigate difficult choices to find balance between her aspirations and reality.",
+    "recommendation": "▸导演Kristoffer Borgli延续其讽刺现实与虚构界限的独特风格，情节层层递进，充满黑色幽默。▸Zendaya与Robert Pattinson首次合作，展现极具张力的情感对手戏，两人细腻表演引发强烈共鸣。▸影片以都市为背景，摄影风格冷峻现代，巧妙捕捉主角内心的孤独与挣扎。",
+    "recommendation_en": "▸ Director Kristoffer Borgli continues his signature exploration of blurred lines between reality and fiction, employing dark humor and layered storytelling. ▸ The first on-screen pairing of Zendaya and Robert Pattinson delivers emotionally charged and nuanced performances, creating palpable chemistry. ▸ Modern, sleek urban cinematography effectively mirrors the protagonist’s internal struggles, with sharp visual contrasts amplifying the film’s thematic depth.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the magic faraway tree": {
+    "synopsis": "在神秘森林深处，几个孩子意外发现了一棵能通往奇幻世界的魔法大树。他们在冒险中不仅要面对陌生的生物和未知的考验，还需互相合作，寻找回家的方法。",
+    "synopsis_en": "A group of children stumbles upon a magical tree that leads to enchanting worlds. Facing strange creatures and unexpected challenges, they must work together to find their way back home, testing their courage and friendship along the way.",
+    "recommendation": "▸ 改编自英国经典儿童文学，剧情充满童趣与想象力，适合家庭观影。▸ 安德鲁·加菲尔德与克莱尔·福伊等实力演员加盟，角色塑造细腻，表演自然生动。▸ 导演本·格雷格通过丰富色彩和奇幻美术，打造沉浸式森林世界，视觉效果出众。",
+    "recommendation_en": "▸ Faithful adaptation of a beloved British children's classic, blending whimsical adventure with imaginative world-building ideal for families. ▸ Stellar performances from Andrew Garfield and Claire Foy add depth and warmth to the characters, elevating the emotional stakes. ▸ Director Ben Gregor crafts a visually immersive forest universe, employing vibrant colors and inventive production design for striking fantasy imagery.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "they will kill you": {
+    "synopsis": "一群陌生人在一座被诅咒的房子中被困，面对神秘致命力量威胁，他们必须合作或背叛彼此以求生。影片融合恐怖与幽默，主角在极端压力下不断做出抉择。",
+    "synopsis_en": "A group of strangers finds themselves trapped in a cursed house, threatened by mysterious deadly forces. Forced to cooperate or betray each other to survive, the protagonists face escalating dilemmas, blending horror and comedy throughout.",
+    "recommendation": "▸导演Kirill Sokolov以黑色幽默和暴力美学著称，本片延续其独特风格，将恐怖与喜剧巧妙结合，气氛张力十足。▸Zazie Beetz与Myha'la Herrold的表演亮眼，角色互动极具火花，推动剧情紧凑。▸视觉设计和音效营造出异样诡谲感，观感刺激，适合喜欢新鲜体验的观众。",
+    "recommendation_en": "▸ Director Kirill Sokolov delivers his signature blend of dark humor and stylized violence, fusing horror and comedy in an intense atmosphere. ▸ Standout performances by Zazie Beetz and Myha’la Herrold bring dynamic chemistry, driving the narrative forward. ▸ The film’s visual design and soundscape create a uniquely unsettling experience, ideal for viewers seeking fresh and unconventional thrills.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "hamnet": {
+    "synopsis": "在伊丽莎白时代，莎士比亚的妻子安妮·海瑟薇在家庭和个人梦想之间挣扎。面对丈夫的疏离和家庭的变故，她必须在爱与自我价值中做出抉择，展现女性在困境中的坚韧。",
+    "synopsis_en": "Set in Elizabethan England, Anne Hathaway, wife of Shakespeare, grapples with family upheaval and her own aspirations. As distance grows between her and her husband, she faces hard choices between love and personal identity, highlighting a woman's resilience amidst adversity.",
+    "recommendation": "▸ 奥斯卡最佳导演赵婷执导，延续其细腻真实的影像风格，将历史人物情感刻画得细腻动人。▸ 杰西·巴克利和保罗·梅斯卡尔的对手戏极具张力，情感层层递进，表演极富感染力。▸ 影片画面构图考究，复原伊丽莎白时期细节，营造沉浸式观影体验。",
+    "recommendation_en": "▸ Directed by Oscar-winner Chloé Zhao, the film showcases her signature intimate, visually poetic style, with a focus on nuanced emotional storytelling. ▸ Jessie Buckley and Paul Mescal deliver compelling, layered performances, their chemistry driving the film’s emotional core. ▸ Meticulous production design and cinematography authentically recreate Elizabethan England, offering a rich, immersive atmosphere.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "pillion": {
+    "synopsis": "一对性格迥异的男同性恋恋人在保守小镇的生活中面临家庭压力与自我认同的冲突，试图在现实与情感之间寻找平衡。",
+    "synopsis_en": "Two gay men with contrasting personalities struggle to reconcile their relationship and personal identities amid family pressure and conservative small-town values.",
+    "recommendation": "▸ 导演Harry Lighton以细腻的镜头语言刻画角色内心，氛围感强烈，情感张力十足。▸ Alexander Skarsgård与Harry Melling的表演真实动人，展现人物复杂性，情感交锋极具张力。▸ 烂番茄99%高分，获得国际媒体一致好评，适合注重情感深度和表演的观众。",
+    "recommendation_en": "▸ Director Harry Lighton delivers a nuanced portrait of LGBTQ+ life, using atmospheric cinematography to intensify emotional stakes. ▸ The performances by Alexander Skarsgård and Harry Melling stand out for their authenticity and depth, powerfully capturing the characters’ inner turmoil. ▸ With a 99% Rotten Tomatoes rating, the film has received critical acclaim for its emotional complexity and strong acting.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "one battle after another": {
+    "synopsis": "莱昂纳多·迪卡普里奥饰演一位卷入神秘案件的律师，意外遭遇连环危机，在正义与自保间挣扎。随着谜团层层揭开，他必须在真相与个人命运之间做出艰难抉择。",
+    "synopsis_en": "Leonardo DiCaprio plays a lawyer entangled in a mysterious case, facing escalating dangers and a moral quandary between justice and self-preservation. As the plot thickens, he must choose between uncovering the truth and protecting his own fate.",
+    "recommendation": "▸ 保罗·托马斯·安德森精湛导演手法，悬疑与黑色幽默巧妙融合，情节紧凑，风格鲜明。▸ 莱昂纳多·迪卡普里奥与西恩·潘两大影帝飙戏，人物塑造层次丰富，表演极具张力。▸ 高分口碑（豆瓣8.0、烂番茄94%）印证影片质量，适合喜欢烧脑剧情和角色冲突的观众。",
+    "recommendation_en": "▸ Paul Thomas Anderson masterfully blends suspense and dark comedy, delivering a tightly woven narrative with his signature visual flair. ▸ Stellar performances from Leonardo DiCaprio and Sean Penn offer rich, complex character dynamics, elevating every scene. ▸ High ratings (Douban 8.0, Rotten Tomatoes 94%) signal the film's strong reception, making it a must-see for fans of cerebral thrillers and intense drama.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the apartment": {
+    "synopsis": "一名职场小职员为了升职，将自己的公寓借给上司约会，却陷入道德困境和情感挣扎。影片通过主角的选择展现社会与个人良心的冲突。",
+    "synopsis_en": "A low-level office worker lends his apartment to his bosses for their trysts, hoping for a promotion, but faces a moral and emotional dilemma. The film explores the clash between personal conscience and societal pressures.",
+    "recommendation": "▸比利·怀尔德导演以犀利幽默和温情巧妙结合，展现职场冷漠与人性温度。▸杰克·莱蒙与雪莉·麦克莱恩的表演极具感染力，展现角色内心复杂。▸影片以细腻镜头语言和精妙对白勾勒都市孤独，兼具喜剧与深刻社会讽刺。",
+    "recommendation_en": "▸ Billy Wilder masterfully blends sharp humor and warmth, dissecting workplace indifference and human vulnerability. ▸ Jack Lemmon and Shirley MacLaine deliver nuanced performances, capturing the emotional complexity of their characters. ▸ The film’s delicate cinematography and witty dialogue offer both comedic moments and incisive social commentary on urban loneliness.",
+    "awards": "1961奥斯卡最佳影片、最佳导演、最佳原创剧本等5项大奖",
+    "awards_en": "1961 Academy Award for Best Picture, Best Director, Best Original Screenplay and 2 more"
+  },
+  "sinners": {
+    "synopsis": "一座偏远小镇接连发生神秘命案，主角在追查真相时陷入信仰与道德的挣扎，面对隐藏在表象之下的黑暗力量。影片聚焦人性的复杂与救赎。",
+    "synopsis_en": "A series of mysterious murders shakes a remote town, forcing the protagonist to confront both faith and morality while uncovering hidden darkness beneath the surface. The film explores the complexity of human nature and the search for redemption.",
+    "recommendation": "▸ 导演瑞恩·库格勒将悬疑惊悚与心理恐怖巧妙融合，营造出紧张氛围与深刻人性探讨。▸ 迈克尔·B·乔丹和海莉·斯坦菲尔德的对手戏极具张力，角色内心挣扎真实动人。▸ 影片摄影风格冷峻细腻，善于利用光影强化压抑感，细节处理令人印象深刻。",
+    "recommendation_en": "▸ Director Ryan Coogler masterfully blends suspense and psychological horror, creating a tense atmosphere with profound human exploration. ▸ Michael B. Jordan and Hailee Steinfeld deliver gripping performances, with intense on-screen chemistry and authentic emotional struggles. ▸ The film features stark and meticulous cinematography, using lighting and composition to heighten the oppressive mood and underscore key details.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "arco": {
+    "synopsis": "在未来世界中，小男孩Arco意外获得神秘力量，被卷入拯救家人与世界的冒险。他必须在责任与自我之间抉择，直面成长的挑战。",
+    "synopsis_en": "In a futuristic world, a young boy named Arco unexpectedly acquires mysterious powers and is thrust into an epic quest to save his family and the world. He must choose between personal desires and responsibility, facing the trials of growing up.",
+    "recommendation": "▸ 导演Ugo Bienvenu以独特法式美学融合科幻与家庭元素，动画风格新颖，视觉体验突出。▸ 配音阵容强大，Will Ferrell与America Ferrera的表现为角色注入鲜明个性，提升情感共鸣。▸ 豆瓣7.3与烂番茄93%的高分显示口碑极佳，兼具娱乐性与深度，适合家庭观影。",
+    "recommendation_en": "▸ Director Ugo Bienvenu brings a distinct French aesthetic that merges sci-fi and family themes, with innovative animation and standout visuals. ▸ The voice cast, including Will Ferrell and America Ferrera, delivers memorable and heartfelt performances, enriching the emotional core. ▸ With a strong 93% Rotten Tomatoes rating and 7.3 on Douban, the film is both critically acclaimed and entertaining, making it a great family choice.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "army of shadows": {
+    "synopsis": "故事讲述二战时期法国抵抗组织成员菲利普在敌占区秘密活动，他面临背叛与生死考验，必须在道德与生存之间做出艰难抉择。影片聚焦地下斗争的残酷与人性的复杂。",
+    "synopsis_en": "Set during WWII, the film follows Philippe, a member of the French Resistance, as he navigates betrayal and mortal danger while operating covertly in Nazi-occupied France. It explores the harsh realities and moral dilemmas of underground warfare.",
+    "recommendation": "▸ 梅尔维尔以极简冷峻的导演风格，深刻展现抵抗者心理与现实残酷，氛围压抑，紧张感十足。▸ 林诺·文图拉等主演表现细腻，将角色的沉默、坚韧与内心挣扎诠释得极具感染力。▸ 摄影以灰蓝调营造历史质感，刻画地下世界的隐秘与危险，堪称视觉与情感双重震撼。",
+    "recommendation_en": "▸ Jean-Pierre Melville’s minimalist and austere direction powerfully conveys the psychological tension and harsh realities faced by Resistance members. ▸ Lino Ventura delivers a restrained, deeply moving performance, capturing the silent strength and inner turmoil of his character. ▸ The film’s striking cinematography uses cold tones to evoke historical authenticity, intensifying the sense of secrecy and danger.",
     "awards": "",
     "awards_en": ""
   },
   "encanto": {
-    "synopsis": "玛丽贝尔出生在一个拥有魔法天赋的家庭，却是唯一没有特殊能力的成员。当家族的魔法逐渐消失，她必须直面内心的不安，寻找拯救家人的方法。",
-    "synopsis_en": "Mirabel, the only member of her magical family born without a special gift, must confront her own insecurities when their home’s magic begins to fade, and she is driven to find a way to save her loved ones.",
-    "recommendation": "▸ 音乐由林-曼努尔·米兰达操刀，融合拉丁风格，歌曲极具感染力，曾获全球热议。▸ 动画画面色彩斑斓，细腻展现哥伦比亚风情，视觉体验突出。▸ 主题聚焦家庭与自我认同，情感表达真挚，适合亲子共赏。",
-    "recommendation_en": "▸ Features a vibrant, Latin-inspired soundtrack by Lin-Manuel Miranda, with standout musical numbers that generated worldwide buzz. ▸ Visually stunning animation brings Colombian culture to life with rich color palettes and detailed backgrounds. ▸ Explores themes of family and self-worth with heartfelt storytelling, making it highly suitable for family viewing.",
-    "awards": "2022年奥斯卡最佳动画长片奖",
-    "awards_en": "2022 Academy Award for Best Animated Feature"
+    "synopsis": "在魔法家族中，主角米拉贝尔是唯一没有魔法天赋的成员。当家族的魔法力量危机四伏时，米拉贝尔不得不寻找自己的价值，努力拯救家人和家族魔法。",
+    "synopsis_en": "In a magical family, Mirabel is the only one without powers. When the family's magic faces imminent danger, she must discover her own worth and find a way to save both her loved ones and their magical legacy.",
+    "recommendation": "▸ 影片以哥伦比亚文化为背景，展现丰富细腻的拉美家庭情感和美丽的民俗风情。▸ 歌曲由林-曼努尔·米兰达创作，充满活力的音乐与精美动画相融合，营造独特视听体验。▸ 角色形象立体，展现自我价值与家庭责任的多重冲突，引发观众共鸣。",
+    "recommendation_en": "▸ Set against a vibrant Colombian backdrop, the film immerses viewers in authentic Latin American family dynamics and folklore. ▸ Features energetic, memorable songs by Lin-Manuel Miranda, seamlessly integrated with Disney’s lush, colorful animation for a distinctive audiovisual experience. ▸ The complex portrayal of family expectations and personal identity gives depth to the characters, making their struggles relatable and emotionally engaging.",
+    "awards": "2022年奥斯卡最佳动画长片、最佳原创配乐、最佳原创歌曲提名（获最佳动画长片）",
+    "awards_en": "2022 Academy Award for Best Animated Feature (winner), Best Original Score and Best Original Song (nominations)"
   },
-  "the apartment": {
-    "synopsis": "一位普通职员巴克斯特用自己的公寓帮助上司约会，陷入道德困境和职场压力之间难以抉择的人生困局。影片围绕他在爱情与自尊、理想与现实之间的挣扎展开。",
-    "synopsis_en": "C.C. Baxter, a low-level office worker, lends his apartment to his superiors for their secret affairs. He becomes trapped in a moral and emotional dilemma, torn between his ambition and personal values as complicated relationships unfold.",
-    "recommendation": "▸ 比利·怀尔德以细腻幽默与深刻人性洞察，打造都市职场与情感困局的经典叙事，兼具讽刺与温情。▸ 杰克·莱蒙与雪莉·麦克雷恩的出色化学反应，赋予角色复杂真实的情感层次，令人共鸣。▸ 影片获奥斯卡最佳影片等多项大奖，类型融合与结构创新影响深远。",
-    "recommendation_en": "▸ Billy Wilder’s masterful direction blends sharp satire with heartfelt drama, offering nuanced commentary on corporate culture and moral compromise. ▸ Jack Lemmon and Shirley MacLaine deliver nuanced, emotionally resonant performances that elevate the film’s impact. ▸ The Apartment won the Academy Award for Best Picture and is noted for its innovative narrative structure and genre fusion.",
-    "awards": "1961奥斯卡最佳影片、最佳导演、最佳原创剧本等5项大奖，金球奖音乐/喜剧类最佳影片",
-    "awards_en": "1961 Academy Award for Best Picture, Best Director, Best Original Screenplay, and 2 more; Golden Globe for Best Motion Picture – Musical or Comedy"
-  },
-  "my father's shadow": {
-    "synopsis": "一位年轻男子在父亲去世后，回到家乡面对家族遗产与过往创伤。他在亲情与个人追求之间挣扎，探索自我认同与和解的可能性。",
-    "synopsis_en": "A young man returns to his hometown after his father’s death, confronting unresolved family trauma and the weight of inheritance. He must navigate the tension between familial duty and his own aspirations, seeking identity and reconciliation.",
-    "recommendation": "▸ 导演Akinola Davies以细腻的叙事风格和非线性结构，展现主人公复杂的心理历程，情感真实动人。▸ Sope Dirisu领衔的表演极具感染力，角色层次丰富，极大提升了影片张力。▸ 影片以温暖自然光线和非洲本土色彩表现家庭与土地的联系，画面极具美感。",
-    "recommendation_en": "▸ Director Akinola Davies employs a nuanced narrative and nonlinear structure, authentically portraying the protagonist’s emotional journey. ▸ Sope Dirisu delivers a powerful, layered performance that elevates the film’s dramatic intensity. ▸ The cinematography uses warm natural lighting and African color palettes to beautifully evoke the connection between family and homeland.",
+  "mamma mia": {
+    "synopsis": "在希腊小岛上，年轻女孩苏菲即将结婚，却因不知道父亲是谁而苦恼。为了揭开身世之谜，她邀请了三位可能是父亲的男子，令母亲唐娜陷入情感与回忆的冲突中。",
+    "synopsis_en": "On a Greek island, young Sophie prepares to get married but struggles with not knowing who her real father is. She invites three men from her mother's past, leading to emotional turmoil and heartfelt confrontations.",
+    "recommendation": "▸ ABBA金曲串联全片，经典旋律与剧情完美融合，唤起观众共鸣。▸ 梅丽尔·斯特里普领衔，群星阵容展现高水准表演，带来欢乐与感动。▸ 阳光希腊风光与明快色彩，营造轻松愉快的观影氛围，适合音乐剧爱好者和家庭观众。",
+    "recommendation_en": "▸ The film ingeniously weaves ABBA's greatest hits into the narrative, creating an infectious singalong experience. ▸ Meryl Streep leads a star-studded cast, delivering energetic performances that balance humor and emotion. ▸ Vivid Greek island scenery and exuberant color palettes enhance the feel-good atmosphere, making it a treat for musical lovers and families.",
     "awards": "",
     "awards_en": ""
   },
-  "mamma mia": {
-    "synopsis": "年轻女孩苏菲即将结婚，却因不知生父身份而苦恼。她秘密邀请母亲的三位旧情人来到希腊小岛，希望揭开自己的身世谜团。这部音乐喜剧以母女情感和自我认同为核心。",
-    "synopsis_en": "Sophie, a young bride-to-be, faces uncertainty about her father’s identity. She secretly invites three men from her mother’s past to their Greek island, hoping to solve the mystery. The musical centers on family bonds and personal discovery.",
-    "recommendation": "▸ 改编自全球热演的ABBA音乐剧，片中多首经典ABBA金曲贯穿全片，营造轻快愉悦氛围。▸ 梅丽尔·斯特里普领衔出演，展现卓越歌舞与喜剧表演，为角色赋予独特魅力。▸ 希腊海岛的明媚风光与热烈色彩，为观众带来强烈的视觉享受和度假氛围。",
-    "recommendation_en": "▸ Adapted from the smash-hit ABBA musical, the film features numerous beloved ABBA songs that drive the story and create an uplifting mood. ▸ Meryl Streep leads with outstanding musical and comedic performance, infusing her character with warmth and charisma. ▸ The sun-drenched Greek island setting offers vibrant visuals and a strong vacation vibe, making the film visually captivating.",
+  "othello": {
+    "synopsis": "本片改编自莎士比亚经典悲剧，讲述黑将军奥赛罗在爱情与权力之间挣扎，被身边人操纵与背叛，陷入疑虑与痛苦，最终卷入一场无法回头的悲剧。影片聚焦人物心理与社会偏见。",
+    "synopsis_en": "Adapted from Shakespeare’s classic tragedy, the film centers on Othello, a black general torn between love and power. Manipulation and betrayal by those close to him fuel his doubts and anguish, leading to irreversible consequences. The story explores psychological depth and social prejudice.",
+    "recommendation": "▸ 大卫·哈雷伍德以强烈情感和多层次演绎展现奥赛罗的复杂心理，呈现角色的挣扎与悲剧。▸ 汤姆·莫里斯导演采用现代舞台感与光影手法，增强戏剧张力，巧妙融合经典与当代视觉风格。▸ 剧本忠于原著但有创新解读，深入探讨权力、种族与信任议题，让莎士比亚文本焕发新意。",
+    "recommendation_en": "▸ David Harewood delivers a powerful, nuanced portrayal of Othello, capturing the character’s inner turmoil and tragic arc. ▸ Director Tom Morris employs contemporary stage aesthetics and striking lighting techniques to amplify dramatic tension, blending classic and modern visual styles. ▸ The screenplay stays true to Shakespeare’s original but introduces fresh interpretations, delving into themes of power, race, and trust with renewed relevance.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "sentimental value": {
+    "synopsis": "一位年轻女性在父亲突然归来后，被迫面对多年前家庭破裂的创伤。她在亲情与自我救赎之间挣扎，试图重新定义与家人的关系，寻找内心的平衡。",
+    "synopsis_en": "A young woman is forced to confront deep-seated family wounds when her estranged father unexpectedly returns. Torn between familial ties and personal healing, she must redefine her relationship with her family and seek inner balance.",
+    "recommendation": "▸ 挪威导演Joachim Trier延续细腻现实主义风格，以复杂家庭关系为切入点，精准描绘情感裂痕和人物成长。▸ Renate Reinsve与Stellan Skarsgård两代实力派演员对手戏张力十足，情感表达层次丰富。▸ 影片光影处理与北欧氛围渲染出独特质感，为观众带来沉浸式观影体验。",
+    "recommendation_en": "▸ Norwegian director Joachim Trier continues his mastery of nuanced realism, exploring fractured family ties with emotional precision and depth. ▸ The dynamic performances from Renate Reinsve and Stellan Skarsgård offer outstanding emotional range and on-screen chemistry. ▸ The film’s cinematography employs Nordic light and atmosphere to create an immersive, visually distinct experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "calle malaga": {
+    "synopsis": "一位西班牙城市边缘的青年，在马拉加街头挣扎于家庭责任与个人梦想之间。随着生活压力逐渐加剧，他必须面对内心的抉择，探索属于自己的未来。",
+    "synopsis_en": "A young man on the outskirts of a Spanish city grapples with family obligations and personal ambitions on Calle Malaga. As pressures mount, he faces a pivotal choice that will define his path forward.",
+    "recommendation": "▸导演以现实主义镜头捕捉西班牙城市生活，将主角的精神挣扎与环境氛围巧妙融合，画面充满地域特色。▸主演表现细腻，情感层次丰富，令人共鸣。▸影片节奏紧凑，故事推进自然，适合喜欢社会题材和成长故事的观众。",
+    "recommendation_en": "▸ The director employs a realistic visual style to authentically portray Spanish urban life, blending the protagonist’s inner turmoil with environmental context. ▸ The lead actor delivers a nuanced performance, capturing complex emotions with depth. ▸ The film maintains a tight pace and organic narrative flow, appealing to fans of social themes and coming-of-age stories.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "12 monkeys": {
+    "synopsis": "未来社会，主角被派回过去调查致命病毒的起源，却陷入复杂的时间谜团和心理困境。影片聚焦他在现实与幻觉间挣扎，逐步揭开“12猴子”组织的秘密。",
+    "synopsis_en": "In a dystopian future, the protagonist is sent back in time to investigate the origin of a deadly virus. He faces complex temporal puzzles and psychological challenges as he uncovers the mystery surrounding the '12 Monkeys' group.",
+    "recommendation": "▸ 导演特瑞·吉列姆以独特视觉风格营造末世氛围，融合现实和幻觉，极具冲击力。▸ 布鲁斯·威利斯表现出色，布拉德·皮特饰演精神病患者更是突破自我，获得奥斯卡提名。▸ 剧本结构紧凑，时空穿越与悬疑交织，思想性与娱乐性兼备。",
+    "recommendation_en": "▸ Terry Gilliam’s distinctive visual style creates a compelling dystopian atmosphere, blending reality and hallucination. ▸ Bruce Willis delivers a strong performance, while Brad Pitt’s portrayal of a mentally unstable character earned him an Oscar nomination. ▸ The tightly constructed script masterfully fuses time travel with mystery, balancing intellectual depth and entertainment.",
+    "awards": "1996奥斯卡最佳男配角提名（布拉德·皮特）；1996金球奖最佳男配角获奖（布拉德·皮特）",
+    "awards_en": "1996 Academy Award nominee for Best Supporting Actor (Brad Pitt); 1996 Golden Globe winner for Best Supporting Actor (Brad Pitt)"
+  },
+  "the princess diaries": {
+    "synopsis": "平凡少女米娅意外得知自己拥有王室血统，被迫面对身份转变的巨大压力。她在奶奶的引导下，挣扎于做自己和承担责任之间，成长为更坚强的人。",
+    "synopsis_en": "Mia, an ordinary teenager, unexpectedly learns she is heir to a royal throne. Forced to confront new responsibilities under her grandmother’s guidance, she must navigate the tension between staying true to herself and embracing her destiny.",
+    "recommendation": "▸ 朱莉·安德鲁斯与安妮·海瑟薇的精彩对手戏，展现了代际冲突与温馨家庭情感。▸ 导演加里·马歇尔以轻松幽默的风格，赋予成长题材以新意，适合全家观赏。▸ 影片通过米娅的蜕变过程，探讨自我认同与责任感，情感真挚，轻松不失启发。",
+    "recommendation_en": "▸ Stellar performances by Julie Andrews and Anne Hathaway create a compelling dynamic, blending generational conflict with warmth. ▸ Director Garry Marshall infuses the coming-of-age story with his signature humor and a breezy tone, making it accessible for family audiences. ▸ The film thoughtfully explores themes of self-identity and responsibility through Mia’s transformation, delivering heartfelt moments without losing its light touch.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "zabriskie point": {
+    "synopsis": "在美国社会动荡的1970年代，一位年轻男生和一位女学生在加州沙漠偶遇。两人各自面临理想与现实的拉扯，试图逃离城市压力，寻找个人自由，最终卷入一场不可避免的冲突。",
+    "synopsis_en": "Set against the backdrop of 1970s America, a young man and a student girl meet in the California desert. Both struggle with the tension between personal ideals and societal pressures, seeking freedom from urban life, and are drawn into a profound conflict.",
+    "recommendation": "▸ 意大利大师安东尼奥尼执导，全片以独特镜头语言和冗长静默展现美国反文化时代的迷惘与疏离感。▸ 大量实地取景，沙漠风光和极具象征性的空镜头极富视觉冲击力。▸ 配乐由平克·弗洛伊德等乐队创作，音乐与影像深度融合，成为电影的重要叙事层面。",
+    "recommendation_en": "▸ Directed by Michelangelo Antonioni, the film features his signature visual style—long takes and contemplative pacing—capturing the mood of alienation and confusion in countercultural America. ▸ Striking on-location cinematography in the desert, with symbolic imagery and powerful landscape shots, heighten the film’s atmosphere. ▸ Soundtrack by Pink Floyd and others enriches the narrative, seamlessly blending music and visuals.",
     "awards": "",
     "awards_en": ""
   },
   "28 years later the bone temple": {
-    "synopsis": "本片为《28天/周/年后》系列新作，讲述一位幸存者在末世病毒肆虐28年后，误入神秘“骨庙”，被迫直面人性、信仰与生存抉择的极限挑战。",
-    "synopsis_en": "As the latest entry in the '28 Days/Weeks/Years Later' series, a survivor stumbles into the enigmatic Bone Temple 28 years after the viral apocalypse, confronting harrowing choices about faith, humanity, and survival in a world on the brink.",
-    "recommendation": "▸ 尼娅·达科斯塔以独特视角重塑经典丧尸世界，悬念与惊悚氛围兼具，紧张节奏贯穿全片。▸ 拉尔夫·费因斯领衔主演，细腻演绎末世边缘的人性挣扎，为系列注入强烈戏剧张力。▸ 影片在视觉上大胆采用冷峻色调与极简美术，强化末世荒凉感，观感震撼。",
-    "recommendation_en": "▸ Director Nia DaCosta revitalizes the classic post-apocalyptic zombie franchise with a suspenseful, tightly-paced narrative and a fresh perspective. ▸ Ralph Fiennes delivers a compelling, nuanced performance that brings intense emotional depth to the protagonist's struggle. ▸ The film's striking use of stark color palettes and minimalist production design amplifies the desolation of the setting, creating a haunting visual impact.",
+    "synopsis": "作为《28天/28周》系列的全新续作，故事讲述末日幸存者在瘟疫爆发28年后，深入神秘的“骨庙”寻找生存希望，却被未知力量和内外威胁双重夹击。",
+    "synopsis_en": "As a new sequel to the '28 Days/Weeks' saga, survivors decades after the outbreak must venture into the enigmatic Bone Temple in search of hope, facing both unknown threats and internal conflicts in a devastated world.",
+    "recommendation": "▸ 导演Nia DaCosta以紧张氛围和沉浸式视听风格，赋予经典系列新鲜感，恐怖悬疑与科幻元素融合出独特质感。▸ Ralph Fiennes领衔主演，展现人物心理复杂与极端环境下的脆弱与坚韧，表演层次丰富。▸ 摄影与场景设计极具末世美学，骨庙场景营造强烈压迫感，增强观众代入体验。",
+    "recommendation_en": "▸ Director Nia DaCosta revitalizes the classic saga with her intense pacing and immersive audiovisual style, blending horror, thriller, and sci-fi into a distinctive tone. ▸ Ralph Fiennes leads with a nuanced performance, exploring psychological depth and human resilience amid crisis. ▸ The film’s cinematography and production design create a haunting post-apocalyptic aesthetic, with the Bone Temple setting heightening tension and immersion.",
     "awards": "",
     "awards_en": ""
   },
+  "it was just an accident": {
+    "synopsis": "一场看似偶然的事故让普通男子阿里陷入道德与法律的双重困境。在真相逐渐浮现的过程中，他被迫面对内心挣扎和社会压力，逐步揭开隐藏的秘密。",
+    "synopsis_en": "After a seemingly accidental incident, an ordinary man named Ali finds himself caught between moral and legal dilemmas. As the truth slowly unravels, he must confront mounting internal struggles and societal pressures.",
+    "recommendation": "▸ 贾法·帕纳希以细腻现实主义风格，展现个人与社会的碰撞，细节刻画精准，张力十足。▸ 男主角瓦希德·莫巴塞里表演层次丰富，将角色复杂情感展现得淋漓尽致，极具感染力。▸ 影片摄影运用冷静写实手法，营造出悬疑紧张氛围，视觉叙事极具代入感。",
+    "recommendation_en": "▸ Jafar Panahi’s signature realistic direction masterfully explores the clash between individual morality and societal norms, with meticulous attention to nuanced details. ▸ Lead actor Vahid Mobasseri delivers a riveting, multi-layered performance that powerfully conveys the protagonist’s emotional turmoil. ▸ The cinematography uses stark, immersive visuals to sustain suspense and tension, drawing the audience deep into the mystery.",
+    "awards": "2025柏林电影节主竞赛单元入围",
+    "awards_en": "2025 Berlin International Film Festival Competition Entry"
+  },
+  "marty supreme": {
+    "synopsis": "年轻侦探马蒂在纽约调查一宗离奇失踪案，逐渐陷入一场围绕家族秘密与道德抉择的危机，必须在真相和自我救赎之间做出选择。",
+    "synopsis_en": "Young detective Marty investigates a mysterious disappearance in New York, finding himself entangled in a web of family secrets and moral dilemmas, forced to choose between uncovering the truth and seeking his own redemption.",
+    "recommendation": "▸ Josh Safdie以紧张写实的镜头语言，营造出纽约都市中的压抑氛围和悬念感，使观众沉浸于主角的心理困局。▸ 提莫西·查拉梅挑战复杂角色，展现从脆弱到坚决的多层次表演，配合葛妮丝·帕特洛、奥德萨·阿齐昂的精彩对手戏，人物张力十足。▸ 烂番茄高分反映出影片在节奏把控和剧本深度上的行业认可，是近年来同类型片中的佳作。",
+    "recommendation_en": "▸ Josh Safdie’s direction brings a gritty, immersive realism to New York’s urban landscape, heightening suspense and psychological tension throughout. ▸ Timothée Chalamet delivers a layered performance as a conflicted detective, with compelling chemistry alongside Gwyneth Paltrow and Odessa A’zion. ▸ Its 93% Rotten Tomatoes score signals critical acclaim for its pacing, narrative complexity, and standout performances.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "mr nobody against putin": {
+    "synopsis": "本片聚焦普通俄罗斯公民Pasha Talankin，在普京政权下因信仰与良知面临巨大压力。他在社会与个人道德之间挣扎，展现普通人对权力的抵抗与无声呐喊。",
+    "synopsis_en": "The film follows ordinary Russian citizen Pasha Talankin as he faces immense pressure under Putin's regime. Torn between his conscience and societal expectations, he embodies the silent resistance and moral struggle of everyday people living under authoritarian rule.",
+    "recommendation": "▸ 纪录片通过真实人物切入，生动展现了极权环境下个体的心理挣扎与勇气，情感感染力强。▸ 导演David Borenstein以冷静客观的视角和细腻影像，揭示俄罗斯社会的复杂现实，展现独特纪实风格。▸ 豆瓣高分与烂番茄满分反映影片在中外观众中的强烈共鸣与专业认可。",
+    "recommendation_en": "▸ The documentary offers an intimate look at an ordinary individual’s mental and emotional resilience under authoritarian pressure, using Pasha Talankin’s real-life experience. ▸ Director David Borenstein employs a restrained, observational style, with nuanced cinematography that reveals the intricate layers of Russian society. ▸ High ratings on Douban and a perfect Rotten Tomatoes score highlight its strong resonance and critical acclaim among both Chinese and international audiences.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "nirvanna the band the show the movie": {
+    "synopsis": "本片为知名喜剧系列《Nirvanna the Band the Show》的电影版，两位主角陷入一场荒谬却执着的冒险，试图让他们的乐队获得关注，却不断制造出令人啼笑皆非的混乱。",
+    "synopsis_en": "This film adaptation of the acclaimed comedy series follows two protagonists as they embark on a hilariously misguided quest to get their band noticed, leading to a series of escalating misadventures and absurd situations.",
+    "recommendation": "▸ 导演Matt Johnson延续了系列荒诞幽默与伪纪录片风格，巧妙融合现实与虚构，极具个人特色。▸ 演员本色出演，临场反应自然，喜剧节奏出色，许多情节借助即兴和真实场景拍摄，带来强烈代入感。▸ 烂番茄98%高分，获得评论界一致好评，证明其创新和娱乐价值。",
+    "recommendation_en": "▸ Director Matt Johnson continues the series’ signature mockumentary style, blending reality and fiction with inventive narrative techniques. ▸ The cast delivers naturalistic, improvisational performances, with much of the humor arising from real-life interactions and spontaneous moments. ▸ A stellar 98% Rotten Tomatoes score highlights its critical acclaim for originality and comedic impact.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "no other choice": {
+    "synopsis": "一位资深刑警在调查一桩离奇命案时，意外卷入复杂权力斗争。他必须在真相与自我保护之间做出艰难选择，逐步揭开现实与谎言交织的谜团。",
+    "synopsis_en": "A seasoned detective investigating a bizarre murder becomes entangled in a web of power struggles. He faces a tough choice between uncovering the truth and protecting himself, navigating a labyrinth of deception and reality.",
+    "recommendation": "▸朴赞郁导演巧妙融合悬疑与黑色幽默，营造紧张又富有讽刺意味的氛围。▸李秉宪与孙艺珍精彩对手戏，人物心理层次丰富，情感冲突强烈。▸精致摄影和剪辑带来高质感视听体验，案件线索与剧情节奏把控出色。",
+    "recommendation_en": "▸ Director Park Chan-wook masterfully blends suspense with dark comedy, creating a tense yet satirical atmosphere. ▸ Lee Byung-hun and Son Ye-jin deliver nuanced performances with compelling emotional conflict. ▸ The film features meticulous cinematography and editing, offering a high-quality audiovisual experience and expertly paced mystery.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the secret agent": {
+    "synopsis": "在20世纪动荡的巴西，一名普通男子意外卷入一场政治阴谋，被迫在正义与生存之间做出抉择。面对重重追查与信任危机，他必须揭开真相，同时守护至亲安全。",
+    "synopsis_en": "Set in turbulent 20th-century Brazil, an ordinary man is unwittingly drawn into a web of political intrigue. Forced to choose between justice and survival, he must uncover hidden truths while protecting his loved ones amid escalating suspicion.",
+    "recommendation": "▸ 导演克莱伯·门多萨·菲尔霍以细腻现实主义风格重现历史时期，营造出紧张悬疑氛围。▸ 瓦格纳·莫拉领衔主演，内敛但极具层次的表演展现人物复杂心理。▸ 豆瓣高分与烂番茄高好评率，证明影片在影评人与大众中的双重认可。",
+    "recommendation_en": "▸ Director Kleber Mendonça Filho brings a nuanced, realist touch to historical drama, crafting a tense and immersive atmosphere. ▸ Wagner Moura delivers a layered, compelling performance that captures the protagonist's inner turmoil. ▸ High scores on both Douban and Rotten Tomatoes reflect strong acclaim from critics and general audiences alike.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the voice of hind rajab": {
+    "synopsis": "在战火中的中东小镇，少女Hind Rajab因一场突发冲突与家人失散，独自面对生死考验。她在废墟中寻找生路，努力与外界取得联系，展现出顽强求生的勇气和希望。",
+    "synopsis_en": "Amidst war-torn chaos in a Middle Eastern town, young Hind Rajab is separated from her family by sudden conflict. Alone among the ruins, she struggles to survive and reach out for help, embodying resilience and hope under extreme adversity.",
+    "recommendation": "▸ 导演考斯尔·本·哈尼亚以细腻现实主义手法还原冲突地区平民生存状态，情感真实动人。▸ 女主角Saja Kilani的表现极具感染力，将恐惧与坚韧演绎得层次分明，令人印象深刻。▸ 烂番茄高分反映影片在国际评论界口碑良好，尤其在戏剧张力和视听表现方面获得肯定。",
+    "recommendation_en": "▸ Director Kaouther Ben Hania employs a nuanced, realistic style, vividly capturing the civilian experience in conflict zones with raw emotional depth. ▸ Lead actress Saja Kilani delivers a powerful, layered performance, authentically portraying the protagonist’s fear and resilience. ▸ The film’s high Rotten Tomatoes score signals strong critical acclaim, particularly for its dramatic intensity and immersive audiovisual storytelling.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the salt of the earth": {
+    "synopsis": "著名摄影师塞巴斯蒂昂·萨尔加多在目睹人类苦难与环境浩劫后，陷入信仰危机。他通过镜头记录世界，试图在绝望与希望之间寻找人生意义。",
+    "synopsis_en": "Renowned photographer Sebastião Salgado faces a crisis of faith after witnessing immense human suffering and environmental devastation. Through his lens, he seeks purpose and hope, navigating the fine line between despair and redemption.",
+    "recommendation": "▸ 由维姆·文德斯和萨尔加多之子联手执导，影片以诗意镜头展现萨尔加多数十年人文与自然摄影力作，影像极具冲击力。▸ 纪录片深入探讨艺术、道德与人性的边界，引发观众对人类处境和环境议题的深刻思考。",
+    "recommendation_en": "▸ Co-directed by Wim Wenders and Juliano Ribeiro Salgado, the film uses evocative cinematography to present decades of Sebastião Salgado’s most powerful photographic work. ▸ The documentary deeply examines the intersection of art, morality, and humanity, prompting viewers to reflect on the state of the world and environmental issues.",
+    "awards": "2015奥斯卡最佳纪录长片提名，2014戛纳一种关注单元特别奖",
+    "awards_en": "2015 Academy Award nominee for Best Documentary Feature, 2014 Cannes Un Certain Regard Special Prize"
+  },
+  "wings of desire": {
+    "synopsis": "一位柏林守护天使见证人类悲喜，却无法参与其生活。在目睹一位马戏女演员的孤独后，他陷入自我与职责的冲突，渴望体验真实的情感与人性。",
+    "synopsis_en": "An angel in Berlin observes the lives of humans, feeling their joys and sorrows but unable to intervene. Drawn to a lonely circus performer, he faces a dilemma between his eternal duties and the desire to experience human emotions.",
+    "recommendation": "▸ 文德斯以黑白与彩色影像切换，展现天使与人类世界的界限，影像极具诗意。▸ 布鲁诺·冈茨的细腻表演与柏林城市风貌交融，塑造出独特氛围。▸ 影片深刻探讨孤独、渴望与存在意义，哲学思辨引人深思。",
+    "recommendation_en": "▸ Wim Wenders’s poetic use of black-and-white and color cinematography vividly contrasts the ethereal and human realms, creating a mesmerizing visual language. ▸ Bruno Ganz delivers a nuanced performance, blending seamlessly with Berlin’s evocative cityscape. ▸ The film offers profound philosophical reflections on loneliness, longing, and the search for meaning.",
+    "awards": "1987戛纳电影节最佳导演奖",
+    "awards_en": "1987 Cannes Best Director Award"
+  },
   "the state of things": {
-    "synopsis": "一支电影摄制组因资金短缺被困在葡萄牙海边，导演菲利普面临拍摄中断和团队信任危机，在等待制片人答复的过程中，现实与虚构的界限逐渐模糊，充满悬疑与不安。",
-    "synopsis_en": "A film crew stranded on the Portuguese coast faces halted production due to lack of funds. Director Friedrich grapples with uncertainty, growing mistrust among his team, and the blurred line between reality and fiction, all set against a suspenseful and uneasy atmosphere.",
-    "recommendation": "▸ 温德斯以黑白影像营造荒凉氛围，深刻探讨电影创作本身的不确定性和虚无感。▸ 片中真实与虚构交错，混合悬疑与元电影元素，展现导演对电影行业困境的批判与自省。▸ 主演群戏自然，群体角色心理微妙变化引发观众共鸣。",
-    "recommendation_en": "▸ Wim Wenders crafts a bleak, introspective atmosphere using stark black-and-white cinematography, delving into existential uncertainty within filmmaking. ▸ The film interweaves reality and fiction, blending suspense and meta-cinematic elements to critique the film industry and explore creative crisis. ▸ The ensemble cast delivers nuanced performances, effectively portraying shifting group dynamics and psychological tension.",
-    "awards": "1982 威尼斯电影节金狮奖",
+    "synopsis": "一支电影剧组因资金短缺被困在葡萄牙的废弃旅馆，导演面对创作与现实的双重压力，必须在失控的拍摄与外界威胁中做出抉择。",
+    "synopsis_en": "A film crew stranded in a desolate Portuguese hotel faces a lack of funds, forcing the director to confront creative stagnation and external threats as he seeks solutions under mounting pressure.",
+    "recommendation": "▸ 维姆·文德斯以高度自反的叙事，探讨电影创作的困局与现实荒诞感，极具导演个人风格。▸ 黑白摄影与长镜头营造出疏离、凝重的氛围，让观众沉浸在虚实交错的电影世界。▸ 大卫·伯恩等音乐人为影片配乐增添了实验与张力。",
+    "recommendation_en": "▸ Wim Wenders crafts a self-reflexive narrative, delving into the existential challenges of filmmaking with his signature contemplative style. ▸ Striking black-and-white cinematography and extended takes create a sense of alienation and tension, immersing viewers in a blurred line between fiction and reality. ▸ The experimental score, featuring music by David Byrne, adds a unique layer of atmosphere.",
+    "awards": "1982威尼斯电影节金狮奖",
     "awards_en": "1982 Venice Golden Lion"
+  },
+  "the american friend": {
+    "synopsis": "一位德国画框修复师因重病和经济压力，被卷入美国神秘商人策划的犯罪交易中。他在道德挣扎与生存本能之间徘徊，逐渐陷入危险的谜团和心理博弈。",
+    "synopsis_en": "A German picture framer, facing illness and financial hardship, is drawn into a criminal scheme by a mysterious American. Caught between moral conflict and survival, he becomes entangled in a dangerous web of intrigue and psychological tension.",
+    "recommendation": "▸ 文德斯导演以冷峻写实风格展现70年代汉堡和巴黎都市风貌，营造出独特的疏离和悬疑氛围。▸ 丹尼斯·霍珀与布鲁诺·甘茨的对手戏充满张力，细腻刻画人物心理变化。▸ 影片改编自海史密斯小说，情节复杂，悬念层层递进，适合喜欢心理犯罪题材的观众。",
+    "recommendation_en": "▸ Wim Wenders delivers a visually arresting portrait of 1970s Hamburg and Paris, using restrained realism to create a haunting, suspenseful atmosphere. ▸ Dennis Hopper and Bruno Ganz offer compelling, nuanced performances that vividly portray shifting loyalties and inner turmoil. ▸ Based on Patricia Highsmith’s novel, the film excels in layered storytelling and psychological complexity, making it a standout for fans of cerebral thrillers.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "my father's shadow": {
+    "synopsis": "年轻男子在父亲去世后回到家乡，面对未解决的家庭矛盾和自我认同的困惑。他在亲情与责任之间挣扎，逐步揭开父亲过去的秘密，寻找内心的和解。",
+    "synopsis_en": "After his father's death, a young man returns to his hometown, confronting unresolved family tensions and his own identity crisis. Torn between familial duty and self-discovery, he uncovers secrets from his father's past while seeking reconciliation.",
+    "recommendation": "▸导演Akinola Davies以细腻写实的镜头语言，深度描绘非洲家庭与传统的张力，情感真挚动人。▸Sope Dirisu的表演层次丰富，将主角的迷惘与成长刻画得极具感染力。▸色彩与光影运用突出，营造出独特的视觉氛围，让观众沉浸于角色的情感世界。",
+    "recommendation_en": "▸ Director Akinola Davies employs a sensitive, realistic visual style to deeply explore the tensions between African tradition and modern family dynamics. ▸ Sope Dirisu delivers a nuanced and powerful performance, authentically portraying the protagonist's emotional journey. ▸ The film's striking use of color and light creates an immersive atmosphere that draws viewers into the character's inner world.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "buena vista social club": {
+    "synopsis": "本片聚焦一群被遗忘的古巴音乐家，他们在国际音乐人的帮助下重拾舞台，面对时代变迁与身份认同的挑战，共同追寻音乐梦想。纪录片展现他们如何用音乐连接过去与现在。",
+    "synopsis_en": "The film follows a group of forgotten Cuban musicians who, with support from international artists, reclaim their place on stage. They confront changing times and identity challenges while pursuing their musical dreams. It explores how music bridges past and present.",
+    "recommendation": "▸导演温·温德斯以极富情感的镜头语言捕捉音乐家的生活和古巴城市风貌，营造出怀旧与诗意氛围。▸真实呈现古巴传统音乐的魅力和音乐家们的技艺，现场录音与表演极具感染力。▸Ry Cooder的音乐制作让观众沉浸于独特的世界音乐体验，唤起对文化传承的思考。",
+    "recommendation_en": "▸ Wim Wenders employs evocative cinematography to immerse viewers in the musicians’ lives and Havana’s nostalgic atmosphere. ▸ The film authentically showcases the artistry of Cuban traditional music, with compelling live performances and recordings. ▸ Ry Cooder’s musical production delivers a rich world music experience, prompting reflection on cultural heritage.",
+    "awards": "2000年奥斯卡最佳纪录片提名, 1999年欧洲电影奖最佳纪录片奖",
+    "awards_en": "2000 Academy Award nominee for Best Documentary Feature, 1999 European Film Award for Best Documentary"
+  },
+  "paris texas": {
+    "synopsis": "一位神秘失踪多年的男子突然出现在荒漠，被弟弟带回家庭。他在努力修复破裂的亲情关系，却面临过去阴影的困扰。影片聚焦家庭与自我救赎的核心冲突。",
+    "synopsis_en": "A man who has been missing for years is found wandering the desert and brought back by his brother. As he tries to reconnect with his estranged family, he is haunted by unresolved issues from his past, centering on redemption and reconciliation.",
+    "recommendation": "▸ 导演维姆·文德斯以极具诗意和摄影美学的镜头，展现美国西南荒凉公路与人物内心世界的映射。▸ 哈利·戴恩·斯坦顿与娜塔莎·金斯基的表演细腻动人，尤其结尾长镜头的对话堪称经典。▸ 影片配乐由雷·库德创作，极具氛围感，为情感表达增色不少。",
+    "recommendation_en": "▸ Wim Wenders crafts a poetic visual narrative, using the vast landscapes of the American Southwest to mirror the characters’ emotional journeys. ▸ Harry Dean Stanton and Nastassja Kinski deliver nuanced, deeply affecting performances, with the climactic conversation scene hailed as iconic. ▸ Ry Cooder’s atmospheric score profoundly enhances the film’s emotional resonance.",
+    "awards": "1984戛纳电影节金棕榈奖、国际影评人费比西奖",
+    "awards_en": "1984 Cannes Palme d'Or, FIPRESCI Prize"
+  },
+  "the last emperor 末代皇帝": {
+    "synopsis": "影片讲述末代皇帝溥仪自幼即位，身处中国历史剧变之中，面对权力、孤独与自我认知的困境。他在宫廷与现实之间挣扎，反映个人命运与时代变迁的冲突。",
+    "synopsis_en": "The film follows the life of Puyi, China's last emperor, who ascends the throne as a child and confronts the turmoil of shifting political landscapes. His struggle with power, isolation, and identity reflects the clash between personal fate and historical change.",
+    "recommendation": "▸ 意大利导演贝托鲁奇以宏大的视觉风格重现紫禁城，展现历史更迭与人物复杂心理 ▸ 中英演员阵容出色，尊龙、陈冲与Peter O'Toole的表演深刻细腻 ▸ 影片全球实景拍摄，宫廷与时代氛围极具沉浸感，音乐和美术获业界高度评价",
+    "recommendation_en": "▸ Bertolucci's grand visual style authentically recreates the Forbidden City and vividly captures the psychological complexity of historical change ▸ Stellar international cast, with John Lone, Joan Chen, and Peter O'Toole delivering nuanced performances ▸ Filmed on location across the globe, the film's immersive atmosphere, acclaimed score, and production design enhance its epic storytelling.",
+    "awards": "1988奥斯卡最佳影片、最佳导演等9项大奖；1988英国电影学院奖最佳影片等",
+    "awards_en": "1988 Academy Awards: Best Picture, Best Director and 7 other Oscars; 1988 BAFTA Awards: Best Film and others"
+  },
+  "anselm": {
+    "synopsis": "本片聚焦德国著名艺术家安塞尔姆·基弗，通过他的创作与人生，展现他在历史与个人记忆之间的挣扎，以及艺术如何成为他面对德国历史创伤的方式。",
+    "synopsis_en": "This film follows renowned German artist Anselm Kiefer, exploring his struggles between personal memory and collective history, and how he uses art to confront the traumas of Germany's past.",
+    "recommendation": "▸ 维姆·文德斯以沉浸式3D摄影和独特视角，全方位捕捉基弗的创作过程与思想世界，视觉风格极具冲击力。▸ 影片深入探讨艺术与历史、记忆的关系，既具思想深度，又兼具美学享受，是艺术及纪录片爱好者不容错过的佳作。",
+    "recommendation_en": "▸ Wim Wenders employs immersive 3D cinematography and a distinctive perspective to vividly capture Kiefer’s creative process and inner world, delivering visually stunning sequences. ▸ The film offers profound reflection on the relationship between art, history, and memory, balancing intellectual depth with aesthetic beauty—making it a must-see for art and documentary enthusiasts.",
+    "awards": "2023戛纳电影节特别展映单元",
+    "awards_en": "2023 Cannes Special Screenings"
+  },
+  "the passion of the christ": {
+    "synopsis": "影片聚焦耶稣受难的最后十二小时，展现他在信仰与背叛、苦难与宽恕之间的挣扎。耶稣面临人性的极限考验，在信仰与命运的抉择中承受巨大痛苦。",
+    "synopsis_en": "The film depicts the final twelve hours of Jesus Christ’s life, focusing on his struggle between faith, betrayal, and forgiveness. He endures immense suffering while facing profound tests of humanity and destiny.",
+    "recommendation": "▸ 梅尔·吉布森以极具争议的写实风格，刻画耶稣受难过程，画面冲击力极强，情感张力十足。▸ 影片采用拉丁语、阿拉姆语对白，增强历史真实感，营造独特沉浸氛围。▸ 吉姆·卡维泽尔展现出极具感染力的表演，将精神信仰与肉体苦难深度结合。",
+    "recommendation_en": "▸ Mel Gibson’s controversial, unflinching realism delivers visceral emotional impact, with graphic and powerful depictions of suffering. ▸ The use of Latin and Aramaic dialogue enhances authenticity and immerses viewers in the historical setting. ▸ Jim Caviezel’s intense performance compellingly embodies the fusion of spiritual faith and physical torment.",
+    "awards": "2005奥斯卡最佳摄影、最佳化妆、最佳原创配乐提名",
+    "awards_en": "2005 Academy Award nominee for Best Cinematography, Best Makeup, and Best Original Score"
+  },
+  "epic elvis presley in concert": {
+    "synopsis": "本片聚焦猫王埃尔维斯·普雷斯利的音乐生涯和个人挣扎，探索他如何在辉煌舞台背后面对名誉与自我认同的冲突，是对这位传奇偶像最深刻的音乐传记纪录片。",
+    "synopsis_en": "The film delves into Elvis Presley's musical journey and personal struggles, exploring the tension between his public fame and inner identity. It offers an intimate look at the legendary icon's life, revealing the challenges he faced behind the spotlight without giving away key details.",
+    "recommendation": "▸ 巴兹·鲁赫曼以其华丽视觉风格和独特剪辑手法，将猫王现场演出与珍贵历史影像无缝融合，营造极具沉浸感的观影体验。▸ 纪录片深度还原猫王舞台背后鲜为人知的心路历程，通过修复和未曝光音像资料，使观众近距离感受其音乐才华与个人挣扎。",
+    "recommendation_en": "▸ Baz Luhrmann's signature visual flamboyance and innovative editing blend archival concert footage with newly restored material, creating a vivid, immersive experience. ▸ The documentary uncovers lesser-known aspects of Elvis's emotional journey, using rare, previously unseen audio-visual content to provide a fresh perspective on his artistry and the pressures of fame.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "peaky blinders the immortal man": {
+    "synopsis": "本片为《浴血黑帮》系列电影，讲述托马斯·谢尔比在家族与黑帮权力面临新威胁时，如何在内忧外患中抉择自我与家族命运，陷入权力与良知的激烈冲突。",
+    "synopsis_en": "As a continuation of the Peaky Blinders saga, Thomas Shelby faces escalating threats to his family and criminal empire, forcing him into a tense struggle between power and conscience amidst internal and external turmoil.",
+    "recommendation": "▸ 基利安·墨菲再度出演托马斯，展现角色复杂内心与成长，表演层次丰富，张力十足。▸ 导演汤姆·哈珀以冷峻写实风格还原1920年代伯明翰黑帮世界，氛围沉浸，摄影与美术风格鲜明。▸ 剧情延续剧集的高水准，聚焦家庭、权力与信念矛盾，情感冲突强烈，适合原剧粉丝观赏。",
+    "recommendation_en": "▸ Cillian Murphy returns as Thomas, delivering a nuanced and gripping portrayal of the character’s psychological depth and evolution. ▸ Director Tom Harper’s gritty, realistic approach vividly recreates the 1920s Birmingham underworld, with striking cinematography and production design. ▸ The storyline maintains the series’ high standards, focusing on intense conflicts of family, power, and ideals—especially appealing to fans of the original show.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "a man and a woman": {
+    "synopsis": "一位寡妇和一位鳏夫在送孩子上学的途中偶然相识，彼此在过往的伤痛中挣扎，逐渐产生了复杂情感。他们需要面对内心创伤与现实责任的冲突，决定是否勇敢追求新生。",
+    "synopsis_en": "A widow and a widower, both haunted by past tragedies, meet by chance while taking their children to school. As their bond deepens, they must confront emotional scars and real-life obligations, struggling to decide whether to embrace a second chance at love.",
+    "recommendation": "▸ 克洛德·勒卢什以诗意的镜头语言和创新的非线性叙事，描绘出细腻的情感流动，开创了浪漫电影的新风格。▸ 阿努克·艾梅和让-路易斯·特兰蒂尼昂的表演极富层次，将角色内心的矛盾与柔情展现得真实动人。▸ 影片配乐极具辨识度，与画面完美融合，成为法式浪漫电影的经典标志。",
+    "recommendation_en": "▸ Claude Lelouch’s poetic visual style and innovative non-linear storytelling bring a delicate emotional texture, redefining the romance genre. ▸ Anouk Aimée and Jean-Louis Trintignant deliver deeply nuanced performances, authentically portraying the characters’ internal conflicts and tenderness. ▸ The memorable musical score seamlessly intertwines with the imagery, establishing an iconic soundscape emblematic of French romantic cinema.",
+    "awards": "1966戛纳电影节金棕榈奖、1967奥斯卡最佳外语片奖及最佳原创剧本奖",
+    "awards_en": "1966 Cannes Palme d'Or; 1967 Academy Award for Best Foreign Language Film and Best Original Screenplay"
+  },
+  "a nun in the city": {
+    "synopsis": "修女玛丽亚因命运所迫离开修道院，来到充满诱惑与复杂人性的城市。她在信仰与现实之间挣扎，面对道德抉择和人性的考验，内心不断动摇，寻找自我价值的答案。",
+    "synopsis_en": "Sister Maria is forced to leave her convent and enters a city full of temptation and moral ambiguity. She grapples with her faith while facing challenging choices, torn between her spiritual beliefs and the realities of urban life.",
+    "recommendation": "▸ 导演Marcello Pagliero以细腻现实主义手法，深刻刻画信仰与社会冲突，展现战后法国城市底层众生相。▸ 女主演Ginette Leclerc将修女的内心矛盾与挣扎表现得极具感染力，使人物形象立体生动。▸ 黑白摄影营造出冷峻氛围，增强了影片的情感张力和历史质感。",
+    "recommendation_en": "▸ Director Marcello Pagliero employs a realistic and nuanced approach to depict the clash between faith and society, offering a vivid portrait of postwar French urban life. ▸ Lead actress Ginette Leclerc delivers a compelling performance, bringing depth to the nun’s inner turmoil. ▸ The black-and-white cinematography intensifies the emotional tension and adds a strong historical atmosphere.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "case 137": {
+    "synopsis": "一名女侦探在调查一宗离奇谋杀案时，逐步揭开受害者和嫌疑人之间错综复杂的秘密，逐渐陷入道德与正义的两难抉择。案件表象下隐藏着更深层的人性黑暗。",
+    "synopsis_en": "A female detective delves into a perplexing murder case, uncovering intricate secrets linking the victim and suspects. As she gets closer to the truth, she faces a moral and ethical dilemma, revealing the complex darkness beneath the surface.",
+    "recommendation": "▸ 导演多米尼克·摩尔以细腻现实主义风格还原案件调查过程，营造出压抑紧张的氛围。▸ 女主演蕾娅·德吕克表现出色，将角色的矛盾心理与脆弱感呈现得极具层次感。▸ 影片在悬疑推进与社会议题的探讨间取得平衡，令观众持续思考正义与选择的界限。",
+    "recommendation_en": "▸ Director Dominik Moll employs a restrained, realistic style to immerse viewers in the investigation, crafting a tense and claustrophobic atmosphere. ▸ Lead actress Léa Drucker delivers a compelling, nuanced performance, embodying her character’s inner conflict and vulnerability. ▸ The film skillfully balances suspenseful storytelling with thought-provoking social themes, prompting audiences to reflect on justice and moral choices.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "colours of time": {
+    "synopsis": "在时间交错的城市中，主角意外获得了一种能感知过去与未来的能力，陷入了现实与幻觉的边界。他必须在逐渐失控的时间洪流中做出抉择，寻找自我与世界的联系。",
+    "synopsis_en": "In a city where time overlaps, the protagonist unexpectedly gains the ability to perceive both past and future, blurring the lines between reality and illusion. Facing an uncontrollable flow of time, he must make crucial choices to rediscover his own identity and connection to the world.",
+    "recommendation": "▸ 导演以极具个人风格的镜头语言展现时间主题，通过非线性叙事构建出独特的沉浸体验。▸ 影片色彩运用与美术设计极富想象力，将现实与幻想巧妙融合，带来强烈视觉冲击。▸ 主演在面对时间错乱时的心理层次表现细腻，极大提升了角色的复杂性与共鸣感。",
+    "recommendation_en": "▸ The director employs a highly distinctive visual style and nonlinear storytelling to explore the theme of time, creating an immersive narrative experience. ▸ Imaginative use of color and art direction seamlessly blends reality with fantasy, resulting in strong visual impact. ▸ The lead actor delivers a nuanced performance, convincingly portraying the psychological turmoil caused by temporal dislocation, adding depth and emotional resonance.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "guru": {
+    "synopsis": "一位以爱情顾问自居的男子，在帮助他人解决感情问题时，意外卷入与一位独立女性的情感拉锯战。面对自我怀疑与真实情感的挑战，他必须重新思考爱情的意义。",
+    "synopsis_en": "A self-proclaimed love guru finds himself entangled in an emotional tug-of-war with an independent woman while solving others' relationship issues. Confronted by self-doubt and genuine feelings, he must reconsider what love truly means.",
+    "recommendation": "▸ 两大巴基斯坦国民演员Humayun Saeed与Mahira Khan精彩对手戏，化学反应强烈，情感张力十足。▸ 导演Nadeem Baig以其细腻幽默的叙事风格，将都市情感困境以轻喜剧方式呈现，节奏明快，观赏性强。▸ 豆瓣评分7.6，口碑较高，适合喜欢轻松浪漫氛围的观众。",
+    "recommendation_en": "▸ Features powerhouse performances from Pakistani stars Humayun Saeed and Mahira Khan, whose on-screen chemistry creates engaging emotional tension. ▸ Director Nadeem Baig brings his trademark blend of nuanced humor and brisk pacing, offering a fresh comedic take on urban romance dilemmas. ▸ Strong Douban rating of 7.6 suggests positive word-of-mouth; ideal for those seeking a light-hearted, romantic film experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "little amélie or the character of rain": {
+    "synopsis": "小阿梅丽在比利时成长，因特殊的内心世界与现实格格不入。她努力理解家庭与自我之间的距离，面对成长中的孤独与认同困惑，逐渐寻找属于自己的情感出口。",
+    "synopsis_en": "Little Amélie grows up in Belgium, feeling disconnected from reality due to her unique inner world. She struggles to bridge the gap between her family and herself, navigating loneliness and the search for identity as she comes of age.",
+    "recommendation": "▸ 影片以细腻的动画风格展现成长与自我认同的主题，将儿童视角与现实主义巧妙融合，情感真挚动人。▸ 导演瓦拉德与韩莲巧妙运用色彩和光影，塑造诗意氛围，带来独特的视觉体验。▸ 女主角Loïse Charpentier的配音表现极具感染力，为角色赋予鲜明个性。",
+    "recommendation_en": "▸ The film uses delicate animation to explore themes of growth and self-identity, blending a child's perspective with realism for an emotionally resonant narrative. ▸ Directors Maïlys Vallade and Liane-Cho Han employ inventive use of color and lighting, creating a poetic visual atmosphere. ▸ Loïse Charpentier’s voice performance brings depth and authenticity to the protagonist, making her journey truly compelling.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the great arch": {
+    "synopsis": "本片聚焦一位建筑师在设计标志性建筑拱门过程中，如何在艺术理想与现实压力之间挣扎。他不仅面临职业声望的考验，还要处理团队内部的分歧与外界质疑。",
+    "synopsis_en": "The film follows an architect who, while designing a monumental arch, is torn between artistic ambition and real-world constraints. He faces both professional scrutiny and internal team conflicts, challenging his creative vision.",
+    "recommendation": "▸ 导演斯特凡·德穆斯蒂耶以细腻写实的风格，深入刻画主角心理变化和建筑行业的现实矛盾。▸ 克拉斯·邦和西德丝·巴贝特·克努森的表演极具张力，极大提升了角色的层次感和故事的情感厚度。▸ 影片利用建筑美学元素与光影调度，呈现出极具视觉冲击力的场景，凸显建筑与人物情感的呼应。",
+    "recommendation_en": "▸ Director Stéphane Demoustier’s nuanced, realistic style vividly captures the protagonist’s internal struggles and the complex realities of the architectural world. ▸ Claes Bang and Sidse Babett Knudsen deliver layered, intense performances that elevate the emotional resonance. ▸ Striking use of architectural aesthetics and lighting creates visually memorable scenes, highlighting the interplay between structure and emotion.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the musicians": {
+    "synopsis": "一位陷入创作瓶颈的中年音乐家，在意外邂逅一支性格迥异的乐队后，被迫重新审视自己的理想与现实，面对事业与家庭的双重压力，寻找自我救赎的道路。",
+    "synopsis_en": "A middle-aged musician experiencing a creative slump unexpectedly meets an unconventional band. Confronted with both career and family pressures, he must reconcile his ideals with reality while searching for personal redemption.",
+    "recommendation": "▸ 导演Grégory Magne以细腻的镜头语言呈现音乐行业的现实困境，将温情与幽默巧妙结合，展现人物内心转变。▸ 主演Valérie Donzelli与Frédéric Pierrot表演层次丰富，将中年焦虑与音乐激情诠释得真实动人，极具共鸣。",
+    "recommendation_en": "▸ Director Grégory Magne uses nuanced cinematography to authentically depict the struggles of the music world, blending warmth and humor while capturing the characters’ emotional evolution. ▸ Standout performances from Valérie Donzelli and Frédéric Pierrot convey middle-age anxiety and musical passion with remarkable depth and relatability.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the stranger": {
+    "synopsis": "一位年轻男子在小镇卷入一桩离奇犯罪事件，被迫面对自身过往与现实的道德困境。他在调查真相的过程中逐渐发现隐藏的黑暗，内心挣扎于正义与自保之间。",
+    "synopsis_en": "A young man becomes entangled in a mysterious crime in a small town, forcing him to confront his past and a complex moral dilemma. As he investigates the truth, he uncovers hidden darkness and is torn between seeking justice and self-preservation.",
+    "recommendation": "▸ 导演弗朗索瓦·欧容以细腻的镜头语言营造悬疑氛围，角色心理刻画真实而深刻。▸ 本杰明·沃赞与丽贝卡·马德尔的表演张力十足，将人物的矛盾与挣扎呈现得层次分明。▸ 影片在犯罪题材中加入社会议题探讨，让故事兼具娱乐性与思考价值。",
+    "recommendation_en": "▸ Director François Ozon crafts a suspenseful atmosphere with nuanced cinematography and deeply explores the protagonists' psychological states. ▸ Benjamin Voisin and Rebecca Marder deliver compelling performances, vividly conveying the characters' inner turmoil. ▸ The film integrates social issues into the crime genre, giving the story both entertainment value and thought-provoking depth.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "what is love": {
+    "synopsis": "影片聚焦几位不同背景的人物，在面对爱情、婚姻与信仰的矛盾选择中，努力寻找爱的真正含义。纪录片以真实访谈和生活片段，展现他们在亲密关系中的挣扎与成长。",
+    "synopsis_en": "The film follows individuals from diverse backgrounds as they grapple with choices about love, marriage, and faith. Through candid interviews and real-life moments, it explores their struggles and growth in intimate relationships.",
+    "recommendation": "▸ 以深入访谈与真实生活片段交织，呈现多元文化视角下对“爱”的本质探讨，内容细腻且具共鸣。▸ 导演Steve Bollman以敏锐观察力和温暖的镜头语言，捕捉人物情感流动，使观众能感同身受地思考自身的情感关系。",
+    "recommendation_en": "▸ The documentary weaves in-depth interviews with real-life scenes, offering a nuanced, multicultural exploration of what love truly means. The content resonates strongly with audiences. ▸ Director Steve Bollman’s sensitive direction and warm cinematography capture the emotional subtleties of each subject, inviting viewers to reflect on their own relationships.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "dance for your life": {
+    "synopsis": "一位身陷家庭与梦想抉择的年轻舞者，在逆境中为参加全国舞蹈大赛奋力拼搏。面对亲情羁绊与自我怀疑，他必须找到信念，突破重重阻碍，追寻属于自己的舞台。",
+    "synopsis_en": "A young dancer torn between family obligations and personal dreams struggles to compete in a national dance contest. Battling self-doubt and familial expectations, the protagonist must find inner strength to pursue his passion against the odds.",
+    "recommendation": "▸ 导演以极具感染力的镜头语言，细腻展现舞者的心理挣扎和成长历程，情感真实动人。▸ 舞蹈场面编排精妙，将街舞与现代舞巧妙融合，视觉冲击力强，极具观赏性。▸ 主演表演自然，情绪层次丰富，完美诠释角色的脆弱与坚韧，让观众产生共鸣。",
+    "recommendation_en": "▸ The director employs compelling visual storytelling to authentically depict the protagonist's emotional journey and coming-of-age, resonating deeply with viewers. ▸ Dance sequences are masterfully choreographed, blending street and contemporary styles for high visual impact. ▸ The lead actor delivers a nuanced performance, capturing both vulnerability and resilience, anchoring the film's emotional core.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "one battle after another 70mm": {
+    "synopsis": "一名意外卷入谜案的侦探，在错综复杂的人际关系和幽默荒诞的事件中步步为营，试图揭开真相。他面对的不仅是谜题本身，更是内心的挣扎与选择。",
+    "synopsis_en": "A detective unexpectedly drawn into a mysterious case must navigate tangled relationships and absurdly comic events, all while seeking the truth. The core conflict centers on his struggle between solving the mystery and confronting his own inner dilemmas.",
+    "recommendation": "▸ 保罗·托马斯·安德森以70毫米胶片拍摄，画面极致细腻，营造出独特的复古氛围和视觉冲击力。▸ 莱昂纳多·迪卡普里奥与西恩·潘同台飙戏，两位影帝在悬疑、幽默与戏剧张力之间转换自如，角色魅力强烈。▸ 故事融合悬疑、黑色幽默与人性剖析，剧情曲折，观众在紧张与轻松间反复切换，极具观赏性。",
+    "recommendation_en": "▸ Paul Thomas Anderson’s use of 70mm film delivers exquisite, richly detailed visuals with a distinct vintage atmosphere. ▸ Leonardo DiCaprio and Sean Penn deliver powerhouse performances, skillfully shifting between suspense, comedy, and drama, creating memorable characters. ▸ The film masterfully blends mystery, dark humor, and human insight, with a tightly woven plot that keeps viewers oscillating between tension and levity.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "ladies": {
+    "synopsis": "三位印度少女在保守小镇中，面对家庭和社会的双重束缚，勇敢追寻自我与梦想。她们在成长过程中彼此支持，努力突破传统观念的局限，探索属于自己的未来。",
+    "synopsis_en": "Three young Indian women in a conservative town struggle against family and societal restrictions as they pursue their dreams. Their journey of self-discovery and mutual support leads them to challenge traditional norms and seek their own paths.",
+    "recommendation": "▸ 导演Kiran Rao以细腻真实的笔触展现印度女性成长困境，情感真挚动人，社会议题直击现实。▸ 三位年轻演员表现自然，人物层次丰富，将少女的叛逆与脆弱演绎得淋漓尽致。▸ 影片在喜剧与戏剧之间平衡得当，既有轻松幽默也不乏深刻反思，适合多年龄层观众。",
+    "recommendation_en": "▸ Director Kiran Rao brings a nuanced and authentic portrayal of young Indian women navigating societal expectations, with emotionally resonant storytelling and sharp social commentary. ▸ The three leads deliver natural, layered performances, vividly capturing the complexities of adolescence. ▸ The film skillfully balances comedy and drama, offering both lighthearted moments and thought-provoking themes, making it appealing to a broad audience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "angel's egg": {
+    "synopsis": "在末日般荒凉的世界中，一名神秘少女守护着一个鸡蛋，与一位陌生男子的邂逅让她陷入信任与怀疑的抉择。两人探索失落文明的废墟，思索信仰与存在的意义。",
+    "synopsis_en": "In a desolate, post-apocalyptic landscape, a mysterious girl guards a precious egg. Her encounter with a nameless man forces her to grapple with trust and doubt as they wander through ruins, questioning faith and the very meaning of existence.",
+    "recommendation": "▸ 押井守导演以极简叙事和深邃意象打造纯粹的氛围体验，台词极少，留白丰富，鼓励观众自主解读。▸ 画风独特，融合哥特、宗教与超现实元素，背景细致，光影对比强烈，视觉冲击力极强。▸ 配乐由川井宪次操刀，营造出神秘而压抑的氛围，强化观影沉浸感。",
+    "recommendation_en": "▸ Director Mamoru Oshii employs minimalist storytelling and dense symbolism, creating an atmospheric experience with sparse dialogue and interpretative space for the viewer. ▸ The animation style uniquely blends gothic, religious, and surreal motifs, featuring meticulously detailed backgrounds and striking light-dark contrasts. ▸ Kenji Kawai's haunting score deepens the mysterious, oppressive mood, heightening immersion.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "if i had legs i'd kick you": {
+    "synopsis": "一位生活陷入低谷的女子，因一场意外邂逅了性格古怪的电台主持和乐观的邻居，三人被卷入一宗扑朔迷离的谜案，在追查真相的过程中各自面临人生选择与信任考验。",
+    "synopsis_en": "A woman at a crossroads befriends an eccentric radio host and an optimistic neighbor. The trio becomes entangled in a mysterious case, forcing each to confront personal dilemmas and issues of trust as they search for the truth.",
+    "recommendation": "▸ 导演Mary Bronstein以细腻现实主义风格，将悬疑、幽默与温情巧妙融合，营造出独特的戏剧张力。▸ Rose Byrne与Conan O'Brien跨界合作，展现出极具化学反应的表演，角色间对话充满机智与张力，令人耳目一新。▸ 影片节奏紧凑，通过巧妙叙事和反转不断增强悬疑感，获得烂番茄92%高分，广受影评人好评。",
+    "recommendation_en": "▸ Director Mary Bronstein’s nuanced realist style blends mystery, humor, and warmth, creating an engaging dramatic tension. ▸ The unexpected pairing of Rose Byrne and Conan O'Brien delivers standout performances with sharp, witty dialogue and palpable chemistry. ▸ Tight pacing and clever narrative twists maintain suspense throughout, reflected by a strong 92% Rotten Tomatoes score and critical acclaim.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "mulholland dr": {
+    "synopsis": "一位怀揣梦想的女演员在洛杉矶遇见失忆女子，两人试图揭开神秘身份的真相，却逐步陷入现实与幻觉交错的迷雾。影片以错综复杂的结构探索身份、欲望与梦境之间的界限。",
+    "synopsis_en": "An aspiring actress in Los Angeles meets an amnesiac woman. Together, they try to uncover the truth behind the woman’s lost identity, only to become entangled in a surreal web where reality and illusion blur. The film explores identity, ambition, and dreams through a labyrinthine narrative.",
+    "recommendation": "▸导演大卫·林奇用非线性叙事和梦境般的影像风格，将现实与幻想巧妙交织，挑战观众对故事真相的理解。▸娜奥米·沃茨的表演极具层次感，从天真到崩溃的情感转变令人印象深刻，成为她的突破性代表作。▸影片在悬疑和惊悚中融入好莱坞黑色幽默与讽刺，让观众在解谜中不断反思名利场的本质。",
+    "recommendation_en": "▸ Director David Lynch’s nonlinear storytelling and dreamlike visuals intricately weave reality with fantasy, challenging viewers’ perceptions of truth. ▸ Naomi Watts delivers a nuanced, transformative performance, marking her career breakthrough with an emotional range from innocence to breakdown. ▸ The film blends suspense with Hollywood satire and dark humor, inviting audiences to unravel mysteries while reflecting on the nature of ambition and illusion.",
+    "awards": "2001戛纳电影节最佳导演奖，2002奥斯卡最佳导演提名",
+    "awards_en": "2001 Cannes Best Director Award, 2002 Academy Award nominee for Best Director"
+  },
+  "nouvelle vague": {
+    "synopsis": "一位法国青年导演在美国独立电影圈追寻艺术理想，却因文化差异和创作瓶颈陷入身份和方向的双重迷茫。喜剧氛围下，主角尝试用新方式突破自我，碰撞出独特火花。",
+    "synopsis_en": "A young French filmmaker navigates the American indie scene, facing cultural clashes and creative stagnation. Amidst comedic situations, he grapples with his artistic identity and direction, seeking innovative ways to break through.",
+    "recommendation": "▸导演Richard Linklater以流畅自然的对话和日常化幽默展现人物成长，融合法美电影风格，带来新鲜观感。▸Guillaume Marbeck和Zoey Deutch的表演碰撞出灵动火花，角色关系张力十足。▸影片在豆瓣与烂番茄评分差异突出，说明其艺术探索兼具争议与创新，适合喜欢另类喜剧的观众。",
+    "recommendation_en": "▸ Richard Linklater’s signature conversational style blends French and American cinematic sensibilities, creating fresh comedic rhythms. ▸ Guillaume Marbeck and Zoey Deutch deliver lively performances with palpable chemistry and tension. ▸ The film’s contrasting Douban and Rotten Tomatoes ratings indicate innovative ambitions and artistic risks, appealing to fans of unconventional comedies.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "train dreams": {
+    "synopsis": "在美国西部铁路扩张时代，一位劳工在家庭悲剧与社会变迁的夹缝中艰难求生。他面对失落与孤独，努力寻找属于自己的归属，故事聚焦个人命运与时代洪流的冲突。",
+    "synopsis_en": "Set during the expansion of the American West, a laborer struggles with personal loss and isolation while society rapidly changes. The film centers on his quest for belonging amid the harsh realities of his era, exploring the tension between individual fate and historical forces.",
+    "recommendation": "▸ 克林特·本特利导演以细腻现实主义手法重现美国西部变迁，画面质感极高，营造出沉浸式历史氛围。▸ 乔尔·埃哲顿与克利夫顿·柯林斯的表演层次丰富，展现人物内心挣扎与情感波动，尤其在无言场景中极具感染力。▸ 豆瓣高分和烂番茄94%新鲜度，兼顾口碑与艺术水准，适合喜欢深度人性探索的观众。",
+    "recommendation_en": "▸ Clint Bentley’s realistic directorial approach vividly recreates the American West, with immersive, high-quality visuals and atmospheric detail. ▸ Joel Edgerton and Clifton Collins Jr. deliver nuanced performances, capturing the protagonist’s emotional turmoil and silent resilience. ▸ The film boasts strong critical acclaim, with a high Douban score and 94% on Rotten Tomatoes, appealing to fans of profound human drama.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the secret of kells": {
+    "synopsis": "年轻修道士布兰登在入侵者威胁修道院的危机中，被赋予协助完成神秘《凯尔斯之书》的重任。他必须跨越未知与恐惧，寻找信仰与勇气，守护文化与希望。",
+    "synopsis_en": "Young monk Brendan faces an imminent threat to his abbey and is tasked with helping finish the mystical Book of Kells. He must confront fears and venture into the unknown to protect hope and heritage.",
+    "recommendation": "▸ 影片以凯尔特艺术为灵感，画面风格独特，手绘动画极具美感和象征意义，极大增强了观赏体验。▸ 故事巧妙融合历史与神话，寓意深远，涉及信仰、成长与创造力。适合全年龄观众，尤其适合家庭观影。",
+    "recommendation_en": "▸ The film’s visual style, inspired by Celtic art, features distinctive hand-drawn animation, rich symbolism, and intricate details that make it a visual masterpiece. ▸ The narrative skillfully blends history and myth, exploring themes of faith, creativity, and coming-of-age, making it both profound and accessible for audiences of all ages, especially families.",
+    "awards": "2010年奥斯卡最佳动画长片提名",
+    "awards_en": "2010 Academy Award nominee for Best Animated Feature"
+  },
+  "perfect days": {
+    "synopsis": "本片讲述东京公厕清洁工平山的日常生活，在平凡琐事中逐步展现他内心的孤独与温暖，通过细腻观察和人物关系揭示都市生活下的情感困境。",
+    "synopsis_en": "The film follows Hirayama, a Tokyo public toilet cleaner, whose routine life uncovers layers of solitude and warmth. Through subtle interactions and understated moments, it explores the emotional challenges of urban existence without revealing plot twists.",
+    "recommendation": "▸导演温·温德斯以极简手法捕捉都市中孤独与温情，镜头语言静谧有力。▸主演役所广司以细腻表演诠释人物内心，展现情感深度，获国际影评高度认可。▸影片将日本都市与生活哲学融合，呈现独特审美体验，适合喜欢沉静、深思的观众。",
+    "recommendation_en": "▸ Wim Wenders employs minimalist direction and evocative cinematography to capture both loneliness and warmth in Tokyo. ▸ Kôji Yakusho delivers a nuanced, deeply affecting performance, earning critical acclaim for his portrayal. ▸ The film interweaves Japanese urban life and philosophical undertones, offering a contemplative cinematic experience suited for audiences seeking introspection.",
+    "awards": "2023戛纳电影节最佳男演员（役所广司）、金棕榈提名",
+    "awards_en": "2023 Cannes Best Actor (Kôji Yakusho), Palme d'Or nominee"
+  },
+  "2001 a space odyssey": {
+    "synopsis": "一项太空探索任务中，宇航员们在与先进人工智能HAL 9000协作时，逐渐陷入人机关系与生存危机的核心冲突。这部科幻经典聚焦人类与科技、宇宙未知之间的对抗与思考。",
+    "synopsis_en": "During a deep space mission, astronauts working alongside the advanced AI HAL 9000 encounter escalating tensions that threaten their survival. This sci-fi classic explores humanity’s relationship with technology and the mysteries of the cosmos.",
+    "recommendation": "▸ 斯坦利·库布里克以极富美学和前瞻性的视听语言，打造出极具沉浸感的太空体验，开创了科幻电影新纪元。▸ 影片以哲学性的叙事和视觉象征，深度探讨人类进化、人工智能与宇宙命运，启发无数后世导演。▸ 采用革命性的特效和配乐，至今仍被视为科幻与艺术电影的巅峰之作。",
+    "recommendation_en": "▸ Stanley Kubrick’s visionary direction and meticulous visual style create an immersive, groundbreaking space odyssey that redefined sci-fi cinema. ▸ The film’s philosophical narrative and symbolic imagery probe themes of human evolution, artificial intelligence, and cosmic destiny, influencing generations of filmmakers. ▸ Its revolutionary special effects and iconic use of classical music remain benchmarks for both science fiction and art films.",
+    "awards": "1969年奥斯卡最佳视觉效果奖",
+    "awards_en": "1969 Academy Award for Best Visual Effects"
+  },
+  "the blues brothers": {
+    "synopsis": "杰克刚出狱，和弟弟艾尔伍德重组布鲁斯兄弟乐队，为了拯救孤儿院，他们踏上一段疯狂的筹款之旅，途中遭遇执法部门和各路追捕。",
+    "synopsis_en": "Jake is released from prison and, with his brother Elwood, reunites their band to save the orphanage where they grew up. Their mission turns into a wild adventure as they face relentless pursuers and escalating obstacles.",
+    "recommendation": "▸ 影片融合音乐、喜剧与动作，导演约翰·兰迪斯以极富节奏感的剪辑和夸张场面调度，创造出独特风格。▸ 约翰·贝鲁西和丹·艾克罗伊德默契十足，配合詹姆斯·布朗等音乐传奇，现场表演极具感染力，经典乐曲贯穿全片，极大提升观影乐趣。",
+    "recommendation_en": "▸ The film blends musical numbers, comedy, and action with John Landis's energetic direction and over-the-top set pieces, creating a distinctive style. ▸ John Belushi and Dan Aykroyd deliver iconic performances, while cameos by music legends like James Brown and thrilling live performances of classic blues and soul songs elevate the entertainment value.",
+    "awards": "",
+    "awards_en": ""
   }
 }
