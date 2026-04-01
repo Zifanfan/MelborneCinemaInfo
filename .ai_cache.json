@@ -566,5 +566,53 @@
     "recommendation_en": "▸ Buster Keaton directs and stars, blending silent comedy with action and adventure, creating inventive physical gags and masterful visual storytelling. ▸ The film’s train chase sequences are legendary, utilizing real locomotives and practical stunts that set a high bar for action cinema. ▸ Its humorous treatment of wartime tension, mixed with heartfelt moments, makes it appealing to audiences of all ages.",
     "awards": "",
     "awards_en": ""
+  },
+  "annie hall": {
+    "synopsis": "喜剧演员艾尔维·辛格与安妮·霍尔在纽约相识，相互吸引却因性格差异和生活观念发生冲突，两人试图寻找爱情与自我之间的平衡。",
+    "synopsis_en": "Comedian Alvy Singer meets Annie Hall in New York. Drawn to each other but challenged by personality differences and life philosophies, they struggle to balance love and personal identity.",
+    "recommendation": "▸ 伍迪·艾伦自编自导自演，风格独特，充满机智对白和幽默自嘲，巧妙打破第四面墙。▸ 戴安·基顿的表演自然生动，角色形象深入人心，服装造型成为70年代时尚标志。▸ 影片以非线性叙事展现都市情感困境，深度探讨爱情、成长与自我认知。",
+    "recommendation_en": "▸ Woody Allen’s signature direction and performance deliver witty dialogues, meta-humor, and fourth-wall breaks, creating a unique comedic style. ▸ Diane Keaton gives a natural, iconic performance; her character’s style became a 1970s fashion phenomenon. ▸ The film’s nonlinear narrative explores urban relationships and delves into themes of love, self-discovery, and personal growth.",
+    "awards": "1978年奥斯卡最佳影片、最佳导演、最佳女主角、最佳原创剧本奖",
+    "awards_en": "1978 Academy Awards: Best Picture, Best Director, Best Actress, Best Original Screenplay"
+  },
+  "consume me": {
+    "synopsis": "一位身陷自我怀疑的年轻艺术家在现实与幻想之间挣扎，面对外界压力和内心创作欲望的冲突，逐渐逼近心理极限，寻找自我救赎的出路。",
+    "synopsis_en": "A young artist battling self-doubt struggles to distinguish reality from fantasy as external pressures and internal creative desires clash, pushing them toward a psychological breaking point in search of self-redemption.",
+    "recommendation": "▸ 导演以极具表现力的视听语言展现主角内心世界，利用光影与镜头运动营造出梦境般氛围。▸ 主演精准细腻地诠释焦虑与挣扎，使角色真实感人，情感张力强烈。▸ 剧本结构紧凑，巧妙融合悬疑与心理描写，观众始终保持高度关注。",
+    "recommendation_en": "▸ The director vividly visualizes the protagonist's inner turmoil using expressive cinematography and lighting, creating a dreamlike atmosphere. ▸ The lead actor delivers an intensely nuanced performance, authentically portraying anxiety and struggle. ▸ The screenplay is tightly structured, skillfully blending elements of suspense with psychological depth to maintain audience engagement.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "27a": {
+    "synopsis": "故事讲述了一名因轻罪入狱的中年男子遭遇精神崩溃，被送往精神病院后，面对体制冷漠与压抑环境，努力寻求自由与尊严的艰难历程，展现个人与体制的尖锐冲突。",
+    "synopsis_en": "A middle-aged man imprisoned for a minor offense suffers a breakdown and is sent to a mental institution, where he confronts an indifferent system and oppressive environment, struggling to reclaim his dignity and freedom in the face of institutional conflict.",
+    "recommendation": "▸ 现实主义风格强烈，细腻展现70年代澳大利亚监狱与精神病院的真实环境，令人深思社会体制问题。▸ Robert McDarra以极具感染力的表演呈现主角心理崩溃与内心挣扎，极具代入感和情感冲击力。▸ 导演Esben Storm以紧凑节奏与冷峻镜头，营造出压抑、紧张的氛围，强化主题表达。",
+    "recommendation_en": "▸ The film’s realistic style vividly depicts the harsh realities of 1970s Australian prisons and mental institutions, provoking critical reflection on systemic issues. ▸ Robert McDarra delivers a deeply affecting performance, portraying the protagonist’s psychological unraveling and inner turmoil with authenticity and emotional depth. ▸ Director Esben Storm’s taut pacing and stark cinematography create a tense, claustrophobic atmosphere that amplifies the film’s central themes.",
+    "awards": "1979年澳大利亚电影学院奖最佳影片、最佳男主角",
+    "awards_en": "1979 Australian Film Institute Award for Best Film and Best Actor"
+  },
+  "citizen kane": {
+    "synopsis": "传媒大亨查尔斯·凯恩在极致权力与财富中迷失自我，不断追寻内心空缺的意义。他的成功背后隐藏着复杂的人性冲突和无法弥补的遗憾，人生轨迹渐渐偏离初衷。",
+    "synopsis_en": "Media tycoon Charles Kane, amidst immense power and wealth, grapples with deep personal emptiness. His journey exposes the struggle between ambition and genuine fulfillment, revealing complex human conflict as he drifts further from his original ideals.",
+    "recommendation": "▸ 奥逊·威尔斯以大胆创新的叙事结构和非线性时间线彻底革新了影像表达，开创了现代电影语言。▸ 极具表现力的摄影与光影运用，深焦镜头、镜头调度和场面调度成为电影史的经典范例。▸ 主演奥逊·威尔斯展现出强烈个人魅力与多层次情感，使角色极具张力和共鸣。",
+    "recommendation_en": "▸ Orson Welles revolutionizes cinematic language with innovative narrative structure and non-linear storytelling, influencing generations of filmmakers. ▸ The film's expressive cinematography—especially deep focus shots, lighting, and complex mise-en-scène—remain benchmarks in film history. ▸ Welles’s own performance as Kane is magnetic and emotionally nuanced, bringing extraordinary depth to the character.",
+    "awards": "1942奥斯卡最佳原创剧本奖；1942奥斯卡最佳影片等9项提名",
+    "awards_en": "1942 Academy Award for Best Original Screenplay; 9 Oscar nominations including Best Picture"
+  },
+  "raiders of the lost ark": {
+    "synopsis": "考古学家印第安纳·琼斯受命寻找传说中的圣物，在与纳粹势力的较量中，他不仅要面对致命机关和险恶敌人，还要权衡责任与个人信念。这是印第安纳·琼斯系列的首部作品。",
+    "synopsis_en": "Archaeologist Indiana Jones is tasked with finding a legendary artifact before it falls into the hands of the Nazis. Facing deadly traps and ruthless enemies, he must balance personal convictions with a dangerous mission. This is the first film of the Indiana Jones series.",
+    "recommendation": "▸ 史蒂文·斯皮尔伯格以极富节奏感和创新性的动作场面，开创了现代冒险电影的新标准，许多场景已成经典。▸ 哈里森·福特以独特魅力和幽默感塑造了印第安纳·琼斯这一银幕传奇，角色辨识度极高。▸ 影片采用实地取景与精妙特效结合，营造出紧张刺激与异国情调兼具的氛围。",
+    "recommendation_en": "▸ Steven Spielberg's masterful direction sets a high bar for adventure films, with innovative action sequences and expertly paced storytelling that became genre-defining. ▸ Harrison Ford delivers an iconic performance, blending charm, wit, and physicality to create one of cinema’s most memorable heroes. ▸ The film’s use of practical effects, on-location shooting, and dynamic set pieces creates immersive tension and a rich sense of exotic adventure.",
+    "awards": "1982年奥斯卡金像奖最佳艺术指导、剪辑、音效、视觉效果、音响五项获奖，最佳影片、导演等提名",
+    "awards_en": "1982 Academy Awards winner for Best Art Direction, Editing, Sound, Visual Effects, and Sound Effects Editing; nominated for Best Picture, Director, and more"
+  },
+  "the good the bad and the ugly": {
+    "synopsis": "美国内战期间，三位性格迥异的赏金猎人因一笔隐藏的黄金展开激烈角逐。在充满背叛与试探的西部荒野中，他们各怀心思，相互算计，命运交错，最终走向无法避免的对决。",
+    "synopsis_en": "During the American Civil War, three bounty hunters—each with their own motives—embark on a tense quest for hidden gold. As alliances shift and betrayals loom, their fates intertwine in a high-stakes game across the unforgiving Western landscape.",
+    "recommendation": "▸ 导演赛尔乔·莱昂内以极具风格化的长镜头与紧张配乐，塑造出西部片的经典氛围，影响深远。▸ 克林特·伊斯特伍德等主演的精彩对手戏，展现人物复杂心理和微妙关系。▸ 恩尼奥·莫里康内创作的配乐成为西部电影的标志性旋律，为影片增添史诗感。",
+    "recommendation_en": "▸ Director Sergio Leone’s signature long takes and operatic tension redefine the Western genre, delivering a visually striking and atmospheric experience. ▸ The nuanced performances from Clint Eastwood, Eli Wallach, and Lee Van Cleef elevate the psychological interplay and shifting alliances among the leads. ▸ Ennio Morricone’s iconic score has become synonymous with Western cinema, amplifying the film’s epic and suspenseful tone.",
+    "awards": "",
+    "awards_en": ""
   }
 }

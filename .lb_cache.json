@@ -510,5 +510,45 @@
   "the muppet movie": {
     "score": 4.05,
     "url": "https://letterboxd.com/film/the-muppet-movie/"
+  },
+  "annie hall": {
+    "score": 4.02,
+    "url": "https://letterboxd.com/film/annie-hall/"
+  },
+  "pellegrinis": {
+    "score": null,
+    "url": ""
+  },
+  "consume me": {
+    "score": null,
+    "url": ""
+  },
+  "27a": {
+    "score": null,
+    "url": ""
+  },
+  "going down": {
+    "score": null,
+    "url": ""
+  },
+  "citizen kane": {
+    "score": 4.19,
+    "url": "https://letterboxd.com/film/citizen-kane/"
+  },
+  "the exorcist": {
+    "score": 3.95,
+    "url": "https://letterboxd.com/film/the-exorcist/"
+  },
+  "raiders of the lost ark": {
+    "score": 4.15,
+    "url": "https://letterboxd.com/film/raiders-of-the-lost-ark/"
+  },
+  "hands across the table": {
+    "score": 3.49,
+    "url": "https://letterboxd.com/film/hands-across-the-table/"
+  },
+  "the good the bad and the ugly": {
+    "score": 4.51,
+    "url": "https://letterboxd.com/film/the-good-the-bad-and-the-ugly/"
   }
 }
