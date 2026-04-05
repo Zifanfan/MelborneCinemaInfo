@@ -638,5 +638,45 @@
   "tenet": {
     "score": 3.44,
     "url": "https://letterboxd.com/film/tenet/"
+  },
+  "beauty and the beast": {
+    "score": 3.22,
+    "url": "https://letterboxd.com/film/beauty-and-the-beast-2017/"
+  },
+  "notorious": {
+    "score": 4.09,
+    "url": "https://letterboxd.com/film/notorious/"
+  },
+  "anemone": {
+    "score": 2.79,
+    "url": "https://letterboxd.com/film/anemone-2025/"
+  },
+  "frankenstein": {
+    "score": 3.82,
+    "url": "https://letterboxd.com/film/frankenstein-2025/"
+  },
+  "the breadwinner": {
+    "score": 4.09,
+    "url": "https://letterboxd.com/film/the-breadwinner/"
+  },
+  "met opera 2025-26 tristan und isolde": {
+    "score": null,
+    "url": ""
+  },
+  "true stories": {
+    "score": 4.08,
+    "url": "https://letterboxd.com/film/true-stories/"
+  },
+  "willy wonka": {
+    "score": null,
+    "url": ""
+  },
+  "dreams": {
+    "score": 2.69,
+    "url": "https://letterboxd.com/film/dreams-2025/"
+  },
+  "the muppets": {
+    "score": 3.61,
+    "url": "https://letterboxd.com/film/the-muppets/"
   }
 }

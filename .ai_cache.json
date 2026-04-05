@@ -702,5 +702,53 @@
     "recommendation_en": "▸ Christopher Nolan’s signature nonlinear storytelling and minimal dialogue create intense, immersive tension throughout. ▸ Hans Zimmer’s score and Hoyte van Hoytema’s cinematography combine for a striking audiovisual experience. ▸ Extensive use of practical effects and minimal CGI delivers remarkable realism, authentically recreating the historic event.",
     "awards": "2018奥斯卡最佳剪辑、最佳音效剪辑、最佳混音奖；提名最佳影片、最佳导演等8项",
     "awards_en": "2018 Academy Awards: Best Editing, Best Sound Editing, Best Sound Mixing; nominated for Best Picture, Best Director, and 8 total nominations"
+  },
+  "notorious": {
+    "synopsis": "美国女主角艾丽西亚被招募参与间谍任务，需潜入纳粹组织，面临信任与背叛的双重考验。她与特工戴夫发展复杂情感关系，任务和个人情感发生激烈冲突。",
+    "synopsis_en": "Alicia, an American woman, is recruited for a covert mission infiltrating a Nazi group. She faces a dangerous web of trust and betrayal, as her relationship with agent Devlin becomes entangled with the risks of her assignment.",
+    "recommendation": "▸希区柯克以精妙的悬疑节奏和镜头语言，营造紧张氛围，导演手法极具风格。▸英格丽·褒曼与加里·格兰特的对手戏展现深层次人物心理，情感与悬疑交织，表演极具张力。▸影片以创新的长镜头与构图著称，酒窖场景成为影史经典，视觉表现力强。",
+    "recommendation_en": "▸ Hitchcock's masterful suspense pacing and visual storytelling create a tense, stylish atmosphere throughout. ▸ Ingrid Bergman and Cary Grant deliver nuanced performances, with emotionally charged chemistry blending romance and intrigue. ▸ The film is renowned for inventive cinematography, especially the iconic wine cellar sequence, showcasing remarkable use of long takes and composition.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the breadwinner": {
+    "synopsis": "一位性格内向的父亲在家庭经济压力下，被迫踏上一系列啼笑皆非的赚钱冒险。他在平凡生活与自我价值之间挣扎，如何在责任与梦想中做出选择成为核心冲突。",
+    "synopsis_en": "An introverted father faces mounting financial pressures and embarks on a series of comedic money-making schemes. Torn between family responsibilities and his own aspirations, he must navigate the chaos to find balance and meaning.",
+    "recommendation": "▸导演Eric Appel擅长将生活琐事转化为幽默情节，本片节奏明快，笑点密集，风格轻松。▸Nate Bargatze以其真实自然的表演，赋予角色温暖和层次感，搭档Mandy Moore、Colin Jost，化学反应十足。▸影片以家庭与自我成长为主题，兼具共鸣与思考，适合都市观众观影。",
+    "recommendation_en": "▸ Director Eric Appel transforms everyday struggles into sharp, relatable comedy, maintaining brisk pacing and clever humor throughout. ▸ Nate Bargatze delivers an authentic, layered performance, with Mandy Moore and Colin Jost providing strong chemistry and comedic timing. ▸ The film thoughtfully explores family and personal growth, resonating with modern urban audiences.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "13 days 13 nights": {
+    "synopsis": "一名年轻侦探在巴黎卷入一桩离奇失踪案，必须在13天13夜内揭开真相。随着调查深入，他被卷入道德抉择与个人信念的冲突，案件背后隐藏着更大的阴谋。",
+    "synopsis_en": "A young detective in Paris becomes entangled in a mysterious disappearance case, forced to uncover the truth within 13 days and nights. As the investigation deepens, he faces a moral dilemma and discovers a far-reaching conspiracy.",
+    "recommendation": "▸ 导演Martin Bourboulon以紧凑节奏和冷峻风格营造悬疑氛围，成功将巴黎夜色与心理张力结合。▸ Sina Parvaneh与Roschdy Zem的对手戏展现复杂人性，表演层次丰富，情感冲突张力十足。▸ 影片摄影运用大量低光和都市空间，增强了紧张感和视觉美感。",
+    "recommendation_en": "▸ Director Martin Bourboulon crafts a suspenseful atmosphere with a brisk pace and a cold, urban style, blending Parisian nights with psychological tension. ▸ The performances by Sina Parvaneh and Roschdy Zem stand out for their emotional depth and nuanced portrayal of conflicted characters. ▸ Cinematography uses low light and urban settings to heighten both tension and visual appeal.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the muppets": {
+    "synopsis": "《布偶历险记》（2011）是布偶系列电影。讲述主角与朋友们联手，试图拯救布偶剧院免遭恶意企业收购的故事。面对重重阻碍，他们必须团结一心找回昔日光彩。",
+    "synopsis_en": "The Muppets (2011) is a revival of the classic franchise. The main characters must unite to save the beloved Muppet Theater from a greedy businessman. Facing tough challenges, they rediscover their bond and strive to restore the Muppets' glory.",
+    "recommendation": "▸ 影片以怀旧与创新结合的方式重塑经典布偶形象，适合新老观众共赏。▸ 杰森·席格尔与艾米·亚当斯展现出色喜剧表现，与布偶角色互动自然，情感真挚。▸ 歌舞片段设计巧妙，音乐元素为故事增添温暖氛围，极具感染力。",
+    "recommendation_en": "▸ The film skillfully blends nostalgia with fresh humor, making the Muppets appealing to both longtime fans and newcomers. ▸ Jason Segel and Amy Adams deliver charming comedic performances, seamlessly interacting with the puppets. ▸ The musical numbers are cleverly staged, with original songs that add warmth and emotional resonance to the story.",
+    "awards": "2012年奥斯卡最佳原创歌曲奖",
+    "awards_en": "2012 Academy Award for Best Original Song"
+  },
+  "dreams": {
+    "synopsis": "一位中年退役运动员在生活的低谷中挣扎，试图重新定义自我价值。他与家人及昔日队友的关系不断变化，面对现实与梦想的冲突，揭示内心的渴望和困惑。",
+    "synopsis_en": "A middle-aged former athlete grapples with personal setbacks while seeking to redefine his sense of worth. As relationships with family and old teammates shift, he confronts the tension between reality and aspiration, revealing deep inner longing and confusion.",
+    "recommendation": "▸导演Clint Bentley以细腻写实的镜头语言呈现主人公的心理状态，营造出极具代入感的情绪氛围。▸Joel Edgerton与Clifton Collins Jr.的对手戏充满张力，两位主演以精湛表演刻画人物复杂情感。▸影片获得烂番茄94%高分，口碑极佳，适合喜欢深度剧情的观众。",
+    "recommendation_en": "▸ Director Clint Bentley employs nuanced, realistic cinematography to immerse viewers in the protagonist’s emotional landscape. ▸ Joel Edgerton and Clifton Collins Jr. deliver gripping performances, skillfully portraying the complexity of their characters’ inner turmoil. ▸ With a 94% Rotten Tomatoes score, the film has garnered exceptional acclaim, making it a strong choice for fans of thoughtful drama.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "willy wonka": {
+    "synopsis": "贫困少年查理获得参观奇妙巧克力工厂的机会，与其他孩子一同进入谜团重重的世界。他必须面对工厂主威利·旺卡的考验，探索童真与欲望间的抉择。这是经典奇幻故事的首次电影改编。",
+    "synopsis_en": "A poor boy named Charlie wins a rare chance to visit Willy Wonka’s mysterious chocolate factory alongside other children. He faces strange tests from the enigmatic Wonka, confronting themes of innocence and temptation in this classic fantasy’s first film adaptation.",
+    "recommendation": "▸吉恩·怀尔德以独特幽默和深刻层次塑造了威利·旺卡，表演风格兼具怪诞与温情。▸电影融合奇幻美术、色彩斑斓的布景和音乐剧元素，营造梦幻童话氛围。▸导演梅尔·斯图亚特巧妙利用镜头与节奏，将原著精神和社会隐喻精准传达，适合亲子观影。",
+    "recommendation_en": "▸ Gene Wilder delivers a nuanced and eccentric performance as Willy Wonka, blending warmth and oddity. ▸ The film’s vibrant set design, whimsical art direction, and musical numbers create a captivating fairy-tale atmosphere. ▸ Director Mel Stuart skillfully adapts the source material, using inventive cinematography and pacing to evoke both the story’s moral undertones and playful charm—ideal for family viewing.",
+    "awards": "",
+    "awards_en": ""
   }
 }
