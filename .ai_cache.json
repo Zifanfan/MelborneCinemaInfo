@@ -750,5 +750,29 @@
     "recommendation_en": "▸ Gene Wilder delivers a nuanced and eccentric performance as Willy Wonka, blending warmth and oddity. ▸ The film’s vibrant set design, whimsical art direction, and musical numbers create a captivating fairy-tale atmosphere. ▸ Director Mel Stuart skillfully adapts the source material, using inventive cinematography and pacing to evoke both the story’s moral undertones and playful charm—ideal for family viewing.",
     "awards": "",
     "awards_en": ""
+  },
+  "the producers": {
+    "synopsis": "一位走投无路的百老汇制作人与神经质的会计师，意外策划了一场注定失败的音乐剧，试图利用失败来获利。两人在荒谬的计划中逐渐陷入困境，引发连串笑料。",
+    "synopsis_en": "A desperate Broadway producer and a neurotic accountant hatch a scheme to profit by creating a guaranteed flop. Their absurd plan leads to escalating chaos and unexpected consequences, as they grapple with their own ambitions and fears.",
+    "recommendation": "▸ 影片由喜剧大师梅尔·布鲁克斯执导，风格夸张且节奏明快，台词机智，笑点密集，极具个人特色。▸ 零·莫斯泰尔与吉恩·怀尔德的表演极富化学反应，将角色的荒诞与紧张完美展现，喜剧张力十足。▸ 本片为布鲁克斯导演的经典代表作，深刻影响后世喜剧电影，并多次被翻拍和改编为音乐剧。",
+    "recommendation_en": "▸ Directed by comedy legend Mel Brooks, the film features his signature rapid pacing, sharp dialogue, and bold satirical style. ▸ Zero Mostel and Gene Wilder deliver outstanding performances with palpable chemistry, perfectly capturing their characters’ absurdity and neuroses. ▸ As a seminal Brooks work, it has influenced generations of comedies and inspired multiple stage and screen adaptations.",
+    "awards": "1969奥斯卡最佳原著剧本奖、最佳男配角提名",
+    "awards_en": "1969 Academy Award for Best Original Screenplay, Best Supporting Actor nominee"
+  },
+  "princess mononoke nausicaa of the valley of the": {
+    "synopsis": "在人类与自然冲突加剧的时代，主角为阻止毁灭性的争斗，踏上旅程，试图调和人类与森林生灵的矛盾。她在动荡中不断挣扎，探索和平共处的可能性。",
+    "synopsis_en": "Set in an era of escalating conflict between humans and nature, the protagonist embarks on a journey to prevent destruction and mediate between humanity and the forest spirits. She struggles to find balance and a path toward peaceful coexistence.",
+    "recommendation": "▸ 宫崎骏以深厚的世界观与细腻笔触，打造出高度复杂的人与自然关系，影片兼具史诗感与哲思。▸ 画面极致唯美，手绘动画展现出丰富生态细节，每一帧都充满生命力。▸ 配乐由久石让操刀，情感渲染力极强，极大增强了观影沉浸感。",
+    "recommendation_en": "▸ Hayao Miyazaki crafts a richly layered world, exploring the complex dynamics between humans and nature with philosophical depth and epic scale. ▸ The hand-drawn animation is visually stunning, brimming with ecological detail and vibrancy. ▸ Joe Hisaishi's evocative score heightens the emotional impact and immersiveness of the film.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the big sleep": {
+    "synopsis": "私家侦探菲利普·马洛受雇调查富豪家庭的勒索案，却被卷入复杂的谜团与危险之中。在层层谎言和诱惑下，他必须揭开真相，保护自己和委托人。",
+    "synopsis_en": "Private detective Philip Marlowe is hired to handle a blackmail case involving a wealthy family, only to find himself entangled in a web of lies, danger, and intrigue. He must navigate deception to uncover the truth and protect his client.",
+    "recommendation": "▸ 亨弗莱·鲍嘉与劳伦·白考尔的银幕化学反应极为出色，被誉为影史经典搭档，火花四射。▸ 霍华德·霍克斯导演以紧凑节奏和复杂叙事打造极致黑色电影氛围，将悬疑与情色、暴力巧妙结合，层层反转令人目不暇接。▸ 电影对白机智锋利，风格标志性，成为犯罪悬疑片范本，对后世影响深远。",
+    "recommendation_en": "▸ The on-screen chemistry between Humphrey Bogart and Lauren Bacall is legendary, making their performances magnetic and memorable. ▸ Director Howard Hawks crafts a quintessential film noir with intricate plotting, sharp pacing, and an atmosphere thick with danger and seduction. ▸ The film’s witty, rapid-fire dialogue and layered narrative set a benchmark for detective thrillers, influencing generations of crime cinema.",
+    "awards": "",
+    "awards_en": ""
   }
 }
