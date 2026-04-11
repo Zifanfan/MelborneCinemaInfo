@@ -870,5 +870,53 @@
     "recommendation_en": "▸ Brian De Palma crafts an atmosphere of mounting dread, using inventive camerawork and editing—especially in the iconic prom sequence, now a staple of horror cinema. ▸ Sissy Spacek delivers a riveting, nuanced performance, capturing both Carrie's vulnerability and her explosive transformation, lending the film lasting emotional impact.",
     "awards": "1977年奥斯卡最佳女主角、最佳女配角提名",
     "awards_en": "1977 Academy Award nominations for Best Actress and Best Supporting Actress"
+  },
+  "gummo": {
+    "synopsis": "影片聚焦俄亥俄州小镇两名少年，龙卷风灾后挣扎于贫困与孤独，试图在破碎家庭和冷漠环境中寻找归属与意义，展现青少年边缘生活困境。",
+    "synopsis_en": "Set in a tornado-ravaged Ohio town, two teenage boys grapple with poverty and isolation. As they navigate broken families and an indifferent community, they search for belonging and meaning amid bleak surroundings.",
+    "recommendation": "▸ 导演哈莫尼·科林采用极具实验性的非线性叙事和纪录片式影像风格，真实捕捉美国底层边缘群体的生存状态。▸ 片中大量非职业演员参与，表演自然、原生态，营造出极强的现实感和荒诞氛围。▸ 影片对社会冷漠和家庭解体的刻画大胆直白，挑战观众对“美式生活”的刻板印象。",
+    "recommendation_en": "▸ Harmony Korine delivers an experimental, non-linear narrative and documentary-style visuals, authentically portraying marginalized American communities. ▸ The use of mostly non-professional actors adds rawness and realism, creating a surreal yet believable atmosphere. ▸ The film's unflinching depiction of social alienation and family breakdown boldly challenges conventional notions of American life.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "polyester": {
+    "synopsis": "富家主妇弗朗辛的生活陷入混乱，丈夫出轨、子女叛逆，还要应对怪异邻居和社会压力，她渴望获得真正的幸福与安宁。",
+    "synopsis_en": "Francine, an upper-class housewife, faces chaos as her marriage unravels, her children rebel, and bizarre neighbors disrupt her life. Surrounded by dysfunction, she desperately seeks genuine happiness and peace.",
+    "recommendation": "▸ 约翰·沃特斯以恶趣味和讽刺手法解构美国郊区家庭，通过夸张风格和大胆幽默展现社会伪善。▸ Divine以极具冲击力的表演诠释主角，将角色的脆弱与荒诞无缝融合，成为本片最大亮点。▸ 本片采用“气味电影”概念，观众可通过特殊卡片体验互动式观影，极具新意与趣味。",
+    "recommendation_en": "▸ John Waters deconstructs suburban life with outrageous dark humor and camp, offering a sharp satire of American family values. ▸ Divine delivers a powerhouse performance, blending vulnerability and absurdity, making the protagonist unforgettable. ▸ The film uniquely employs the 'Odorama' scent card, inviting audiences to interact and smell along, a groundbreaking and playful cinematic experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "lust in the dust": {
+    "synopsis": "一位神秘牛仔和风情万种的女人在美国西部小镇邂逅，为了寻宝卷入荒诞混乱的争斗中。他们必须面对贪婪与背叛，寻找各自的生存之道。",
+    "synopsis_en": "A mysterious cowboy and a seductive woman cross paths in a dusty Western town and are drawn into a chaotic treasure hunt. As greed and betrayal rise, they must each find a way to survive the escalating madness.",
+    "recommendation": "▸ 导演Paul Bartel独具风格的黑色幽默，将西部片元素与恶搞喜剧巧妙融合，呈现出另类荒诞的观感。▸ Divine与Tab Hunter的火花四射对手戏，表演张力十足，极具反差感和娱乐性，成就本片的强烈个人色彩。",
+    "recommendation_en": "▸ Director Paul Bartel’s signature dark humor fuses Western tropes with outrageous camp comedy, creating a deliberately offbeat, irreverent tone. ▸ The chemistry between Divine and Tab Hunter stands out, with their contrasting performances driving much of the film’s unique, over-the-top energy and cult appeal.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "pink flamingos": {
+    "synopsis": "一位极具争议的地下人物Divine因被认为是“世界上最肮脏的人”而受到挑战，她与对手展开一场荒诞又激烈的较量，核心冲突在于权力、道德底线和荒诞欲望的碰撞。",
+    "synopsis_en": "Divine, an infamous underground figure, is challenged for her title as 'the filthiest person alive.' The film centers on her outrageous rivalry with challengers, exploring boundaries of morality and desire in a darkly comedic context.",
+    "recommendation": "▸导演John Waters以极端讽刺和大胆视觉风格著称，本片将低俗美学与社会批判融为一体，创造极具冲击力的观感。▸主演Divine的表演极具张力和挑战性，塑造了影史上独一无二的角色。▸影片以超越常规的黑色幽默和荒诞情节，成为美国地下电影的重要里程碑。",
+    "recommendation_en": "▸ John Waters' direction fuses camp aesthetics with biting social satire, creating a provocative and visually striking experience. ▸ Divine delivers an unforgettable, fearless performance that defines cult cinema. ▸ The film's boundary-pushing black humor and absurd plot established it as a landmark of American underground film.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "drag bingo": {
+    "synopsis": "在一个充满活力的小镇，主角们参加了一场别出心裁的变装宾果之夜，却意外卷入一连串离奇恐怖事件，必须揭开谜团才能自保。这部电影融合了喜剧与悬疑元素，带来紧张又荒诞的观影体验。",
+    "synopsis_en": "In a lively small town, the protagonists attend a quirky drag bingo night that takes a sinister turn, forcing them to unravel a series of bizarre and terrifying events to survive. The film blends comedy, suspense, and horror for a tense yet absurd adventure.",
+    "recommendation": "▸ Lizzy Caplan与John Stamos的精湛表演，为角色注入独特魅力和幽默感。▸ 导演Raviv Ullman与Greg Yagolnitzer巧妙融合喜剧与恐怖悬疑，用色彩丰富的视听风格营造出前所未有的氛围反差。▸ 烂番茄93%高分证明影片在观众与评论界的广泛认可，适合喜欢新鲜题材和混搭类型的观众。",
+    "recommendation_en": "▸ Standout performances by Lizzy Caplan and John Stamos inject unique charm and wit into their roles. ▸ Directors Raviv Ullman and Greg Yagolnitzer skillfully blend comedy with horror-thriller elements, using vibrant visuals and sound design to create an unprecedented tonal contrast. ▸ The impressive 93% Rotten Tomatoes score signals broad acclaim from critics and audiences, making it a must-see for fans of genre mashups and inventive storytelling.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "roman holiday": {
+    "synopsis": "一位受约束的欧洲公主在罗马短暂逃离宫廷生活，偶遇一位美国记者。她渴望自由与真实的体验，而记者则面临职业与良知的抉择，两人的相遇引发了一系列温馨而有趣的事件。",
+    "synopsis_en": "A sheltered European princess escapes her royal duties for a day in Rome and meets an American journalist. Caught between her longing for freedom and his professional interests, they embark on a heartfelt journey filled with humor and charm.",
+    "recommendation": "▸ 奥黛丽·赫本凭本片一举成名，塑造了极具魅力与层次的公主形象，表演细腻自然。▸ 导演威廉·惠勒以优雅细腻的镜头语言，展现了1950年代罗马的迷人风光与浪漫氛围，影像极具美感。▸ 影片将爱情、幽默与社会阶层冲突巧妙融合，故事流畅，情感真挚，成为浪漫喜剧经典。",
+    "recommendation_en": "▸ Audrey Hepburn delivers a breakout, Oscar-winning performance as the princess, bringing nuance and charm to the role. ▸ Director William Wyler crafts an elegant, visually stunning portrait of 1950s Rome, blending romantic ambiance with comedic timing. ▸ The film expertly weaves romance, humor, and class tensions into a timeless, emotionally resonant narrative, cementing its status as a genre classic.",
+    "awards": "1954奥斯卡最佳女主角、最佳服装设计、最佳原创剧本奖；1954金球奖最佳女主角",
+    "awards_en": "1954 Oscar for Best Actress, Best Costume Design, and Best Original Story; 1954 Golden Globe for Best Actress"
   }
 }
