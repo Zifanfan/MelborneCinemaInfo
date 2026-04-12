@@ -918,5 +918,29 @@
     "recommendation_en": "▸ Audrey Hepburn delivers a breakout, Oscar-winning performance as the princess, bringing nuance and charm to the role. ▸ Director William Wyler crafts an elegant, visually stunning portrait of 1950s Rome, blending romantic ambiance with comedic timing. ▸ The film expertly weaves romance, humor, and class tensions into a timeless, emotionally resonant narrative, cementing its status as a genre classic.",
     "awards": "1954奥斯卡最佳女主角、最佳服装设计、最佳原创剧本奖；1954金球奖最佳女主角",
     "awards_en": "1954 Oscar for Best Actress, Best Costume Design, and Best Original Story; 1954 Golden Globe for Best Actress"
+  },
+  "all that heaven allows": {
+    "synopsis": "寡妇凯莉在小镇上与年轻园丁罗恩陷入禁忌恋情，面对家庭与社会的压力，她必须在爱情与社会期望之间做出艰难选择。",
+    "synopsis_en": "Widow Cary falls for a younger gardener, Ron, in a small town. Their romance faces intense scrutiny from family and society, forcing Cary to choose between personal happiness and social conformity.",
+    "recommendation": "▸ 道格拉斯·西克以精致的色彩和构图展现50年代美国社会阶层与情感压抑，视觉风格极具象征意义。▸ 简·怀曼与洛克·哈德森的表演将角色内心挣扎和情感渴望细腻呈现，富有感染力。▸ 影片对爱情与社会规范的探讨，至今仍具现实意义，是经典好莱坞情感电影的代表。",
+    "recommendation_en": "▸ Douglas Sirk's masterful use of color and composition creates a visually symbolic portrayal of 1950s American social repression and class divides. ▸ Jane Wyman and Rock Hudson deliver nuanced performances, capturing the emotional turmoil and longing of their characters. ▸ The film’s examination of love versus societal expectations remains relevant, making it a standout example of classic Hollywood melodrama.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the goonies": {
+    "synopsis": "一群少年为拯救即将失去的家园，偶然发现藏宝地图，踏上一场惊险刺激的寻宝冒险。他们不仅要应对各种机关陷阱，还要摆脱邪恶势力的追捕。",
+    "synopsis_en": "A group of kids, desperate to save their homes from foreclosure, discovers a treasure map that leads them into a perilous adventure. Along the way, they face traps and outwit dangerous criminals.",
+    "recommendation": "▸ 充满80年代怀旧氛围，导演理查德·唐纳以紧凑节奏和幽默风格打造出儿童视角的冒险世界。▸ 少年演员表现自然，将团队协作与童年友情诠释得生动感人，令观众共鸣。▸ 机关设计奇特，场景转换丰富，视觉体验新颖，适合家庭观影。",
+    "recommendation_en": "▸ Director Richard Donner masterfully combines brisk pacing and humor to create a nostalgic 1980s adventure from a child’s perspective. ▸ The young cast delivers authentic, energetic performances, capturing the spirit of friendship and teamwork. ▸ The film features inventive trap designs and varied set pieces, providing a visually engaging experience for family audiences.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "some like it hot": {
+    "synopsis": "两位乐队成员因目睹黑帮犯罪，被迫女扮男装加入女子乐队逃命。他们在躲避追捕的同时，还要应对身份混乱和复杂的情感纠葛，笑料百出。",
+    "synopsis_en": "Two musicians accidentally witness a mob crime and disguise themselves as women to join an all-female band. As they evade gangsters, they face identity confusion and romantic entanglements, leading to comic situations.",
+    "recommendation": "▸比利·怀尔德导演以极富节奏感的叙事和机智对白，营造经典喜剧氛围，情节紧凑且高潮迭起。▸玛丽莲·梦露展现极具魅力的表演，Tony Curtis和Jack Lemmon化身女装形象，贡献幽默与默契配合。▸影片以性别错位和社会刻板印象为主题，既有娱乐性也有深度，被誉为美国喜剧巅峰。",
+    "recommendation_en": "▸ Billy Wilder’s direction delivers a fast-paced narrative and clever dialogue, creating an iconic comedic atmosphere. ▸ Marilyn Monroe shines with charismatic performance, while Tony Curtis and Jack Lemmon’s gender-bending roles generate hilarious chemistry. ▸ The film explores themes of gender and societal norms with both entertainment and depth, regarded as a pinnacle of American comedy.",
+    "awards": "1960奥斯卡最佳导演、最佳男主角等6项提名；1960金球奖最佳喜剧或音乐片奖",
+    "awards_en": "1960 Oscar nominations for Best Director, Best Actor and 4 others; 1960 Golden Globe for Best Motion Picture – Musical or Comedy"
   }
 }
