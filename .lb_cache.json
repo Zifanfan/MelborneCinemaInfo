@@ -850,5 +850,37 @@
   "muppet treasure island": {
     "score": 3.59,
     "url": "https://letterboxd.com/film/muppet-treasure-island/"
+  },
+  "fuze": {
+    "score": 3.05,
+    "url": "https://letterboxd.com/film/fuze/"
+  },
+  "lee cronin's the mummy": {
+    "score": null,
+    "url": ""
+  },
+  "oklahoma": {
+    "score": 3.28,
+    "url": "https://letterboxd.com/film/oklahoma/"
+  },
+  "to live": {
+    "score": 4.23,
+    "url": "https://letterboxd.com/film/to-live/"
+  },
+  "under a bamboo sky": {
+    "score": null,
+    "url": ""
+  },
+  "parasite and memories of murder": {
+    "score": null,
+    "url": ""
+  },
+  "party monster": {
+    "score": 3.47,
+    "url": "https://letterboxd.com/film/party-monster/"
+  },
+  "the delta force": {
+    "score": 2.8,
+    "url": "https://letterboxd.com/film/the-delta-force/"
   }
 }
