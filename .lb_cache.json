@@ -934,5 +934,17 @@
   "exit 8": {
     "score": 3.14,
     "url": "https://letterboxd.com/film/exit-8/"
+  },
+  "rango": {
+    "score": 3.74,
+    "url": "https://letterboxd.com/film/rango/"
+  },
+  "the adventures of priscilla queen of the desert": {
+    "score": 3.95,
+    "url": "https://letterboxd.com/film/the-adventures-of-priscilla-queen-of-the-desert/"
+  },
+  "shadow cast": {
+    "score": null,
+    "url": ""
   }
 }
