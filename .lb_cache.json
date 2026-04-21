@@ -1090,5 +1090,29 @@
   "beast": {
     "score": 3.24,
     "url": "https://letterboxd.com/film/beast/"
+  },
+  "fffa dracula": {
+    "score": null,
+    "url": ""
+  },
+  "top screen screening only": {
+    "score": null,
+    "url": ""
+  },
+  "the fly": {
+    "score": 3.99,
+    "url": "https://letterboxd.com/film/the-fly-1986/"
+  },
+  "mission impossible": {
+    "score": 3.62,
+    "url": "https://letterboxd.com/film/mission-impossible/"
+  },
+  "the untouchables": {
+    "score": 3.85,
+    "url": "https://letterboxd.com/film/the-untouchables/"
+  },
+  "the giants": {
+    "score": 3.46,
+    "url": "https://letterboxd.com/film/the-giants/"
   }
 }
