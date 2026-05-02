@@ -1390,5 +1390,61 @@
     "recommendation_en": "▸ Terrence Malick’s signature poetic visuals and philosophical narrative bring a unique approach to the cyberpunk genre, blending existential themes with striking imagery. ▸ Brad Pitt delivers a transformative performance, adding depth and complexity to the protagonist. ▸ The IMAX format amplifies the immersive futuristic cityscape, showcasing grand-scale spectacle and nuanced visual effects.",
     "awards": "",
     "awards_en": ""
+  },
+  "battle royale": {
+    "synopsis": "在近未来的日本，一群高中生被政府强制送往荒岛，参与一场生死对决的残酷游戏。主角面对同学间的信任危机与生存压力，必须在极限环境下做出艰难抉择。",
+    "synopsis_en": "In a dystopian near-future Japan, a class of high school students is forced by the government to participate in a deadly survival game on a remote island. The protagonist must navigate trust, betrayal, and moral dilemmas under intense life-or-death pressure.",
+    "recommendation": "▸ 导演深刻揭示社会压力与人性黑暗，剧情紧张刺激，对青少年和极权体制的反思极具冲击力。▸ 场面调度和动作设计极具张力，血腥暴力风格与荒诞黑色幽默巧妙结合，形成独特视觉体验。▸ 藤原龙也、前田亚季等年轻演员表现出色，情绪层次丰富，极大增强了影片的感染力。",
+    "recommendation_en": "▸ Director Kinji Fukasaku masterfully explores societal pressure and the darker sides of human nature, delivering a tense reflection on youth and authoritarianism. ▸ The film features gripping action choreography and striking visual style, blending intense violence with darkly comic moments for a singular cinematic experience. ▸ Standout performances from Tatsuya Fujiwara and Aki Maeda bring emotional depth, making the survival stakes feel raw and impactful.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "days and nights in the forest": {
+    "synopsis": "四位城市青年在森林度假时，遇到当地女性和村民，逐渐暴露自身的欲望、偏见与冲突。主角们在陌生环境中面对内心困惑和人际关系的挑战，引发深刻自省。",
+    "synopsis_en": "Four urban friends retreat to a forest for a holiday, where encounters with locals and women force them to confront their desires, prejudices, and interpersonal tensions. The unfamiliar setting sparks introspection and exposes core conflicts among the group.",
+    "recommendation": "▸萨蒂亚吉特·雷以细腻镜头捕捉人物心理转变，展现印度社会阶层、性别与文化隔阂。▸主角群体表演自然真实，尤其苏米特拉·查特吉的内敛演绎为影片增添深度。▸森林环境与光影运用营造独特氛围，使观众沉浸于人与自然、内心与外界的对话。",
+    "recommendation_en": "▸ Satyajit Ray’s direction excels at subtle psychological portrayal, exploring social class, gender, and cultural barriers in India. ▸ The ensemble cast delivers remarkably nuanced performances, with Soumitra Chatterjee’s understated acting providing emotional resonance. ▸ The forest setting and masterful use of light and shadows create a unique atmosphere, immersing viewers in the interplay between nature and internal conflict.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "fffa obsession": {
+    "synopsis": "一位年轻男子因一场离奇事件陷入内心的执念，逐步被恐怖力量所操控。在理智与疯狂的边缘，他试图揭开真相，却发现自己无法逃脱噩梦般的困境。",
+    "synopsis_en": "A young man becomes obsessed after a bizarre incident, gradually falling under the influence of a terrifying force. As he teeters between sanity and madness, he tries to uncover the truth, only to realize he may never escape his nightmarish situation.",
+    "recommendation": "▸ 导演Curry Barker通过极具张力的镜头语言和氛围营造，将主角的心理恐惧与超自然元素巧妙融合，令观众持续紧绷神经。▸ 主演Michael Johnston在角色崩溃边缘的表演极具感染力，成功展现人物复杂的心理变化。▸ 烂番茄高达96%的评分显示本片在恐怖片类型中获得了罕见的专业认可，值得恐怖片爱好者关注。",
+    "recommendation_en": "▸ Director Curry Barker masterfully blends psychological horror with supernatural elements, using tense cinematography to keep viewers on edge. ▸ Michael Johnston delivers a gripping performance, convincingly portraying a character on the brink of breakdown. ▸ The exceptionally high 96% Rotten Tomatoes score signals rare critical acclaim for a horror film, making it a must-see for genre enthusiasts.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "fffa ichi the killer": {
+    "synopsis": "一名心理扭曲的杀手与一位冷酷黑帮成员在东京黑暗世界中交错，他们各自背负着痛苦的过往，在暴力与欲望的旋涡中逐渐走向毁灭性的对决。",
+    "synopsis_en": "A disturbed contract killer and a ruthless yakuza enforcer navigate Tokyo’s criminal underworld. Each tormented by their own past, they are drawn into a violent and destructive confrontation driven by revenge and inner demons.",
+    "recommendation": "▸ 导演三池崇史以极端暴力与黑色幽默相结合，呈现出独特且令人不安的美学风格，挑战观众心理极限。▸ 浅野忠信、⼤森南朋等演员的表现极具张力，将角色心理扭曲与痛苦展现得淋漓尽致。▸ 影片在犯罪类型片中以创新的叙事和视觉效果，被认为是日本极端电影的代表作之一。",
+    "recommendation_en": "▸ Director Takashi Miike fuses extreme violence with dark humor, creating a distinct and unsettling aesthetic that pushes psychological boundaries. ▸ Tadanobu Asano and Nao Ômori deliver intense, unforgettable performances, vividly portraying psychological torment and obsession. ▸ The film’s innovative narrative and visual style make it a landmark in Japanese extreme cinema, setting new standards for the crime genre.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "clueless": {
+    "synopsis": "富家少女Cher在洛杉矶高中生活中，面对人际关系、爱情和自我成长的挑战。她试图用自己的方式帮助身边的人，却逐渐发现生活并不如她想象的简单。",
+    "synopsis_en": "Cher, a wealthy high school student in Los Angeles, navigates social dynamics, romance, and personal growth. As she tries to help those around her, she realizes that life and relationships are more complicated than she expected.",
+    "recommendation": "▸导演Amy Heckerling以明快幽默的手法，赋予经典文学新意，塑造90年代最具代表性的青春校园氛围。▸Alicia Silverstone在主角Cher一角中展现魅力与幽默，表演自然，极具感染力，成为当年偶像。▸影片对时尚、美式文化和青少年成长的精准刻画，成为流行文化里程碑，影响后续无数校园电影。",
+    "recommendation_en": "▸ Amy Heckerling’s direction brings sharp wit and a vibrant atmosphere, reimagining classic literature for the 1990s teen audience. ▸ Alicia Silverstone shines as Cher, delivering a charming and nuanced performance that helped define her career. ▸ The film’s spot-on depiction of fashion, American youth culture, and coming-of-age themes established Clueless as a pop culture milestone, influencing many later teen films.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "ger26 berlin hero": {
+    "synopsis": "在战火纷飞的古代中国，一位身怀绝技的无名剑客被卷入朝堂权谋与个人信念的冲突之中。他必须在国家和平与个人复仇之间做出艰难抉择，命运走向悬而未决。",
+    "synopsis_en": "Set in war-torn ancient China, a nameless swordsman is caught between political intrigue and personal conviction. He faces a tough choice between national peace and personal revenge, with his fate hanging in the balance.",
+    "recommendation": "▸ 张艺谋导演以极致的美学风格展现武侠世界，每一帧画面都如同水墨画般精致，色彩运用极具象征意义。▸ 李连杰、梁朝伟、张曼玉三位主演呈现精彩对决，内敛表演与动作戏高度融合，展现人物复杂心理。▸ 大规模战争场面与独特的幻想元素结合，提升影片史诗感。",
+    "recommendation_en": "▸ Director Zhang Yimou delivers a visually stunning wuxia epic, with painterly cinematography and symbolic color palettes throughout. ▸ Jet Li, Tony Leung, and Maggie Cheung offer nuanced performances that blend restrained emotion with breathtaking action choreography, giving depth to their characters’ motivations. ▸ Epic battle sequences merge seamlessly with fantasy elements, elevating the film’s sense of grandeur.",
+    "awards": "2003奥斯卡最佳外语片提名, 2003柏林电影节金熊奖提名",
+    "awards_en": "2003 Oscar Best Foreign Language Film nominee, 2003 Berlin Film Festival Golden Bear nominee"
+  },
+  "ger26 sound of falling": {
+    "synopsis": "在家庭变故后，女主角努力在现实与自我认知之间寻找平衡，却不断陷入情感困扰和身份迷失。她必须直面内心的脆弱，重新定义与亲情和自我的关系。",
+    "synopsis_en": "After a family upheaval, the protagonist struggles to reconcile her reality with her sense of self, facing emotional turmoil and an identity crisis. She must confront her vulnerabilities to rebuild her bonds with family and herself.",
+    "recommendation": "▸ 导演Mascha Schilinski以细腻现实主义手法刻画女性心理，情感表达真实动人，层次丰富。▸ 主演Hanna Heckt与Lena Urzendowsky表演内敛但极具张力，展现角色复杂性和成长。▸ 影片摄影风格极具美感，利用光影和构图强化主角内心世界的变化。",
+    "recommendation_en": "▸ Director Mascha Schilinski employs a nuanced realist approach, delivering an authentic and layered portrayal of a woman's psychological journey. ▸ Lead performances by Hanna Heckt and Lena Urzendowsky are understated yet powerful, capturing the complexities of their characters. ▸ The film’s cinematography stands out for its expressive use of light and composition, mirroring the protagonist’s inner transformation.",
+    "awards": "",
+    "awards_en": ""
   }
 }
