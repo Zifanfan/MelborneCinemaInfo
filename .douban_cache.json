@@ -1888,5 +1888,35 @@
     "url": "",
     "title_cn": "",
     "hot_comment": ""
+  },
+  "happiness": {
+    "score": 7.8,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "rouge": {
+    "score": 8.5,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "encounter of the spooky kind": {
+    "score": 7.8,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "mccabe mrs miller": {
+    "score": 7.9,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
+  },
+  "the go-between": {
+    "score": 7.0,
+    "url": "",
+    "title_cn": "",
+    "hot_comment": ""
   }
 }
