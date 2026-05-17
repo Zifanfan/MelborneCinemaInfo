@@ -1854,5 +1854,37 @@
     "recommendation_en": "▸ Director Andrey Zvyagintsev uses stark, unflinching realism to dissect familial and social alienation in contemporary Russia. ▸ Maryana Spivak and Alexey Rozin deliver nuanced performances, capturing emotional coldness and suppressed anguish. ▸ Striking cinematography with carefully framed shots and atmospheric color palettes amplifies the film’s themes of loneliness and despair.",
     "awards": "2017戛纳电影节评审团奖，奥斯卡最佳外语片提名，金球奖最佳外语片提名",
     "awards_en": "2017 Cannes Jury Prize, Oscar nominee for Best Foreign Language Film, Golden Globe nominee for Best Foreign Language Film"
+  },
+  "sunset boulevard": {
+    "synopsis": "一位失意编剧偶然闯入一位过气女演员的豪宅，被卷入她对昔日辉煌的执念与现实的落寞中。两人间的依赖与欲望，逐渐引发一场危险的心理博弈。",
+    "synopsis_en": "A struggling screenwriter stumbles into the mansion of a faded silent-film star, becoming entangled in her desperate clinging to past fame. Their complex relationship spirals into a tense battle of dependency and ambition.",
+    "recommendation": "▸ 比利·怀尔德以犀利的黑色幽默和精妙的结构，揭示好莱坞的虚荣与幻灭，极具批判性和现实意义。▸ 格洛丽亚·斯旺森的表演极富张力，将沉溺于回忆的女明星演绎得令人难忘。▸ 黑白影像风格与室内布景营造压抑氛围，强化主角心理的封闭与绝望。",
+    "recommendation_en": "▸ Billy Wilder’s razor-sharp direction and narrative structure deliver a scathing critique of Hollywood’s illusions and obsessions. ▸ Gloria Swanson’s powerhouse performance as Norma Desmond is iconic, blending vulnerability and delusion. ▸ The atmospheric black-and-white cinematography and claustrophobic set design heighten the film’s psychological tension and sense of entrapment.",
+    "awards": "第23届奥斯卡最佳剧本、艺术指导、配乐奖，最佳影片等11项提名",
+    "awards_en": "Winner of 3 Academy Awards (Best Writing, Art Direction, Score) and 11 Oscar nominations including Best Picture"
+  },
+  "willy wonka the chocolate factory": {
+    "synopsis": "贫穷善良的查理获得了进入神秘巧克力工厂的机会，与其他孩子一同展开奇幻冒险。在工厂主威利·旺卡的考验下，查理面临选择善良与诱惑的抉择。",
+    "synopsis_en": "Poor but kind-hearted Charlie wins a chance to visit the mysterious chocolate factory, joining other children in a fantastical adventure. Guided by Willy Wonka, Charlie faces challenges that test his integrity and values.",
+    "recommendation": "▸ 吉恩·怀尔德以古怪又深情的表演塑造了独特的旺卡角色，成为影史经典形象之一。▸ 影片融合歌舞、幽默与黑色童话氛围，导演梅尔·斯图尔特巧妙把握节奏和幻想色彩，适合全年龄段观众。▸ 色彩丰富的美术设计与奇思妙想的工厂场景，至今仍具视觉冲击力。",
+    "recommendation_en": "▸ Gene Wilder delivers a whimsical yet heartfelt performance as Willy Wonka, creating one of cinema’s most memorable characters. ▸ Director Mel Stuart masterfully blends musical numbers, humor, and dark fairy-tale elements, maintaining an engaging pace for audiences of all ages. ▸ The film’s vibrant production design and imaginative factory sets remain visually striking decades after its release.",
+    "awards": "1972奥斯卡最佳原创配乐提名",
+    "awards_en": "1972 Academy Award nominee for Best Original Score"
+  },
+  "soundtrack to a coup d etat": {
+    "synopsis": "在冷战背景下，刚果独立运动与政变阴谋交织，音乐家与政治家们在国际势力夹缝中挣扎，面对命运与理想的抉择，揭示权力、文化和自由的复杂冲突。",
+    "synopsis_en": "Set against the Cold War, Congo’s independence movement collides with a coup d’état. Musicians and politicians navigate international interference, confronting dilemmas between ideals and survival in a tense landscape of power, culture, and freedom.",
+    "recommendation": "▸ 导演Johan Grimonprez以独特拼贴手法，将历史影像、音乐与档案资料巧妙融合，构建出富有沉浸感的叙事体验。▸ 影片深入挖掘音乐在政治变革中的作用，通过真实人物和极具张力的历史事件，展现非洲解放运动的复杂面貌，兼具思想性与艺术性。",
+    "recommendation_en": "▸ Director Johan Grimonprez employs a distinctive collage style, merging archival footage, music, and historical documents for an immersive narrative. ▸ The film deeply explores music’s role in political upheaval, using real figures and tense events to vividly portray the complexities of the African liberation movement, balancing intellectual depth with artistic innovation.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "anaïs in love": {
+    "synopsis": "年轻的阿娜伊斯正处于人生十字路口，事业与情感均陷入迷茫。她意外卷入一段复杂的三人关系，被真挚情感与个人自由拉扯，面临自我认同与选择的困境。",
+    "synopsis_en": "Anaïs, a spirited young woman, finds herself at a crossroads in life, torn between personal freedom and the pull of an unexpected, complicated romantic entanglement. She must confront her desires and identity as her relationships grow increasingly complex.",
+    "recommendation": "▸ 导演夏琳·布尔热-塔凯以细腻又轻盈的法式风格，描绘女性情感与自我探索，节奏明快，氛围浪漫。▸ 阿娜伊斯·德穆斯蒂埃表演极具感染力，将角色的真实感与不羁魅力展现得鲜活立体。▸ LGBTQ+ 主题自然融入剧情，打破刻板印象，呈现多元情感与女性视角。",
+    "recommendation_en": "▸ Director Charline Bourgeois-Tacquet blends delicate French sensibility with brisk pacing, crafting a vibrant portrait of female desire and self-discovery. ▸ Anaïs Demoustier delivers a captivating, nuanced performance that brings the impulsive protagonist vividly to life. ▸ The film integrates LGBTQ+ themes organically, offering fresh, non-stereotypical perspectives on relationships and identity.",
+    "awards": "",
+    "awards_en": ""
   }
 }

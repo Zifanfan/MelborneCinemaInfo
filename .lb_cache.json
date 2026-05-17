@@ -1918,5 +1918,25 @@
   "loveless": {
     "score": 3.91,
     "url": "https://letterboxd.com/film/loveless-2017/"
+  },
+  "sunset boulevard": {
+    "score": 4.43,
+    "url": "https://letterboxd.com/film/sunset-boulevard/"
+  },
+  "willy wonka the chocolate factory": {
+    "score": 3.79,
+    "url": "https://letterboxd.com/film/willy-wonka-the-chocolate-factory/"
+  },
+  "soundtrack to a coup d etat": {
+    "score": null,
+    "url": ""
+  },
+  "anaïs in love": {
+    "score": null,
+    "url": ""
+  },
+  "met opera 2025-26 eugene onegin": {
+    "score": null,
+    "url": ""
   }
 }
