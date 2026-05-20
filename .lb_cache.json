@@ -1962,5 +1962,33 @@
   "passenger": {
     "score": 3.87,
     "url": "https://letterboxd.com/film/passenger/"
+  },
+  "moonstruck": {
+    "score": 3.79,
+    "url": "https://letterboxd.com/film/moonstruck/"
+  },
+  "from all sides": {
+    "score": null,
+    "url": ""
+  },
+  "in the heat of the night": {
+    "score": 4.04,
+    "url": "https://letterboxd.com/film/in-the-heat-of-the-night/"
+  },
+  "www rachelormont com": {
+    "score": null,
+    "url": ""
+  },
+  "election": {
+    "score": 3.78,
+    "url": "https://letterboxd.com/film/election/"
+  },
+  "exiled": {
+    "score": 3.23,
+    "url": "https://letterboxd.com/film/exiled-1998/"
+  },
+  "star wars the mandalorian and grogu 2d": {
+    "score": null,
+    "url": ""
   }
 }
