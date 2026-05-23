@@ -1974,5 +1974,29 @@
     "recommendation_en": "▸ Baz Luhrmann delivers a visually stunning spectacle, blending modern pop music with 19th-century Paris, creating an energetic musical experience. ▸ Nicole Kidman and Ewan McGregor shine with compelling chemistry and impressive singing performances. ▸ The film’s editing and cinematography are distinctive, with vibrant colors and dynamic pacing, enhancing its unique romantic yet tragic atmosphere.",
     "awards": "2002奥斯卡最佳影片、最佳女主角提名；2002金球奖最佳影片（音乐/喜剧）获奖，最佳女主角获奖",
     "awards_en": "2002 Academy Award nominee for Best Picture and Best Actress; 2002 Golden Globe winner for Best Motion Picture (Musical/Comedy) and Best Actress"
+  },
+  "a clockwork orange": {
+    "synopsis": "在一个未来反乌托邦社会，青年亚历克斯沉迷暴力与放纵，被政府以极端手段改造人性。他在自由与控制间挣扎，面临个人意志与社会规范的激烈冲突。",
+    "synopsis_en": "In a dystopian future, young Alex is obsessed with violence and pleasure. After being arrested, he undergoes a controversial government experiment that challenges his free will, facing the intense conflict between personal freedom and societal control.",
+    "recommendation": "▸ 斯坦利·库布里克以极具争议的视觉风格，展现人性、暴力与体制控制的深刻议题，画面与配乐极具冲击力。▸ 马尔科姆·麦克道威尔的表演层次丰富，成功塑造了一个复杂又令人不安的主角形象。▸ 影片运用讽刺和黑色幽默，挑战观众对于道德与自由的思考，是影史最具争议的作品之一。",
+    "recommendation_en": "▸ Stanley Kubrick’s provocative visual style masterfully explores themes of human nature, violence, and systemic control, with striking imagery and a memorable classical soundtrack. ▸ Malcolm McDowell delivers a nuanced, disturbing performance as the conflicted protagonist. ▸ The film’s satire and dark humor challenge viewers’ moral assumptions, making it one of the most controversial and influential works in cinema history.",
+    "awards": "1972年奥斯卡最佳影片、最佳导演、最佳改编剧本提名；1972年金球奖最佳影片、最佳导演提名",
+    "awards_en": "1972 Oscar nominations: Best Picture, Best Director, Best Adapted Screenplay; 1972 Golden Globe nominations: Best Motion Picture, Best Director"
+  },
+  "r m n": {
+    "synopsis": "一名在德国打工归来的男子回到罗马尼亚家乡，试图重新建立家庭关系，却被村庄内部因外来劳工引发的紧张与偏见所困扰，陷入复杂的社会与人性冲突。",
+    "synopsis_en": "A man returns to his Romanian village after working in Germany, seeking to reconnect with his family. He becomes entangled in escalating tensions and prejudice within the community, triggered by the arrival of foreign workers.",
+    "recommendation": "▸导演克里斯蒂安·蒙吉以冷静深刻的视角，剖析小镇社会对“外来者”的恐惧与排斥，展现罗马尼亚现实的复杂层次。▸影片运用长镜头与群戏，细腻刻画群体心理和集体情绪失控，情感压抑与爆发极具张力。",
+    "recommendation_en": "▸ Director Cristian Mungiu delivers a penetrating look at xenophobia and collective anxiety in a Romanian village, blending social realism with nuanced character study. ▸ The film’s use of extended takes and ensemble scenes masterfully builds tension and exposes the fragile fabric of community, making for an intense and thought-provoking viewing.",
+    "awards": "2022戛纳金棕榈提名",
+    "awards_en": "2022 Cannes Palme d'Or nominee"
+  },
+  "my dinner": {
+    "synopsis": "纽约剧作家华莱士·肖恩受邀与多年未见的老友安德烈·格雷戈里共进晚餐，两人就人生意义、理想与现实展开深刻对话，面对各自内心的迷茫与冲突。",
+    "synopsis_en": "New York playwright Wallace Shawn meets his old friend Andre Gregory for dinner, where they engage in a profound conversation about life, ideals, and reality, each confronting their own doubts and existential dilemmas.",
+    "recommendation": "▸ 全片以一场晚餐对谈展开，导演路易·马勒以极简场景和长镜头突出人物思想交锋，话语张力极强。▸ 两位主演本色出演，将哲学议题与现实困境自然融合，展现绝佳对白功力，为观众带来思辨与共鸣。",
+    "recommendation_en": "▸ The film is set almost entirely during a dinner conversation, with director Louis Malle employing minimalist staging and extended takes to focus on the intellectual and emotional interplay between the leads. ▸ Wallace Shawn and Andre Gregory deliver authentic performances, blending philosophical inquiry with personal struggles, making the dialogue both compelling and relatable.",
+    "awards": "",
+    "awards_en": ""
   }
 }
