@@ -2042,5 +2042,33 @@
   "my dinner": {
     "score": null,
     "url": ""
+  },
+  "timestamp": {
+    "score": 3.6,
+    "url": "https://letterboxd.com/film/timestamp/"
+  },
+  "the lion king": {
+    "score": 4.23,
+    "url": "https://letterboxd.com/film/the-lion-king/"
+  },
+  "sanatorium": {
+    "score": null,
+    "url": ""
+  },
+  "the third man": {
+    "score": 4.24,
+    "url": "https://letterboxd.com/film/the-third-man/"
+  },
+  "bus stop": {
+    "score": 2.79,
+    "url": "https://letterboxd.com/film/bus-stop/"
+  },
+  "fight club": {
+    "score": 4.27,
+    "url": "https://letterboxd.com/film/fight-club/"
+  },
+  "move ya body the birth of house": {
+    "score": null,
+    "url": ""
   }
 }

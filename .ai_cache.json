@@ -1998,5 +1998,21 @@
     "recommendation_en": "▸ The film is set almost entirely during a dinner conversation, with director Louis Malle employing minimalist staging and extended takes to focus on the intellectual and emotional interplay between the leads. ▸ Wallace Shawn and Andre Gregory deliver authentic performances, blending philosophical inquiry with personal struggles, making the dialogue both compelling and relatable.",
     "awards": "",
     "awards_en": ""
+  },
+  "the lion king": {
+    "synopsis": "本片为《狮子王》系列新作，讲述年轻狮子如何在逆境中继承王位，面对家族与责任的双重挑战，展开一段自我成长与冒险之旅。",
+    "synopsis_en": "As a new installment of The Lion King series, the story follows a young lion who must confront family legacy and responsibility, embarking on an adventurous journey of self-discovery amid adversity.",
+    "recommendation": "▸ 奥斯卡获奖导演Barry Jenkins首次执导动画长片，为经典故事注入更深层次情感与现实主义气质。▸ 配音阵容新鲜，包括Aaron Pierre与Kelvin Harrison Jr.，为角色带来独特个性和新鲜诠释。▸ 全新视觉风格，大量采用真实动物动作捕捉与CGI技术，展现非洲草原的壮丽景观和动物王国的细腻情感。",
+    "recommendation_en": "▸ Oscar-winning director Barry Jenkins brings emotional depth and realism to the beloved story, marking his animation debut. ▸ Fresh voice cast, including Aaron Pierre and Kelvin Harrison Jr., injects new energy and unique character interpretations. ▸ Visually striking with advanced CGI and motion capture, the film immerses audiences in the grandeur of the African savannah and the nuanced world of the animal kingdom.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the third man": {
+    "synopsis": "美国作家霍利·马丁斯受邀前往战后维也纳，却卷入好友离奇死亡的谜团。他在调查过程中逐步揭开一系列阴暗真相，面临信任与道德的双重考验。",
+    "synopsis_en": "American writer Holly Martins arrives in postwar Vienna to visit a friend, only to be drawn into a web of intrigue following his friend's mysterious death. As he investigates, he faces moral dilemmas and questions of trust amid a divided and shadowy city.",
+    "recommendation": "▸ 卡罗尔·里德导演以极具张力的黑白镜头、倾斜构图和光影运用，将战后维也纳的颓败与悬疑氛围表现得淋漓尽致。▸ 奥森·威尔斯饰演的神秘角色极具魅力，片中著名的“摩天轮对话”已成为影史经典。▸ 齐特琴配乐独特，增强了影片的紧张感与异域风情。",
+    "recommendation_en": "▸ Director Carol Reed’s masterful use of canted angles, stark lighting, and shadow transforms postwar Vienna into a haunting, suspenseful labyrinth. ▸ Orson Welles delivers an iconic performance, especially in the legendary Ferris wheel scene, elevating the film’s intrigue. ▸ The distinctive zither score adds an unforgettable tension and unique atmosphere, making the film a touchstone in thriller cinema.",
+    "awards": "1949戛纳电影节金棕榈提名，1949戛纳电影节最佳导演",
+    "awards_en": "1949 Cannes Palme d'Or nominee, 1949 Cannes Best Director"
   }
 }
