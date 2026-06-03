@@ -2230,5 +2230,45 @@
     "recommendation_en": "▸ Humphrey Bogart delivers an iconic performance as the hard-boiled detective Sam Spade, a touchstone for film noir protagonists. ▸ John Huston's directorial debut stands out for its taut narrative, striking shadow-heavy cinematography, and masterful suspense, profoundly influencing the noir genre. ▸ The film’s intricate plotting and psychological gamesmanship keep viewers engrossed with every twist.",
     "awards": "",
     "awards_en": ""
+  },
+  "juno": {
+    "synopsis": "高中女生朱诺意外怀孕后，决定将孩子出生后送给收养家庭。她在青春期的迷茫与责任之间做出选择，面对家庭、友情和成长的挑战，展现坚韧与幽默。",
+    "synopsis_en": "Juno, a high school girl, faces an unplanned pregnancy and decides to find adoptive parents for her baby. She navigates the complexities of adolescence, responsibility, and relationships with wit and resilience.",
+    "recommendation": "▸ 影片以机智幽默的对白和独特的叙事风格，打破传统青春题材的刻板印象，展现成长的真实困境。▸ Elliot Page的表演层次丰富，将角色的脆弱与坚强表现得淋漓尽致，配角Michael Cera、Jennifer Garner也极具感染力。▸ 导演Jason Reitman巧妙把握节奏，配乐与画面风格清新，整体观感温暖感人。",
+    "recommendation_en": "▸ The film stands out for its witty, sharp dialogue and authentic portrayal of coming-of-age dilemmas, subverting clichés of teen dramas. ▸ Elliot Page delivers a nuanced, memorable performance, supported by excellent turns from Michael Cera and Jennifer Garner. ▸ Director Jason Reitman’s deft pacing, along with a distinctive soundtrack and visual style, creates a heartfelt, uplifting cinematic experience.",
+    "awards": "2008奥斯卡最佳原创剧本奖；2008奥斯卡最佳影片、女主角、导演提名",
+    "awards_en": "2008 Academy Award for Best Original Screenplay; 2008 Oscar nominations for Best Picture, Actress, Director"
+  },
+  "call me by your name": {
+    "synopsis": "意大利夏日，青年艾利奥与父亲的助手奥利弗邂逅，两人因共同兴趣产生情感纠葛。艾利奥在自我认同与家庭期待间挣扎，面对初恋与成长的冲突。",
+    "synopsis_en": "During a summer in Italy, young Elio meets his father's assistant Oliver. Their shared interests spark an intimate connection, leaving Elio torn between self-discovery and familial expectations as he faces the challenges of first love.",
+    "recommendation": "▸ 导演卢卡·格达尼诺以细腻镜头展现意大利田园与青春情感，氛围极具感染力。▸ 提莫西·查拉梅和艾米·汉默表演真实细腻，情感波动丰富，令人共鸣。▸ 配乐与摄影完美融合，强化情感表达，营造独特艺术氛围。",
+    "recommendation_en": "▸ Luca Guadagnino’s direction uses evocative cinematography to capture both the Italian countryside and the emotional landscape of youth. ▸ Timothée Chalamet and Armie Hammer deliver nuanced, authentic performances, making the romantic tension deeply resonant. ▸ The film’s soundtrack and visual style enhance its artistic mood, intensifying the emotional experience.",
+    "awards": "2018奥斯卡最佳改编剧本奖；2018奥斯卡最佳影片、最佳男主角、最佳男配角提名；2018金球奖最佳影片、最佳男主角提名",
+    "awards_en": "2018 Academy Award for Best Adapted Screenplay; 2018 Oscar nominations for Best Picture, Best Actor, Best Supporting Actor; 2018 Golden Globe nominations for Best Picture, Best Actor"
+  },
+  "malcolm": {
+    "synopsis": "一对情侣在电影首映夜归家后，因创作、信任与自我价值观的分歧爆发激烈争吵。两人在一夜间不断揭开彼此隐藏的伤口，关系经历情感的拉锯与挣扎。",
+    "synopsis_en": "After returning from a film premiere, a couple plunges into an intense overnight argument, exposing deep-seated issues around trust, creativity, and self-worth. Their relationship is tested as hidden wounds and resentments come to the surface.",
+    "recommendation": "▸ 导演Sam Levinson采用极简场景和黑白摄影，营造高度戏剧张力和亲密感，突出角色心理细节。▸ Zendaya与John David Washington的对手戏张力十足，对白锋利，情感爆发力强，极具表演张力。",
+    "recommendation_en": "▸ Director Sam Levinson employs striking black-and-white cinematography and minimalist settings to create intense dramatic tension and intimacy, focusing on psychological nuances. ▸ Zendaya and John David Washington deliver powerful performances with sharp, emotionally charged dialogues, showcasing impressive acting chemistry throughout the film.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the north": {
+    "synopsis": "一名年轻男子在北方荒野中独自面对极端环境，努力寻找自我和生存的意义。他在旅途中遭遇自然挑战与内心挣扎，逐步揭示人生的核心抉择。本片为独立原创作品。",
+    "synopsis_en": "A young man ventures alone into the northern wilderness, confronting harsh conditions and his own internal struggles. As he faces nature's challenges, he is pushed to make fundamental choices about survival and identity. This is an original, standalone film.",
+    "recommendation": "▸导演Bart Schrijver以写实手法展现北方荒野的壮丽景色，营造出独特氛围和紧张感。▸主演Bart Harder的表演层次分明，将角色的孤独、坚韧和内心变化细腻呈现，提升影片情感深度。▸影片在豆瓣获得7.5分，反映其在剧情、视听和角色塑造上均有较高水准。",
+    "recommendation_en": "▸ Director Bart Schrijver uses a realistic approach to capture the grandeur and tension of the northern wilderness, creating a unique atmosphere. ▸ Lead actor Bart Harder delivers a nuanced performance, portraying the protagonist’s loneliness and resilience with emotional depth. ▸ The film’s 7.5 rating on Douban indicates strong storytelling, impressive visuals, and well-developed characters.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "throw down": {
+    "synopsis": "落魄柔道冠军苏剑因生活打击意志消沉，面对昔日对手和新生挑战，被迫正视自己内心的恐惧与挣扎，踏上寻找自我救赎的旅程。",
+    "synopsis_en": "Judo champion Sze-to Bo, now disillusioned and adrift, confronts persistent rivals and unexpected challengers, forcing him to face his inner fears and embark on a quest for personal redemption.",
+    "recommendation": "▸ 杜琪峰以黑色幽默和极具风格化的镜头语言，赋予动作片独特的诗意与哲思，展现柔道精神与人生低谷的共鸣。▸ 古天乐与郭富城的对手戏张力十足，刻画人物心理层次丰富，令角色转变极具说服力。▸ 片中夜色都市氛围与动作场景高度融合，营造出超现实与现实交织的美学体验，极具观赏价值。",
+    "recommendation_en": "▸ Johnnie To fuses noir aesthetics with philosophical undertones, turning the martial arts genre into a poetic meditation on struggle and resilience. ▸ The intense performances from Louis Koo and Aaron Kwok add emotional depth, making characters’ transformations authentic and compelling. ▸ The film’s stylized urban nightscapes and surreal action sequences blend seamlessly, offering a visually arresting and immersive experience.",
+    "awards": "",
+    "awards_en": ""
   }
 }
