@@ -2398,5 +2398,37 @@
     "recommendation_en": "▸ Director Céline Sciamma crafts a unique female gaze through minimalist storytelling and emotional subtlety. ▸ Both leads deliver deeply nuanced performances, conveying forbidden longing with powerful restraint. ▸ The film’s painterly cinematography and art direction, rich in light and composition, create an immersive and evocative atmosphere.",
     "awards": "2019戛纳电影节最佳剧本奖、金棕榈提名；多项欧洲电影奖提名",
     "awards_en": "2019 Cannes Best Screenplay, Palme d'Or nominee; multiple European Film Awards nominations"
+  },
+  "e t the extra-terrestrial": {
+    "synopsis": "一名孤独的男孩在家中意外发现一位迷路的外星人，两人逐渐建立起深厚友谊。随着政府介入，男孩必须在保护外星人和自身安全之间做出艰难抉择。",
+    "synopsis_en": "A lonely boy discovers a stranded alien in his home. As their friendship grows, government authorities close in, forcing the boy to choose between safeguarding his extraterrestrial companion and ensuring their own safety.",
+    "recommendation": "▸ 史蒂文·斯皮尔伯格以温情视角讲述成长与别离，情感真挚，细腻动人。▸ 约翰·威廉姆斯经典配乐强化了影片温馨氛围，令观众难以忘怀。▸ 创新的特效和摄影手法营造出奇幻童真的视角，成为80年代科幻电影的里程碑。",
+    "recommendation_en": "▸ Steven Spielberg masterfully blends warmth and wonder, delivering an emotionally resonant coming-of-age story. ▸ John Williams’ iconic score amplifies the film’s heartfelt atmosphere, making it unforgettable. ▸ Groundbreaking visual effects and cinematography create a child’s-eye view of the world, setting a new standard for 1980s science fiction cinema.",
+    "awards": "1983年奥斯卡最佳影片等9项提名，获最佳视觉效果、最佳音效等4项大奖",
+    "awards_en": "Nominated for 9 Academy Awards in 1983, including Best Picture; won 4 Oscars including Best Visual Effects and Best Sound"
+  },
+  "gypsy": {
+    "synopsis": "讲述舞台母亲罗斯推动女儿露易丝成为脱衣舞女王的故事。母女之间的梦想与现实冲突，展现了家庭压力与自我认同的矛盾。",
+    "synopsis_en": "The story follows stage mother Rose as she drives her daughter Louise toward stardom in burlesque. Their journey highlights tensions between ambition and personal identity within a complex mother-daughter relationship.",
+    "recommendation": "▸ 罗莎琳德·拉塞尔与娜塔莉·伍德的表演极具张力，母女互动令人印象深刻，深入展现角色心理变化。▸ 音乐与舞台场面华丽，歌舞编排极富感染力，展现百老汇经典风格。",
+    "recommendation_en": "▸ Rosalind Russell and Natalie Wood deliver powerful, nuanced performances, vividly portraying the evolving mother-daughter dynamic and inner struggles. ▸ The film’s lavish musical numbers and choreography capture the spirit of classic Broadway, with standout set pieces and vibrant production design.",
+    "awards": "第20届金球奖最佳音乐/喜剧类女主角奖（罗莎琳德·拉塞尔）",
+    "awards_en": "1963 Golden Globe Award for Best Actress in a Musical or Comedy (Rosalind Russell)"
+  },
+  "mysterious skin": {
+    "synopsis": "两名童年经历截然不同的少年，在成长过程中因一段被遗忘的往事产生交集。他们各自用不同方式面对过去的创伤，逐步揭开真相，内心挣扎与救赎成为故事核心。",
+    "synopsis_en": "Two young men with vastly different childhoods find their lives intertwined by a forgotten event. Each copes with trauma in their own way, and as the truth unfolds, their emotional struggle and search for healing form the heart of the story.",
+    "recommendation": "▸ 约瑟夫·高登-莱维特奉献突破性表演，细腻刻画角色心理创伤与脆弱，令人印象深刻。▸ 导演格雷格·阿拉奇以冷静沉着的镜头语言，将敏感主题拍得克制而有力，避免猎奇，兼具诗意与现实质感。▸ 影片色彩与配乐氛围营造独特，强化了主人公内心世界的疏离与困惑。",
+    "recommendation_en": "▸ Joseph Gordon-Levitt delivers a career-defining performance, capturing the raw vulnerability and psychological depth of his character. ▸ Director Gregg Araki approaches difficult subject matter with restraint and poetic realism, balancing sensitivity and impact without exploitation. ▸ Striking visuals and atmospheric music enhance the sense of alienation and inner turmoil experienced by the protagonists.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "spa26 homo sapiens": {
+    "synopsis": "本片通过静默镜头观察人类活动遗迹，探索现代社会的变迁和环境影响。主角并非具体人物，而是人类整体，困境在于文明遗留与自然之间的冲突。本片非系列作品，聚焦社会与生态的关系。",
+    "synopsis_en": "The film uses silent, observational shots to examine traces of human activity, exploring the transformation of modern society and environmental impacts. No single protagonist; the dilemma centers on humanity's legacy and its conflict with nature. Not part of a series.",
+    "recommendation": "▸导演尼古劳斯·盖尔哈尔特以极简主义镜头语言，展现世界各地被遗弃的空间，营造深度反思氛围。▸影片无旁白和配乐，通过纯视觉体验，让观众直面人类文明对环境的影响和遗留问题。▸获得烂番茄100%高分，专业评论一致认可其独特审视视角和艺术表现力。",
+    "recommendation_en": "▸ Director Nikolaus Geyrhalter employs minimalist cinematography to portray abandoned spaces worldwide, creating an atmosphere of profound reflection. ▸ The film features no narration or music, relying on pure visuals to confront viewers with the environmental consequences of human civilization. ▸ Rotten Tomatoes score of 100%, with critics praising its unique perspective and artistic power.",
+    "awards": "",
+    "awards_en": ""
   }
 }
