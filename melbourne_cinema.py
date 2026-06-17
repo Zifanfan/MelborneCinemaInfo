@@ -504,7 +504,7 @@ def _clean_title(t: str) -> str:
     if ", The" in t: t = "The " + t.replace(", The","")
     t = re.sub(r'\s*\(\d{4}\)\s*',' ',t)
     # 已知电影节前缀 (兜底, 通常 _preprocess_films 已处理)
-    t = re.sub(r'^(?:AFFA|AFFFF|MIFF|HRAFF|MQFF|MDFF|JFF|BIFF|GIFF)\d*\s*[-:]?\s+', '', t, flags=re.I)
+    t = re.sub(r'^(?:AFFA|AFFFF|MIFF|HRAFF|MQFF|MDFF|JFF|BIFF|GIFF|CHIFF|SPA|SFF)\d*\s*[-:]?\s+', '', t, flags=re.I)
     return t.strip()
 
 def _search_title(t: str) -> str:
@@ -640,6 +640,91 @@ def _extract_douban_title_cn(soup) -> str:
         if re.search(r'[\u4e00-\u9fff]', first):
             cn = first
     return cn
+
+
+# ── Wikipedia 中文标题查找 ──
+_WIKI_HEADERS = {
+    "User-Agent": "MelbourneCinemaInfo/1.0 (https://github.com/Zifanfan/MelborneCinemaInfo)"
+}
+
+def _norm_for_match(s: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", " ", s.lower())).strip()
+
+def search_wikipedia_cn(title: str) -> str:
+    """通过 Wikipedia 查找电影的中文标题。
+    流程: opensearch (前缀匹配) → 严格验证标题 → 拉 langlinks zh + categories。
+    返回 zh 标题 (已去消歧义后缀); 找不到返回 ""。
+    """
+    clean = _search_title(title)
+    try:
+        # 1. opensearch: 拿候选 article titles (前缀匹配, 比 search 更严格)
+        r = SESSION.get(
+            "https://en.wikipedia.org/w/api.php",
+            params={"action": "opensearch", "search": clean, "limit": 10,
+                    "namespace": 0, "format": "json"},
+            headers=_WIKI_HEADERS, timeout=10,
+        )
+        if r.status_code != 200:
+            return ""
+        data = r.json()
+        if not isinstance(data, list) or len(data) < 2:
+            return ""
+        all_titles = data[1] or []
+        if not all_titles:
+            return ""
+
+        # 2. 严格验证: article 标题去掉括号消歧义后, 标准化要等于 query
+        norm_q = _norm_for_match(clean)
+        candidates = []
+        for ct in all_titles:
+            base = re.sub(r"\s*\([^)]*\)\s*$", "", ct).strip()
+            if _norm_for_match(base) == norm_q:
+                candidates.append(ct)
+        if not candidates:
+            return ""
+
+        # 3. 排序: (YYYY film) > (film) > 无括号 > 其他括号
+        def rk(t: str) -> int:
+            if re.search(r"\(\d{4}\s*film\)", t, re.I): return 0
+            if re.search(r"\(film\)", t, re.I): return 1
+            if "(" not in t: return 2
+            return 3
+        candidates.sort(key=rk)
+
+        # 4. 批量查 langlinks + categories (lllimit=20 给每篇至少 1 个 zh link)
+        r2 = SESSION.get(
+            "https://en.wikipedia.org/w/api.php",
+            params={"action": "query", "prop": "langlinks|categories",
+                    "redirects": 1,
+                    "titles": "|".join(candidates[:5]),
+                    "lllang": "zh", "lllimit": 20, "cllimit": 500,
+                    "format": "json"},
+            headers=_WIKI_HEADERS, timeout=10,
+        )
+        if r2.status_code != 200:
+            return ""
+        pages = r2.json().get("query", {}).get("pages", {})
+        title_to_page = {p.get("title", ""): p for p in pages.values()}
+
+        for ct in candidates[:5]:
+            p = title_to_page.get(ct)
+            if not p:
+                continue
+            cats = " ".join(c.get("title", "") for c in p.get("categories", [])).lower()
+            is_film_cat = bool(re.search(r"\b(films?|cinema)\b", cats))
+            # 无括号且分类不含 film → 拒绝 (可能是 album / book / disambiguation)
+            if "(" not in ct and not is_film_cat:
+                continue
+            lls = p.get("langlinks", [])
+            if not lls:
+                continue
+            zh = lls[0].get("*", "")
+            zh_clean = re.sub(r"\s*\([^)]*(?:电影|電影)[^)]*\)\s*$", "", zh).strip()
+            if zh_clean and re.search(r"[\u4e00-\u9fff]", zh_clean):
+                return zh_clean
+    except Exception:
+        pass
+    return ""
 
 # ── 烂番茄 ──
 def search_rotten_tomatoes(title: str) -> tuple[Optional[int], str, str, str]:
@@ -856,33 +941,46 @@ def _query_douban_serial(films: list[Film]) -> None:
         if not film.title_cn:
             retry_cn.append((key, film))
 
-    # 补充中文名: 对所有缺 title_cn 的电影重试 (suggest API + 搜索页 + 详情页)
+    # 补充中文名: 对所有缺 title_cn 的电影重试
+    # 顺序: Wikipedia langlinks (主) → 豆瓣 suggest → 搜索页 → 详情页 (兜底)
     if retry_cn:
-        log.info("  补充中文名: %d 部...", len(retry_cn))
+        log.info("  补充中文名: %d 部 (Wikipedia 优先 + 豆瓣兜底)...", len(retry_cn))
         for key, film in retry_cn:
             clean = _search_title(film.title)
             cn_found = ""
             url_found = film.douban_url
+            source = ""
 
-            # 1) suggest API 重试
+            # 1) Wikipedia
             try:
-                resp = SESSION.get("https://movie.douban.com/j/subject_suggest",
-                                   params={"q": clean}, timeout=8)
-                if resp.status_code == 200:
-                    for item in (resp.json() or []):
-                        if item.get("type") == "movie":
-                            cn = item.get("title", "")
-                            if cn:
-                                cn_found = cn
-                                did = item.get("id", "")
-                                if did and not url_found:
-                                    url_found = f"https://movie.douban.com/subject/{did}/"
-                                break
+                cn_found = search_wikipedia_cn(film.title)
+                if cn_found:
+                    source = "wiki"
             except Exception:
                 pass
-            time.sleep(1)
+            time.sleep(0.6)
 
-            # 2) 搜索页
+            # 2) 豆瓣 suggest API
+            if not cn_found:
+                try:
+                    resp = SESSION.get("https://movie.douban.com/j/subject_suggest",
+                                       params={"q": clean}, timeout=8)
+                    if resp.status_code == 200:
+                        for item in (resp.json() or []):
+                            if item.get("type") == "movie":
+                                cn = item.get("title", "")
+                                if cn:
+                                    cn_found = cn
+                                    source = "douban-suggest"
+                                    did = item.get("id", "")
+                                    if did and not url_found:
+                                        url_found = f"https://movie.douban.com/subject/{did}/"
+                                    break
+                except Exception:
+                    pass
+                time.sleep(1)
+
+            # 3) 豆瓣搜索页
             if not cn_found:
                 try:
                     resp = SESSION.get("https://www.douban.com/search",
@@ -897,6 +995,7 @@ def _query_douban_serial(films: list[Film]) -> None:
                                 txt = a.get_text(strip=True)
                                 if txt and re.search(r'[\u4e00-\u9fff]', txt):
                                     cn_found = txt
+                                    source = "douban-search"
                                 if not url_found:
                                     href = a.get("href", "")
                                     m = re.search(r"url=([^&]+)", href)
@@ -910,7 +1009,7 @@ def _query_douban_serial(films: list[Film]) -> None:
                     pass
                 time.sleep(1)
 
-            # 3) 详情页
+            # 4) 豆瓣详情页
             if not cn_found and url_found:
                 try:
                     resp = SESSION.get(url_found, timeout=10)
@@ -919,6 +1018,7 @@ def _query_douban_serial(films: list[Film]) -> None:
                         cn = _extract_douban_title_cn(soup)
                         if cn:
                             cn_found = cn
+                            source = "douban-detail"
                 except Exception:
                     pass
                 time.sleep(1)
@@ -938,7 +1038,7 @@ def _query_douban_serial(films: list[Film]) -> None:
                         "title_cn": cn_found,
                         "hot_comment": film.hot_comment,
                     }
-                log.info("    %s → %s", film.title, cn_found)
+                log.info("    [%s] %s → %s", source, film.title, cn_found)
                 queried += 1
 
     # 保存缓存
@@ -1109,6 +1209,9 @@ _FESTIVAL_PREFIXES = {
     r'^JFF\d*\s*[-:]?\s+': 'JFF',              # Japanese Film Festival
     r'^BIFF\d*\s*[-:]?\s+': 'BIFF',
     r'^GIFF\d*\s*[-:]?\s+': 'GIFF',
+    r'^CHIFF\d*\s*[-:]?\s+': 'CHIFF',          # Children's International FF
+    r'^SPA\d*\s*[-:]?\s+': 'Spanish FF',       # Spanish Film Festival (SPA26)
+    r'^SFF\d*\s*[-:]?\s+': 'SFF',
     r'^Astor:\s*': 'Astor Special',
     r'^Encore[\s:\-–]+': 'Encore',             # Encore: / Encore - / Encore 
     r'^NT Live[\s:\-–]+': 'NT Live',
