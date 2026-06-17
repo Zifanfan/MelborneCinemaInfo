@@ -1820,7 +1820,7 @@
   "mother mary": {
     "score": 5.3,
     "url": "",
-    "title_cn": "",
+    "title_cn": "魅影巨星",
     "hot_comment": ""
   },
   "obsession": {
@@ -2745,6 +2745,48 @@
     "score": null,
     "url": "",
     "title_cn": "五虎將之決裂",
+    "hot_comment": ""
+  },
+  "how to talk australians the movie": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/34957966/",
+    "title_cn": "How to talk Australians",
+    "hot_comment": ""
+  },
+  "wild asia": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38495514/",
+    "title_cn": "极境亚洲",
+    "hot_comment": ""
+  },
+  "you the living": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/2002696/",
+    "title_cn": "你还活着",
+    "hot_comment": ""
+  },
+  "giliap": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/3279657/",
+    "title_cn": "羁旅情愫",
+    "hot_comment": ""
+  },
+  "homo sapiens": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/2032293/",
+    "title_cn": "智人",
+    "hot_comment": ""
+  },
+  "sofia's suspicion": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/30145597/",
+    "title_cn": "猜忌",
+    "hot_comment": ""
+  },
+  "sundays": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36898818/",
+    "title_cn": "礼拜天",
     "hot_comment": ""
   }
 }

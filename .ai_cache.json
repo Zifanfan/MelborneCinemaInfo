@@ -2526,5 +2526,69 @@
     "recommendation_en": "▸ Director Andrew Stanton maintains Pixar’s signature blend of humor and emotional depth, balancing laughs with heartfelt moments. ▸ Tom Hanks and Tim Allen reprise their iconic roles; their performances evoke genuine emotion and strong audience connection. ▸ The animation is visually refined and creatively designed, injecting fresh energy into the franchise.",
     "awards": "",
     "awards_en": ""
+  },
+  "bird boy": {
+    "synopsis": "一名南非乡村少年梦想飞翔，却因家庭变故和现实困境被迫放弃理想。在母亲和新朋友的陪伴下，他在成长中寻找自我，面对命运的挑战。",
+    "synopsis_en": "A rural South African boy dreams of flying, but family turmoil and harsh realities force him to set aside his ambitions. With support from his mother and a new friend, he embarks on a journey of self-discovery and resilience.",
+    "recommendation": "▸ 导演Joel Soisson以细腻视角展现南非乡村风貌，将成长与家庭主题巧妙融合，情感真挚。▸ Téa Leoni和南非新星Litlhonolofatso Litlhakanyane的表演真实动人，母子关系刻画细腻，极具感染力。▸ 影片摄影捕捉非洲自然风光与人物心理，画面极具美感与代入感。",
+    "recommendation_en": "▸ Director Joel Soisson delivers a sensitive portrayal of rural South Africa, blending coming-of-age and family themes with authenticity and emotional depth. ▸ Performances by Téa Leoni and newcomer Litlhonolofatso Litlhakanyane stand out for their realism and the moving depiction of a mother-son bond. ▸ The cinematography captures both the African landscape and the characters’ inner worlds, providing a visually immersive experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "emma thomas": {
+    "synopsis": "艾玛与托马斯在充满奇幻色彩的马戏团环境中，面对彼此心灵创伤与外部挑战，努力寻找归属与自我认同，故事聚焦他们如何突破困境实现成长。",
+    "synopsis_en": "Emma and Thomas, set against a whimsical circus backdrop, grapple with emotional scars and external challenges. Their journey centers on seeking belonging and self-acceptance while overcoming obstacles and personal growth.",
+    "recommendation": "▸导演巧妙运用马戏团元素，将现实与幻想融合，营造独特视觉氛围。▸主演表现细腻，情感层次丰富，推动角色成长令人动容。▸配乐与色彩运用突出，强化主题与角色心境，提升观影体验。",
+    "recommendation_en": "▸ The director skillfully blends circus motifs with reality, creating a visually distinctive atmosphere. ▸ Lead performances are nuanced and emotionally layered, driving authentic character development. ▸ The film’s score and color palette are striking, enhancing both thematic depth and the protagonists’ inner worlds for a compelling cinematic experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "michel gondry do it yourself": {
+    "synopsis": "本片聚焦鬼才导演米歇尔·贡德里的创作旅程，呈现他如何在现实与幻想间寻找自我表达的空间，并面对外界质疑与自我怀疑的双重挑战。纪录片深入其艺术探索，展现创作背后的真实挣扎。",
+    "synopsis_en": "This documentary follows visionary director Michel Gondry as he navigates the challenges of balancing personal imagination with real-world expectations. It explores his journey of creative self-expression while confronting external skepticism and inner doubt.",
+    "recommendation": "▸ 通过丰富档案资料和幕后影像，揭示贡德里独特的手工美学及其电影创意的诞生过程，让观众深入了解其标志性幻想风格背后的实践细节。▸ 真实呈现贡德里面对创作瓶颈与行业压力时的心理挣扎，对艺术家和电影爱好者极具启发性。",
+    "recommendation_en": "▸ The film offers rare behind-the-scenes footage and archival material, shedding light on Gondry's signature handmade visual style and the practical steps behind his inventive filmmaking. ▸ It authentically captures Gondry’s personal struggles with creative blocks and industry expectations, providing inspiration and insight for artists and cinephiles alike.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "you the living": {
+    "synopsis": "本片通过一系列瑞典普通人的生活片段，展现他们在孤独、失落与希望之间挣扎。影片以黑色幽默和讽刺手法，描绘现代社会中个体面对生活琐事的无力感与荒诞性。",
+    "synopsis_en": "A mosaic of everyday Swedes grappling with loneliness, disappointment, and fleeting hope. The film uses deadpan humor and surreal vignettes to explore the absurdities and quiet pains of modern existence.",
+    "recommendation": "▸ 瑞典导演罗伊·安德森标志性的长镜头和冷峻色调，营造出独特的幽默与疏离氛围，让观众沉浸于荒诞现实中。▸ 全片采用群像叙事，通过精心编排的场景和精准的演员表演，展现普通人内心的脆弱和共鸣感。▸ 影片在黑色幽默和哲理思考间取得巧妙平衡，是近年来欧洲艺术电影的杰出代表。",
+    "recommendation_en": "▸ Director Roy Andersson’s signature use of long static shots and muted color palettes creates a uniquely deadpan, surreal atmosphere that immerses viewers in the absurdities of everyday life. ▸ The ensemble cast delivers remarkably subtle performances, with meticulously staged scenes highlighting the vulnerability and shared humanity of ordinary people. ▸ The film masterfully balances dark humor with philosophical reflection, marking it as a standout work in contemporary European cinema.",
+    "awards": "2007戛纳电影节“一种关注”单元入围",
+    "awards_en": "2007 Cannes Un Certain Regard selection"
+  },
+  "homo sapiens": {
+    "synopsis": "本片通过一系列无人场景，探索人类消失后的世界与遗迹，反思文明的脆弱和生态环境的变迁。导演以静默镜头展现人类活动的终止，观众将直面未知的未来和深刻的哲学命题。",
+    "synopsis_en": "The film presents abandoned human spaces, envisioning a world after mankind has vanished. Through silent imagery, it questions the fragility of civilization and environmental transformation, confronting viewers with profound philosophical dilemmas about our future.",
+    "recommendation": "▸ 导演尼古劳斯·盖尔哈特以极具感染力的长镜头和无对白手法，营造出末世感和哲学沉思氛围。▸ 全片以真实废墟取景，展现人类遗迹的视觉冲击力，让观众直观感受文明消逝后的孤寂。▸ 100%烂番茄高分，受到国际专业影评人一致认可，适合喜欢沉浸式思考和独特视听体验的观众。",
+    "recommendation_en": "▸ Nikolaus Geyrhalter’s masterful use of lengthy, silent shots establishes a haunting atmosphere of post-apocalyptic contemplation. ▸ Filmed entirely in authentic abandoned locations, the film delivers striking visual impact, immersing viewers in the solitude of vanished civilizations. ▸ With a 100% Rotten Tomatoes score, it is internationally acclaimed and ideal for those seeking immersive, thought-provoking cinema.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "mistura": {
+    "synopsis": "Mistura讲述一位女性主厨在秘鲁美食界奋斗的故事。面对传统与创新的冲突，她不仅要证明自己的才能，还要应对职业和家庭之间的矛盾。影片聚焦文化与个人成长的抉择。",
+    "synopsis_en": "Mistura follows a female chef navigating Peru’s culinary world, balancing tradition and innovation. She struggles to prove her talent while facing conflicts between her career ambitions and family responsibilities. The film explores cultural identity and personal growth.",
+    "recommendation": "▸ 巴尔巴拉·莫里在主角的复杂情感刻画上表现出色，展现出坚韧与脆弱的多重面貌。▸ 导演Ricardo de Montreuil以细腻的镜头语言捕捉秘鲁美食文化，视觉呈现极具地域特色。▸ 烂番茄高分认可，说明影片在剧情和表演上获得专业影评人一致好评。",
+    "recommendation_en": "▸ Bárbara Mori delivers an outstanding performance, capturing the protagonist’s resilience and inner turmoil with nuance. ▸ Director Ricardo de Montreuil uses refined cinematography to spotlight Peru’s culinary culture, offering visually immersive local flavor. ▸ The film’s 100% rating on Rotten Tomatoes signals strong acclaim from critics for both narrative and acting.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "romería": {
+    "synopsis": "一位西班牙青年在传统节日“Romería”中面对家庭过去的秘密与自我身份的挣扎，逐步探索自己与爱情、家庭之间的关系。本片为导演卡拉·西蒙的全新原创作品。",
+    "synopsis_en": "A Spanish young man confronts family secrets and his own identity during the traditional 'Romería' festival, navigating complex relationships with love and family. This is director Carla Simón's original drama, not connected to any previous series.",
+    "recommendation": "▸ 卡拉·西蒙以细腻视角呈现西班牙乡村风情，融合传统文化与个人成长的主题。▸ 特里斯坦·乌略亚与萨拉·卡萨斯诺瓦斯表演自然，情感层次丰富。▸ 影片画面精致，色彩和光影捕捉当地节日氛围，提升观赏体验。",
+    "recommendation_en": "▸ Carla Simón’s nuanced direction authentically captures rural Spain, blending traditional culture with themes of personal growth. ▸ Tristán Ulloa and Sara Casasnovas deliver layered, natural performances that anchor the emotional core. ▸ The cinematography stands out, with vibrant colors and lighting that evoke the festival’s atmosphere and enhance the visual experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the blue trail": {
+    "synopsis": "中年女性玛丽亚在神秘的蓝色小径上寻找失踪的儿子，途中不断面对现实与幻想交错的挑战。她的旅程不仅是对亲情的追寻，也是自我救赎与成长的考验。",
+    "synopsis_en": "Maria, a middle-aged woman, embarks on the mysterious Blue Trail searching for her missing son. Along the way, she confronts challenges where reality and fantasy intertwine, forcing her to grapple with both personal loss and self-discovery.",
+    "recommendation": "▸导演Gabriel Mascaro以诗意镜头和独特视觉风格营造出梦幻与现实交错的氛围，让观众沉浸于主角内心世界。▸Denise Weinberg和Rodrigo Santoro精彩对戏，情感层次丰富，表现出角色深刻的心理变化。▸影片在冒险剧情中巧妙融入幻想元素，呈现巴西文化背景与自然环境的深度融合。",
+    "recommendation_en": "▸ Director Gabriel Mascaro crafts a poetic and immersive atmosphere through innovative visuals, blurring the line between fantasy and reality. ▸ Denise Weinberg and Rodrigo Santoro deliver nuanced performances, portraying the protagonist’s emotional turmoil and evolution. ▸ The film integrates fantasy elements into its adventure narrative, offering a vivid exploration of Brazilian cultural landscapes and nature.",
+    "awards": "",
+    "awards_en": ""
   }
 }
