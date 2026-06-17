@@ -356,16 +356,9 @@ def scrape_acmi(start: dt.date, end: dt.date) -> list[Film]:
 
 # ───────── Palace Cinemas ─────────
 PALACE_BASE = "https://www.palacecinemas.com.au"
-# Melbourne Palace cinemas (VIC only)
+# Melbourne Palace cinemas — 仅保留 Astor 和 Kino 两家
 PALACE_MELB_SLUGS = [
-    "palace-cinema-como",
-    "palace-brighton-bay",
     "the-kino-melbourne",
-    "palace-balwyn",
-    "palace-westgarth",
-    "pentridge-cinema",
-    "palace-penny-lane",
-    "palace-church-street",
     "the-astor-theatre",
 ]
 
@@ -510,7 +503,8 @@ def scrape_imax(start: dt.date, end: dt.date) -> list[Film]:
 def _clean_title(t: str) -> str:
     if ", The" in t: t = "The " + t.replace(", The","")
     t = re.sub(r'\s*\(\d{4}\)\s*',' ',t)
-    t = re.sub(r'^AFFA\d+\s+','',t)
+    # 已知电影节前缀 (兜底, 通常 _preprocess_films 已处理)
+    t = re.sub(r'^(?:AFFA|AFFFF|MIFF|HRAFF|MQFF|MDFF|JFF|BIFF|GIFF)\d*\s*[-:]?\s+', '', t, flags=re.I)
     return t.strip()
 
 def _search_title(t: str) -> str:
@@ -555,32 +549,66 @@ def search_douban(title: str) -> tuple[Optional[float], str, str, str]:
     except Exception:
         pass
 
-    # Step2: 搜索页 — 获取评分 (比详情页稳定)
+    # Step2: 搜索页 — 获取评分 + 中文片名 (suggest API 失败的兜底)
     try:
         resp = SESSION.get("https://www.douban.com/search",
                            params={"q": clean, "cat": "1002"}, timeout=10)
         if resp.status_code == 200:
             soup = BeautifulSoup(resp.text, "html.parser")
-            rating = soup.find("span", class_="rating_nums")
-            if rating and (txt := rating.get_text(strip=True)):
-                score = float(txt)
-            # 如果 suggest 没拿到 url，从搜索页补
-            if not douban_url:
-                link = soup.find("a", href=re.compile(r"movie\.douban\.com/subject/\d+"))
-                if link:
-                    douban_url = link["href"]
+            # 第一条结果 (最相关)
+            first = soup.find("div", class_="result")
+            if first:
+                # 中文标题 + 详情页链接 (URL 被 link2 包装, 需解码)
+                h3a = first.find("h3")
+                a = h3a.find("a") if h3a else None
+                if a:
+                    cn_text = a.get_text(strip=True)
+                    if cn_text and not title_cn:
+                        title_cn = cn_text
+                    if not douban_url:
+                        href = a.get("href", "")
+                        m = re.search(r"url=([^&]+)", href)
+                        if m:
+                            from urllib.parse import unquote
+                            decoded = unquote(m.group(1))
+                            sm = re.search(r"movie\.douban\.com/subject/\d+", decoded)
+                            if sm:
+                                douban_url = "https://" + sm.group(0) + "/"
+                # 评分
+                rating = first.find("span", class_="rating_nums")
+                if rating and (txt := rating.get_text(strip=True)):
+                    try:
+                        score = float(txt)
+                    except ValueError:
+                        pass
+            # 顶部老式布局兜底
+            if score is None:
+                rating = soup.find("span", class_="rating_nums")
+                if rating and (txt := rating.get_text(strip=True)):
+                    try:
+                        score = float(txt)
+                    except ValueError:
+                        pass
     except Exception:
         pass
 
-    # Step3: 如果有 url 且搜索页拿不到评分，尝试详情页 (最后手段)
-    if score is None and douban_url:
+    # Step3: 如果有 url 但缺评分或中文名，访问详情页补全
+    if douban_url and (score is None or not title_cn):
         try:
             resp = SESSION.get(douban_url, timeout=10)
             if resp.status_code == 200:
                 soup = BeautifulSoup(resp.text, "html.parser")
-                se = soup.find("strong", class_="ll rating_num")
-                if se and (t := se.get_text(strip=True)):
-                    score = float(t)
+                if score is None:
+                    se = soup.find("strong", class_="ll rating_num")
+                    if se and (t := se.get_text(strip=True)):
+                        try:
+                            score = float(t)
+                        except ValueError:
+                            pass
+                if not title_cn:
+                    cn = _extract_douban_title_cn(soup)
+                    if cn:
+                        title_cn = cn
                 # 顺便拿短评
                 ce = soup.find("span", class_="short")
                 if ce:
@@ -589,6 +617,29 @@ def search_douban(title: str) -> tuple[Optional[float], str, str, str]:
             pass
 
     return score, douban_url, title_cn, hot_comment
+
+
+def _extract_douban_title_cn(soup) -> str:
+    """从豆瓣详情页提取中文片名。
+    页面 <title> 形如 '阿基拉 アキラ (1988)' — 取首段 (空格前) 的中文部分。
+    备用: 从 <span property="v:itemreviewed"> 提取。
+    """
+    cn = ""
+    h1 = soup.find("span", attrs={"property": "v:itemreviewed"})
+    if h1:
+        full = h1.get_text(strip=True)
+        # 取第一个空格之前的部分 (通常是中文名), 并验证含中文字符
+        first = full.split(" ")[0] if full else ""
+        if first and re.search(r'[\u4e00-\u9fff]', first):
+            return first
+    # 兜底: <title>
+    t = soup.find("title")
+    if t:
+        full = t.get_text(strip=True)
+        first = full.split(" ")[0]
+        if re.search(r'[\u4e00-\u9fff]', first):
+            cn = first
+    return cn
 
 # ── 烂番茄 ──
 def search_rotten_tomatoes(title: str) -> tuple[Optional[int], str, str, str]:
@@ -805,11 +856,15 @@ def _query_douban_serial(films: list[Film]) -> None:
         if not film.title_cn:
             retry_cn.append((key, film))
 
-    # 补充中文名: 对所有缺 title_cn 的电影重试 suggest API
+    # 补充中文名: 对所有缺 title_cn 的电影重试 (suggest API + 搜索页 + 详情页)
     if retry_cn:
         log.info("  补充中文名: %d 部...", len(retry_cn))
         for key, film in retry_cn:
             clean = _search_title(film.title)
+            cn_found = ""
+            url_found = film.douban_url
+
+            # 1) suggest API 重试
             try:
                 resp = SESSION.get("https://movie.douban.com/j/subject_suggest",
                                    params={"q": clean}, timeout=8)
@@ -818,18 +873,73 @@ def _query_douban_serial(films: list[Film]) -> None:
                         if item.get("type") == "movie":
                             cn = item.get("title", "")
                             if cn:
-                                film.title_cn = cn
-                                cache[key]["title_cn"] = cn
+                                cn_found = cn
                                 did = item.get("id", "")
-                                if did and not cache[key].get("url"):
-                                    film.douban_url = f"https://movie.douban.com/subject/{did}/"
-                                    cache[key]["url"] = film.douban_url
-                                log.info("    %s → %s", film.title, cn)
-                                queried += 1
-                            break
+                                if did and not url_found:
+                                    url_found = f"https://movie.douban.com/subject/{did}/"
+                                break
             except Exception:
                 pass
             time.sleep(1)
+
+            # 2) 搜索页
+            if not cn_found:
+                try:
+                    resp = SESSION.get("https://www.douban.com/search",
+                                       params={"q": clean, "cat": "1002"}, timeout=10)
+                    if resp.status_code == 200:
+                        soup = BeautifulSoup(resp.text, "html.parser")
+                        first = soup.find("div", class_="result")
+                        if first:
+                            h3a = first.find("h3")
+                            a = h3a.find("a") if h3a else None
+                            if a:
+                                txt = a.get_text(strip=True)
+                                if txt and re.search(r'[\u4e00-\u9fff]', txt):
+                                    cn_found = txt
+                                if not url_found:
+                                    href = a.get("href", "")
+                                    m = re.search(r"url=([^&]+)", href)
+                                    if m:
+                                        from urllib.parse import unquote
+                                        decoded = unquote(m.group(1))
+                                        sm = re.search(r"movie\.douban\.com/subject/\d+", decoded)
+                                        if sm:
+                                            url_found = "https://" + sm.group(0) + "/"
+                except Exception:
+                    pass
+                time.sleep(1)
+
+            # 3) 详情页
+            if not cn_found and url_found:
+                try:
+                    resp = SESSION.get(url_found, timeout=10)
+                    if resp.status_code == 200:
+                        soup = BeautifulSoup(resp.text, "html.parser")
+                        cn = _extract_douban_title_cn(soup)
+                        if cn:
+                            cn_found = cn
+                except Exception:
+                    pass
+                time.sleep(1)
+
+            if cn_found:
+                film.title_cn = cn_found
+                if url_found and not film.douban_url:
+                    film.douban_url = url_found
+                if key in cache:
+                    cache[key]["title_cn"] = cn_found
+                    if url_found and not cache[key].get("url"):
+                        cache[key]["url"] = url_found
+                else:
+                    cache[key] = {
+                        "score": film.douban_score,
+                        "url": url_found,
+                        "title_cn": cn_found,
+                        "hot_comment": film.hot_comment,
+                    }
+                log.info("    %s → %s", film.title, cn_found)
+                queried += 1
 
     # 保存缓存
     if queried > 0:
@@ -990,15 +1100,26 @@ def _is_movie(f: Film) -> bool:
 
 # ── 电影节前缀 / 双片联映 处理 ──
 _FESTIVAL_PREFIXES = {
-    r'^AFFFF\d+\s+': 'AFFFF',
-    r'^AFFA\d+\s+': 'AFFA',
-    r'^MIFF\d*\s+': 'MIFF',
-    r'^HRAFF\d*\s+': 'HRAFF',
-    r'^Astor:\s*': 'Astor Special',       # "Astor: The Departed" → "The Departed"
-    r'^NT Live:\s*': 'NT Live',           # National Theatre Live
-    r'^La Scala:\s*': 'La Scala',
-    r'^Royal Ballet:\s*': 'Royal Ballet',
-    r'^Royal Opera:\s*': 'Royal Opera',
+    r'^AFFFF\d*\s*[-:]?\s+': 'AFFFF',          # AFFFF / AFFFF26 / AFFFF: 等
+    r'^AFFA\d*\s*[-:]?\s+': 'AFFA',
+    r'^MIFF\d*\s*[-:]?\s+': 'MIFF',
+    r'^HRAFF\d*\s*[-:]?\s+': 'HRAFF',
+    r'^MQFF\d*\s*[-:]?\s+': 'MQFF',            # Melbourne Queer Film Festival
+    r'^MDFF\d*\s*[-:]?\s+': 'MDFF',            # Melbourne Documentary FF
+    r'^JFF\d*\s*[-:]?\s+': 'JFF',              # Japanese Film Festival
+    r'^BIFF\d*\s*[-:]?\s+': 'BIFF',
+    r'^GIFF\d*\s*[-:]?\s+': 'GIFF',
+    r'^Astor:\s*': 'Astor Special',
+    r'^Encore[\s:\-–]+': 'Encore',             # Encore: / Encore - / Encore 
+    r'^NT Live[\s:\-–]+': 'NT Live',
+    r'^National Theatre Live[\s:\-–]+': 'NT Live',
+    r'^La Scala[\s:\-–]+': 'La Scala',
+    r'^Royal Ballet[\s:\-–]+': 'Royal Ballet',
+    r'^Royal Opera[\s:\-–]+': 'Royal Opera',
+    r'^Met Opera[\s:\-–]+': 'Met Opera',
+    r'^Bolshoi[\s:\-–]+': 'Bolshoi',
+    r'^Exhibition on Screen[\s:\-–]+': 'Exhibition on Screen',
+    r'^Anime at the Astor[\s:\-–]+': 'Anime',
 }
 
 def _preprocess_films(films: list[Film]) -> list[Film]:
@@ -1030,6 +1151,15 @@ def _preprocess_films(films: list[Film]) -> list[Film]:
             tag = special_m.group(1).strip()
             f.title = f.title[:special_m.start()].strip()
             f.genre = f"✨ {tag} | {f.genre}" if f.genre else f"✨ {tag}"
+        else:
+            # 无破折号变体: "A Knight's Tale Extended Edition" / "Akira 4K Remaster"
+            special_m2 = re.search(
+                r'\s+((?:Extended|Theatrical|Special|Collector.?s|Ultimate|Final|Director.?s\s+Cut|\d+\w*\s+Anniversary|4K\s+Remaster|Remastered|Restoration)\s*(?:Edition|Cut|Version)?)\s*$',
+                f.title, re.I)
+            if special_m2:
+                tag = special_m2.group(1).strip()
+                f.title = f.title[:special_m2.start()].strip()
+                f.genre = f"✨ {tag} | {f.genre}" if f.genre else f"✨ {tag}"
 
         # 4. 双片联映: "X + Y" (只在 + 两边都是电影名才拆分)
         if " + " in f.title:
