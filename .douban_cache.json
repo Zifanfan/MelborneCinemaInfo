@@ -2330,13 +2330,13 @@
   "sound of falling": {
     "score": 6.6,
     "url": "",
-    "title_cn": "",
+    "title_cn": "望向太阳",
     "hot_comment": ""
   },
   "call me by your name": {
     "score": 8.8,
     "url": "",
-    "title_cn": "",
+    "title_cn": "请以你的名字呼唤我",
     "hot_comment": ""
   },
   "malcolm": {
@@ -2787,6 +2787,24 @@
     "score": null,
     "url": "https://movie.douban.com/subject/36898818/",
     "title_cn": "礼拜天",
+    "hot_comment": ""
+  },
+  "howl's moving castle": {
+    "score": null,
+    "url": "",
+    "title_cn": "哈尔的移动城堡",
+    "hot_comment": ""
+  },
+  "electric dreams": {
+    "score": null,
+    "url": "",
+    "title_cn": "菲利普·狄克的電子夢",
+    "hot_comment": ""
+  },
+  "back to the future": {
+    "score": null,
+    "url": "",
+    "title_cn": "回到未来",
     "hot_comment": ""
   }
 }
