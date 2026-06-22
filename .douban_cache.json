@@ -1003,8 +1003,8 @@
   },
   "t rex": {
     "score": 5.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/36657672/",
+    "title_cn": "霸王龙",
     "hot_comment": ""
   },
   "mulholland dr": {
@@ -2961,6 +2961,60 @@
     "score": null,
     "url": "",
     "title_cn": "紫醉金迷",
+    "hot_comment": ""
+  },
+  "minions monsters": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/36962219/",
+    "title_cn": "小黄人与大怪兽",
+    "hot_comment": ""
+  },
+  "supergirl": {
+    "score": 6.4,
+    "url": "https://movie.douban.com/subject/36225840/",
+    "title_cn": "超级少女",
+    "hot_comment": ""
+  },
+  "mumbo jumbo": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/11614070/",
+    "title_cn": "Mumbo Jumbo",
+    "hot_comment": ""
+  },
+  "rent": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/1422912/",
+    "title_cn": "吉屋出租",
+    "hot_comment": ""
+  },
+  "momo": {
+    "score": 7.6,
+    "url": "https://movie.douban.com/subject/35937041/",
+    "title_cn": "墨墨奇游记",
+    "hot_comment": ""
+  },
+  "silent friend": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/26967871/",
+    "title_cn": "寂静的朋友",
+    "hot_comment": ""
+  },
+  "midnight express": {
+    "score": null,
+    "url": "",
+    "title_cn": "午夜快車",
+    "hot_comment": ""
+  },
+  "interstellar": {
+    "score": null,
+    "url": "",
+    "title_cn": "星际穿越",
+    "hot_comment": ""
+  },
+  "shark kingdom": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38495520/",
+    "title_cn": "鲨鱼王国",
     "hot_comment": ""
   }
 }
