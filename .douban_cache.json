@@ -824,7 +824,7 @@
   "akira": {
     "score": 8.5,
     "url": "",
-    "title_cn": "",
+    "title_cn": "亚基拉",
     "hot_comment": ""
   },
   "blow out": {
@@ -1333,8 +1333,8 @@
   },
   "500 days in the wild": {
     "score": 7.9,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/36442531/",
+    "title_cn": "荒野500天",
     "hot_comment": ""
   },
   "victorian queens": {
@@ -3015,6 +3015,48 @@
     "score": null,
     "url": "https://movie.douban.com/subject/38495520/",
     "title_cn": "鲨鱼王国",
+    "hot_comment": ""
+  },
+  "kiri and lou go raaa": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38499690/",
+    "title_cn": "Kiri and Lou Go Raaa!",
+    "hot_comment": ""
+  },
+  "curly burly": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38234191/",
+    "title_cn": "卷毛小淘气",
+    "hot_comment": ""
+  },
+  "maurice": {
+    "score": 8.8,
+    "url": "https://movie.douban.com/subject/1293456/",
+    "title_cn": "莫里斯",
+    "hot_comment": ""
+  },
+  "moss freud": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36229326/",
+    "title_cn": "莫斯与弗洛伊德",
+    "hot_comment": ""
+  },
+  "la salsa vive": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37212396/",
+    "title_cn": "La Salsa Vive",
+    "hot_comment": ""
+  },
+  "the devil's backbone": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/1304044/",
+    "title_cn": "鬼童院",
+    "hot_comment": ""
+  },
+  "the exterminating angel": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1303556/",
+    "title_cn": "泯灭天使",
     "hot_comment": ""
   }
 }
