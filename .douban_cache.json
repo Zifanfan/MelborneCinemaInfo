@@ -1651,8 +1651,8 @@
   },
   "dj ahmet": {
     "score": 7.0,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/35346338/",
+    "title_cn": "羊背上的DJ",
     "hot_comment": ""
   },
   "one hour with you": {
@@ -3105,6 +3105,30 @@
     "score": null,
     "url": "https://movie.douban.com/subject/37271013/",
     "title_cn": "先驱者：她们只想踢球",
+    "hot_comment": ""
+  },
+  "ponyo": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1959877/",
+    "title_cn": "崖上的波妞",
+    "hot_comment": ""
+  },
+  "rufus the sea serpent who couldn't swim": {
+    "score": 6.7,
+    "url": "https://movie.douban.com/subject/20469542/",
+    "title_cn": "不会游泳的男孩",
+    "hot_comment": ""
+  },
+  "glenrothan": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/35900176/",
+    "title_cn": "格伦罗森",
+    "hot_comment": ""
+  },
+  "scarface": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/1292065/",
+    "title_cn": "疤面煞星",
     "hot_comment": ""
   }
 }

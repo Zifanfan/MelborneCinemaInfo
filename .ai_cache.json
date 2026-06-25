@@ -2766,5 +2766,21 @@
     "recommendation_en": "▸ Roy Andersson’s minimalist, deadpan style utilizes static long shots to create a distinctive visual and philosophical atmosphere. ▸ The poetic narration seamlessly links vignettes, breaking conventional storytelling and offering profound reflections. ▸ High critical acclaim and a 95% Rotten Tomatoes score underscore its artistic achievement and audience appreciation.",
     "awards": "2019威尼斯电影节银狮奖最佳导演",
     "awards_en": "2019 Venice Silver Lion for Best Director"
+  },
+  "ponyo": {
+    "synopsis": "一条渴望成为人类的小鱼Ponyo逃离大海，与男孩宗介建立友情。她的冒险引发自然与魔法的混乱，宗介必须做出选择，拯救Ponyo并恢复世界的平衡。核心是童真与成长的冲突。",
+    "synopsis_en": "Ponyo, a magical goldfish who wishes to become human, escapes from the sea and befriends a boy named Sosuke. Their bond triggers magical chaos, forcing Sosuke to make choices that restore balance. The story explores innocence and coming-of-age dilemmas.",
+    "recommendation": "▸宫崎骏导演独特的手绘动画风格，色彩绚丽、画面细腻，营造梦幻般的童话世界。▸故事融合环保主题与童真视角，展现人与自然关系，适合家庭观众。▸配音阵容强大，英文版有Liam Neeson和Cate Blanchett，赋予角色更多层次。",
+    "recommendation_en": "▸ Hayao Miyazaki’s signature hand-drawn animation creates a vibrant and whimsical visual world, rich in color and detail. ▸ The narrative blends environmental themes with a child’s perspective, offering a heartfelt exploration of human and nature relationships, ideal for families. ▸ The English voice cast, including Liam Neeson and Cate Blanchett, adds depth and nuance to the characters.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "scarface": {
+    "synopsis": "故事讲述古巴移民托尼·蒙塔纳在迈阿密涉足毒品犯罪，为追求权力和财富不断挑战底线，最终陷入道德和生存的两难境地。影片聚焦其野心与社会秩序的冲突。",
+    "synopsis_en": "Scarface follows Cuban immigrant Tony Montana as he rises in Miami's drug underworld, driven by ambition and a relentless pursuit of power. The film centers on his moral struggles and the escalating conflict between personal desires and societal limits.",
+    "recommendation": "▸ 布莱恩·德·帕尔玛独特导演风格，营造紧张氛围和视觉暴力美学，令影片极具冲击力。▸ 阿尔·帕西诺奉献极具爆发力和层次感的表演，展现角色野心、脆弱与疯狂。▸ 影片深刻描绘美国梦与腐败的复杂关系，具有鲜明时代意义和社会批判性。",
+    "recommendation_en": "▸ Brian De Palma’s distinctive direction crafts intense atmospheres and striking visual violence, making the film highly impactful. ▸ Al Pacino delivers a powerhouse, multifaceted performance, capturing Tony Montana’s ambition, vulnerability, and madness. ▸ The film incisively explores the complexities of the American Dream and corruption, offering strong social critique and cultural significance.",
+    "awards": "",
+    "awards_en": ""
   }
 }
