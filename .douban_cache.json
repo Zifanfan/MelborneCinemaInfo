@@ -1465,8 +1465,8 @@
   },
   "the stranger l étranger": {
     "score": 7.2,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/37284351/",
+    "title_cn": "局外人",
     "hot_comment": ""
   },
   "the untouchables": {
@@ -2029,8 +2029,8 @@
   },
   "private life a": {
     "score": 8.2,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1448767/",
+    "title_cn": "猫的私生活",
     "hot_comment": ""
   },
   "soundtrack to a coup d etat": {
@@ -3129,6 +3129,36 @@
     "score": 8.4,
     "url": "https://movie.douban.com/subject/1292065/",
     "title_cn": "疤面煞星",
+    "hot_comment": ""
+  },
+  "north": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/1293437/",
+    "title_cn": "浪子保镖",
+    "hot_comment": ""
+  },
+  "tafiti across the desert": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37199575/",
+    "title_cn": "勇敢的塔菲缇",
+    "hot_comment": ""
+  },
+  "undercover la infiltrada": {
+    "score": 6.5,
+    "url": "https://movie.douban.com/subject/36537553/",
+    "title_cn": "她的卧底生涯",
+    "hot_comment": ""
+  },
+  "100 nights of hero": {
+    "score": 6.5,
+    "url": "https://movie.douban.com/subject/37033729/",
+    "title_cn": "英雄百夜",
+    "hot_comment": ""
+  },
+  "the playboy of the western world nt live": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37925657/",
+    "title_cn": "西部世界的花花公子",
     "hot_comment": ""
   }
 }
