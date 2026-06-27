@@ -2790,5 +2790,21 @@
     "recommendation_en": "▸ Hitchcock’s masterful direction creates sustained suspense, with iconic sequences such as landscape chases and the famous Mount Rushmore climax. ▸ Cary Grant and Eva Marie Saint deliver nuanced performances, bringing emotional depth and intensity to their characters. ▸ The film’s mistaken identity plot explores themes of trust, alienation, and societal paranoia, making it a multilayered thriller.",
     "awards": "",
     "awards_en": ""
+  },
+  "fight club": {
+    "synopsis": "男主角因失眠与空虚陷入人生困境，邂逅神秘男子后，组建地下搏击俱乐部，试图摆脱现代生活的压抑，却逐渐卷入不可控的混乱与自我认知危机。",
+    "synopsis_en": "A disillusioned man suffering from insomnia forms an underground fight club with a mysterious stranger, seeking escape from his mundane life. As he loses control, he faces escalating chaos and a profound crisis of identity.",
+    "recommendation": "▸ 大卫·芬奇以冷峻风格和极具张力的叙事手法，营造出强烈的心理悬疑氛围，层层推进主角的精神崩溃。▸ 爱德华·诺顿与布拉德·皮特精湛对手戏，极具张力的人物塑造，让角色复杂性与情感冲突深入人心。▸ 影片对消费主义与现代都市异化的深刻反思，通过视觉和叙事多重隐喻，成为讨论度极高的文化现象。",
+    "recommendation_en": "▸ David Fincher’s distinctively cold tone and masterful narrative pacing create an intense psychological thriller, immersing viewers in the protagonist’s unraveling psyche. ▸ Exceptional performances from Edward Norton and Brad Pitt deliver complex, layered character dynamics full of tension and emotional depth. ▸ The film’s critical exploration of consumerism and urban alienation, conveyed through striking visuals and layered metaphors, has solidified its status as a widely debated cultural landmark.",
+    "awards": "2000奥斯卡最佳音效剪辑提名",
+    "awards_en": "2000 Academy Award nominee for Best Sound Editing"
+  },
+  "godzilla": {
+    "synopsis": "在日本遭遇巨大怪兽哥斯拉袭击时，主角们必须在绝望与恐惧中寻找生存和拯救家园的方法。影片以灾难为背景，聚焦人类面对超自然危机的抉择和牺牲，是哥斯拉系列的重新演绎。",
+    "synopsis_en": "When Japan is threatened by the monstrous Godzilla, the protagonists face a desperate struggle for survival and must find ways to protect their homeland. The film centers on human choices and sacrifices amid a supernatural disaster, offering a fresh take on the Godzilla saga.",
+    "recommendation": "▸导演山崎贵以细腻的视角重塑哥斯拉形象，融合传统与现代特效，展现极具冲击力的灾难场面。▸主演神木隆之介、滨边美波等表现出色，将人类恐惧和勇气演绎得真实动人。▸影片在视觉效果和情感刻画上均达到新高度，获得烂番茄99%高分，充分证明其艺术与娱乐价值。",
+    "recommendation_en": "▸ Takashi Yamazaki offers a nuanced approach, blending classic Godzilla elements with modern VFX for striking disaster sequences. ▸ Ryûnosuke Kamiki and Minami Hamabe deliver gripping performances, capturing human fear and resilience. ▸ The film achieves exceptional visual effects and emotional depth, reflected in its 99% Rotten Tomatoes score, confirming both artistic and entertainment merit.",
+    "awards": "",
+    "awards_en": ""
   }
 }
