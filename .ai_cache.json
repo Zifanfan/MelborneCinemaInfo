@@ -2806,5 +2806,29 @@
     "recommendation_en": "▸ Takashi Yamazaki offers a nuanced approach, blending classic Godzilla elements with modern VFX for striking disaster sequences. ▸ Ryûnosuke Kamiki and Minami Hamabe deliver gripping performances, capturing human fear and resilience. ▸ The film achieves exceptional visual effects and emotional depth, reflected in its 99% Rotten Tomatoes score, confirming both artistic and entertainment merit.",
     "awards": "",
     "awards_en": ""
+  },
+  "to catch a thief": {
+    "synopsis": "前窃贼约翰·罗比在法国蔚蓝海岸被卷入一系列新盗窃案，警察怀疑他重操旧业。他必须查明真相，洗清嫌疑，同时面对爱情与危险的双重考验。",
+    "synopsis_en": "Former thief John Robie is suspected of a string of jewel thefts along the French Riviera. To clear his name, he must uncover the real culprit while navigating romance and looming threats.",
+    "recommendation": "▸希区柯克以精巧悬疑和幽默融合，营造独特气氛，节奏紧凑，情节反转精彩。▸嘉丽·格兰特与格蕾丝·凯利的化学反应极强，展现经典银幕魅力。▸蔚蓝海岸的摄影极具美感，画面华丽，展现50年代欧洲风情。",
+    "recommendation_en": "▸ Hitchcock masterfully blends suspense with wit, delivering tight pacing and clever plot twists. ▸ Cary Grant and Grace Kelly ignite the screen with their charismatic performances and chemistry. ▸ The film boasts stunning cinematography of the French Riviera, capturing glamorous 1950s Europe.",
+    "awards": "1956奥斯卡最佳摄影（金像奖）提名",
+    "awards_en": "1956 Academy Award nominee for Best Cinematography"
+  },
+  "all the president's men": {
+    "synopsis": "两位记者深入调查一起政治丑闻，面临巨大压力和阻力，逐步揭开权力层层遮掩的真相。故事聚焦媒体与政府之间的较量，考验主角的勇气与职业操守。",
+    "synopsis_en": "Two journalists investigate a major political scandal, facing mounting pressure and obstacles as they uncover layers of deception. The film centers on the tension between the press and the government, testing the protagonists’ courage and integrity.",
+    "recommendation": "▸精妙的写实风格，导演阿兰·帕库拉营造紧张气氛，细腻展现新闻调查的复杂过程。▸罗伯特·雷德福和达斯汀·霍夫曼的出色表演，真实塑造新闻人的坚韧与疑惑。▸影片以真实历史事件为背景，对新闻自由与社会责任进行深刻探讨，启发思考。",
+    "recommendation_en": "▸ Alan J. Pakula’s realistic directorial approach creates a gripping, taut atmosphere and meticulously portrays the investigative process. ▸ Robert Redford and Dustin Hoffman deliver stellar performances, authentically capturing the determination and uncertainty of journalists. ▸ Based on real historical events, the film offers profound reflections on press freedom and social responsibility.",
+    "awards": "1977奥斯卡最佳影片提名，1977奥斯卡最佳男配角、导演等多项提名，1977奥斯卡最佳编剧、最佳音效获奖",
+    "awards_en": "1977 Academy Award nominee for Best Picture, Best Supporting Actor, Best Director, and winner for Best Screenplay and Best Sound"
+  },
+  "jaws": {
+    "synopsis": "在海滨小镇，警长与专家、渔夫联手对抗一只威胁游客安全的巨大鲨鱼。他们面临恐慌蔓延与生死挑战，必须找到制止鲨鱼的方法。这是斯皮尔伯格执导的经典惊悚片。",
+    "synopsis_en": "In a coastal town, a police chief, a marine expert, and a fisherman team up to stop a deadly shark threatening tourists. As panic spreads, they must confront both their fears and the predator. Directed by Spielberg, this is a landmark thriller.",
+    "recommendation": "▸ 斯皮尔伯格以紧张气氛与精妙镜头调度，开创现代惊悚片风格，水下视角和配乐极具标志性。▸ 主演罗伊·谢德尔、罗伯特·肖表现出色，角色张力十足。▸ 影片在恐怖与冒险之间把控节奏，极大提高观众沉浸感，是大银幕观影的经典体验。",
+    "recommendation_en": "▸ Spielberg’s mastery of suspense and innovative camera work, including iconic underwater shots and soundtrack, redefined the thriller genre. ▸ Roy Scheider and Robert Shaw deliver memorable performances, with strong character dynamics. ▸ The film’s pacing between horror and adventure offers an immersive cinematic experience, making it an enduring must-see in theaters.",
+    "awards": "1976奥斯卡最佳剪辑、最佳音效、最佳原创配乐奖",
+    "awards_en": "1976 Academy Awards: Best Film Editing, Best Sound, Best Original Score"
   }
 }
