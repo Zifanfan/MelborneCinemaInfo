@@ -2830,5 +2830,29 @@
     "recommendation_en": "▸ Spielberg’s mastery of suspense and innovative camera work, including iconic underwater shots and soundtrack, redefined the thriller genre. ▸ Roy Scheider and Robert Shaw deliver memorable performances, with strong character dynamics. ▸ The film’s pacing between horror and adventure offers an immersive cinematic experience, making it an enduring must-see in theaters.",
     "awards": "1976奥斯卡最佳剪辑、最佳音效、最佳原创配乐奖",
     "awards_en": "1976 Academy Awards: Best Film Editing, Best Sound, Best Original Score"
+  },
+  "sing": {
+    "synopsis": "年轻女子在偏远沼泽中独自生活，被卷入一桩离奇谋杀案。面对社会偏见和自我成长，她必须寻找真相与自我救赎。该片为剧情悬疑类型，展现主角的坚韧与孤独。",
+    "synopsis_en": "A young woman living alone in remote marshlands becomes entangled in a mysterious murder case. Facing social prejudice and her own growth, she must seek the truth and redemption. This drama thriller explores resilience and solitude.",
+    "recommendation": "▸导演Olivia Newman以细腻笔触展现沼泽环境与主角心理，营造紧张气氛。▸Daisy Edgar-Jones饰演主角，表现出色，将角色的脆弱与坚强层次诠释得极具说服力。▸影片悬疑元素与情感描写融合，既有案件调查的紧张，也有成长主题的深度。",
+    "recommendation_en": "▸ Olivia Newman’s direction delicately brings the marsh setting and protagonist’s inner world to life, building a tense atmosphere. ▸ Daisy Edgar-Jones delivers a nuanced performance, convincingly portraying vulnerability and strength. ▸ The film blends mystery and emotional depth, balancing suspenseful investigation with coming-of-age themes.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "yentl": {
+    "synopsis": "故事发生在20世纪初的东欧，女主角Yentl渴望接受宗教教育，却因性别受限。她为追求知识不得不隐瞒身份，面临内心挣扎与复杂的人际关系。这是一部关于自我认同与追寻自由的音乐剧。",
+    "synopsis_en": "Set in early 20th-century Eastern Europe, Yentl yearns for religious study but is restricted by her gender. She conceals her identity to pursue knowledge, facing inner turmoil and complicated relationships. The film explores self-identity and freedom.",
+    "recommendation": "▸巴布拉·史翠珊首次自导自演，展现女性导演在好莱坞的突破，表演与导演均具感染力。▸音乐剧与犹太文化结合，歌曲与剧情紧密连接，情感表达细腻动人。▸摄影营造独特时代氛围，画面富有诗意，色彩与光影突出角色心理变化。",
+    "recommendation_en": "▸ Barbra Streisand's debut as director and lead actress marks a groundbreaking moment for female filmmakers in Hollywood, with compelling performance and direction. ▸ The integration of musical elements with Jewish cultural context is handled delicately, with songs deeply entwined with the narrative. ▸ Cinematography creates a poetic period atmosphere, using color and light to enhance character psychology.",
+    "awards": "1984奥斯卡最佳原创音乐奖获奖，最佳女主角、最佳艺术指导等提名；1984金球奖最佳影片（喜剧/音乐类）获奖，最佳导演、最佳女主角提名",
+    "awards_en": "1984 Academy Award for Best Original Score winner, Best Actress and Best Art Direction nominee; 1984 Golden Globe Award for Best Motion Picture (Musical or Comedy) winner, Best Director and Best Actress nominee"
+  },
+  "following": {
+    "synopsis": "一位作家因好奇而跟踪陌生人，却意外卷入一场犯罪阴谋。他在迷失自我的过程中，逐渐难以分辨现实与谎言，陷入复杂的心理博弈与道德抉择。",
+    "synopsis_en": "A writer, driven by curiosity, begins following strangers and becomes entangled in a criminal plot. As he struggles with self-identity, he faces psychological manipulation and moral dilemmas, blurring the line between reality and deception.",
+    "recommendation": "▸克里斯托弗·诺兰的导演处女作，以极简黑白影像和非线性叙事展现独特风格，奠定其后续作品基础。▸紧凑的悬疑氛围和心理博弈，使故事在短短70分钟内层层反转，极具观看价值。▸演员表演自然，低成本制作下展现高完成度，适合喜欢探索电影语言和导演成长轨迹的观众。",
+    "recommendation_en": "▸ Christopher Nolan’s directorial debut, featuring minimalist black-and-white cinematography and nonlinear storytelling, sets the groundwork for his later films. ▸ The tight suspense and psychological intrigue deliver multiple twists within a concise 70-minute runtime. ▸ Natural performances and impressive craftsmanship despite the low budget make it a must-watch for those interested in film language and Nolan’s evolution.",
+    "awards": "",
+    "awards_en": ""
   }
 }
