@@ -1555,8 +1555,8 @@
   },
   "it's never over jeff buckley": {
     "score": 7.8,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/37153826/",
+    "title_cn": "杰夫·巴克利，一切从未结束",
     "hot_comment": ""
   },
   "lawrence of arabia": {
@@ -2149,8 +2149,8 @@
   },
   "h is for hawk": {
     "score": 6.7,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/35011296/",
+    "title_cn": "以鹰之名",
     "hot_comment": ""
   },
   "all that jazz": {
@@ -3267,6 +3267,42 @@
     "score": null,
     "url": "",
     "title_cn": "猎捕",
+    "hot_comment": ""
+  },
+  "my grandfather is a nihonjin": {
+    "score": 7.0,
+    "url": "https://movie.douban.com/subject/36879657/",
+    "title_cn": "Eu e Meu Avô Nihonjin",
+    "hot_comment": ""
+  },
+  "the desert child": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37077449/",
+    "title_cn": "沙漠之书",
+    "hot_comment": ""
+  },
+  "the songbirds secret": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/36893213/",
+    "title_cn": "灵雀密语",
+    "hot_comment": ""
+  },
+  "memento": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1304447/",
+    "title_cn": "记忆碎片",
+    "hot_comment": ""
+  },
+  "head on": {
+    "score": null,
+    "url": "",
+    "title_cn": "窗外有男天",
+    "hot_comment": ""
+  },
+  "when the wind blows": {
+    "score": null,
+    "url": "",
+    "title_cn": "當風吹來的時候",
     "hot_comment": ""
   }
 }
