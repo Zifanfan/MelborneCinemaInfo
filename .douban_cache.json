@@ -2354,7 +2354,7 @@
   "the room": {
     "score": 4.3,
     "url": "",
-    "title_cn": "",
+    "title_cn": "房間",
     "hot_comment": ""
   },
   "season of the devil": {
@@ -3333,6 +3333,12 @@
     "score": null,
     "url": "",
     "title_cn": "海洋奇缘",
+    "hot_comment": ""
+  },
+  "batman begins": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1309069/",
+    "title_cn": "蝙蝠侠：侠影之谜",
     "hot_comment": ""
   }
 }
