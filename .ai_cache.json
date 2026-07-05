@@ -2950,5 +2950,45 @@
     "recommendation_en": "▸ Director Hlynur Pálmason's cold, realistic approach immerses viewers in the emotional isolation of Icelandic rural life, adding psychological depth. ▸ Performances by Saga Garðarsdóttir and Sverrir Gudnason are nuanced and compelling, especially the mother-daughter scenes. ▸ Cinematography poetically captures the stark landscapes, mirroring the characters’ emotional states and enhancing dramatic tension.",
     "awards": "",
     "awards_en": ""
+  },
+  "all about eve": {
+    "synopsis": "本片讲述舞台剧明星玛戈面临事业与人际关系的双重危机，初出茅庐的伊芙逐渐取代她的位置，两人之间展开一场关于野心与信任的较量。",
+    "synopsis_en": "A celebrated stage actress, Margo, faces both career and personal challenges as the ambitious newcomer Eve gradually moves into her spotlight, leading to a tense battle of ambition and trust.",
+    "recommendation": "▸ 贝蒂·戴维斯与安妮·巴克斯特的精彩对手戏，展现人物复杂心理和女性竞争的深层次。▸ 导演曼凯维奇以犀利台词、精妙结构，揭示演艺圈权谋与虚伪，节奏紧凑，情节引人入胜。▸ 电影在黑白摄影下呈现经典好莱坞氛围，细节丰富，视听体验极佳。",
+    "recommendation_en": "▸ Bette Davis and Anne Baxter deliver intense performances, exploring the psychological complexity and rivalry between women. ▸ Director Joseph L. Mankiewicz crafts sharp dialogue and an intricate narrative, exposing the backstage power games and illusions of show business. ▸ The film’s black-and-white cinematography creates a timeless Hollywood atmosphere with rich details and outstanding audiovisual impact.",
+    "awards": "1951奥斯卡最佳影片、最佳导演等6项大奖；1951金球奖最佳导演",
+    "awards_en": "1951 Academy Award for Best Picture, Best Director and 4 other Oscars; 1951 Golden Globe for Best Director"
+  },
+  "the jungle book": {
+    "synopsis": "本片改编自经典童书，讲述人类男孩毛克利在丛林中成长，面对动物世界的挑战与危险，探索自己的身份与归属。作为系列作品，2016年新版以更现代的视觉技术重现故事。",
+    "synopsis_en": "Adapted from a classic children's book, the film follows Mowgli, a human boy raised in the jungle, as he faces dangerous challenges and searches for his identity and belonging. The 2016 version is a modern reimagining of the series.",
+    "recommendation": "▸ 全片采用极具沉浸感的视觉特效，丛林与动物栩栩如生，适合大银幕观看。▸ 配音阵容豪华，Bill Murray、Ben Kingsley等带来极具特色的角色塑造。▸ 导演Jon Favreau巧妙融合童趣冒险与紧张氛围，适合家庭观众，也有深度思考空间。",
+    "recommendation_en": "▸ The film features immersive visual effects, bringing the jungle and animals to life in a way best experienced on the big screen. ▸ A star-studded voice cast, including Bill Murray and Ben Kingsley, delivers distinctive and memorable performances. ▸ Director Jon Favreau skillfully blends adventure and tension, appealing to families while offering depth for adult viewers.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "nor26 the battle of oslo": {
+    "synopsis": "在纳粹占领下的奥斯陆，一位抵抗组织领导者在极端压迫中挣扎，必须在个人安危与国家命运之间做出抉择，带领同伴对抗无情的侵略者，命运悬于一线。",
+    "synopsis_en": "Set in Nazi-occupied Oslo, a resistance leader faces harrowing choices between personal safety and national freedom as he leads his comrades against a ruthless invading force. The protagonist's struggle is marked by constant tension and sacrifice.",
+    "recommendation": "▸ 著名导演吉洛·彭特科沃以纪实手法还原战时奥斯陆，场面调度紧张写实，极具沉浸感。▸ 让·马丁等主演展现出强烈的人物内心冲突与群像刻画，使观众深刻体会抵抗运动的压力和牺牲。▸ 影片在历史细节、战争氛围和社会动荡的表现上高度精准，被誉为战争题材的经典之作。",
+    "recommendation_en": "▸ Directed by Gillo Pontecorvo, the film employs a documentary-like realism, creating immersive tension throughout the battle scenes in Oslo. ▸ Jean Martin and the cast deliver powerful performances, vividly portraying the psychological toll and collective spirit of resistance. ▸ The film stands out for its meticulous historical accuracy and atmospheric depiction of wartime Oslo, earning acclaim as a war cinema classic.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "nor26 the guest": {
+    "synopsis": "一名神秘士兵自称是阵亡战友的朋友，拜访了一个普通美国家庭。随着他融入家庭，接连发生的离奇事件让家人逐渐陷入危险与怀疑之中，真正身份成为核心谜团。",
+    "synopsis_en": "A mysterious soldier claiming to be a fallen comrade’s friend visits an ordinary American family. As he integrates into their lives, strange and dangerous events unfold, pushing the family into a web of suspicion and peril. The guest’s true identity is at the heart of the conflict.",
+    "recommendation": "▸ 导演亚当·温加德以精湛的节奏和悬疑氛围打造出融合惊悚与幽默的独特风格，让观众持续紧张又不失娱乐感。▸ 丹·史蒂文斯颠覆型出演，展现出极富魅力与威胁感的角色，表演层次丰富，令人印象深刻。▸ 80年代复古配乐与美术风格，为影片增添另类酷感和强烈风格化观感。",
+    "recommendation_en": "▸ Director Adam Wingard masterfully blends suspense and dark humor, crafting a thriller that’s both tense and entertaining. ▸ Dan Stevens delivers a transformative performance, balancing charm and menace in a role that’s complex and memorable. ▸ The film’s 1980s-inspired synth soundtrack and stylized production design create a unique, retro-cool atmosphere.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "nor26 the last viking": {
+    "synopsis": "一位落魄维京战士在现代社会中挣扎求生，为了保护家族和自我身份，他不得不面对荒诞且充满挑战的新环境，核心冲突在于传统与现实的碰撞。",
+    "synopsis_en": "A down-and-out Viking warrior struggles to adapt in modern society, forced to protect his family and identity. The film centers on the clash between tradition and reality, highlighting his dilemma in an absurd, challenging environment.",
+    "recommendation": "▸ 安德斯·托马斯·延森以独特黑色幽默和荒诞现实主义风格，巧妙展现维京题材的新鲜视角。▸ 麦斯·米克尔森与尼克莱·李·卡斯的精湛演技赋予角色复杂情感，张力十足。▸ 影片摄影捕捉北欧自然与都市景观对比，视觉冲击力强。",
+    "recommendation_en": "▸ Anders Thomas Jensen employs black humor and absurd realism, offering a fresh take on Viking themes. ▸ Mads Mikkelsen and Nikolaj Lie Kaas deliver nuanced, intense performances, adding depth to the characters. ▸ The cinematography contrasts Nordic nature and urban landscapes, delivering strong visual impact.",
+    "awards": "",
+    "awards_en": ""
   }
 }
