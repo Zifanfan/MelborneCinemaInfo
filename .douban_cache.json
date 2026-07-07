@@ -1069,8 +1069,8 @@
   },
   "going down": {
     "score": 7.2,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1301090/",
+    "title_cn": "伊比的堕落",
     "hot_comment": ""
   },
   "rodrigue in love": {
@@ -3453,6 +3453,42 @@
     "score": null,
     "url": "https://movie.douban.com/subject/37421420/",
     "title_cn": "昭告世人",
+    "hot_comment": ""
+  },
+  "the navigator": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1293618/",
+    "title_cn": "航海家",
+    "hot_comment": ""
+  },
+  "wolfram": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37339827/",
+    "title_cn": "钨",
+    "hot_comment": ""
+  },
+  "going dry": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/5138373/",
+    "title_cn": "生活仍将继续",
+    "hot_comment": ""
+  },
+  "two of us": {
+    "score": 8.9,
+    "url": "https://movie.douban.com/subject/1302658/",
+    "title_cn": "披头四外传",
+    "hot_comment": ""
+  },
+  "new wave": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/1303520/",
+    "title_cn": "新浪潮",
+    "hot_comment": ""
+  },
+  "nor26 a light that never goes out": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/34940882/",
+    "title_cn": "灯火阑珊",
     "hot_comment": ""
   }
 }
