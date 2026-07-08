@@ -1220,7 +1220,7 @@
   "dunkirk": {
     "score": 8.4,
     "url": "",
-    "title_cn": "",
+    "title_cn": "敦克爾克大行動",
     "hot_comment": ""
   },
   "identification of a woman": {
@@ -3489,6 +3489,54 @@
     "score": 6.3,
     "url": "https://movie.douban.com/subject/34940882/",
     "title_cn": "灯火阑珊",
+    "hot_comment": ""
+  },
+  "notting hill": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/1298038/",
+    "title_cn": "诺丁山",
+    "hot_comment": ""
+  },
+  "first light": {
+    "score": 5.1,
+    "url": "https://movie.douban.com/subject/27124961/",
+    "title_cn": "第一缕曙光",
+    "hot_comment": ""
+  },
+  "kiki's delivery service": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1307811/",
+    "title_cn": "魔女宅急便",
+    "hot_comment": ""
+  },
+  "what dreams may come": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/1293179/",
+    "title_cn": "美梦成真",
+    "hot_comment": ""
+  },
+  "anxiety club": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38456323/",
+    "title_cn": "焦虑俱乐部",
+    "hot_comment": ""
+  },
+  "malcolm x": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/1292681/",
+    "title_cn": "黑潮",
+    "hot_comment": ""
+  },
+  "la haine": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1306449/",
+    "title_cn": "怒火青春",
+    "hot_comment": ""
+  },
+  "nor26 being bo widerberg": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37259237/",
+    "title_cn": "成为博·维德伯格",
     "hot_comment": ""
   }
 }
