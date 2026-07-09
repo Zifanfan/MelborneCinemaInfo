@@ -1214,7 +1214,7 @@
   "tenet": {
     "score": 7.6,
     "url": "",
-    "title_cn": "",
+    "title_cn": "TENET天能",
     "hot_comment": ""
   },
   "dunkirk": {
@@ -3537,6 +3537,30 @@
     "score": null,
     "url": "https://movie.douban.com/subject/37259237/",
     "title_cn": "成为博·维德伯格",
+    "hot_comment": ""
+  },
+  "when marnie was there": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/25790555/",
+    "title_cn": "记忆中的玛妮",
+    "hot_comment": ""
+  },
+  "40 years of f cking up": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38480701/",
+    "title_cn": "如此浪荡四十年",
+    "hot_comment": ""
+  },
+  "don't forget me": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/1303679/",
+    "title_cn": "勿忘我",
+    "hot_comment": ""
+  },
+  "the odyssey": {
+    "score": null,
+    "url": "",
+    "title_cn": "奧德賽",
     "hot_comment": ""
   }
 }
