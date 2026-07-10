@@ -57,6 +57,32 @@ class Film:
     hot_comment: str = ""      # 豆瓣最热短评
 
 
+@dataclass
+class MIFFFilm:
+    title: str
+    url: str
+    title_cn: str = ""
+    poster: str = ""
+    type: str = ""
+    year: str = ""
+    duration: str = ""
+    director: str = ""
+    countries: str = ""
+    language: str = ""
+    genre: str = ""
+    strand: str = ""
+    premiere: str = ""
+    synopsis: str = ""
+    synopsis_cn: str = ""
+    description: str = ""
+    awards: str = ""
+    recommendation: str = ""
+    lb_score: Optional[float] = None
+    lb_url: str = ""
+    is_top_pick: bool = False
+    ai_enriched: bool = False
+
+
 # ─────────────── HTTP ───────────────
 SESSION = requests.Session()
 SESSION.headers.update({
@@ -887,6 +913,430 @@ def search_letterboxd(title: str, year: str = "") -> tuple[Optional[float], str]
             pass
     return None, ""
 
+
+# ── MIFF 2026 一次性推荐单 ──
+MIFF_BASE = "https://miff.com.au"
+_miff_cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".miff_cache.json")
+
+_MIFF_AWARD_KEYWORDS = re.compile(
+    r"\b(award|awards|prize|winner|winning|won(?!['’]t)|nominee|nominated|nomination|"
+    r"palme|grand prix|golden|lion|bear|oscar|academy award|"
+    r"cannes|venice|berlinale|berlin|sundance|locarno|rotterdam|sxsw|"
+    r"tiff|toronto|tribeca|san sebasti[aá]n|directors.? fortnight|"
+    r"un certain regard|critics.? week|premier(?:e|ing|ed))\b",
+    re.I,
+)
+
+def _abs_miff_url(url: str) -> str:
+    if not url:
+        return ""
+    if url.startswith("http"):
+        return url
+    return f"{MIFF_BASE}{url}"
+
+def _miff_type_from_card(card_text: str) -> str:
+    for t in ("Shorts Package", "Feature", "Short", "XR", "Event", "Talk"):
+        if card_text.startswith(t):
+            return t
+    return ""
+
+def _duration_to_minutes(duration: str) -> str:
+    m = re.match(r"PT(\d+)M", duration or "")
+    return f"{m.group(1)} mins" if m else duration
+
+_MIFF_TYPE_CN = {
+    "Feature": "长片",
+    "Short": "短片",
+    "Shorts Package": "短片集",
+    "XR": "沉浸式 / XR",
+    "Event": "特别活动",
+    "Talk": "映后 / 对谈",
+}
+
+_MIFF_GENRE_CN = {
+    "Action": "动作", "Adventure": "冒险", "Animation": "动画", "Comedy": "喜剧",
+    "Crime": "犯罪", "Documentary": "纪录片", "Drama": "剧情", "Experimental": "实验",
+    "Family": "家庭", "Fantasy": "奇幻", "Horror": "恐怖", "Music": "音乐",
+    "Musical": "歌舞", "Mystery": "悬疑", "Romance": "爱情", "Sci-Fi": "科幻",
+    "Science Fiction": "科幻", "Thriller": "惊悚", "War": "战争", "Western": "西部",
+}
+
+_MIFF_COUNTRY_CN = {
+    "Argentina": "阿根廷", "Australia": "澳大利亚", "Austria": "奥地利",
+    "Belgium": "比利时", "Brazil": "巴西", "Canada": "加拿大", "Chile": "智利",
+    "China": "中国", "Colombia": "哥伦比亚", "Denmark": "丹麦", "France": "法国",
+    "Germany": "德国", "Greece": "希腊", "Hong Kong": "中国香港", "Hungary": "匈牙利",
+    "Iceland": "冰岛", "India": "印度", "Indonesia": "印度尼西亚", "Iran": "伊朗",
+    "Ireland": "爱尔兰", "Italy": "意大利", "Japan": "日本", "Mexico": "墨西哥",
+    "Netherlands": "荷兰", "New Zealand": "新西兰", "Norway": "挪威",
+    "Palestine": "巴勒斯坦", "Philippines": "菲律宾", "Poland": "波兰",
+    "Portugal": "葡萄牙", "Singapore": "新加坡", "South Korea": "韩国",
+    "Spain": "西班牙", "Sweden": "瑞典", "Switzerland": "瑞士", "Taiwan": "中国台湾",
+    "Thailand": "泰国", "Turkey": "土耳其", "UK": "英国", "United Kingdom": "英国",
+    "USA": "美国", "United States": "美国", "Vietnam": "越南",
+}
+
+_MIFF_STRAND_CN = {
+    "Africa & Middle East": "非洲与中东", "Animation": "动画单元",
+    "Asia Pacific": "亚太单元", "Australian Films": "澳洲电影",
+    "Australian Shorts": "澳洲短片", "Bright Horizons": "新锐视野",
+    "Critical Condition": "锋利现实", "Doc Visions": "纪录新视野",
+    "Documentaries": "纪录片单元", "Europe & UK": "欧洲与英国",
+    "Experimentations": "实验影像", "Family Films": "家庭电影",
+    "Headliners": "主打佳片", "International Panorama": "国际视野",
+    "Latin America": "拉丁美洲", "MIFF Play": "线上放映",
+    "MIFF Schools": "学校单元", "MIFF Shorts": "短片竞赛",
+    "MIFF Talks": "对谈活动", "MIFF XR": "沉浸式 XR",
+    "Music on Film": "音乐电影", "Night Shift": "午夜 / 类型片",
+    "North America": "北美单元", "Restorations": "经典修复",
+    "Special Events": "特别活动", "Tales of Cinema": "电影之梦",
+    "The Natural World": "自然世界",
+}
+
+def _miff_cn_join_csv(value: str, mapping: dict[str, str]) -> str:
+    parts = [p.strip() for p in re.split(r",|/", value or "") if p.strip()]
+    return "、".join(mapping.get(p, p) for p in parts)
+
+def _miff_cn_genre(value: str) -> str:
+    return _miff_cn_join_csv(value, _MIFF_GENRE_CN)
+
+def _miff_cn_countries(value: str) -> str:
+    return _miff_cn_join_csv(value, _MIFF_COUNTRY_CN)
+
+def _miff_cn_strand(value: str) -> str:
+    return _MIFF_STRAND_CN.get(value or "", value or "")
+
+def _miff_cn_premiere(value: str) -> str:
+    return {
+        "World Premiere": "世界首映",
+        "International Premiere": "国际首映",
+        "Australian Premiere": "澳洲首映",
+        "Victorian Premiere": "维州首映",
+        "Melbourne Premiere": "墨尔本首映",
+    }.get(value or "", value or "")
+
+def _miff_cn_theme(text: str) -> str:
+    t = (text or "").lower()
+    checks = [
+        (r"\bfamily|mother|father|sister|brother|parent|daughter|son\b", "家庭关系"),
+        (r"\bcoming[- ]of[- ]age|teen|childhood|youth|school\b", "成长与青春"),
+        (r"\blove|romance|marriage|desire|relationship\b", "亲密关系"),
+        (r"\bpolitic|resistance|justice|trial|court|activist|war|colonial\b", "政治与社会现实"),
+        (r"\bmemory|archive|history|past\b", "记忆与历史"),
+        (r"\bgrief|death|loss|mourning\b", "失去与哀悼"),
+        (r"\bthriller|murder|crime|mystery|noir\b", "悬疑 / 犯罪张力"),
+        (r"\bmusic|song|dance|band\b", "音乐与表演"),
+        (r"\bdocumentary|portrait|observational\b", "纪录片视角"),
+        (r"\bhorror|ghost|nightmare|supernatural\b", "恐怖 / 超自然"),
+    ]
+    return "、".join(label for pattern, label in checks if re.search(pattern, t)) or "导演表达与人物处境"
+
+def _miff_cn_awards(text: str) -> str:
+    if not text:
+        return ""
+    tags = []
+    checks = [
+        (r"palme d.?or", "金棕榈相关"), (r"grand prix", "大奖"),
+        (r"special jury prize", "评审团特别奖"), (r"jury prize", "评审团奖"),
+        (r"teddy award", "泰迪奖"), (r"silver bear", "银熊奖"), (r"golden bear", "金熊奖"),
+        (r"golden lion", "金狮奖"), (r"orizzonti", "威尼斯地平线单元"),
+        (r"best actor", "最佳演员奖"), (r"best actress", "最佳演员奖"),
+        (r"best director|directing award", "导演奖"), (r"editing", "剪辑奖"),
+        (r"winner|winning|won(?!['’]t)|award", "获奖"), (r"nominee|nominated|nomination", "提名"),
+        (r"cannes", "戛纳"), (r"directors.? fortnight", "导演双周"),
+        (r"critics.? week", "影评人周"), (r"un certain regard", "一种关注"),
+        (r"berlinale|berlin", "柏林电影节"), (r"venice", "威尼斯"),
+        (r"sundance", "圣丹斯"), (r"locarno", "洛迦诺"), (r"rotterdam", "鹿特丹"),
+        (r"toronto|tiff", "多伦多"), (r"tribeca", "翠贝卡"), (r"san sebasti[aá]n", "圣塞巴斯蒂安"),
+        (r"premier(?:e|ing|ed)", "首映"),
+    ]
+    for pattern, value in checks:
+        if re.search(pattern, text, re.I) and value not in tags:
+            tags.append(value)
+    return "、".join(tags[:6]) if tags else "有电影节展映/奖项线索"
+
+def _miff_cn_summary(f: MIFFFilm) -> str:
+    countries = _miff_cn_countries(f.countries)
+    genre = _miff_cn_genre(f.genre)
+    strand = _miff_cn_strand(f.strand)
+    premiere = _miff_cn_premiere(f.premiere)
+    type_cn = _MIFF_TYPE_CN.get(f.type, f.type or "影片")
+    bits = []
+    if f.year or countries or genre:
+        bits.append(f"这是一部{f.year + '年' if f.year else ''}{countries}{genre}{type_cn}。")
+    if f.director:
+        bits.append(f"导演：{f.director}。")
+    tags = "、".join(x for x in [strand, premiere] if x)
+    if tags:
+        bits.append(f"MIFF 信息：{tags}。")
+    bits.append(f"核心看点：{_miff_cn_theme(' '.join([f.synopsis, f.description]))}。")
+    return "".join(bits)
+
+def _lookup_cached_douban_title_cn(title: str) -> str:
+    cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".douban_cache.json")
+    try:
+        with open(cache_path, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+        cn = cache.get(_dedup_key(title), {}).get("title_cn", "")
+        if cn and re.search(r"[\u4e00-\u9fff]", cn) and cn.lower() != title.lower():
+            return cn
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    return ""
+
+def lookup_miff_title_cn(title: str) -> str:
+    """MIFF 中文名：先用已有豆瓣缓存，再用 Wikipedia 中文链接。"""
+    cn = _lookup_cached_douban_title_cn(title)
+    if cn:
+        return cn
+    cn = search_wikipedia_cn(title)
+    if cn and cn.lower() != title.lower():
+        return cn
+    return ""
+
+def _extract_miff_awards(paras: list[str], premiere: str = "") -> str:
+    hits = []
+    for p in paras:
+        if not _MIFF_AWARD_KEYWORDS.search(p):
+            continue
+        clean = re.sub(r"\s+", " ", p).strip()
+        sentences = re.split(r"(?<=[.!?])\s+", clean)
+        for sentence in sentences:
+            if not _MIFF_AWARD_KEYWORDS.search(sentence):
+                continue
+            if len(sentence) > 220:
+                m = _MIFF_AWARD_KEYWORDS.search(sentence)
+                start = max(0, m.start() - 90)
+                end = min(len(sentence), m.end() + 130)
+                sentence = sentence[start:end].strip(" ,;:-–")
+                if start > 0:
+                    sentence = "..." + sentence
+                if end < len(clean):
+                    sentence = sentence + "..."
+            if sentence not in hits:
+                hits.append(sentence)
+            break
+    return " | ".join(hits[:2])
+
+def _miff_recommendation(f: MIFFFilm) -> str:
+    score = f"Letterboxd {f.lb_score:.2f}/5" if f.lb_score is not None else "暂无 Letterboxd 评分"
+    tags = " / ".join(x for x in [_miff_cn_genre(f.genre), _miff_cn_strand(f.strand), _miff_cn_premiere(f.premiere)] if x)
+    award = _miff_cn_awards(f.awards) if f.awards else "暂无明确获奖信息，主要按评分、题材和导演风格推荐"
+    return f"{score}；{tags or 'MIFF 片单'}。推荐理由：{_miff_cn_theme(' '.join([f.synopsis, f.description]))}。奖项/展映线索：{award}"
+
+def _miff_rank_score(f: MIFFFilm) -> float:
+    score = (f.lb_score or 0) * 20
+    awards = f.awards.lower()
+    if re.search(r"palme|grand prix|golden|lion|bear|oscar|academy award|jury prize|winner|winning|won", awards):
+        score += 16
+    if re.search(r"cannes|venice|berlinale|berlin|sundance|locarno|rotterdam|tiff|toronto", awards):
+        score += 10
+    if f.type == "Feature":
+        score += 4
+    if f.premiere:
+        score += 2
+    return score
+
+def _parse_miff_detail(url: str, seed: dict) -> MIFFFilm:
+    resp = _get(url)
+    soup = BeautifulSoup(resp.text, "html.parser")
+    article = soup.find("article", id="film") or soup
+
+    data = {}
+    script = article.find("script", type="application/ld+json")
+    if script and script.string:
+        try:
+            data = json.loads(script.string)
+        except json.JSONDecodeError:
+            data = {}
+
+    h1 = article.find("h1")
+    title = h1.get_text(" ", strip=True) if h1 else seed.get("title", "")
+    description = BeautifulSoup(data.get("description", "") or "", "html.parser").get_text(" ", strip=True)
+    images = data.get("image") or []
+    poster = images[0] if isinstance(images, list) and images else seed.get("poster", "")
+    poster = _abs_miff_url(poster)
+
+    director = ""
+    d = data.get("director")
+    if isinstance(d, dict):
+        director = d.get("name", "")
+    elif isinstance(d, list):
+        director = ", ".join(x.get("name", "") for x in d if isinstance(x, dict) and x.get("name"))
+
+    year = str(data.get("dateCreated", "") or "")
+    duration = _duration_to_minutes(str(data.get("duration", "") or ""))
+
+    details = article.select_one("#film_details .leading-tight")
+    countries, languages, genres = [], [], []
+    premiere = ""
+    if details:
+        for a in details.find_all("a", href=True):
+            text = a.get_text(" ", strip=True)
+            href = a["href"]
+            if "origin=" in href:
+                countries.append(text)
+            elif "language=" in href:
+                languages.append(text)
+            elif "genre=" in href:
+                genres.append(text)
+            elif "premiere-status=" in href:
+                premiere = text
+
+    strand = ""
+    strand_el = article.select_one('a[href*="/program/strand/"]')
+    if strand_el:
+        strand = strand_el.get_text(" ", strip=True)
+
+    paras = []
+    for p in article.select("#film_details .prose p"):
+        txt = p.get_text(" ", strip=True)
+        if txt and len(txt) > 30 and "miff.com.au/access" not in txt and not txt.lower().startswith("viewer advice:"):
+            paras.append(txt)
+    synopsis = paras[0] if paras else description
+    long_desc = " ".join(paras[1:3]) if len(paras) > 1 else description
+    awards = _extract_miff_awards(paras, premiere)
+
+    film = MIFFFilm(
+        title=title,
+        url=url,
+        title_cn=lookup_miff_title_cn(title),
+        poster=poster,
+        type=seed.get("type", ""),
+        year=year,
+        duration=duration,
+        director=director,
+        countries=", ".join(countries),
+        language=", ".join(languages),
+        genre=", ".join(genres),
+        strand=strand,
+        premiere=premiere,
+        synopsis=synopsis,
+        description=long_desc,
+        awards=awards,
+    )
+    film.lb_score, film.lb_url = _query_letterboxd_cached(film.title, film.year)
+    film.recommendation = _miff_recommendation(film)
+    return film
+
+def _miff_to_dict(f: MIFFFilm) -> dict:
+    return {
+        "title": f.title, "url": f.url, "title_cn": f.title_cn,
+        "poster": f.poster, "type": f.type,
+        "year": f.year, "duration": f.duration, "director": f.director,
+        "countries": f.countries, "language": f.language, "genre": f.genre,
+        "strand": f.strand, "premiere": f.premiere, "synopsis": f.synopsis,
+        "synopsis_cn": f.synopsis_cn,
+        "description": f.description, "awards": f.awards,
+        "recommendation": f.recommendation, "lb_score": f.lb_score,
+        "lb_url": f.lb_url, "is_top_pick": f.is_top_pick,
+        "ai_enriched": f.ai_enriched,
+    }
+
+def _miff_from_dict(d: dict) -> MIFFFilm:
+    return MIFFFilm(
+        title=d.get("title", ""), url=d.get("url", ""), title_cn=d.get("title_cn", ""),
+        poster=d.get("poster", ""),
+        type=d.get("type", ""), year=d.get("year", ""), duration=d.get("duration", ""),
+        director=d.get("director", ""), countries=d.get("countries", ""),
+        language=d.get("language", ""), genre=d.get("genre", ""), strand=d.get("strand", ""),
+        premiere=d.get("premiere", ""), synopsis=d.get("synopsis", ""),
+        synopsis_cn=d.get("synopsis_cn", ""),
+        description=d.get("description", ""), awards=d.get("awards", ""),
+        recommendation=d.get("recommendation", ""), lb_score=d.get("lb_score"),
+        lb_url=d.get("lb_url", ""), is_top_pick=bool(d.get("is_top_pick")),
+        ai_enriched=bool(d.get("ai_enriched")),
+    )
+
+def load_or_generate_miff(force: bool = False) -> list[MIFFFilm]:
+    """生成一次 MIFF 首页推荐单；之后默认从 .miff_cache.json 读取。"""
+    if not force:
+        try:
+            with open(_miff_cache_path, "r", encoding="utf-8") as f:
+                cached = json.load(f)
+            films = [_miff_from_dict(x) for x in cached.get("films", [])]
+            if films:
+                log.info("🎞️ MIFF 缓存: %d 部", len(films))
+                return films
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+
+    log.info("🎞️ MIFF: 抓取 Program Films")
+    seeds = []
+    seen_urls = set()
+    for page in range(1, 20):
+        url = f"{MIFF_BASE}/program/films" + (f"?page={page}" if page > 1 else "")
+        soup = BeautifulSoup(_get(url).text, "html.parser")
+        cards = soup.select(".film-card")
+        if not cards:
+            break
+        for card in cards:
+            a = card.find("a", href=True)
+            if not a:
+                continue
+            film_url = _abs_miff_url(a["href"].split("#")[0])
+            if film_url in seen_urls:
+                continue
+            seen_urls.add(film_url)
+            title = a.get_text(" ", strip=True)
+            heading = card.find(["h1", "h2", "h3", "h4"])
+            if heading:
+                title = heading.get_text(" ", strip=True)
+            img = card.find("img")
+            poster = _abs_miff_url(img.get("src", "")) if img else ""
+            seeds.append({
+                "title": title,
+                "url": film_url,
+                "poster": poster,
+                "type": _miff_type_from_card(card.get_text(" ", strip=True)),
+            })
+        log.info("  MIFF page %d: +%d (total %d)", page, len(cards), len(seeds))
+        next_link = soup.find("a", href=re.compile(r"page="), string=re.compile(r"Next"))
+        if not next_link and page >= 8:
+            break
+
+    films = []
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        futs = {pool.submit(_parse_miff_detail, s["url"], s): s for s in seeds}
+        for i, fut in enumerate(as_completed(futs), 1):
+            seed = futs[fut]
+            try:
+                film = fut.result()
+                films.append(film)
+                if i % 25 == 0 or i == len(seeds):
+                    log.info("  MIFF details %d/%d", i, len(seeds))
+            except Exception as exc:
+                log.warning("  MIFF detail failed %s: %s", seed["title"], exc)
+
+    ranked = sorted(films, key=_miff_rank_score, reverse=True)
+    top_titles = {f.title for f in ranked[:20]}
+    for film in films:
+        film.is_top_pick = film.title in top_titles
+    films.sort(key=lambda f: (not f.is_top_pick, -_miff_rank_score(f), f.title.lower()))
+
+    try:
+        with open(_miff_cache_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "generated_at": dt.datetime.now().isoformat(timespec="seconds"),
+                "source": f"{MIFF_BASE}/program/films",
+                "films": [_miff_to_dict(x) for x in films],
+            }, f, ensure_ascii=False, indent=2)
+        log.info("🎞️ MIFF 缓存已保存 (%d 部)", len(films))
+    except Exception as exc:
+        log.warning("MIFF 缓存保存失败: %s", exc)
+    return films
+
+def save_miff_cache(films: list[MIFFFilm]) -> None:
+    try:
+        with open(_miff_cache_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "generated_at": dt.datetime.now().isoformat(timespec="seconds"),
+                "source": f"{MIFF_BASE}/program/films",
+                "films": [_miff_to_dict(x) for x in films],
+            }, f, ensure_ascii=False, indent=2)
+    except Exception as exc:
+        log.warning("MIFF 缓存保存失败: %s", exc)
+
 def _query_douban_serial(films: list[Film]) -> None:
     """串行查询豆瓣评分，带本地缓存避免重复请求"""
     # 加载缓存
@@ -1150,6 +1600,71 @@ def enrich_with_ai(film: Film, client, model: str) -> Film:
     film.recommendation = _template_recommendation(film)
     return film
 
+
+def enrich_miff_with_ai(film: MIFFFilm, client, model: str) -> MIFFFilm:
+    """为 MIFF 必看片生成中文片名、中文简介和具体看点。"""
+    if not client:
+        return film
+
+    info = {
+        "title": film.title,
+        "known_chinese_title": film.title_cn,
+        "year": film.year,
+        "director": film.director,
+        "countries": film.countries,
+        "language": film.language,
+        "genre": film.genre,
+        "strand": film.strand,
+        "premiere": film.premiere,
+        "letterboxd": film.lb_score,
+        "awards_or_festival_context": film.awards,
+        "short_synopsis": film.synopsis,
+        "miff_description": film.description[:1200],
+    }
+    prompt = f"""你是一位面向中文观众的电影节选片顾问。请为 MIFF 2026 的一部电影生成中文展示内容。
+
+要求：
+1. title_cn：尽量给出已有通行中文译名/官方中文名；如果查无通行译名，请给一个自然、简洁、适合片单展示的中文译名，不要写“暂无”。
+2. synopsis_cn：60-90 字中文简介，概括人物处境、主题和类型气质，不剧透，不要泛泛而谈。
+3. highlights：中文核心看点，120-180 字，用“▸”分隔2-3条。必须具体说明为什么值得在 MIFF 看：导演/形式/表演/奖项/题材/影像风格/观影体验。不要空话，不要重复简介。
+4. awards_cn：把 awards_or_festival_context 翻译/概括成中文标签或短句；没有明确奖项则留空。
+
+电影信息 JSON：
+{json.dumps(info, ensure_ascii=False, indent=2)}
+
+请只返回 JSON，不要多余文字：
+{{
+  "title_cn": "中文片名",
+  "synopsis_cn": "中文简介",
+  "highlights": "▸看点一▸看点二▸看点三",
+  "awards_cn": "中文奖项/展映信息"
+}}"""
+
+    try:
+        resp = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=900,
+            temperature=0.55,
+        )
+        text = resp.choices[0].message.content.strip()
+        m = re.search(r"\{.*\}", text, re.DOTALL)
+        if not m:
+            return film
+        data = json.loads(m.group())
+        title_cn = (data.get("title_cn") or "").strip()
+        if title_cn and re.search(r"[\u4e00-\u9fff]", title_cn):
+            film.title_cn = title_cn
+        film.synopsis_cn = (data.get("synopsis_cn") or "").strip()
+        film.recommendation = (data.get("highlights") or "").strip() or film.recommendation
+        awards_cn = (data.get("awards_cn") or "").strip()
+        if awards_cn:
+            film.awards = awards_cn
+        film.ai_enriched = True
+    except Exception as exc:
+        log.warning("  MIFF AI 失败 (%s): %s", film.title, exc)
+    return film
+
 def _template_recommendation(film: Film) -> str:
     parts = []
     if film.douban_score and film.douban_score >= 8.0:
@@ -1376,7 +1891,81 @@ def generate_report(films: list[Film], start: dt.date, end: dt.date) -> str:
 def _esc(s: str) -> str:
     return html_mod.escape(s)
 
-def generate_html(films: list[Film], start: dt.date, end: dt.date) -> str:
+def _html_miff_card(f: MIFFFilm, idx: int, compact: bool = False) -> str:
+    badges = []
+    if f.is_top_pick:
+        badges.append('<span class="bd" style="background:#3a2a1a;color:#f0c040;border:1px solid #5a4a2d">必看20</span>')
+    if f.lb_score is not None:
+        badges.append(f'<span class="bd" style="background:#1a2a1a;color:#85d485;border:1px solid #2d4a2d">🎬 LB {f.lb_score:.2f}</span>')
+    else:
+        badges.append('<span class="bd" style="background:#2a2a3e;color:var(--t2);border:1px solid var(--b)">LB N/A</span>')
+    if f.type:
+        badges.append(f'<span class="bd" style="background:#1a2a3a;color:#60b0e0;border:1px solid #2d4a5a">{_esc(_MIFF_TYPE_CN.get(f.type, f.type))}</span>')
+
+    meta = " · ".join(x for x in [
+        f.year,
+        f.duration.replace("mins", "分钟") if f.duration else "",
+        _miff_cn_genre(f.genre),
+        _miff_cn_strand(f.strand),
+        _miff_cn_premiere(f.premiere),
+        f"<b>导演</b> {_esc(f.director)}" if f.director else "",
+        _miff_cn_countries(f.countries),
+    ] if x)
+    meta_html = f'<div class="meta">{meta}</div>' if meta else ""
+    awards_html = ""
+    if f.awards:
+        awards_html = f'<div class="miff-awards">🏆 {_esc(_miff_cn_awards(f.awards))}<details><summary>英文原文</summary>{_esc(f.awards)}</details></div>'
+    synopsis_text = f.synopsis_cn or _miff_cn_summary(f)
+    synopsis = f'<div class="syn">{_esc(synopsis_text)}</div>'
+    desc = "" if compact else (f'<details class="miff-desc"><summary>英文原文简介</summary>{_esc(f.description or f.synopsis)}</details>' if (f.description or f.synopsis) else "")
+    rec = f'<div class="rec">{_esc(f.recommendation)}</div>' if f.recommendation else ""
+
+    links = [f'<a href="{_esc(f.url)}" target="_blank">MIFF</a>']
+    if f.lb_url:
+        links.append(f'<a href="{_esc(f.lb_url)}" target="_blank">Letterboxd</a>')
+    link_html = f'<div class="lk">{"".join(links)}</div>'
+
+    poster = ""
+    if f.poster:
+        poster = f'<div class="fc-poster"><img src="{_esc(f.poster)}" alt="{_esc(f.title)}" loading="lazy"></div>'
+
+    compact_cls = " miff-compact" if compact else ""
+    title_html = _esc(f.title)
+    if f.title_cn and f.title_cn != f.title:
+        title_html = f'{_esc(f.title_cn)} <span class="miff-title-en">{_esc(f.title)}</span>'
+    return f"""<div class="fc miff-card{compact_cls}">
+<div class="fh"><span class="rk">#{idx}</span><span class="tt">{title_html}</span>{" ".join(badges)}</div>
+<div class="fc-body">
+{poster}
+<div class="fc-info">
+{meta_html}{awards_html}{synopsis}{desc}{rec}{link_html}
+</div>
+</div>
+</div>"""
+
+def _html_miff_section(miff_films: list[MIFFFilm]) -> str:
+    if not miff_films:
+        return '<div class="ct"><p class="stat">MIFF 推荐单尚未生成</p></div>'
+    top = [f for f in miff_films if f.is_top_pick][:20]
+    all_films = miff_films
+    top_cards = "\n".join(_html_miff_card(f, i, compact=True) for i, f in enumerate(top, 1))
+    all_cards = "\n".join(_html_miff_card(f, i) for i, f in enumerate(all_films, 1))
+    scored = sum(1 for f in miff_films if f.lb_score is not None)
+    return f"""<div class="ct miff-ct">
+<p class="stat">MIFF 2026 · 从 {len(miff_films)} 部片中生成 · {scored} 部有 Letterboxd 评分 · 默认按“必看20 + 评分/奖项”排序</p>
+<section class="miff-block">
+<h2>🔥 MIFF 必看 20 部</h2>
+<p class="miff-note">综合 Letterboxd 评分、国际电影节奖项/首映信息和片型排序。点击卡片底部可跳转 MIFF 购票页或 Letterboxd。</p>
+{top_cards}
+</section>
+<section class="miff-block">
+<h2>🎞️ MIFF 全片单</h2>
+<p class="miff-note">每部电影包含海报、简介、奖项/首映线索和自动推荐语；MIFF 内容默认从缓存读取，只在缓存缺失时重新抓取。</p>
+{all_cards}
+</section>
+</div>"""
+
+def generate_html(films: list[Film], start: dt.date, end: dt.date, miff_films: Optional[list[MIFFFilm]] = None) -> str:
     rec = sorted([f for f in films if is_high_rated(f)], key=_sort_score)
 
     # 提取所有影院和日期用于筛选器
@@ -1404,6 +1993,7 @@ def generate_html(films: list[Film], start: dt.date, end: dt.date) -> str:
     day_btns = ''.join(f'<button class="fb" data-filter-day="{_esc(d)}">{_esc(d)}</button>' for d in all_days)
 
     cards = "\n".join(_html_card(f, i) for i, f in enumerate(rec, 1))
+    miff_section = _html_miff_section(miff_films or [])
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN"><head>
@@ -1415,6 +2005,10 @@ def generate_html(films: list[Film], start: dt.date, end: dt.date) -> str:
 body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.6;padding-bottom:60px;font-size:14px}}
 .hd{{text-align:center;padding:36px 20px 16px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-bottom:1px solid var(--b)}}
 .hd h1{{font-size:1.6em;color:var(--acc);margin-bottom:4px;letter-spacing:2px}}.hd .sub{{color:var(--t2);font-size:.85em}}
+.view-tabs{{display:flex;justify-content:center;gap:8px;padding:14px 12px;background:#111120;border-bottom:1px solid var(--b);position:sticky;top:0;z-index:12}}
+.vt{{font-size:.8em;padding:7px 18px;border-radius:999px;border:1px solid var(--b);background:transparent;color:var(--t2);cursor:pointer;font-family:inherit;font-weight:700}}
+.vt:hover{{border-color:var(--acc);color:var(--acc)}}.vt.active{{background:var(--acc);border-color:var(--acc);color:var(--bg)}}
+.view.hidden{{display:none}}
 .filters{{background:#141425;border-bottom:1px solid var(--b);padding:12px 20px;position:sticky;top:0;z-index:10}}
 .filters-inner{{max-width:800px;margin:0 auto}}
 .fg{{margin-bottom:8px}}.fg:last-child{{margin-bottom:0}}
@@ -1453,6 +2047,10 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 .fc-poster img{{width:130px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.4)}}
 .fc-info{{flex:1;min-width:0}}
 .no-results{{text-align:center;color:var(--t2);padding:32px 20px;font-size:.88em}}
+.miff-ct{{max-width:980px}}.miff-block{{margin-bottom:26px}}.miff-block h2{{font-size:1.25em;color:var(--acc);margin:10px 0 6px}}
+.miff-note{{color:var(--t2);font-size:.82em;margin:0 0 14px}}.miff-awards{{font-size:.78em;color:#f0c040;margin:5px 0;padding:7px 10px;border-left:2px solid #f0c040;background:rgba(240,192,64,.05);border-radius:0 6px 6px 0}}
+.miff-title-en{{display:block;color:var(--t2);font-size:.82em;font-weight:500;margin-top:1px}}.miff-awards details,.miff-desc{{font-size:.92em;color:var(--t2);margin-top:5px}}
+.miff-awards summary,.miff-desc summary{{cursor:pointer;color:var(--acc);font-size:.9em}}.miff-desc{{font-size:.8em;color:var(--t2);margin:6px 0;line-height:1.65}}.miff-card.miff-compact{{border-color:#4a3a1d;background:linear-gradient(135deg,rgba(230,200,76,.08),rgba(26,26,46,.95))}}
 @media(max-width:500px){{.fc-poster{{width:90px}}.fc-poster img{{width:90px}}.fc{{padding:14px 16px}}}}
 .ft{{text-align:center;color:var(--t2);font-size:.73em;padding:24px 20px;border-top:1px solid var(--b)}}
 [data-lang=en]{{display:none}}
@@ -1474,8 +2072,18 @@ body.en .lang-toggle .lt-en{{background:var(--acc);color:var(--bg)}}
 </div>
 
 <div class="hd"><h1>🎬 <span data-lang="cn">墨尔本电影周报</span><span data-lang="en">Melbourne Cinema Weekly</span></h1>
-<div class="sub">{start.strftime('%m/%d')}–{end.strftime('%m/%d %Y')} · <span data-lang="cn">豆瓣 ≥ 7.5 / 🍅 ≥ 90%</span><span data-lang="en">Douban ≥ 7.5 / 🍅 ≥ 90%</span></div></div>
+<div class="sub">MIFF 2026 · {start.strftime('%m/%d')}–{end.strftime('%m/%d %Y')} · <span data-lang="cn">电影节推荐 + 每周高分排片</span><span data-lang="en">Festival guide + weekly cinema picks</span></div></div>
 
+<div class="view-tabs">
+<button class="vt active" data-view-target="miff-view"><span data-lang="cn">MIFF 推荐单</span><span data-lang="en">MIFF Guide</span></button>
+<button class="vt" data-view-target="weekly-view"><span data-lang="cn">每周推荐</span><span data-lang="en">Weekly Picks</span></button>
+</div>
+
+<section id="miff-view" class="view">
+{miff_section}
+</section>
+
+<section id="weekly-view" class="view hidden">
 <div class="filters"><div class="filters-inner">
 <div class="fg"><div class="fg-label"><span data-lang="cn">🎬 影院</span><span data-lang="en">🎬 CINEMA</span></div><div class="fg-btns">
 <button class="fb active" data-filter-cinema="all"><span data-lang="cn">全部</span><span data-lang="en">All</span></button>{cinema_btns}
@@ -1490,6 +2098,7 @@ body.en .lang-toggle .lt-en{{background:var(--acc);color:var(--bg)}}
 {cards}
 <div class="no-results" id="no-results" style="display:none"><span data-lang="cn">没有符合筛选条件的电影</span><span data-lang="en">No films match your filter</span></div>
 </div>
+</section>
 
 <div class="ft" style="position:relative">
   <span data-lang="cn">数据来源</span><span data-lang="en">Sources</span>: Lido · Nova · ACMI · Palace · IMAX · <span data-lang="cn">豆瓣</span><span data-lang="en">Douban</span> · Rotten Tomatoes<br>
@@ -1510,9 +2119,17 @@ body.en .lang-toggle .lt-en{{background:var(--acc);color:var(--bg)}}
 <script>
 (function(){{
   let activeCinema='all', activeDay='all';
-  const cards=document.querySelectorAll('.fc[data-cinemas]');
+  const cards=document.querySelectorAll('#weekly-view .fc[data-cinemas]');
   const statEl=document.getElementById('stat-text');
   const noRes=document.getElementById('no-results');
+  document.querySelectorAll('[data-view-target]').forEach(btn=>{{
+    btn.addEventListener('click',()=>{{
+      document.querySelectorAll('[data-view-target]').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));
+      document.getElementById(btn.dataset.viewTarget).classList.remove('hidden');
+    }});
+  }});
 
   function applyFilters(){{
     let visible=0;
@@ -1686,6 +2303,25 @@ def main():
     log.info("墨尔本电影推荐 %s ~ %s", start, end)
     log.info("=" * 50)
 
+    # ⓪ MIFF 推荐单: 只在 .miff_cache.json 缺失或 MIFF_FORCE_REFRESH=1 时重新生成
+    miff_films = load_or_generate_miff(force=os.getenv("MIFF_FORCE_REFRESH") == "1")
+    miff_top_need_ai = [f for f in miff_films if f.is_top_pick and (not f.ai_enriched or os.getenv("MIFF_AI_REFRESH") == "1")]
+    if miff_top_need_ai:
+        log.info("💡 MIFF 必看20 AI 中文看点: %d 部", len(miff_top_need_ai))
+        client, model = _get_openai_client()
+        if client:
+            with ThreadPoolExecutor(max_workers=3) as pool:
+                futs = {pool.submit(enrich_miff_with_ai, f, client, model): f for f in miff_top_need_ai}
+                for fut in as_completed(futs):
+                    try:
+                        fut.result()
+                    except Exception as exc:
+                        log.warning("MIFF AI error: %s", exc)
+            save_miff_cache(miff_films)
+            log.info("💡 MIFF AI 缓存已保存")
+        else:
+            log.info("  (未配置 AI，保留模板 MIFF 推荐语)")
+
     # ① 爬取 (Nova/ACMI 串行快, Lido 内部已并行)
     log.info("📡 爬取排片...")
     all_films = (scrape_lido(start, end) + scrape_nova(start, end) + 
@@ -1806,7 +2442,7 @@ def main():
     _save_lb_cache()
     log.info("📦 LB 缓存已保存 (%d 条)", len(_lb_cache))
 
-    html = generate_html(films, start, end)
+    html = generate_html(films, start, end, miff_films)
     html_path = os.path.join(base, "index.html")
     with open(html_path, "w", encoding="utf-8") as fp: fp.write(html)
     log.info("✅ HTML: %s", html_path)
