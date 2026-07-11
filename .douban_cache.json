@@ -787,8 +787,8 @@
   },
   "dogs in space": {
     "score": 7.1,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/2068314/",
+    "title_cn": "太空狗",
     "hot_comment": ""
   },
   "if i had legs i'd kick you": {
@@ -3561,6 +3561,60 @@
     "score": null,
     "url": "",
     "title_cn": "奧德賽",
+    "hot_comment": ""
+  },
+  "being john malkovich": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1292279/",
+    "title_cn": "成为约翰·马尔科维奇",
+    "hot_comment": ""
+  },
+  "shorts": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/3007808/",
+    "title_cn": "奇石",
+    "hot_comment": ""
+  },
+  "out laws": {
+    "score": 5.4,
+    "url": "https://movie.douban.com/subject/3230187/",
+    "title_cn": "法外之徒",
+    "hot_comment": ""
+  },
+  "queer shorts": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/3220249/",
+    "title_cn": "黄热病",
+    "hot_comment": ""
+  },
+  "nor26 the battle of oslo": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/37228408/",
+    "title_cn": "布吕歇尔号巡洋舰",
+    "hot_comment": ""
+  },
+  "nor26 the fires": {
+    "score": 5.3,
+    "url": "https://movie.douban.com/subject/36073533/",
+    "title_cn": "匿杀",
+    "hot_comment": ""
+  },
+  "nor26 the guest": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/25721544/",
+    "title_cn": "不速之客",
+    "hot_comment": ""
+  },
+  "history of ha": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/35575718/",
+    "title_cn": "菲常历史",
+    "hot_comment": ""
+  },
+  "strictly ballroom": {
+    "score": null,
+    "url": "",
+    "title_cn": "舞国英雄",
     "hot_comment": ""
   }
 }
