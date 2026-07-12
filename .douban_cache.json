@@ -3616,5 +3616,47 @@
     "url": "",
     "title_cn": "舞国英雄",
     "hot_comment": ""
+  },
+  "matilda": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/26287055/",
+    "title_cn": "玛蒂尔达：音乐剧",
+    "hot_comment": ""
+  },
+  "the philadelphia story": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/1292840/",
+    "title_cn": "费城故事",
+    "hot_comment": ""
+  },
+  "japanese story": {
+    "score": 6.4,
+    "url": "https://movie.douban.com/subject/1340520/",
+    "title_cn": "日本故事",
+    "hot_comment": ""
+  },
+  "muriel's wedding": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/1293313/",
+    "title_cn": "穆丽尔的婚礼",
+    "hot_comment": ""
+  },
+  "nor26 the pension heist": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38228421/",
+    "title_cn": "The Pension Heist",
+    "hot_comment": ""
+  },
+  "nor26 the quiet beekeeper": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/30152036/",
+    "title_cn": "蜂语无声",
+    "hot_comment": ""
+  },
+  "les liaisons dangereuses": {
+    "score": 7.0,
+    "url": "https://movie.douban.com/subject/1296464/",
+    "title_cn": "危险关系",
+    "hot_comment": ""
   }
 }
