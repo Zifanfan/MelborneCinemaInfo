@@ -1430,7 +1430,7 @@
   "an american in paris": {
     "score": 7.1,
     "url": "",
-    "title_cn": "",
+    "title_cn": "花都舞影",
     "hot_comment": ""
   },
   "lee cronin's the mummy": {
@@ -3657,6 +3657,60 @@
     "score": 7.0,
     "url": "https://movie.douban.com/subject/1296464/",
     "title_cn": "危险关系",
+    "hot_comment": ""
+  },
+  "ten years": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/6879185/",
+    "title_cn": "为奴十二年",
+    "hot_comment": ""
+  },
+  "amélie": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1292215/",
+    "title_cn": "天使爱美丽",
+    "hot_comment": ""
+  },
+  "clockwork orange a": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1292233/",
+    "title_cn": "发条橙",
+    "hot_comment": ""
+  },
+  "full metal jacket": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1300055/",
+    "title_cn": "全金属外壳",
+    "hot_comment": ""
+  },
+  "common wealth": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/2084376/",
+    "title_cn": "谋财管委会",
+    "hot_comment": ""
+  },
+  "nor26 the kidnapping of a president": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/37037594/",
+    "title_cn": "总统绑架案",
+    "hot_comment": ""
+  },
+  "nor26 the last resort": {
+    "score": 3.4,
+    "url": "https://movie.douban.com/subject/26732616/",
+    "title_cn": "最后的度假胜地",
+    "hot_comment": ""
+  },
+  "romeo": {
+    "score": null,
+    "url": "",
+    "title_cn": "羅密歐·蒙泰古",
+    "hot_comment": ""
+  },
+  "juliet": {
+    "score": null,
+    "url": "",
+    "title_cn": "朱麗葉·凱普萊特",
     "hot_comment": ""
   }
 }
