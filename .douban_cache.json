@@ -1459,8 +1459,8 @@
   },
   "calle málaga": {
     "score": 7.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/36900800/",
+    "title_cn": "马拉加街夕阳红",
     "hot_comment": ""
   },
   "the stranger l étranger": {
@@ -3735,6 +3735,36 @@
     "score": 7.2,
     "url": "https://movie.douban.com/subject/36416363/",
     "title_cn": "最后的维京人",
+    "hot_comment": ""
+  },
+  "dirty dancing": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/1293293/",
+    "title_cn": "辣身舞",
+    "hot_comment": ""
+  },
+  "how to kill a mermaid": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1297991/",
+    "title_cn": "杀死一只知更鸟",
+    "hot_comment": ""
+  },
+  "whistleblower": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/35068658/",
+    "title_cn": "举报人",
+    "hot_comment": ""
+  },
+  "4 little girls": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/1294883/",
+    "title_cn": "四个小女孩",
+    "hot_comment": ""
+  },
+  "summer of sam": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/1297020/",
+    "title_cn": "山姆的夏天",
     "hot_comment": ""
   }
 }
