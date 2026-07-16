@@ -3766,5 +3766,29 @@
     "url": "https://movie.douban.com/subject/1297020/",
     "title_cn": "山姆的夏天",
     "hot_comment": ""
+  },
+  "highlander": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/1300682/",
+    "title_cn": "高地人",
+    "hot_comment": ""
+  },
+  "in the mouth of madness": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/1303460/",
+    "title_cn": "战栗黑洞",
+    "hot_comment": ""
+  },
+  "no limbs no limits": {
+    "score": 5.7,
+    "url": "https://movie.douban.com/subject/38531723/",
+    "title_cn": "无肢，无界",
+    "hot_comment": ""
+  },
+  "spirit of the photobooth": {
+    "score": 7.6,
+    "url": "https://movie.douban.com/subject/27083735/",
+    "title_cn": "疯人院",
+    "hot_comment": ""
   }
 }
