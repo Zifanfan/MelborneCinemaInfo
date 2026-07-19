@@ -3844,5 +3844,35 @@
     "url": "https://movie.douban.com/subject/26781769/",
     "title_cn": "诚忠堂",
     "hot_comment": ""
+  },
+  "frida kahlo": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37271210/",
+    "title_cn": "Winter as Frida Kahlo",
+    "hot_comment": ""
+  },
+  "rebel without a cause": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/1295416/",
+    "title_cn": "无因的反叛",
+    "hot_comment": ""
+  },
+  "up": {
+    "score": 9.1,
+    "url": "https://movie.douban.com/subject/2129039/",
+    "title_cn": "飞屋环游记",
+    "hot_comment": ""
+  },
+  "elizabeth": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/1296223/",
+    "title_cn": "伊丽莎白",
+    "hot_comment": ""
+  },
+  "nor26 elvira madigan": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/1292502/",
+    "title_cn": "今生今世",
+    "hot_comment": ""
   }
 }
