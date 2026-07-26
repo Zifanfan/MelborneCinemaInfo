@@ -3830,5 +3830,25 @@
   "nor26 raven's end": {
     "score": null,
     "url": ""
+  },
+  "aladdin": {
+    "score": 3.1,
+    "url": "https://letterboxd.com/film/aladdin-2019/"
+  },
+  "rear window": {
+    "score": 4.37,
+    "url": "https://letterboxd.com/film/rear-window/"
+  },
+  "dragon inn 龍門客棧": {
+    "score": 4.02,
+    "url": "https://letterboxd.com/film/dragon-inn/"
+  },
+  "the dressmaker": {
+    "score": 3.42,
+    "url": "https://letterboxd.com/film/the-dressmaker-2015/"
+  },
+  "jurassic park": {
+    "score": 4.12,
+    "url": "https://letterboxd.com/film/jurassic-park/"
   }
 }

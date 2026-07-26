@@ -4012,5 +4012,35 @@
     "url": "https://movie.douban.com/subject/27622774/",
     "title_cn": "当浪潮已逝",
     "hot_comment": ""
+  },
+  "aladdin": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/26891256/",
+    "title_cn": "阿拉丁",
+    "hot_comment": ""
+  },
+  "rear window": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1299080/",
+    "title_cn": "后窗",
+    "hot_comment": ""
+  },
+  "dragon inn 龍門客棧": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1292287/",
+    "title_cn": "新龙门客栈",
+    "hot_comment": ""
+  },
+  "the dressmaker": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/25697098/",
+    "title_cn": "裁缝",
+    "hot_comment": ""
+  },
+  "jurassic park": {
+    "score": null,
+    "url": "",
+    "title_cn": "侏羅紀公園",
+    "hot_comment": ""
   }
 }
