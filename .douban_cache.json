@@ -517,8 +517,8 @@
   },
   "colours of time": {
     "score": 7.7,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/36799751/",
+    "title_cn": "旧时光景",
     "hot_comment": ""
   },
   "couture": {
@@ -4047,6 +4047,30 @@
     "score": null,
     "url": "https://movie.douban.com/subject/2979523/",
     "title_cn": "乌鸦住宅区",
+    "hot_comment": ""
+  },
+  "reality bites": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1297373/",
+    "title_cn": "四个毕业生",
+    "hot_comment": ""
+  },
+  "bon voyage marie": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37167056/",
+    "title_cn": "我们这就出发",
+    "hot_comment": ""
+  },
+  "le samouraï": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1300966/",
+    "title_cn": "独行杀手",
+    "hot_comment": ""
+  },
+  "we're all going to the world's fair": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/35288811/",
+    "title_cn": "我们要去世博会",
     "hot_comment": ""
   }
 }
