@@ -3702,5 +3702,29 @@
     "recommendation_en": "▸ Pasolini’s unique directorial vision blends myth with reality, creating a ritualistic and alienating atmosphere. ▸ Maria Callas delivers her first and only film performance, bringing powerful emotional depth and stage presence. ▸ The film’s vivid Eastern European landscapes amplify its cultural estrangement and artistic appeal.",
     "awards": "",
     "awards_en": ""
+  },
+  "tony": {
+    "synopsis": "影片讲述托尼在成长过程中面对家庭压力与社会期望的冲突，努力寻找自我身份和人生方向。通过真实事件改编，展现主角在关键时刻的抉择与挣扎。",
+    "synopsis_en": "Tony follows the protagonist as he navigates family pressures and societal expectations, struggling to define his own identity and path in life. Inspired by true events, the film centers on Tony's pivotal choices in moments of crisis.",
+    "recommendation": "▸ 导演Matt Johnson以细腻真实的手法还原人物传记，情感表达深刻，节奏控制出色。▸ Dominic Sessa和Emilia Jones的表演层次丰富，将角色内心世界展现得极具说服力。▸ 画面风格简洁而富有质感，精准捕捉时代氛围，有效增强故事的沉浸感。",
+    "recommendation_en": "▸ Director Matt Johnson delivers a nuanced and authentic portrayal, with carefully paced storytelling and deeply resonant emotions. ▸ Dominic Sessa and Emilia Jones offer layered, convincing performances that vividly capture their characters’ inner conflicts. ▸ The cinematography is understated yet evocative, skillfully recreating the period’s atmosphere and enhancing audience immersion.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "camera buff": {
+    "synopsis": "一个普通工厂工人在买了一台摄像机后，开始记录生活，逐渐陷入对影像与现实的思考。他的拍摄行为引发家庭和社会的矛盾，主角在个人热情与外部压力之间挣扎。",
+    "synopsis_en": "A factory worker buys a camera and starts filming his surroundings, leading to unexpected conflicts with his family and society. The protagonist is caught between his passion for filmmaking and the pressures from those around him.",
+    "recommendation": "▸导演Kieslowski以细腻现实主义手法，刻画普通人对艺术与自由的追求，展现深刻社会观察。▸Jerzy Stuhr精彩表演，将主角的内心挣扎与成长表现得真实动人。▸影片通过影像与生活的关系，引发观众对个人表达与社会规范冲突的思考。",
+    "recommendation_en": "▸ Kieslowski’s subtle realism expertly portrays an ordinary man's pursuit of creativity and freedom, offering sharp social commentary. ▸ Jerzy Stuhr delivers an authentic, moving performance, conveying the protagonist’s inner turmoil and growth. ▸ The film explores the connection between filmmaking and life, provoking reflection on self-expression versus societal constraints.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "whispers in may": {
+    "synopsis": "在一个风雨交加的五月夜，侦探与两位政界人物卷入一场扑朔迷离的谜案，他们必须揭开层层谎言，寻找真相。紧张氛围下，主角们面临信任与背叛的抉择，生死悬于一线。",
+    "synopsis_en": "During a stormy night in May, a detective and two prominent politicians become entangled in a complex mystery. As they navigate layers of deception, they must confront trust and betrayal, with the truth—and their lives—hanging in the balance.",
+    "recommendation": "▸约翰·弗兰肯海默以冷峻镜头与紧凑剪辑营造出极致悬疑氛围，经典黑白摄影强化心理紧张。▸伯特·兰卡斯特与柯克·道格拉斯同台飙戏，展现深层人物冲突与复杂情感，表演极具张力。▸剧情结构巧妙，层层反转，观众始终被悬念牵引，直至最后一刻。",
+    "recommendation_en": "▸ Frankenheimer's direction employs stark black-and-white cinematography and tight editing, heightening suspense and psychological tension throughout. ▸ Burt Lancaster and Kirk Douglas deliver powerhouse performances, their onscreen chemistry fueling intense character conflicts and emotional complexity. ▸ The cleverly structured plot features multiple twists, keeping viewers engaged and guessing until the very end.",
+    "awards": "",
+    "awards_en": ""
   }
 }
