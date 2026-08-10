@@ -511,8 +511,8 @@
   },
   "case 137": {
     "score": 7.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/37144851/",
+    "title_cn": "137号案件",
     "hot_comment": ""
   },
   "colours of time": {
@@ -4605,6 +4605,42 @@
     "score": 5.9,
     "url": "https://movie.douban.com/subject/37536498/",
     "title_cn": "隔夜岛",
+    "hot_comment": ""
+  },
+  "a hard day's night": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/1298566/",
+    "title_cn": "一夜狂欢",
+    "hot_comment": ""
+  },
+  "three castrated goats": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37259562/",
+    "title_cn": "Three Castrated Goats",
+    "hot_comment": ""
+  },
+  "blade runner final cut": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/10439553/",
+    "title_cn": "银翼杀手：导演剪辑短片",
+    "hot_comment": ""
+  },
+  "dune": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/3001114/",
+    "title_cn": "沙丘",
+    "hot_comment": ""
+  },
+  "look both ways": {
+    "score": 6.8,
+    "url": "https://movie.douban.com/subject/35489692/",
+    "title_cn": "双轨人生",
+    "hot_comment": ""
+  },
+  "nuisance bear": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37923681/",
+    "title_cn": "麻烦熊",
     "hot_comment": ""
   }
 }
