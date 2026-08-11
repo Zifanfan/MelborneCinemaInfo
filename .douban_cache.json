@@ -4642,5 +4642,41 @@
     "url": "https://movie.douban.com/subject/37923681/",
     "title_cn": "麻烦熊",
     "hot_comment": ""
+  },
+  "bell book and candle": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/1788625/",
+    "title_cn": "夺情记",
+    "hot_comment": ""
+  },
+  "sparks": {
+    "score": 9.2,
+    "url": "https://movie.douban.com/subject/26635329/",
+    "title_cn": "火花",
+    "hot_comment": ""
+  },
+  "corpus": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/30462527/",
+    "title_cn": "基督圣体",
+    "hot_comment": ""
+  },
+  "sour minnows": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36880045/",
+    "title_cn": "酸鱼苗",
+    "hot_comment": ""
+  },
+  "the story of documentary film part 2": {
+    "score": 8.1,
+    "url": "https://movie.douban.com/subject/26738669/",
+    "title_cn": "射雕英雄传（下集）",
+    "hot_comment": ""
+  },
+  "aniki-bóbó": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/1455684/",
+    "title_cn": "点指兵兵",
+    "hot_comment": ""
   }
 }
