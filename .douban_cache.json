@@ -2276,7 +2276,7 @@
   "blue velvet": {
     "score": 6.8,
     "url": "",
-    "title_cn": "",
+    "title_cn": "藍絲絨",
     "hot_comment": ""
   },
   "in the heat of the night": {
@@ -4677,6 +4677,36 @@
     "score": 7.7,
     "url": "https://movie.douban.com/subject/1455684/",
     "title_cn": "点指兵兵",
+    "hot_comment": ""
+  },
+  "down with love": {
+    "score": 6.8,
+    "url": "https://movie.douban.com/subject/1305130/",
+    "title_cn": "随爱沉沦",
+    "hot_comment": ""
+  },
+  "sex": {
+    "score": 9.2,
+    "url": "https://movie.douban.com/subject/27594217/",
+    "title_cn": "性爱自修室 第一季",
+    "hot_comment": ""
+  },
+  "crocodile": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/37076504/",
+    "title_cn": "鳄城少年",
+    "hot_comment": ""
+  },
+  "madame x an absolute ruler": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/3611898/",
+    "title_cn": "X夫人：绝对的统治者",
+    "hot_comment": ""
+  },
+  "congo boy": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36903388/",
+    "title_cn": "刚果男孩",
     "hot_comment": ""
   }
 }
