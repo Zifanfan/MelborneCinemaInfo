@@ -4972,5 +4972,47 @@
     "url": "https://movie.douban.com/subject/35359715/",
     "title_cn": "朝云暮雨",
     "hot_comment": ""
+  },
+  "sense and sensibility": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/1299193/",
+    "title_cn": "理智与情感",
+    "hot_comment": ""
+  },
+  "altered states": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/1293762/",
+    "title_cn": "灵魂大搜索",
+    "hot_comment": ""
+  },
+  "boogie nights": {
+    "score": 7.6,
+    "url": "https://movie.douban.com/subject/1292965/",
+    "title_cn": "不羁夜",
+    "hot_comment": ""
+  },
+  "holy motors": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/6875451/",
+    "title_cn": "神圣车行",
+    "hot_comment": ""
+  },
+  "love": {
+    "score": 6.8,
+    "url": "https://movie.douban.com/subject/25933898/",
+    "title_cn": "爱恋",
+    "hot_comment": ""
+  },
+  "speed racer": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/1939761/",
+    "title_cn": "极速赛车手",
+    "hot_comment": ""
+  },
+  "they shoot horses don't they": {
+    "score": null,
+    "url": "",
+    "title_cn": "攞命舞",
+    "hot_comment": ""
   }
 }
