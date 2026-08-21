@@ -5026,5 +5026,29 @@
     "url": "https://movie.douban.com/subject/34820925/",
     "title_cn": "钛",
     "hot_comment": ""
+  },
+  "no end": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/1293109/",
+    "title_cn": "无休无止",
+    "hot_comment": ""
+  },
+  "sons": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/26684012/",
+    "title_cn": "与子赎罪",
+    "hot_comment": ""
+  },
+  "palestine 36": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/36472989/",
+    "title_cn": "巴勒斯坦36",
+    "hot_comment": ""
+  },
+  "boss cat": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/2131773/",
+    "title_cn": "神猫",
+    "hot_comment": ""
   }
 }
