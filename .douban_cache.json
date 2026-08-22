@@ -553,8 +553,8 @@
   },
   "maigret and the dead lover": {
     "score": 6.8,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/37246683/",
+    "title_cn": "豆瓣",
     "hot_comment": ""
   },
   "out of love": {
@@ -5049,6 +5049,60 @@
     "score": 8.3,
     "url": "https://movie.douban.com/subject/2131773/",
     "title_cn": "神猫",
+    "hot_comment": ""
+  },
+  "southland tales": {
+    "score": 5.5,
+    "url": "https://movie.douban.com/subject/1428109/",
+    "title_cn": "南方传奇",
+    "hot_comment": ""
+  },
+  "it ends": {
+    "score": 5.4,
+    "url": "https://movie.douban.com/subject/37070221/",
+    "title_cn": "逃无止境",
+    "hot_comment": ""
+  },
+  "the 5 000 fingers of dr t": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/2978947/",
+    "title_cn": "T博士的5000个手指",
+    "hot_comment": ""
+  },
+  "the discreet charm of the bourgeoisie": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1303364/",
+    "title_cn": "资产阶级的审慎魅力",
+    "hot_comment": ""
+  },
+  "inland empire": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/1438734/",
+    "title_cn": "内陆帝国",
+    "hot_comment": ""
+  },
+  "ticket of no return": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/2059612/",
+    "title_cn": "一个女酒鬼的肖像",
+    "hot_comment": ""
+  },
+  "essential truths of the lake": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36471272/",
+    "title_cn": "湖泊的本质真相",
+    "hot_comment": ""
+  },
+  "tastes of africa": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38382867/",
+    "title_cn": "豆瓣",
+    "hot_comment": ""
+  },
+  "q a": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/1292617/",
+    "title_cn": "铁案风云",
     "hot_comment": ""
   }
 }
