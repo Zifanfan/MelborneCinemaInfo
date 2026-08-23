@@ -4174,5 +4174,37 @@
     "recommendation_en": "▸ David Lynch’s experimental storytelling and surreal atmosphere create a deeply immersive psychological thriller. ▸ Laura Dern delivers an intense and nuanced performance, powerfully portraying the protagonist’s unraveling and struggle. ▸ The use of digital cinematography and fragmented editing enhances the film’s dreamlike quality and unsettling mood.",
     "awards": "",
     "awards_en": ""
+  },
+  "mrs doubtfire": {
+    "synopsis": "丹尼尔是一位幽默但不负责任的父亲，在离婚后无法与孩子们共度时光。为了重新接近家人，他化身为一名家庭保姆，展开一场充满笑料与温情的身份冒险。",
+    "synopsis_en": "Daniel, a fun-loving but irresponsible father, faces losing contact with his children after divorce. To reconnect, he disguises himself as a nanny, leading to a heartfelt and comedic journey centered on family bonds and personal growth.",
+    "recommendation": "▸ 罗宾·威廉姆斯极具感染力的表演，将幽默与深情完美结合，令人印象深刻。▸ 影片在轻松喜剧氛围中探讨家庭与亲情主题，既有笑点也有感人的时刻。▸ 导演克里斯·哥伦布善于营造温暖和现实的家庭场景，使观众产生共鸣。",
+    "recommendation_en": "▸ Robin Williams delivers a memorable performance, blending comedy and heartfelt emotion, truly elevating the film. ▸ The movie explores family and parenthood themes through comedic situations, offering both laughter and touching moments. ▸ Chris Columbus’s direction creates a warm, relatable atmosphere, making the family dynamics feel authentic and engaging.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "the grapes of wrath": {
+    "synopsis": "在美国大萧条时期，乔德一家被迫离开家园，踏上前往加州的旅程，试图寻找新的生活与希望。面对残酷的社会环境，他们必须在绝望与坚强之间做出抉择。",
+    "synopsis_en": "During the Great Depression, the Joad family is forced to leave their home and embark on a journey to California in search of a better life. Facing harsh social realities, they struggle between despair and resilience.",
+    "recommendation": "▸约翰·福特以朴实而深刻的镜头，展现社会动荡下普通人的困境与尊严，极具现实主义风格。▸亨利·方达凭精湛表演塑造了复杂、富有层次的主角形象，情感感染力极强。▸影片在视觉上采用黑白摄影，营造出压抑而真实的氛围，强化故事张力。",
+    "recommendation_en": "▸ John Ford’s realistic direction uses understated yet powerful imagery to portray social upheaval and human dignity. ▸ Henry Fonda delivers a nuanced, deeply affecting performance as the protagonist, capturing emotional complexity. ▸ The film’s black-and-white cinematography creates a stark, authentic atmosphere, enhancing the narrative tension.",
+    "awards": "1941奥斯卡最佳导演奖，1941奥斯卡最佳女配角奖，1940威尼斯电影节最佳导演奖",
+    "awards_en": "1941 Academy Award for Best Director, 1941 Academy Award for Best Supporting Actress, 1940 Venice Film Festival Best Director"
+  },
+  "magellan": {
+    "synopsis": "这部历史传记片讲述麦哲伦在探索未知航线时，面临来自自然、权力和自身信念的多重考验。他必须在生死与使命之间抉择，带领船队穿越险境，挑战世界观与时代限制。",
+    "synopsis_en": "This historical biopic follows Magellan as he faces daunting challenges from nature, authority, and his convictions while pioneering new sea routes. He must choose between survival and his mission, leading his crew through perilous waters and confronting the boundaries of his era.",
+    "recommendation": "▸拉夫·迪亚兹以极具诗意和沉静的镜头语言展现航海冒险，长镜头和极简风格增强历史沉浸感。▸盖尔·加西亚·伯纳尔塑造复杂的麦哲伦形象，展现其信念与矛盾，表演层次丰富。▸影片对殖民历史的反思与多元视角，赋予故事独特的当代意义。",
+    "recommendation_en": "▸ Lav Diaz’s poetic, meditative direction employs long takes and minimalist style, creating immersive historical atmosphere. ▸ Gael García Bernal delivers a nuanced portrayal of Magellan, emphasizing his inner conflicts and convictions. ▸ The film offers a thoughtful critique of colonial history, presenting multiple perspectives and contemporary relevance.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "harry potter the philosopher's stone": {
+    "synopsis": "本片为哈利·波特系列的首部作品，讲述平凡男孩哈利发现自己是巫师后，进入霍格沃茨魔法学校，逐步揭开父母之死背后的谜团，并面对未知危险与成长挑战。",
+    "synopsis_en": "As the first entry in the Harry Potter series, the film follows Harry, an ordinary boy who learns he is a wizard and enters Hogwarts School. He must unravel secrets about his parents and confront new dangers as he discovers his own identity.",
+    "recommendation": "▸ 克里斯·哥伦布斯的导演风格将魔法世界细腻呈现，场景设计和视觉特效极具沉浸感。▸ 丹尼尔·雷德克里夫、鲁伯特·格林特和艾玛·沃森三位主演表现自然，展现青少年的成长与友情。▸ 影片成功塑造了霍格沃茨及其规则，世界观完整，适合家庭观众和原著粉丝。",
+    "recommendation_en": "▸ Chris Columbus’s direction brings the magical world to life with meticulous set designs and immersive visual effects. ▸ Strong performances by Daniel Radcliffe, Rupert Grint, and Emma Watson capture the innocence and camaraderie of young protagonists. ▸ The film establishes Hogwarts and its lore effectively, making it engaging for both families and fans of the original books.",
+    "awards": "",
+    "awards_en": ""
   }
 }

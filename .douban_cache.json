@@ -1424,7 +1424,7 @@
   "magellan": {
     "score": 6.3,
     "url": "",
-    "title_cn": "",
+    "title_cn": "麥哲倫號金星探測器",
     "hot_comment": ""
   },
   "an american in paris": {
@@ -5103,6 +5103,42 @@
     "score": null,
     "url": "https://movie.douban.com/subject/1292617/",
     "title_cn": "铁案风云",
+    "hot_comment": ""
+  },
+  "mrs doubtfire": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/1295006/",
+    "title_cn": "窈窕奶爸",
+    "hot_comment": ""
+  },
+  "the grapes of wrath": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/1292465/",
+    "title_cn": "愤怒的葡萄",
+    "hot_comment": ""
+  },
+  "mockbuster": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/37276074/",
+    "title_cn": "恶搞大片",
+    "hot_comment": ""
+  },
+  "tina arena unravel me": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38375953/",
+    "title_cn": "Tina Arena: Unravel Me",
+    "hot_comment": ""
+  },
+  "harry potter the philosopher's stone": {
+    "score": 9.2,
+    "url": "https://movie.douban.com/subject/1295038/",
+    "title_cn": "哈利·波特与魔法石",
+    "hot_comment": ""
+  },
+  "girl climber": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37469966/",
+    "title_cn": "攀岩女子",
     "hot_comment": ""
   }
 }
