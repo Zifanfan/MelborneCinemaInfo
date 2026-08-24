@@ -1172,7 +1172,7 @@
   "dreams": {
     "score": 5.7,
     "url": "",
-    "title_cn": "",
+    "title_cn": "夢",
     "hot_comment": ""
   },
   "looking for alibrandi": {
@@ -5139,6 +5139,30 @@
     "score": null,
     "url": "https://movie.douban.com/subject/37469966/",
     "title_cn": "攀岩女子",
+    "hot_comment": ""
+  },
+  "the dog stars": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37107254/",
+    "title_cn": "末世行者",
+    "hot_comment": ""
+  },
+  "paw patrol - the dino movie": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/36791178/",
+    "title_cn": "汪汪队立大功大电影3：勇闯恐龙岛",
+    "hot_comment": ""
+  },
+  "sister act": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1301509/",
+    "title_cn": "修女也疯狂",
+    "hot_comment": ""
+  },
+  "barry lyndon": {
+    "score": 8.8,
+    "url": "https://movie.douban.com/subject/1292472/",
+    "title_cn": "巴里·林登",
     "hot_comment": ""
   }
 }
