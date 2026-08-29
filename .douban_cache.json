@@ -2426,7 +2426,7 @@
   "princess mononoke": {
     "score": 8.9,
     "url": "",
-    "title_cn": "",
+    "title_cn": "魔法公主",
     "hot_comment": ""
   },
   "e t the extra-terrestrial": {
@@ -5223,6 +5223,24 @@
     "score": 6.5,
     "url": "https://movie.douban.com/subject/36620874/",
     "title_cn": "Truth or Consequences",
+    "hot_comment": ""
+  },
+  "pulp fiction": {
+    "score": 8.9,
+    "url": "https://movie.douban.com/subject/1291832/",
+    "title_cn": "低俗小说",
+    "hot_comment": ""
+  },
+  "dead man's wire": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/36803372/",
+    "title_cn": "死人开关",
+    "hot_comment": ""
+  },
+  "terminator 2 judgement day": {
+    "score": 8.8,
+    "url": "https://movie.douban.com/subject/1291844/",
+    "title_cn": "终结者2：审判日",
     "hot_comment": ""
   }
 }

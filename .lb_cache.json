@@ -4722,5 +4722,17 @@
   "truth or consequence": {
     "score": null,
     "url": ""
+  },
+  "pulp fiction": {
+    "score": 4.23,
+    "url": "https://letterboxd.com/film/pulp-fiction/"
+  },
+  "dead man's wire": {
+    "score": null,
+    "url": ""
+  },
+  "terminator 2 judgement day": {
+    "score": null,
+    "url": ""
   }
 }

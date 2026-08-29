@@ -4270,5 +4270,29 @@
     "recommendation_en": "▸ Director Anthony Frith delivers a tightly paced, retro-styled adventure, recreating classic sci-fi tension with dynamic set pieces. ▸ The combination of practical effects and CGI for prehistoric creatures creates immersive visuals. ▸ Michael Paré gives a nuanced performance, balancing emotional depth with convincing action sequences.",
     "awards": "",
     "awards_en": ""
+  },
+  "pulp fiction": {
+    "synopsis": "影片围绕洛杉矶黑帮世界，讲述几位角色在暴力、金钱与道德选择中的交错命运。主角们在危机四伏的环境中，面临人生转折与道德抉择，故事线彼此交织，充满悬念与黑色幽默。",
+    "synopsis_en": "Set in Los Angeles' criminal underworld, several characters face life-altering dilemmas involving violence, loyalty, and morality. Their interconnected stories unfold with suspense and dark humor, as each protagonist confronts pivotal choices.",
+    "recommendation": "▸ 昆汀·塔伦蒂诺独特的非线性叙事结构，打破传统时间顺序，巧妙编织多条故事线。▸ 塞缪尔·杰克逊、约翰·特拉沃尔塔等主演表现极具魅力，塑造出经典角色对话和场景。▸ 黑色幽默与暴力美学融合，台词犀利，镜头风格独树一帜，对后世犯罪片影响深远。",
+    "recommendation_en": "▸ Quentin Tarantino’s signature nonlinear storytelling weaves multiple plotlines, redefining narrative structure in cinema. ▸ Stellar performances by Samuel L. Jackson and John Travolta create memorable characters and iconic dialogues. ▸ The film’s blend of dark humor, sharp dialogue, and stylish violence established a new aesthetic, profoundly influencing crime films that followed.",
+    "awards": "1994戛纳金棕榈奖、1995奥斯卡最佳原创剧本奖",
+    "awards_en": "1994 Cannes Palme d'Or, 1995 Oscar for Best Original Screenplay"
+  },
+  "dead man's wire": {
+    "synopsis": "一名电信工程师意外卷入一宗离奇谋杀案，他在追查真相的过程中，逐步发现自己也成为被操控的棋子，面临信任与背叛的双重考验。",
+    "synopsis_en": "A telecom engineer is unwittingly drawn into a bizarre murder case. As he investigates the truth, he finds himself manipulated, forced to navigate a web of trust and betrayal.",
+    "recommendation": "▸ Gus Van Sant以冷峻现实主义风格营造悬疑氛围，都市空间与角色心理相互映射，紧张感持续推进。▸ Bill Skarsgård与Dacre Montgomery对峙戏份张力十足，角色层次丰富，展现复杂人性。▸ 画面色调与剪辑节奏精准，提升犯罪悬疑类型的观感体验。",
+    "recommendation_en": "▸ Gus Van Sant’s signature realistic and atmospheric direction creates constant suspense, with urban settings mirroring the characters’ psychological turmoil. ▸ The intense on-screen confrontation between Bill Skarsgård and Dacre Montgomery delivers nuanced performances, revealing complex moral ambiguity. ▸ The film’s precise color palette and sharp editing enhance the immersive crime-thriller experience.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "terminator 2 judgement day": {
+    "synopsis": "作为《终结者》系列的第二部，故事讲述未来机器人与人类之间的战争背景下，一位少年和他的母亲被新的致命机器人追杀，终结者则被派来保护他们，展开一场生死较量。",
+    "synopsis_en": "As the sequel to the original Terminator, the story follows a young boy and his mother who are hunted by a deadly new robot from the future. Another Terminator is sent to protect them, leading to a gripping battle for survival.",
+    "recommendation": "▸詹姆斯·卡梅隆导演以革新性的视效和动作场面，将科幻与惊悚完美融合，塑造了高能紧张的观影体验。▸阿诺·施瓦辛格塑造了经典反英雄形象，角色深度与情感共鸣远超前作。▸影片对人工智能与人性议题的探讨，提升了故事的思想性和现实警示。",
+    "recommendation_en": "▸ James Cameron’s direction delivers groundbreaking visual effects and action sequences, seamlessly blending sci-fi and thriller elements for a high-intensity cinematic experience. ▸ Arnold Schwarzenegger’s performance as the iconic antihero adds depth and emotional resonance, elevating the character beyond the original film. ▸ The film’s exploration of artificial intelligence and humanity provides thought-provoking themes with contemporary relevance.",
+    "awards": "1992奥斯卡最佳视觉效果、最佳化妆、最佳音效、最佳音响剪辑奖",
+    "awards_en": "1992 Academy Awards for Best Visual Effects, Best Makeup, Best Sound, and Best Sound Editing"
   }
 }
