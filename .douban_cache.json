@@ -5242,5 +5242,35 @@
     "url": "https://movie.douban.com/subject/1291844/",
     "title_cn": "终结者2：审判日",
     "hot_comment": ""
+  },
+  "high school": {
+    "score": 8.1,
+    "url": "https://movie.douban.com/subject/1941340/",
+    "title_cn": "高中",
+    "hot_comment": ""
+  },
+  "the tale of the princess kaguya": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/4099231/",
+    "title_cn": "辉夜姬物语",
+    "hot_comment": ""
+  },
+  "millennium actress": {
+    "score": 8.8,
+    "url": "https://movie.douban.com/subject/1307394/",
+    "title_cn": "千年女优",
+    "hot_comment": ""
+  },
+  "9 to 5": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/1303426/",
+    "title_cn": "朝九晚五",
+    "hot_comment": ""
+  },
+  "monroe 100 all about eve": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1401385/",
+    "title_cn": "彗星美人",
+    "hot_comment": ""
   }
 }
