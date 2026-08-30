@@ -5272,5 +5272,29 @@
     "url": "https://movie.douban.com/subject/1401385/",
     "title_cn": "彗星美人",
     "hot_comment": ""
+  },
+  "the iron giant": {
+    "score": 8.6,
+    "url": "https://movie.douban.com/subject/1293863/",
+    "title_cn": "钢铁巨人",
+    "hot_comment": ""
+  },
+  "the lady eve": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/1303415/",
+    "title_cn": "淑女伊芙",
+    "hot_comment": ""
+  },
+  "suzume": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/35371261/",
+    "title_cn": "铃芽之旅",
+    "hot_comment": ""
+  },
+  "there will be blood": {
+    "score": null,
+    "url": "",
+    "title_cn": "黑金企業",
+    "hot_comment": ""
   }
 }
