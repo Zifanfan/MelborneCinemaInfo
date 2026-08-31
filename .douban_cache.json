@@ -5296,5 +5296,35 @@
     "url": "",
     "title_cn": "黑金企業",
     "hot_comment": ""
+  },
+  "silenced": {
+    "score": 9.3,
+    "url": "https://movie.douban.com/subject/5912992/",
+    "title_cn": "熔炉",
+    "hot_comment": ""
+  },
+  "moonage daydream": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/35869654/",
+    "title_cn": "月球时代白日梦",
+    "hot_comment": ""
+  },
+  "wild at heart and fear and loathing in las vegas": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1295576/",
+    "title_cn": "恐惧拉斯维加斯",
+    "hot_comment": ""
+  },
+  "belle": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/10767696/",
+    "title_cn": "佳人蓓尔",
+    "hot_comment": ""
+  },
+  "by any means": {
+    "score": 7.0,
+    "url": "https://movie.douban.com/subject/37104948/",
+    "title_cn": "不择手段",
+    "hot_comment": ""
   }
 }
