@@ -5326,5 +5326,29 @@
     "url": "https://movie.douban.com/subject/37104948/",
     "title_cn": "不择手段",
     "hot_comment": ""
+  },
+  "pretty woman": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/1293825/",
+    "title_cn": "漂亮女人",
+    "hot_comment": ""
+  },
+  "big night": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1295800/",
+    "title_cn": "狂宴",
+    "hot_comment": ""
+  },
+  "danger diabolik": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/2132409/",
+    "title_cn": "万能侠大显神通",
+    "hot_comment": ""
+  },
+  "rabid dogs": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/26378540/",
+    "title_cn": "愤怒的疯狗",
+    "hot_comment": ""
   }
 }
