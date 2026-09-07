@@ -5410,5 +5410,23 @@
     "url": "https://movie.douban.com/subject/1389915/",
     "title_cn": "一江春水向东流",
     "hot_comment": ""
+  },
+  "chicago": {
+    "score": 8.9,
+    "url": "https://movie.douban.com/subject/1307697/",
+    "title_cn": "芝加哥",
+    "hot_comment": ""
+  },
+  "wake in fright and razorback": {
+    "score": 7.7,
+    "url": "https://movie.douban.com/subject/1300892/",
+    "title_cn": "内陆惊魂",
+    "hot_comment": ""
+  },
+  "the colours within": {
+    "score": 7.0,
+    "url": "https://movie.douban.com/subject/36177245/",
+    "title_cn": "你的颜色",
+    "hot_comment": ""
   }
 }
