@@ -1694,7 +1694,7 @@
   "thief": {
     "score": 7.4,
     "url": "",
-    "title_cn": "",
+    "title_cn": "神偷 (游戏)",
     "hot_comment": ""
   },
   "bashu the little stranger": {
@@ -5427,6 +5427,36 @@
     "score": 7.0,
     "url": "https://movie.douban.com/subject/36177245/",
     "title_cn": "你的颜色",
+    "hot_comment": ""
+  },
+  "frances ha": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/11527487/",
+    "title_cn": "弗兰西丝·哈",
+    "hot_comment": ""
+  },
+  "persona": {
+    "score": 8.8,
+    "url": "https://movie.douban.com/subject/1294438/",
+    "title_cn": "假面",
+    "hot_comment": ""
+  },
+  "the girl who knew too much": {
+    "score": 7.0,
+    "url": "https://movie.douban.com/subject/2037257/",
+    "title_cn": "知道太多的女孩",
+    "hot_comment": ""
+  },
+  "lisa and the devil": {
+    "score": 6.2,
+    "url": "https://movie.douban.com/subject/1298285/",
+    "title_cn": "着魔的丽莎",
+    "hot_comment": ""
+  },
+  "punch drunk love": {
+    "score": null,
+    "url": "",
+    "title_cn": "戀愛雞尾酒",
     "hot_comment": ""
   }
 }
