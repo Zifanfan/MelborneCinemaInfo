@@ -5560,5 +5560,47 @@
     "url": "",
     "title_cn": "荒野生存",
     "hot_comment": ""
+  },
+  "heart of the beast": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/36828393/",
+    "title_cn": "野兽之心",
+    "hot_comment": ""
+  },
+  "jezebel": {
+    "score": 7.2,
+    "url": "https://movie.douban.com/subject/1293468/",
+    "title_cn": "红衫泪痕",
+    "hot_comment": ""
+  },
+  "jumanji": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1294990/",
+    "title_cn": "勇敢者的游戏",
+    "hot_comment": ""
+  },
+  "whisper of the heart": {
+    "score": null,
+    "url": "",
+    "title_cn": "心之谷",
+    "hot_comment": ""
+  },
+  "we need to talk about kevin": {
+    "score": null,
+    "url": "",
+    "title_cn": "我兒子是惡魔",
+    "hot_comment": ""
+  },
+  "iff26 la scala the force of destiny": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37314751/",
+    "title_cn": "命运之力",
+    "hot_comment": ""
+  },
+  "iff26 separate beds": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37292378/",
+    "title_cn": "分床合爱",
+    "hot_comment": ""
   }
 }
