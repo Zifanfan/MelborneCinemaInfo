@@ -5668,5 +5668,29 @@
     "url": "",
     "title_cn": "VAGABOND (電視劇)",
     "hot_comment": ""
+  },
+  "interview with the vampire": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1299327/",
+    "title_cn": "夜访吸血鬼",
+    "hot_comment": ""
+  },
+  "pride and prejudice": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1418200/",
+    "title_cn": "傲慢与偏见",
+    "hot_comment": ""
+  },
+  "paranorman": {
+    "score": null,
+    "url": "",
+    "title_cn": "派拉諾曼：靈動小子",
+    "hot_comment": ""
+  },
+  "the cremator": {
+    "score": null,
+    "url": "",
+    "title_cn": "焚尸人",
+    "hot_comment": ""
   }
 }

@@ -4646,5 +4646,29 @@
     "recommendation_en": "▸ Tom Hanks delivers a nuanced, deeply empathetic performance as Fred Rogers, capturing both warmth and subtle complexity. ▸ Director Marielle Heller employs a gentle yet layered narrative style, blending reality with childhood reminiscence for a distinctive atmosphere. ▸ The film's strong emotional resonance and character development are reflected in its impressive 95% Rotten Tomatoes score.",
     "awards": "",
     "awards_en": ""
+  },
+  "interview with the vampire": {
+    "synopsis": "一位饱受内心折磨的吸血鬼，在新伙伴的引领下踏入永生世界，面对人性与道德的挣扎。他试图在黑暗欲望与残存善良之间寻找自我，故事围绕吸血鬼身份的孤独与爱展开。",
+    "synopsis_en": "A tormented vampire, guided by a charismatic companion, enters the world of eternal life and grapples with moral conflict and loneliness. The narrative explores his struggle between dark desires and lingering humanity, focusing on his quest for identity and love.",
+    "recommendation": "▸ 汤姆·克鲁斯与布拉德·皮特首次合作，表演层次丰富，展现吸血鬼复杂心理。▸ 尼尔·乔丹导演以哥特氛围营造出精致的美学，画面华丽并带有深沉忧郁。▸ 原著改编忠实还原吸血鬼世界，讨论永生、孤独与人性，情感深刻。",
+    "recommendation_en": "▸ Tom Cruise and Brad Pitt deliver nuanced performances, revealing the psychological complexity of vampires in their first on-screen collaboration. ▸ Neil Jordan’s directorial style creates an atmospheric gothic aesthetic, with lush visuals and a melancholic tone. ▸ Faithful adaptation of Anne Rice’s novel, deeply exploring themes of immortality, loneliness, and humanity.",
+    "awards": "1995奥斯卡最佳艺术指导、最佳原创配乐提名",
+    "awards_en": "1995 Oscar nominations for Best Art Direction and Best Original Score"
+  },
+  "pride and prejudice": {
+    "synopsis": "故事围绕伊丽莎白·班纳特与达西先生展开，两人因阶级、性格与家庭压力产生碰撞。伊丽莎白在追求自我与爱情时，面临偏见与误解的困境，核心冲突是自尊与情感的选择。",
+    "synopsis_en": "The story follows Elizabeth Bennet and Mr. Darcy, whose relationship is tested by class differences, family expectations, and personal pride. Elizabeth faces the dilemma of staying true to herself while navigating societal prejudices and misunderstandings.",
+    "recommendation": "▸导演乔·赖特以精巧镜头和长镜头营造英伦田园氛围，赋予经典文学新视觉体验。▸凯拉·奈特莉表演层次丰富，将伊丽莎白的自尊与脆弱诠释得极具说服力。▸服装、布景极具时代感，视觉细节高度还原19世纪英国生活。",
+    "recommendation_en": "▸ Director Joe Wright’s use of elegant tracking shots and atmospheric cinematography brings the English countryside to life, offering a fresh visual take on the classic novel. ▸ Keira Knightley delivers a nuanced performance, capturing Elizabeth’s pride and vulnerability. ▸ The film’s authentic costumes and set design vividly recreate 19th-century England, enhancing immersion.",
+    "awards": "2006奥斯卡最佳女主角提名；2006奥斯卡最佳艺术指导、服装设计、配乐提名",
+    "awards_en": "2006 Academy Award nominee for Best Actress, Best Art Direction, Best Costume Design, and Best Original Score"
+  },
+  "taxi driver": {
+    "synopsis": "出租车司机特拉维斯在纽约的夜色下游走，深感孤独与疏离。他目睹城市的腐败与暴力，内心逐渐被愤怒和无助侵蚀，陷入自我救赎与道德挣扎的漩涡。",
+    "synopsis_en": "Taxi driver Travis roams the nocturnal streets of New York, feeling isolated and disillusioned. Witnessing urban decay and violence, he faces mounting anger and moral dilemmas as he searches for purpose and redemption.",
+    "recommendation": "▸马丁·斯科塞斯以强烈的现实主义风格展现70年代纽约的黑暗与边缘氛围，镜头与配乐极具张力。▸罗伯特·德尼罗奉献极具深度的表演，精准刻画主角心理变化，经典台词“你在跟我说话吗？”深入人心。▸影片探讨社会疏离、道德界限等复杂主题，对后世犯罪题材电影影响深远。",
+    "recommendation_en": "▸ Martin Scorsese's gritty realism vividly captures 1970s New York's grim atmosphere, with tense cinematography and memorable score. ▸ Robert De Niro delivers a powerhouse performance, portraying Travis's psychological descent with nuance—his iconic “You talkin’ to me?” line is unforgettable. ▸ The film explores social alienation and moral ambiguity, setting a benchmark for crime dramas and influencing generations.",
+    "awards": "1976戛纳电影节金棕榈提名；1977奥斯卡最佳影片等4项提名",
+    "awards_en": "1976 Cannes Palme d'Or nominee; 1977 Oscar nominee for Best Picture and 3 other categories"
   }
 }
