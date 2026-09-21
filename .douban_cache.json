@@ -5794,5 +5794,23 @@
     "url": "https://movie.douban.com/subject/5053659/",
     "title_cn": "Un anno di scuola",
     "hot_comment": ""
+  },
+  "charlie harper": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36405363/",
+    "title_cn": "查理与哈珀",
+    "hot_comment": ""
+  },
+  "vanilla sky": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/1299054/",
+    "title_cn": "香草的天空",
+    "hot_comment": ""
+  },
+  "iff26 three goodbyes": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/37233382/",
+    "title_cn": "三声再见",
+    "hot_comment": ""
   }
 }

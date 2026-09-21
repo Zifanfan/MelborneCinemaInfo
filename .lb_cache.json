@@ -5222,5 +5222,25 @@
   "the cat returns": {
     "score": null,
     "url": ""
+  },
+  "charlie harper": {
+    "score": 3.38,
+    "url": "https://letterboxd.com/film/charlie-harper/"
+  },
+  "la la land": {
+    "score": 4.13,
+    "url": "https://letterboxd.com/film/la-la-land/"
+  },
+  "vanilla sky": {
+    "score": 3.57,
+    "url": "https://letterboxd.com/film/vanilla-sky/"
+  },
+  "solaris and persona": {
+    "score": null,
+    "url": ""
+  },
+  "iff26 anna magnani - the untold story": {
+    "score": null,
+    "url": ""
   }
 }
