@@ -5812,5 +5812,29 @@
     "url": "https://movie.douban.com/subject/37233382/",
     "title_cn": "三声再见",
     "hot_comment": ""
+  },
+  "minority report": {
+    "score": 7.9,
+    "url": "https://movie.douban.com/subject/1297689/",
+    "title_cn": "少数派报告",
+    "hot_comment": ""
+  },
+  "blueback": {
+    "score": 5.1,
+    "url": "https://movie.douban.com/subject/35748464/",
+    "title_cn": "蓝背鱼",
+    "hot_comment": ""
+  },
+  "killer of sheep": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1303494/",
+    "title_cn": "杀羊人",
+    "hot_comment": ""
+  },
+  "iff26 anna magnani - the untold story": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37368771/",
+    "title_cn": "安娜·玛尼亚尼的传奇人生",
+    "hot_comment": ""
   }
 }
