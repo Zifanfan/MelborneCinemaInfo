@@ -5884,5 +5884,29 @@
     "url": "https://movie.douban.com/subject/1306960/",
     "title_cn": "探戈课",
     "hot_comment": ""
+  },
+  "verity": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37124892/",
+    "title_cn": "不存在的罪人",
+    "hot_comment": ""
+  },
+  "edge of tomorrow": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/4746257/",
+    "title_cn": "明日边缘",
+    "hot_comment": ""
+  },
+  "solaris": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/1307716/",
+    "title_cn": "索拉里斯",
+    "hot_comment": ""
+  },
+  "the shop on the high street": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/1292830/",
+    "title_cn": "大街上的商店",
+    "hot_comment": ""
   }
 }
