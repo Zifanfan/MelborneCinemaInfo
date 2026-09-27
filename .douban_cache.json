@@ -5992,5 +5992,29 @@
     "url": "https://movie.douban.com/subject/2969008/",
     "title_cn": "豆瓣",
     "hot_comment": ""
+  },
+  "a place in the sun": {
+    "score": 7.6,
+    "url": "https://movie.douban.com/subject/1293047/",
+    "title_cn": "郎心似铁",
+    "hot_comment": ""
+  },
+  "mulan": {
+    "score": 4.9,
+    "url": "https://movie.douban.com/subject/26357307/",
+    "title_cn": "花木兰",
+    "hot_comment": ""
+  },
+  "lost highway": {
+    "score": null,
+    "url": "",
+    "title_cn": "妖夜慌踪",
+    "hot_comment": ""
+  },
+  "vertigo": {
+    "score": null,
+    "url": "",
+    "title_cn": "迷魂記",
+    "hot_comment": ""
   }
 }
