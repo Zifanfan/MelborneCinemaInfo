@@ -6160,5 +6160,29 @@
     "url": "https://movie.douban.com/subject/26787585/",
     "title_cn": "猫",
     "hot_comment": ""
+  },
+  "the double life of véronique": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1291877/",
+    "title_cn": "两生花",
+    "hot_comment": ""
+  },
+  "mf26 bloody tennis": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36995350/",
+    "title_cn": "血腥网球",
+    "hot_comment": ""
+  },
+  "in my skin": {
+    "score": 6.9,
+    "url": "https://movie.douban.com/subject/1436885/",
+    "title_cn": "切肤",
+    "hot_comment": ""
+  },
+  "the deer hunter": {
+    "score": null,
+    "url": "",
+    "title_cn": "猎鹿人",
+    "hot_comment": ""
   }
 }
