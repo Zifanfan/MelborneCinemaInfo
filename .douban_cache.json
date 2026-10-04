@@ -1766,7 +1766,7 @@
   "happiness": {
     "score": 7.8,
     "url": "",
-    "title_cn": "",
+    "title_cn": "Happiness (組合)",
     "hot_comment": ""
   },
   "rouge": {
@@ -6207,6 +6207,30 @@
     "score": null,
     "url": "https://movie.douban.com/subject/38242486/",
     "title_cn": "Hard As Puck",
+    "hot_comment": ""
+  },
+  "duck soup": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/1298113/",
+    "title_cn": "鸭羹",
+    "hot_comment": ""
+  },
+  "space jam": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/1300659/",
+    "title_cn": "空中大灌篮",
+    "hot_comment": ""
+  },
+  "casffa dancing with the bear tanec s medvědem": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/36956578/",
+    "title_cn": "Tanec s medvědem",
+    "hot_comment": ""
+  },
+  "iff26 nino 18 days": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/3097586/",
+    "title_cn": "1.8 Days",
     "hot_comment": ""
   }
 }
