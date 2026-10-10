@@ -6466,5 +6466,29 @@
     "url": "https://movie.douban.com/subject/3682764/",
     "title_cn": "为何我生于世",
     "hot_comment": ""
+  },
+  "naza": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38617828/",
+    "title_cn": "附带伤亡",
+    "hot_comment": ""
+  },
+  "zoo": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1981984/",
+    "title_cn": "动物园",
+    "hot_comment": ""
+  },
+  "tales from the golden age": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/3692290/",
+    "title_cn": "黄金时代的故事",
+    "hot_comment": ""
+  },
+  "possession": {
+    "score": null,
+    "url": "",
+    "title_cn": "著魔",
+    "hot_comment": ""
   }
 }
