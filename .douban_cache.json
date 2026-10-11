@@ -2113,8 +2113,8 @@
   },
   "r m n": {
     "score": 7.6,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/35699754/",
+    "title_cn": "核磁共振",
     "hot_comment": ""
   },
   "dumplings": {
@@ -6489,6 +6489,42 @@
     "score": null,
     "url": "",
     "title_cn": "著魔",
+    "hot_comment": ""
+  },
+  "a goofy movie": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1293369/",
+    "title_cn": "高飞大电影",
+    "hot_comment": ""
+  },
+  "gaslight": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/1296845/",
+    "title_cn": "煤气灯下",
+    "hot_comment": ""
+  },
+  "casffa chica checa chica checa": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/35921667/",
+    "title_cn": "捷克姑娘",
+    "hot_comment": ""
+  },
+  "the evil dead triple feature": {
+    "score": 7.1,
+    "url": "https://movie.douban.com/subject/1292501/",
+    "title_cn": "鬼玩人",
+    "hot_comment": ""
+  },
+  "graduation": {
+    "score": null,
+    "url": "",
+    "title_cn": "毕业会考",
+    "hot_comment": ""
+  },
+  "mon oncle": {
+    "score": null,
+    "url": "",
+    "title_cn": "我的舅舅",
     "hot_comment": ""
   }
 }

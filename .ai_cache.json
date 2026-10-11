@@ -5326,5 +5326,29 @@
     "recommendation_en": "▸ Five directors collaborate on an anthology, offering diverse styles and authentic depictions of the absurdity of the era. ▸ Blends dark humor and sharp social satire, making political critique accessible and relatable. ▸ Naturalistic performances and immersive settings, with strong reception on Douban and Rotten Tomatoes validating both artistic and entertainment merit.",
     "awards": "",
     "awards_en": ""
+  },
+  "gaslight": {
+    "synopsis": "年轻女子在搬入丈夫家后，逐渐发现自己精神状态受到了质疑和操控。随着诡异事件频发，她开始怀疑周围人的动机，陷入信任与自我怀疑的核心冲突。",
+    "synopsis_en": "A young woman moves into her husband's home and soon finds her sanity questioned and manipulated. As strange occurrences escalate, she struggles with trust and self-doubt, facing a core conflict about the motives of those around her.",
+    "recommendation": "▸ 英格丽·褒曼精湛的表演深刻展现心理恐惧与绝望，将角色内心挣扎表现得极具感染力。▸ 导演乔治·库克以紧凑的悬疑节奏和精巧的镜头调度营造出压迫感，强化悬疑氛围。▸ 影片对心理操控、信任危机的刻画影响深远，是“煤气灯效应”概念的经典来源。",
+    "recommendation_en": "▸ Ingrid Bergman delivers a masterful performance, vividly portraying psychological fear and desperation, making her character's inner struggle intensely compelling. ▸ Director George Cukor creates a tense atmosphere through tight pacing and meticulous cinematography, enhancing the suspense. ▸ The film's depiction of psychological manipulation and trust issues established the iconic 'gaslighting' concept, deeply influencing later works.",
+    "awards": "1945奥斯卡最佳女主角、最佳艺术指导获奖，最佳男主角等多项提名",
+    "awards_en": "Winner of 1945 Academy Award for Best Actress and Best Art Direction; nominated for Best Actor and several other Oscars"
+  },
+  "graduation": {
+    "synopsis": "一位医生父亲为了确保女儿顺利进入名校，不惜卷入道德与法律边缘的交易。他在亲情、理想与现实之间艰难抉择，故事聚焦于家庭压力和腐败问题。",
+    "synopsis_en": "A doctor father is determined to secure his daughter's university future, leading him into morally ambiguous territory. The film explores the tension between family expectations and ethical boundaries amid societal corruption.",
+    "recommendation": "▸ 导演克里斯蒂安·蒙吉乌以冷静而细腻的现实主义风格，精准展现罗马尼亚社会的复杂现状。▸ 主演Adrian Țițieni表现出色，将父亲角色的焦虑与无奈诠释得极具说服力。▸ 剧本结构紧凑，情节推进充满张力，深刻剖析家庭与社会腐败的交织。",
+    "recommendation_en": "▸ Cristian Mungiu’s signature realist direction offers a nuanced portrayal of contemporary Romanian society and its moral dilemmas. ▸ Adrian Țițieni delivers a compelling performance as the conflicted father, capturing his anxiety and vulnerability. ▸ The tightly written script maintains tension throughout, deeply exploring the intersection of family loyalty and systemic corruption.",
+    "awards": "2016戛纳电影节最佳导演奖",
+    "awards_en": "2016 Cannes Best Director Award"
+  },
+  "mon oncle": {
+    "synopsis": "主人公于洛先生在现代化的郊区生活，面临与机械化社会格格不入的困境。他与侄子之间的温馨互动，揭示传统与现代之间的核心冲突。",
+    "synopsis_en": "Monsieur Hulot struggles to adapt to his sister’s ultra-modern home and lifestyle, finding himself at odds with the mechanical world around him. His bond with his nephew highlights the tension between tradition and modernity.",
+    "recommendation": "▸ 雅克·塔蒂以独特的无声幽默和精准的肢体表演，展现社会变革中的荒诞与温情。▸ 影片采用极具艺术性的构图与色彩设计，讽刺现代化生活的机械冷漠。▸ 细致的场景设计和道具使用，充分体现导演对视觉喜剧的把控。",
+    "recommendation_en": "▸ Jacques Tati’s signature silent comedy and meticulous physical performance masterfully portray the absurdity and warmth amidst societal change. ▸ Distinctive artistic composition and color design cleverly satirize the mechanical coldness of modern life. ▸ Detailed set and prop usage demonstrate Tati’s precision in visual comedy.",
+    "awards": "1958奥斯卡最佳外语片提名，1958戛纳电影节评审团特别奖",
+    "awards_en": "1958 Academy Award nominee for Best Foreign Language Film, 1958 Cannes Jury Special Prize"
   }
 }
