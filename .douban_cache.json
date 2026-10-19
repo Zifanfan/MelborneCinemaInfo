@@ -6772,5 +6772,47 @@
     "url": "",
     "title_cn": "毒品网络",
     "hot_comment": ""
+  },
+  "clayface": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37154591/",
+    "title_cn": "泥面人",
+    "hot_comment": ""
+  },
+  "possible love": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/36847425/",
+    "title_cn": "可能的爱",
+    "hot_comment": ""
+  },
+  "little shop of horrors": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/1294749/",
+    "title_cn": "异形奇花",
+    "hot_comment": ""
+  },
+  "jennifer's body and buffy the vampire slayer": {
+    "score": 5.6,
+    "url": "https://movie.douban.com/subject/1294439/",
+    "title_cn": "猎鬼少女巴菲",
+    "hot_comment": ""
+  },
+  "steal this story please": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37350230/",
+    "title_cn": "偷真窃闻",
+    "hot_comment": ""
+  },
+  "irff26 the lightkeeper": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/4147701/",
+    "title_cn": "灯塔看守人",
+    "hot_comment": ""
+  },
+  "the wizard of oz": {
+    "score": null,
+    "url": "",
+    "title_cn": "綠野仙蹤",
+    "hot_comment": ""
   }
 }
