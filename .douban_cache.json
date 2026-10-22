@@ -6844,5 +6844,41 @@
     "url": "",
     "title_cn": "超異能快感",
     "hot_comment": ""
+  },
+  "primetime": {
+    "score": 6.3,
+    "url": "https://movie.douban.com/subject/37087760/",
+    "title_cn": "黄金时段",
+    "hot_comment": ""
+  },
+  "monisme": {
+    "score": 9.0,
+    "url": "https://movie.douban.com/subject/36436309/",
+    "title_cn": "一元论",
+    "hot_comment": ""
+  },
+  "le jour se lève": {
+    "score": 7.6,
+    "url": "https://movie.douban.com/subject/1470775/",
+    "title_cn": "天色破晓",
+    "hot_comment": ""
+  },
+  "les tricheurs": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/3244209/",
+    "title_cn": "不安分的年轻人们",
+    "hot_comment": ""
+  },
+  "irff26 hush-a-bye baby": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/3580840/",
+    "title_cn": "安静点，宝贝",
+    "hot_comment": ""
+  },
+  "irff26 listen to the land speak": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38523933/",
+    "title_cn": "聆听大地的低语",
+    "hot_comment": ""
   }
 }
