@@ -6880,5 +6880,35 @@
     "url": "https://movie.douban.com/subject/38523933/",
     "title_cn": "聆听大地的低语",
     "hot_comment": ""
+  },
+  "the devils": {
+    "score": 7.8,
+    "url": "https://movie.douban.com/subject/1823255/",
+    "title_cn": "卢丹的恶魔",
+    "hot_comment": ""
+  },
+  "the housemaid": {
+    "score": null,
+    "url": "",
+    "title_cn": "家弑服务",
+    "hot_comment": ""
+  },
+  "three colours red": {
+    "score": null,
+    "url": "",
+    "title_cn": "三色之红",
+    "hot_comment": ""
+  },
+  "bff26 the match": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/1302451/",
+    "title_cn": "风雨同路",
+    "hot_comment": ""
+  },
+  "irff26 almost with you": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38613049/",
+    "title_cn": "豆瓣",
+    "hot_comment": ""
   }
 }

@@ -5574,5 +5574,53 @@
     "recommendation_en": "▸ Director Margo Harkin delivers a nuanced female perspective on the intersection of coming-of-age and religious conflict in 1980s Northern Ireland. ▸ Emer McCourt offers a raw, layered performance that anchors the film, while Sinéad O'Connor's appearance adds a distinct musical undertone. ▸ Authentic locations and understated cinematography capture the social reality of the era with immersive realism.",
     "awards": "",
     "awards_en": ""
+  },
+  "the devils": {
+    "synopsis": "在17世纪法国，小镇神父奥布林陷入宗教与权力的激烈冲突，被无端指控巫术，面临信仰、道德与欲望的重重考验，展现人性在极端环境下的挣扎。",
+    "synopsis_en": "Set in 17th-century France, a town priest named Urbain faces fierce religious and political turmoil as he is falsely accused of witchcraft. The story explores his struggle with faith, morality, and power under intense societal pressure.",
+    "recommendation": "▸ 肯·拉塞尔导演以大胆视觉语言和极具冲击力的风格，展现宗教狂热与权力腐败的极端氛围。▸ 奥利弗·里德与凡妮莎·雷德格雷夫奉献极具张力的表演，人物心理刻画深刻，情感真实动人。▸ 影片美术与摄影极具象征性，营造出压抑与疯狂交织的历史场景，视觉感染力极强。",
+    "recommendation_en": "▸ Director Ken Russell employs a bold visual style and provocative storytelling to vividly depict religious fanaticism and political corruption. ▸ Oliver Reed and Vanessa Redgrave deliver intense, emotionally charged performances, bringing psychological depth to the main characters. ▸ The film’s symbolic set design and striking cinematography create a claustrophobic, feverish atmosphere that powerfully immerses viewers in its historical setting.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "jiff find me okay": {
+    "synopsis": "一位生活陷入低谷的中年会计师，在失去好友后，踏上了一场横跨美国的自我发现之旅，途中不断面对自我怀疑与人生选择的难题。本片独立成篇，非系列作品。",
+    "synopsis_en": "A middle-aged accountant, struggling with personal setbacks, embarks on a cross-country journey after losing a close friend. Along the way, he confronts self-doubt and difficult life choices. This is a standalone film, not part of a series.",
+    "recommendation": "▸ 导演汤姆·黄以温暖细腻的笔触描绘普通人的孤独与希望，将小人物的情感挣扎呈现得真实动人。▸ 主演Kirby的表演自然真挚，赋予角色层次感，令观众能够产生共鸣。影片在公路旅行中融入美丽的自然风光，增添视觉享受。",
+    "recommendation_en": "▸ Director Tom Huang brings a warm and nuanced touch to the story, authentically portraying the loneliness and hope of everyday people. ▸ Lead actor Kirby delivers a natural, heartfelt performance that gives the protagonist depth and relatability. The film’s use of scenic landscapes during the road trip adds significant visual appeal.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "three colours red": {
+    "synopsis": "年轻模特瓦伦蒂娜在一场意外后，与一位神秘退休法官产生交集，两人的互动逐渐揭示彼此内心孤独与信任危机。本片为“色彩三部曲”的终章，探讨命运与道德选择。",
+    "synopsis_en": "Valentine, a young model, encounters a reclusive retired judge after a chance accident. Their evolving relationship exposes deep loneliness and challenges of trust. This film is the final entry in Kieslowski’s Three Colours trilogy, exploring fate and moral choices.",
+    "recommendation": "▸导演基耶斯洛夫斯基以诗意手法融合现实与哲学，深刻描绘人与人之间的联系与隔阂。▸伊雷娜·雅各布和让-路易·特兰蒂尼昂的表演细腻动人，展现角色复杂情感。▸独特的红色视觉设计与摄影，强化主题象征，提升观影体验。",
+    "recommendation_en": "▸ Kieslowski’s poetic direction masterfully blends realism with philosophical exploration, offering profound insights into human connection and isolation. ▸ Irène Jacob and Jean-Louis Trintignant deliver nuanced, compelling performances that bring emotional depth to their characters. ▸ The striking use of red in cinematography enhances thematic symbolism and elevates the visual experience.",
+    "awards": "1994戛纳电影节金棕榈提名；奥斯卡最佳导演、最佳原创剧本提名",
+    "awards_en": "1994 Cannes Palme d'Or nominee; Academy Award nominations for Best Director and Best Original Screenplay"
+  },
+  "bff26 california schemin'": {
+    "synopsis": "一群音乐梦想家在加州追寻成名之路，因意外事件陷入复杂的人际与事业抉择，主角必须在友情与自我实现间做出艰难选择。本片为BFF系列第26部，延续青春与成长主题。",
+    "synopsis_en": "A group of aspiring musicians in California face unexpected challenges as they pursue fame, forcing the protagonist to choose between friendships and personal ambition. This is the 26th installment in the BFF series, continuing its focus on youth and coming-of-age themes.",
+    "recommendation": "▸ 詹姆斯·麦卡沃伊首次执导并主演，展现独特喜剧与戏剧融合风格，表演深刻自然。▸ 影片以加州音乐圈为背景，音乐元素丰富，现场表演与原声带极具感染力。▸ 烂番茄评分高达92%，获得观众与评论家一致好评，故事节奏紧凑，情感真实。",
+    "recommendation_en": "▸ James McAvoy makes his directorial debut while starring, blending comedy and drama with nuanced, authentic performances. ▸ Set within California's music scene, the film features immersive musical sequences and a compelling soundtrack. ▸ With a 92% Rotten Tomatoes score, critics praise its tight pacing and genuine emotional depth, making it a standout in the series.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "bff26 everybody to kenmure street": {
+    "synopsis": "本片讲述在肯穆尔街发生的一场社会运动，主角们面对权力与道德抉择，团结起来挑战不公。纪录片通过真实视角展现他们如何在困境中寻找希望与改变。",
+    "synopsis_en": "Set on Kenmure Street, this documentary follows protagonists who unite amid a social movement, confronting dilemmas of power and morality. Through authentic perspectives, it captures their search for hope and change in the face of adversity.",
+    "recommendation": "▸ 导演费利佩·布斯托斯·塞拉以细腻且充满张力的镜头语言，真实还原事件现场，让观众身临其境。▸ 凯特·迪奇、艾玛·汤普森等主演的访谈与再现场景极具感染力，展现坚韧与共情。▸ 烂番茄100%高分反映业界与观众一致好评，纪录片在叙事和情感表达上达到了极高水准。",
+    "recommendation_en": "▸ Felipe Bustos Sierra employs a tense, nuanced directorial style, immersing viewers in the real-life events of Kenmure Street. ▸ Interviews and reenactments featuring Kate Dickie and Emma Thompson deliver compelling, empathetic performances. ▸ The film’s 100% Rotten Tomatoes score signals critical and audience acclaim, underscoring its narrative and emotional excellence.",
+    "awards": "",
+    "awards_en": ""
+  },
+  "bff26 the incomer": {
+    "synopsis": "一位外来者突然闯入一个风格独特的小镇，面对居民的排斥与好奇，逐步揭开自己身份的秘密。故事通过幽默与奇幻元素，展现主角如何在异乡寻找归属感与自我认同。",
+    "synopsis_en": "An outsider arrives in a quirky small town, facing both suspicion and curiosity from its inhabitants. Through humor and fantasy, the film explores the protagonist’s journey to find belonging and self-acceptance amid unexpected challenges.",
+    "recommendation": "▸ 路易斯·帕克斯顿以独特的喜剧与现实融合手法，赋予小镇奇幻色彩，营造别具一格的氛围。▸ 多姆纳尔·格里森与盖尔·兰金在角色内心冲突与幽默表达间切换自如，表演层次丰富。▸ 影片烂番茄高达95%，证明其故事和视觉风格获得专业认可，是喜剧与奇幻题材的佳作。",
+    "recommendation_en": "▸ Louis Paxton’s directorial style uniquely blends comedy and realism, giving the town a distinctive fantasy aura and atmosphere. ▸ Domhnall Gleeson and Gayle Rankin deliver nuanced performances, seamlessly balancing internal conflict and comedic timing. ▸ With a 95% Rotten Tomatoes score, the film’s narrative and visual style have been widely praised by critics, marking it as a standout in comedy-fantasy.",
+    "awards": "",
+    "awards_en": ""
   }
 }
