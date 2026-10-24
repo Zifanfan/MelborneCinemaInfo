@@ -6910,5 +6910,59 @@
     "url": "https://movie.douban.com/subject/38613049/",
     "title_cn": "豆瓣",
     "hot_comment": ""
+  },
+  "jigoku": {
+    "score": 6.7,
+    "url": "https://movie.douban.com/subject/1764189/",
+    "title_cn": "地狱",
+    "hot_comment": ""
+  },
+  "ringu": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/1941820/",
+    "title_cn": "七夜怪谈：少女的怨念",
+    "hot_comment": ""
+  },
+  "the policewoman": {
+    "score": 4.5,
+    "url": "https://movie.douban.com/subject/5109129/",
+    "title_cn": "母与子",
+    "hot_comment": ""
+  },
+  "young australian film festival award winners": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/35087646/",
+    "title_cn": "第三届澳门国际影展暨颁奖典礼",
+    "hot_comment": ""
+  },
+  "bff26 the incomer": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/37269689/",
+    "title_cn": "岛外来客",
+    "hot_comment": ""
+  },
+  "ozzy black sabbath back to the beginning": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38682079/",
+    "title_cn": "Ozzy & Black Sabbath: Back to the Beginning",
+    "hot_comment": ""
+  },
+  "wild horse nine": {
+    "score": null,
+    "url": "",
+    "title_cn": "野马九号",
+    "hot_comment": ""
+  },
+  "i saw the tv glow": {
+    "score": null,
+    "url": "",
+    "title_cn": "怪奇粉紅物語",
+    "hot_comment": ""
+  },
+  "the crow": {
+    "score": null,
+    "url": "",
+    "title_cn": "龍族戰神",
+    "hot_comment": ""
   }
 }
