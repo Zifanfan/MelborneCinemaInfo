@@ -6298,5 +6298,41 @@
   "the crow": {
     "score": 2.25,
     "url": "https://letterboxd.com/film/the-crow-2024/"
+  },
+  "casper": {
+    "score": 3.21,
+    "url": "https://letterboxd.com/film/casper/"
+  },
+  "wicker": {
+    "score": 3.71,
+    "url": "https://letterboxd.com/film/wicker/"
+  },
+  "dracula": {
+    "score": 3.17,
+    "url": "https://letterboxd.com/film/dracula-2025/"
+  },
+  "house": {
+    "score": 3.98,
+    "url": "https://letterboxd.com/film/house/"
+  },
+  "audition": {
+    "score": 3.79,
+    "url": "https://letterboxd.com/film/audition/"
+  },
+  "bff26 mother's pride": {
+    "score": null,
+    "url": ""
+  },
+  "bff26 the uprising": {
+    "score": null,
+    "url": ""
+  },
+  "bff26 tender loving care": {
+    "score": null,
+    "url": ""
+  },
+  "scream-a-thon": {
+    "score": null,
+    "url": ""
   }
 }
