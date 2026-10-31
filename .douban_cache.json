@@ -2072,7 +2072,7 @@
   "the silence of the lambs": {
     "score": 8.9,
     "url": "",
-    "title_cn": "",
+    "title_cn": "沉默的羔羊",
     "hot_comment": ""
   },
   "passenger": {
@@ -7203,6 +7203,18 @@
     "score": null,
     "url": "https://movie.douban.com/subject/25912826/",
     "title_cn": "女人皆如此",
+    "hot_comment": ""
+  },
+  "bff26 shirley valentine": {
+    "score": 8.3,
+    "url": "https://movie.douban.com/subject/1300120/",
+    "title_cn": "一刻的灿烂",
+    "hot_comment": ""
+  },
+  "that day on the beach": {
+    "score": null,
+    "url": "",
+    "title_cn": "海灘的一天",
     "hot_comment": ""
   }
 }
