@@ -2102,7 +2102,7 @@
   "moulin rouge": {
     "score": 7.8,
     "url": "",
-    "title_cn": "",
+    "title_cn": "青樓情孽",
     "hot_comment": ""
   },
   "a clockwork orange": {
@@ -7251,6 +7251,60 @@
     "score": null,
     "url": "https://movie.douban.com/subject/38549001/",
     "title_cn": "打造《绝代艳后》",
+    "hot_comment": ""
+  },
+  "godzilla minus zero": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37100760/",
+    "title_cn": "哥斯拉-0.0",
+    "hot_comment": ""
+  },
+  "her last laugh": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37667928/",
+    "title_cn": "Her Last Laugh",
+    "hot_comment": ""
+  },
+  "growing up": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1305579/",
+    "title_cn": "小毕的故事",
+    "hot_comment": ""
+  },
+  "this love of mine": {
+    "score": 6.7,
+    "url": "https://movie.douban.com/subject/10748087/",
+    "title_cn": "我的爱",
+    "hot_comment": ""
+  },
+  "the way of the dragon 猛龍過江": {
+    "score": 8.4,
+    "url": "https://movie.douban.com/subject/1306870/",
+    "title_cn": "猛龙过江",
+    "hot_comment": ""
+  },
+  "autumn tempest": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/1903037/",
+    "title_cn": "落山风",
+    "hot_comment": ""
+  },
+  "separated at birth": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/30175759/",
+    "title_cn": "众叛亲离",
+    "hot_comment": ""
+  },
+  "bff26 a long winter": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37490923/",
+    "title_cn": "长冬",
+    "hot_comment": ""
+  },
+  "rocky": {
+    "score": 8.7,
+    "url": "https://movie.douban.com/subject/1295742/",
+    "title_cn": "洛奇",
     "hot_comment": ""
   }
 }
