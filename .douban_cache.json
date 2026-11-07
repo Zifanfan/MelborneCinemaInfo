@@ -2509,8 +2509,8 @@
   },
   "mommie dearest": {
     "score": 6.2,
-    "url": "",
-    "title_cn": "",
+    "url": "https://movie.douban.com/subject/1302709/",
+    "title_cn": "亲爱的妈咪",
     "hot_comment": ""
   },
   "flubber": {
@@ -7443,6 +7443,54 @@
     "score": 7.2,
     "url": "https://movie.douban.com/subject/37516907/",
     "title_cn": "木挽町复仇记",
+    "hot_comment": ""
+  },
+  "parkway drive home": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38594891/",
+    "title_cn": "Parkway Drive Home",
+    "hot_comment": ""
+  },
+  "rocky iv": {
+    "score": null,
+    "url": "",
+    "title_cn": "洛基4：天下無敵",
+    "hot_comment": ""
+  },
+  "zombucha": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37396876/",
+    "title_cn": "僵尸酵茶",
+    "hot_comment": ""
+  },
+  "alff26 bears in hot tubs": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38586650/",
+    "title_cn": "豆瓣",
+    "hot_comment": ""
+  },
+  "forever home": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38208107/",
+    "title_cn": "永恒之家",
+    "hot_comment": ""
+  },
+  "state legislature": {
+    "score": null,
+    "url": "",
+    "title_cn": "州立法机关 (美国)",
+    "hot_comment": ""
+  },
+  "chao": {
+    "score": null,
+    "url": "",
+    "title_cn": "ChaO，我代表人類跟人魚結婚了",
+    "hot_comment": ""
+  },
+  "hula girls": {
+    "score": null,
+    "url": "",
+    "title_cn": "扶桑花女孩",
     "hot_comment": ""
   }
 }
