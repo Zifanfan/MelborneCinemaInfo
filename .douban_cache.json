@@ -7660,5 +7660,17 @@
     "url": "https://movie.douban.com/subject/2063533/",
     "title_cn": "水仙花开",
     "hot_comment": ""
+  },
+  "scanners": {
+    "score": 7.0,
+    "url": "https://movie.douban.com/subject/1302481/",
+    "title_cn": "夺命凶灵",
+    "hot_comment": ""
+  },
+  "the fox": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/36151519/",
+    "title_cn": "狐言乱语",
+    "hot_comment": ""
   }
 }
