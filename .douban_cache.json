@@ -7672,5 +7672,29 @@
     "url": "https://movie.douban.com/subject/36151519/",
     "title_cn": "狐言乱语",
     "hot_comment": ""
+  },
+  "cars": {
+    "score": 8.2,
+    "url": "https://movie.douban.com/subject/1428878/",
+    "title_cn": "赛车总动员",
+    "hot_comment": ""
+  },
+  "the night of the hunter": {
+    "score": 8.0,
+    "url": "https://movie.douban.com/subject/1293582/",
+    "title_cn": "猎人之夜",
+    "hot_comment": ""
+  },
+  "a very like crazy date": {
+    "score": 7.4,
+    "url": "https://movie.douban.com/subject/38233067/",
+    "title_cn": "相当激烈的约会",
+    "hot_comment": ""
+  },
+  "the fixation": {
+    "score": 5.9,
+    "url": "https://movie.douban.com/subject/38481598/",
+    "title_cn": "La fijación",
+    "hot_comment": ""
   }
 }
