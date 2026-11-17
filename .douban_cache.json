@@ -7696,5 +7696,41 @@
     "url": "https://movie.douban.com/subject/38481598/",
     "title_cn": "La fijación",
     "hot_comment": ""
+  },
+  "bad apples": {
+    "score": 7.5,
+    "url": "https://movie.douban.com/subject/36623663/",
+    "title_cn": "害群之马",
+    "hot_comment": ""
+  },
+  "chopin": {
+    "score": 6.8,
+    "url": "https://movie.douban.com/subject/36950347/",
+    "title_cn": "肖邦，巴黎奏鸣曲",
+    "hot_comment": ""
+  },
+  "blue heron": {
+    "score": 6.7,
+    "url": "https://movie.douban.com/subject/36990045/",
+    "title_cn": "蓝鹭",
+    "hot_comment": ""
+  },
+  "chasing millions": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/37331151/",
+    "title_cn": "百万大追缉",
+    "hot_comment": ""
+  },
+  "42nd street": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/1292559/",
+    "title_cn": "第四十二街",
+    "hot_comment": ""
+  },
+  "focker-in-law": {
+    "score": null,
+    "url": "",
+    "title_cn": "門當父不對之親家駕到",
+    "hot_comment": ""
   }
 }
