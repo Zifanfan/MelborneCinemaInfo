@@ -7828,5 +7828,47 @@
     "url": "https://movie.douban.com/subject/30401849/",
     "title_cn": "1/2的魔法",
     "hot_comment": ""
+  },
+  "buddy": {
+    "score": 7.3,
+    "url": "https://movie.douban.com/subject/37446297/",
+    "title_cn": "逃出布迪秀",
+    "hot_comment": ""
+  },
+  "the incomer": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/37269689/",
+    "title_cn": "岛外来客",
+    "hot_comment": ""
+  },
+  "hamilton": {
+    "score": 9.5,
+    "url": "https://movie.douban.com/subject/34961898/",
+    "title_cn": "汉密尔顿",
+    "hot_comment": ""
+  },
+  "casffa princess stella princezna stokrát jinak": {
+    "score": null,
+    "url": "https://movie.douban.com/subject/38227625/",
+    "title_cn": "百变公主",
+    "hot_comment": ""
+  },
+  "suddenly in the dark": {
+    "score": 6.4,
+    "url": "https://movie.douban.com/subject/6529980/",
+    "title_cn": "午夜凶杀",
+    "hot_comment": ""
+  },
+  "the only living pickpocket in new york": {
+    "score": 6.6,
+    "url": "https://movie.douban.com/subject/37310760/",
+    "title_cn": "纽约最后的扒手",
+    "hot_comment": ""
+  },
+  "the last waltz": {
+    "score": 8.5,
+    "url": "https://movie.douban.com/subject/1306025/",
+    "title_cn": "最后华尔兹",
+    "hot_comment": ""
   }
 }
